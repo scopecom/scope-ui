@@ -1,0 +1,12 @@
+.scui-btn {
+  background-color: #3399FF;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  padding: 8px 16px;
+
+  &:disabled {
+    background-color: #b3c3c9;
+  }
+}

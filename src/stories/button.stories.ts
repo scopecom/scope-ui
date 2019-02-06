@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
-import { ButtonComponent } from '../app/components/button/button.component';
+import { ButtonComponent } from '../app/components/button/button.module';
 
 storiesOf('Scope Button', module)
   .add('with some emoji', () => ({

@@ -1,9 +1,0 @@
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * Generated bundle index. Do not edit.
- */
-export { ScopeUiService, ScopeUiComponent, ScopeUiModule } from './public_api';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmV3c2Nyb24tc2NvcGUtdWktcHJvamVjdHMtc2NvcGUtdWkuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AbmV3c2Nyb24vc2NvcGUtdWkvcHJvamVjdHMvc2NvcGUtdWkvIiwic291cmNlcyI6WyJuZXdzY3Jvbi1zY29wZS11aS1wcm9qZWN0cy1zY29wZS11aS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBSUEsZ0VBQWMsY0FBYyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBHZW5lcmF0ZWQgYnVuZGxlIGluZGV4LiBEbyBub3QgZWRpdC5cbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL3B1YmxpY19hcGknO1xuIl19

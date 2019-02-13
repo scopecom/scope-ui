@@ -1,5 +1,5 @@
 {
-  "name": "@newscron/scope-ui",
+  "name": "@scopecom/scope-ui",
   "version": "0.0.0",
   "scripts": {
     "cypress-open": "cypress open",
@@ -64,7 +64,7 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Newscron/scope-ui.git"
+    "url": "git+https://github.com/scopecom/scope-ui.git"
   },
   "keywords": [
     "scope",
@@ -73,7 +73,7 @@
   "author": "avramz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Newscron/scope-ui/issues"
+    "url": "https://github.com/scopecom/scope-ui/issues"
   },
-  "homepage": "https://github.com/Newscron/scope-ui#readme"
+  "homepage": "https://github.com/scopecom/scope-ui#readme"
 }

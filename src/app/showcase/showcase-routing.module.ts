@@ -5,7 +5,11 @@ import { ShowcaseComponent } from './showcase.component';
 const routes: Routes = [
   {
     path: '',
-    component: ShowcaseComponent
+    component: ShowcaseComponent,
+    children: [{
+      path: '',
+      loadChildren: './views/start/start.module#StartModule',
+    }]
   }
 ];
 
@@ -13,4 +17,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ShowcaseRoutingModule { }
+export class ShowcaseRoutingModule {
+}

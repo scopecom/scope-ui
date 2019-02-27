@@ -17,4 +17,17 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('default', ['scss']);
+gulp.task('scss-icons', function () {
+  return gulp.src('./src/styles/icons/scope-ui.icons.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'compressed',
+      errLogToConsole: false
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({browsers: ['last 3 versions']}))
+    .pipe(rename('scope-ui.icons.min.css'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('default', ['scss', 'scss-icons']);

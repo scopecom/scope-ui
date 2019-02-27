@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StartRoutingModule } from './start-routing.module';
 import { StartComponent } from './start.component';
-import { ScuiNavModule } from '../../../components/scui-nav/scui-nav.module';
+import { ScUiNavModule } from '../../../components/scui-nav/scui-nav.module';
 
 @NgModule({
   declarations: [StartComponent],
   imports: [
     CommonModule,
     StartRoutingModule,
-    ScuiNavModule
+    ScUiNavModule
   ]
 })
 export class StartModule {

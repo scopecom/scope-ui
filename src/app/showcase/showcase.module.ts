@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { ShowcaseRoutingModule } from './showcase-routing.module';
 import { ShowcaseComponent } from './showcase.component';
-import { ScuiNavModule } from '../components/scui-nav/scui-nav.module';
+import { ScUiNavModule } from '../components/scui-nav/scui-nav.module';
 
 @NgModule({
   declarations: [ShowcaseComponent],
   imports: [
     CommonModule,
     ShowcaseRoutingModule,
-    ScuiNavModule
+    ScUiNavModule
   ]
 })
 export class ShowcaseModule { }

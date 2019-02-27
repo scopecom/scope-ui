@@ -12,7 +12,7 @@ export class StartComponent implements OnInit {
   logo: ScUiMenuItem = {
     name: 'Scope',
     route: '/',
-    iconUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-white.svg'
+    iconClass: 'icon-scope-logo-glyph'
   };
 
   menuItems = AppMenu;

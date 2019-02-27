@@ -2,6 +2,6 @@ export interface ScUiMenuItem {
   name: string;
   route: string;
   external?: boolean;
-  iconUrl?: string;
+  iconClass?: string;
   cssClass?: string;
 }

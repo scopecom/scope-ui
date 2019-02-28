@@ -4,7 +4,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 
-gulp.task('scss', function () {
+const scss = () => {
   return gulp.src('./src/styles/scope-ui.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -15,9 +15,9 @@ gulp.task('scss', function () {
     .pipe(rename('scope-ui.min.css'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'));
-});
+};
 
-gulp.task('scss-icons', function () {
+const scssIcons = () => {
   return gulp.src('./src/styles/icons/scope-ui.icons.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -28,6 +28,8 @@ gulp.task('scss-icons', function () {
     .pipe(rename('scope-ui.icons.min.css'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'));
-});
+};
 
-gulp.task('default', ['scss', 'scss-icons']);
+const build = gulp.parallel(scss, scssIcons);
+
+exports.default = build;

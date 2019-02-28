@@ -6,7 +6,7 @@ import { ScUiMenuItem } from '../../interfaces';
   template: `
     <aside class="scui-nav">
       <header class="nav-header" *ngIf="logo">
-        <a [routerLink]="[logo.route]" [ngClass]="logo.cssClass" [routerLinkActive]="activeClass">
+        <a [routerLink]="[logo.route]" [ngClass]="logo.cssClass">
           <span class="icon" [ngClass]="logo.iconClass" ></span>
         </a>
       </header>

@@ -1,0 +1,23 @@
+.scui-drawer {
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+
+  .drawer-inner {
+    background-color: #f1f1f1;
+    min-width: 180px;
+    max-width: 280px;
+  }
+
+  &.drawer-pos-left {
+    margin-left: 64px;
+  }
+
+  .drawer-collapse {
+    width: 16px;
+    height: 100vh;
+    background-color: darkcyan;
+    cursor: pointer;
+  }
+}

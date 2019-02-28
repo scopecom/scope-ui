@@ -5,9 +5,11 @@
   flex-direction: row;
 
   .drawer-inner {
-    background-color: #f1f1f1;
-    min-width: 180px;
-    max-width: 280px;
+    background-color: #f8f8f5;
+    border-right: 2px solid #d4d3d3;
+    padding: 24px 16px;
+    min-width: 220px;
+    max-width: 320px;
   }
 
   &.drawer-pos-left {
@@ -15,9 +17,9 @@
   }
 
   .drawer-collapse {
-    width: 16px;
+    width: 12px;
     height: 100vh;
-    background-color: darkcyan;
+    background-color: #d4d3d3;
     cursor: pointer;
   }
 }

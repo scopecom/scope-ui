@@ -1,9 +1,12 @@
 .scui-container {
   display: flex;
   flex-direction: row;
+  min-height: 100vh;
 }
 
 .scui-content {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  padding: 24px;
 }

@@ -6,15 +6,20 @@ import { ScUiMenuItem } from '../../interfaces';
   template: `
     <aside class="scui-nav">
       <header class="nav-header" *ngIf="logo">
-        <a [routerLink]="[logo.route]" [ngClass]="logo.cssClass">
-          <span class="icon icon-32" [ngClass]="logo.iconClass" ></span>
+        <a [routerLink]="[logo.route]" [ngClass]="logo.cssClass" [routerLinkActive]="activeClass">
+          <span class="icon" [ngClass]="logo.iconClass" ></span>
         </a>
       </header>
       <nav class="nav-items">
-        <a class="nav-item" *ngFor="let menuItem of menuItems" [routerLink]="[menuItem.route]">
-          <span class="icon icon-32" [ngClass]="menuItem.iconClass" ></span>
+        <a class="nav-item" *ngFor="let menuItem of menuItems" [routerLink]="[menuItem.route]" [routerLinkActive]="activeClass">
+          <span class="icon" [ngClass]="menuItem.iconClass" ></span>
         </a>
       </nav>
+      <footer class="nav-footer" *ngIf="footer">
+        <a class="nav-item" *ngFor="let menuItem of footer" [routerLink]="[menuItem.route]" [routerLinkActive]="activeClass">
+          <span class="icon" [ngClass]="menuItem.iconClass" ></span>
+        </a>
+      </footer>
     </aside>
   `,
   encapsulation: ViewEncapsulation.None
@@ -22,6 +27,8 @@ import { ScUiMenuItem } from '../../interfaces';
 export class ScUiNavComponent implements OnInit {
   @Input() menuItems: ScUiMenuItem[];
   @Input() logo: ScUiMenuItem;
+  @Input() footer: ScUiMenuItem[];
+  @Input() activeClass = 'active-nav';
 
   constructor() {
   }

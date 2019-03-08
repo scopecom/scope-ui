@@ -71,98 +71,123 @@ $icon-unlocked: unicode(ea40);
 $icon-lock: unicode(ea41);
 $icon-menu-8: unicode(ea42);
 $icon-menu-7: unicode(ea43);
-$icon-menu-5: unicode(ea44);
-$icon-menu-4: unicode(ea45);
-$icon-menu-3: unicode(ea46);
-$icon-menu-2: unicode(ea47);
-$icon-microsoft: unicode(ea48);
-$icon-down-arrow: unicode(ea49);
-$icon-left-arrow: unicode(ea4a);
-$icon-right-arrow: unicode(ea4b);
-$icon-up-arrow: unicode(ea4c);
-$icon-pin-2: unicode(ea4d);
-$icon-puzzle-10: unicode(ea4e);
-$icon-send: unicode(ea4f);
-$icon-cogwheel: unicode(ea50);
-$icon-upload: unicode(ea51);
-$icon-e-add: unicode(ea52);
-$icon-e-delete: unicode(ea53);
-$icon-e-remove: unicode(ea54);
-$icon-single-01: unicode(ea55);
-$icon-single-02: unicode(ea56);
-$icon-single-content-02: unicode(ea57);
-$icon-single-content-03: unicode(ea58);
-$icon-single-copies: unicode(ea59);
-$icon-single-copy-04: unicode(ea5a);
-$icon-single-copy-06: unicode(ea5b);
-$icon-file-content: unicode(ea5c);
-$icon-single-folded: unicode(ea5d);
-$icon-file-paragraph: unicode(ea5e);
-$icon-i-delete: unicode(ea5f);
-$icon-small-down: unicode(ea60);
-$icon-small-left: unicode(ea61);
-$icon-i-remove: unicode(ea62);
-$icon-small-right: unicode(ea63);
-$icon-small-triangle-down: unicode(ea64);
-$icon-small-triangle-left: unicode(ea65);
-$icon-small-triangle-right: unicode(ea66);
-$icon-small-triangle-up: unicode(ea67);
-$icon-small-up: unicode(ea68);
-$icon-user-frame-31: unicode(ea69);
-$icon-s-add: unicode(ea6a);
-$icon-s-delete: unicode(ea6b);
-$icon-frame-s-arrow-down: unicode(ea6c);
-$icon-frame-s-caret-down: unicode(ea6d);
-$icon-frame-s-arrow-left: unicode(ea6e);
-$icon-frame-s-caret-left: unicode(ea6f);
-$icon-s-remove: unicode(ea70);
-$icon-frame-s-arrow-right: unicode(ea71);
-$icon-frame-s-caret-right: unicode(ea72);
-$icon-square-simple-down: unicode(ea73);
-$icon-square-simple-left: unicode(ea74);
-$icon-square-simple-right: unicode(ea75);
-$icon-square-simple-up: unicode(ea76);
-$icon-frame-s-arrow-up: unicode(ea77);
-$icon-frame-s-caret-up: unicode(ea78);
-$icon-data-upload: unicode(ea79);
-$icon-tag: unicode(ea7a);
-$icon-arrow-down: unicode(ea7b);
-$icon-arrow-left: unicode(ea7c);
-$icon-arrow-right: unicode(ea7d);
-$icon-tail-top: unicode(ea7e);
-$icon-text-2: unicode(ea7f);
-$icon-text: unicode(ea80);
-$icon-time: unicode(ea81);
-$icon-trash-can: unicode(ea82);
-$icon-widget: unicode(ea83);
-$icon-window-zoom-in: unicode(ea84);
-$icon-zoom: unicode(ea85);
-$icon-magnifier-zoom-in: unicode(ea86);
-$icon-magnifier-zoom-out: unicode(ea87);
-$icon-magnifier: unicode(ea88);
-$icon-zoom-in: unicode(ea89);
-$icon-zoom-out: unicode(ea8a);
-$icon-blog: unicode(ea8b);
-$icon-shape-star: unicode(ea8c);
-$icon-components: unicode(ea8d);
-$icon-tool-hand: unicode(ea8e);
-$icon-bars-2: unicode(ea8f);
-$icon-circle-02: unicode(ea90);
-$icon-circle-03: unicode(ea91);
-$icon-circle-04: unicode(ea92);
-$icon-check-single: unicode(ea93);
-$icon-geometry: unicode(ea94);
-$icon-app-store: unicode(ea95);
-$icon-star-rate: unicode(ea96);
-$icon-bookmarks: unicode(ea97);
-$icon-rss-outline: unicode(ea98);
-$icon-scope-logo-glyph: unicode(ea99);
-$icon-scope-logo-outline: unicode(ea9a);
-$icon-scope-logo-full: unicode(ea9b);
-$icon-scope-icon-master: unicode(ea9c);
-$icon-scope-single-folded: unicode(ea9d);
-$icon-scope-square: unicode(ea9e);
-$icon-scope-square-neg: unicode(ea9f);
+$icon-menu-5: unicode(ea45);
+$icon-menu-4: unicode(ea46);
+$icon-menu-3: unicode(ea47);
+$icon-menu-2: unicode(ea48);
+$icon-microsoft: unicode(ea49);
+$icon-down-arrow: unicode(ea4a);
+$icon-left-arrow: unicode(ea4b);
+$icon-right-arrow: unicode(ea4c);
+$icon-up-arrow: unicode(ea4d);
+$icon-paragraph: unicode(ea4e);
+$icon-pin-2: unicode(ea4f);
+$icon-pin-3: unicode(ea50);
+$icon-puzzle-10: unicode(ea51);
+$icon-send: unicode(ea52);
+$icon-settings-gear: unicode(ea53);
+$icon-upload: unicode(ea54);
+$icon-e-add: unicode(ea55);
+$icon-e-delete: unicode(ea56);
+$icon-e-remove: unicode(ea57);
+$icon-single-02: unicode(ea58);
+$icon-single-content-02: unicode(ea59);
+$icon-single-content-03: unicode(ea5a);
+$icon-single-copies: unicode(ea5b);
+$icon-single-copy-04: unicode(ea5c);
+$icon-single-copy-06: unicode(ea5d);
+$icon-file-content: unicode(ea5e);
+$icon-single-folded: unicode(ea5f);
+$icon-file-paragraph: unicode(ea60);
+$icon-i-delete: unicode(ea61);
+$icon-small-down: unicode(ea62);
+$icon-small-left: unicode(ea63);
+$icon-i-remove: unicode(ea64);
+$icon-small-right: unicode(ea65);
+$icon-small-triangle-down: unicode(ea66);
+$icon-small-triangle-left: unicode(ea67);
+$icon-small-triangle-right: unicode(ea68);
+$icon-small-triangle-up: unicode(ea69);
+$icon-small-up: unicode(ea6a);
+$icon-user-frame-31: unicode(ea6b);
+$icon-s-add: unicode(ea6c);
+$icon-s-delete: unicode(ea6d);
+$icon-frame-s-arrow-down: unicode(ea6e);
+$icon-frame-s-caret-down: unicode(ea6f);
+$icon-frame-s-arrow-left: unicode(ea70);
+$icon-frame-s-caret-left: unicode(ea71);
+$icon-s-remove: unicode(ea72);
+$icon-frame-s-arrow-right: unicode(ea73);
+$icon-frame-s-caret-right: unicode(ea74);
+$icon-square-simple-down: unicode(ea75);
+$icon-square-simple-left: unicode(ea76);
+$icon-square-simple-right: unicode(ea77);
+$icon-square-simple-up: unicode(ea78);
+$icon-frame-s-arrow-up: unicode(ea79);
+$icon-frame-s-caret-up: unicode(ea7a);
+$icon-data-upload: unicode(ea7b);
+$icon-tag: unicode(ea7c);
+$icon-arrow-down: unicode(ea7d);
+$icon-arrow-left: unicode(ea7e);
+$icon-arrow-right: unicode(ea7f);
+$icon-tail-top: unicode(ea80);
+$icon-text-2: unicode(ea81);
+$icon-text: unicode(ea82);
+$icon-time: unicode(ea83);
+$icon-bin: unicode(ea84);
+$icon-widget: unicode(ea85);
+$icon-window-zoom-in: unicode(ea86);
+$icon-window-zoom-out: unicode(ea87);
+$icon-world-2: unicode(ea88);
+$icon-zoom: unicode(ea89);
+$icon-magnifier-zoom-in: unicode(ea8a);
+$icon-magnifier-zoom-out: unicode(ea8b);
+$icon-magnifier: unicode(ea8c);
+$icon-zoom-in: unicode(ea8d);
+$icon-zoom-out: unicode(ea8e);
+$icon-blog: unicode(ea8f);
+$icon-shape-oval: unicode(ea90);
+$icon-shape-star: unicode(ea91);
+$icon-shape-arrow: unicode(ea92);
+$icon-components: unicode(ea93);
+$icon-tool-hand: unicode(ea94);
+$icon-bars-2: unicode(ea95);
+$icon-circle-02: unicode(ea96);
+$icon-circle-03: unicode(ea97);
+$icon-circle-04: unicode(ea98);
+$icon-l-circle: unicode(ea99);
+$icon-l-circles: unicode(ea9a);
+$icon-check-single: unicode(ea9b);
+$icon-geometry: unicode(ea9c);
+$icon-app-store: unicode(ea9d);
+$icon-star-rate: unicode(ea9e);
+$icon-bookmarks: unicode(ea9f);
+$icon-rss-outline: unicode(eaa0);
+$icon-scope-logo-glyph: unicode(eaa1);
+$icon-scope-logo-outline: unicode(eaa2);
+$icon-scope-logo-full: unicode(eaa3);
+$icon-scope-icon-master: unicode(eaa4);
+$icon-scope-single-folded: unicode(eaa5);
+$icon-scope-square: unicode(eaa6);
+$icon-scope-square-neg: unicode(eaa7);
+$icon-xing: unicode(eaa8);
+$icon-xing-square: unicode(eaa9);
+$icon-wordpress: unicode(eaaa);
+$icon-wordpress-simple: unicode(eaab);
+$icon-typo3: unicode(eaac);
+$icon-twitter: unicode(eaad);
+$icon-twitter-square: unicode(eaae);
+$icon-tumblr: unicode(eaaf);
+$icon-tumblr-square: unicode(eab0);
+$icon-linkedin: unicode(eab1);
+$icon-linkedin-in: unicode(eab2);
+$icon-instagram: unicode(eab3);
+$icon-google: unicode(eab4);
+$icon-google-wallet: unicode(eab5);
+$icon-google-drive: unicode(eab6);
+$icon-facebook: unicode(eab7);
+$icon-facebook-f: unicode(eab8);
+$icon-uea44-: unicode(ea01);
 
 .icon-add-file::before {
   content: $icon-add-file;
@@ -464,8 +489,16 @@ $icon-scope-square-neg: unicode(ea9f);
   content: $icon-up-arrow;
 }
 
+.icon-paragraph::before {
+  content: $icon-paragraph;
+}
+
 .icon-pin-2::before {
   content: $icon-pin-2;
+}
+
+.icon-pin-3::before {
+  content: $icon-pin-3;
 }
 
 .icon-puzzle-10::before {
@@ -476,8 +509,8 @@ $icon-scope-square-neg: unicode(ea9f);
   content: $icon-send;
 }
 
-.icon-cogwheel::before {
-  content: $icon-cogwheel;
+.icon-settings-gear::before {
+  content: $icon-settings-gear;
 }
 
 .icon-upload::before {
@@ -494,10 +527,6 @@ $icon-scope-square-neg: unicode(ea9f);
 
 .icon-e-remove::before {
   content: $icon-e-remove;
-}
-
-.icon-single-01::before {
-  content: $icon-single-01;
 }
 
 .icon-single-02::before {
@@ -676,8 +705,8 @@ $icon-scope-square-neg: unicode(ea9f);
   content: $icon-time;
 }
 
-.icon-trash-can::before {
-  content: $icon-trash-can;
+.icon-bin::before {
+  content: $icon-bin;
 }
 
 .icon-widget::before {
@@ -686,6 +715,14 @@ $icon-scope-square-neg: unicode(ea9f);
 
 .icon-window-zoom-in::before {
   content: $icon-window-zoom-in;
+}
+
+.icon-window-zoom-out::before {
+  content: $icon-window-zoom-out;
+}
+
+.icon-world-2::before {
+  content: $icon-world-2;
 }
 
 .icon-zoom::before {
@@ -716,8 +753,16 @@ $icon-scope-square-neg: unicode(ea9f);
   content: $icon-blog;
 }
 
+.icon-shape-oval::before {
+  content: $icon-shape-oval;
+}
+
 .icon-shape-star::before {
   content: $icon-shape-star;
+}
+
+.icon-shape-arrow::before {
+  content: $icon-shape-arrow;
 }
 
 .icon-components::before {
@@ -742,6 +787,14 @@ $icon-scope-square-neg: unicode(ea9f);
 
 .icon-circle-04::before {
   content: $icon-circle-04;
+}
+
+.icon-l-circle::before {
+  content: $icon-l-circle;
+}
+
+.icon-l-circles::before {
+  content: $icon-l-circles;
 }
 
 .icon-check-single::before {
@@ -794,5 +847,77 @@ $icon-scope-square-neg: unicode(ea9f);
 
 .icon-scope-square-neg::before {
   content: $icon-scope-square-neg;
+}
+
+.icon-xing::before {
+  content: $icon-xing;
+}
+
+.icon-xing-square::before {
+  content: $icon-xing-square;
+}
+
+.icon-wordpress::before {
+  content: $icon-wordpress;
+}
+
+.icon-wordpress-simple::before {
+  content: $icon-wordpress-simple;
+}
+
+.icon-typo3::before {
+  content: $icon-typo3;
+}
+
+.icon-twitter::before {
+  content: $icon-twitter;
+}
+
+.icon-twitter-square::before {
+  content: $icon-twitter-square;
+}
+
+.icon-tumblr::before {
+  content: $icon-tumblr;
+}
+
+.icon-tumblr-square::before {
+  content: $icon-tumblr-square;
+}
+
+.icon-linkedin::before {
+  content: $icon-linkedin;
+}
+
+.icon-linkedin-in::before {
+  content: $icon-linkedin-in;
+}
+
+.icon-instagram::before {
+  content: $icon-instagram;
+}
+
+.icon-google::before {
+  content: $icon-google;
+}
+
+.icon-google-wallet::before {
+  content: $icon-google-wallet;
+}
+
+.icon-google-drive::before {
+  content: $icon-google-drive;
+}
+
+.icon-facebook::before {
+  content: $icon-facebook;
+}
+
+.icon-facebook-f::before {
+  content: $icon-facebook-f;
+}
+
+.icon-uea44-::before {
+  content: $icon-uea44-;
 }
 

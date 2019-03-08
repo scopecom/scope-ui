@@ -4,6 +4,7 @@ import { StartRoutingModule } from './start-routing.module';
 import { StartComponent } from './start.component';
 import { ScUiNavModule } from '../../../components/scui-nav/scui-nav.module';
 import { ScUiDrawerModule } from '../../../components/scui-drawer/scui-drawer.module';
+import { ScuiCardModule } from '../../../components/scui-card/scui-card.module';
 
 @NgModule({
   declarations: [StartComponent],
@@ -11,7 +12,8 @@ import { ScUiDrawerModule } from '../../../components/scui-drawer/scui-drawer.mo
     CommonModule,
     StartRoutingModule,
     ScUiNavModule,
-    ScUiDrawerModule
+    ScUiDrawerModule,
+    ScuiCardModule
   ]
 })
 export class StartModule {

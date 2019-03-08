@@ -1,0 +1,54 @@
+$col_1: #2f00f3;
+$col_2: #fff;
+$col_3: #000;
+
+.cards-wrap{
+  justify-content: center;
+}
+
+.scui-card {
+  width: 360px;
+  position: relative;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  height: 224px;
+  background: $col_2;
+  &.active {
+    .overlay {
+      width: 100%;
+    }
+    .content {
+      color: $col_2;
+    }
+  }
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    transition: width 0.15s linear;
+    background: $col_1;
+  }
+  .content {
+    position: absolute;
+    left:28px;
+    right:23px;
+    bottom:22px;
+    color: $col_3;
+    .name {
+      font-size: 26px;
+      margin-bottom:8px;
+      font-weight: 500;
+    }
+    .description {
+      font-weight: 300;
+    }
+    .icon {
+      font-size: 34px;
+      right: 0;
+      position: absolute;
+      bottom: 3px;
+    }
+  }
+}

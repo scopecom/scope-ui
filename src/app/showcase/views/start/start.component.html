@@ -1,6 +1,6 @@
 <scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>
 <div class="scui-main-container">
-  <scui-drawer [drawerOpen]="true" [collapse]="true">
+  <scui-drawer [drawerOpen]="false" [collapse]="true">
     <h1 class="section-title">Projects</h1>
     <div class="submenu">
       <h4 class="submenu-title">All projects</h4>
@@ -14,14 +14,14 @@
   <div class="scui-content">
     <div class="scui-container">
       <div class="scui-content">
-        <!-- example:       <div class="scui-row">
-                  <div style="background: red;" class="scui-col-7">
-                    <div class="box-row">tt</div>
-                  </div>
-                  <div style="background: #f9de3e;" class="scui-col-5">
-                    <div class="box-row">rr</div>
-                  </div>
-                </div>-->
+        <div class="scui-row cards-wrap">
+          <div *ngFor="let btn of buttons" >
+            <scui-card [icon]="btn.icon"
+                       [description]="btn.description"
+                       [name]="btn.name">
+            </scui-card>
+          </div>
+        </div>
       </div>
     </div>
   </div>

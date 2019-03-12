@@ -18,7 +18,7 @@ import { Component, OnInit, Input } from '@angular/core';
     </a>
   `,
 })
-export class ScuiCardComponent implements OnInit {
+export class ScUiCardComponent implements OnInit {
   @Input() icon = '';
   @Input() name = '';
   @Input() description = '';

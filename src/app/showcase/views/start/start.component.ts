@@ -10,7 +10,7 @@ export class StartComponent implements OnInit {
   logo = AppMenuLogo;
   footer = AppMenuFooter;
   menuItems = AppMenu;
-  public buttons = [
+  buttons = [
     {
       icon: 'icon-magnifier',
       name: 'Search',

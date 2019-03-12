@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScuiCardComponent } from './scui-card.component';
+import { ScUiCardComponent } from './scui-card.component';
 
 @NgModule({
-  declarations: [ScuiCardComponent],
-  exports:[ScuiCardComponent],
+  declarations: [ScUiCardComponent],
+  exports: [ScUiCardComponent],
   imports: [
     CommonModule
   ]
 })
-export class ScuiCardModule { }
+export class ScUiCardModule {
+}

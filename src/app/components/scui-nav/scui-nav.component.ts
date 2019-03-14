@@ -7,17 +7,21 @@ import { ScUiMenuItem } from '../../interfaces';
     <aside class="scui-nav">
       <header class="nav-header" *ngIf="logo">
         <a [routerLink]="[logo.route]" [ngClass]="logo.cssClass">
-          <span class="icon" [ngClass]="logo.iconClass" ></span>
+          <span class="icon" [ngClass]="logo.iconClass"></span>
         </a>
       </header>
       <nav class="nav-items">
-        <a class="nav-item" *ngFor="let menuItem of menuItems" [routerLink]="[menuItem.route]" [routerLinkActive]="activeClass">
-          <span class="icon" [ngClass]="menuItem.iconClass" ></span>
+        <a class="nav-item"
+           *ngFor="let menuItem of menuItems"
+           scuiBgHover="#2A00A0"
+           [routerLink]="[menuItem.route]"
+           [routerLinkActive]="activeClass">
+          <span class="icon" [ngClass]="menuItem.iconClass"></span>
         </a>
       </nav>
       <footer class="nav-footer" *ngIf="footer">
         <a class="nav-item" *ngFor="let menuItem of footer" [routerLink]="[menuItem.route]" [routerLinkActive]="activeClass">
-          <span class="icon" [ngClass]="menuItem.iconClass" ></span>
+          <span class="icon" [ngClass]="menuItem.iconClass"></span>
         </a>
       </footer>
     </aside>

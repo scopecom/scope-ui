@@ -1,6 +1,5 @@
 .scui-nav {
-  background-color: #f8f8f5;
-  border-right: 2px solid #d4d3d3;
+  background-color: #3A00F8;
   position: fixed;
   left: 0;
   top: 0;
@@ -15,26 +14,31 @@
   }
 
   .nav-items, .nav-footer {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-top: 150px;
-    align-items: center;
-
+    margin-top: 55px;
     .nav-item {
-      padding: 10px;
+      background: #3A00F8;
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      border-radius: 50%;
-      height: 40px;
-      width: 40px;
+      height: 64px !important;
+      width: 64px;
+      position: relative;
+      &.active-nav {
+        background-color: #89C5FC;
+        .icon {
+          color: white;
+        }
+      }
+      .icon {
+        z-index: 1;
+        color: #89C5FC;
+      }
     }
   }
 
   .nav-footer {
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
     flex: inherit;
   }
 
@@ -43,7 +47,4 @@
     font-size: 24px;
   }
 
-  .active-nav {
-    background-color: #f9de3e;
-  }
 }

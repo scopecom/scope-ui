@@ -3,12 +3,12 @@ import { ScUiMenuItem } from '../interfaces';
 export const AppMenu: ScUiMenuItem[] = [
   {
     name: 'Projects',
-    route: '/projects',
+    route: '/test',
     iconClass: 'icon-magnifier'
   },
   {
     name: 'Start',
-    route: '/start',
+    route: '/projects',
     iconClass: 'icon-book-39'
   },
   {
@@ -35,7 +35,7 @@ export const AppMenu: ScUiMenuItem[] = [
 
 export const AppMenuLogo: ScUiMenuItem = {
   name: 'Scope',
-  route: '/',
+  route: '/start',
   iconClass: 'icon-home'
 };
 

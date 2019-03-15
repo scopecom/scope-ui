@@ -6,7 +6,11 @@ import { ScUiMenuItem } from '../../interfaces';
   template: `
     <aside class="scui-nav">
       <header class="nav-header" *ngIf="logo">
-        <a [routerLink]="[logo.route]" [ngClass]="logo.cssClass">
+        <a [routerLink]="[logo.route]"
+           scuiBgHover="#2A00A0"
+           class="nav-item"
+           [routerLinkActive]="activeClass"
+           [ngClass]="logo.cssClass">
           <span class="icon" [ngClass]="logo.iconClass"></span>
         </a>
       </header>
@@ -20,7 +24,11 @@ import { ScUiMenuItem } from '../../interfaces';
         </a>
       </nav>
       <footer class="nav-footer" *ngIf="footer">
-        <a class="nav-item" *ngFor="let menuItem of footer" [routerLink]="[menuItem.route]" [routerLinkActive]="activeClass">
+        <a class="nav-item"
+           scuiBgHover="#2A00A0"
+           *ngFor="let menuItem of footer"
+           [routerLink]="[menuItem.route]"
+           [routerLinkActive]="activeClass">
           <span class="icon" [ngClass]="menuItem.iconClass"></span>
         </a>
       </footer>

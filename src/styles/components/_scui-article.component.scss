@@ -1,3 +1,5 @@
+@import  "../global/_variables";
+
 scui-article {
   width: 50%;
 }
@@ -5,7 +7,7 @@ scui-article {
 .scui-article {
   display: flex;
   flex-direction: row;
-  background-color: #dadada;
+  background-color: $col_4;
   padding: 6px;
   margin: 6px;
 
@@ -32,7 +34,7 @@ scui-article {
 
       a {
         font-size: 18px;
-        color: #0D0D0D;
+        color: $col_6;
       }
     }
 
@@ -48,7 +50,7 @@ scui-article {
       }
 
       a {
-        color: #000;
+        color: $col_3;
         text-decoration: none;
       }
     }
@@ -65,8 +67,8 @@ scui-article {
         align-items: center;
         justify-content: center;
         margin: 0 2px;
-        background-color: #bdbdbd;
-        color: #fff;
+        background-color: $col_5;
+        color: $col_2;
       }
     }
   }

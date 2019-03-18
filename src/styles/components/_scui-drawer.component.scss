@@ -1,3 +1,5 @@
+@import  "../global/_variables";
+
 .scui-drawer {
   min-height: 100vh;
   height: 100%;
@@ -6,8 +8,8 @@
   flex-direction: row;
 
   .drawer-inner {
-    background-color: #f8f8f5;
-    border-right: 2px solid #d4d3d3;
+    background-color: $col_7;
+    border-right: 2px solid $col_8;
     width: 100%;
   }
 
@@ -23,7 +25,7 @@
     width: 12px;
     min-height: 100vh;
     height: 100%;
-    background-color: #d4d3d3;
+    background-color: $col_8;
     cursor: pointer;
   }
 }

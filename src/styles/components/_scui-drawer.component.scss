@@ -4,6 +4,7 @@
   overflow: auto;
   display: flex;
   flex-direction: row;
+  max-width: 300px;
 
   .drawer-inner {
     background-color: #f8f8f5;

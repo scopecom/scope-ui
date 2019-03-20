@@ -6,6 +6,7 @@
   overflow: auto;
   display: flex;
   flex-direction: row;
+  max-width: 300px;
 
   .drawer-inner {
     background-color: $col_7;

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppMenu, AppMenuFooter, AppMenuLogo } from '../../../constants/app.menu';
 import { ScUiArticle } from '../../../interfaces';
+import { ArticleListStub } from '../../../constants/article.list';
 
 @Component({
   selector: 'scui-projects',

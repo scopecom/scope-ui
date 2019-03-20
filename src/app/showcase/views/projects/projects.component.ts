@@ -14,32 +14,7 @@ export class ProjectsComponent implements OnInit {
   footer = AppMenuFooter;
   menuItems = AppMenu;
   openImportArticle = false;
-  articles: ScUiArticle[] = [
-    {
-      title: 'Kress News',
-      description: 'Headline',
-      url: 'http://google.com',
-      date: '01/27/2019',
-      photoUrl: 'https://corporate.thescope.com/hs-fs/hubfs/homepage-images/discovery.png?width=336&name=discovery.png',
-      mode: 'default',
-    },
-    {
-      title: 'Kress News',
-      description: 'Headline',
-      url: 'http://google.com',
-      date: '01/27/2019',
-      photoUrl: 'https://corporate.thescope.com/hs-fs/hubfs/homepage-images/discovery.png?width=336&name=discovery.png',
-      mode: 'edit',
-    },
-    {
-      title: 'Kress News',
-      description: 'Headline',
-      url: 'http://google.com',
-      date: '01/27/2019',
-      photoUrl: 'https://corporate.thescope.com/hs-fs/hubfs/homepage-images/discovery.png?width=336&name=discovery.png',
-      mode: 'delete',
-    }
-  ];
+  articles = ArticleListStub;
 
   constructor() {
   }

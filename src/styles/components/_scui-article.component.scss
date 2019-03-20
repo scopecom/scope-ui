@@ -33,7 +33,10 @@ scui-article {
   }
 
   &.delete {
+    display: inherit;
     position: relative;
+    padding: 0;
+    background: $col_19;
     .bar {
       position: absolute;
       left: 0;
@@ -42,11 +45,15 @@ scui-article {
       width: 8px;
       background: $col_18;
     }
+    .content {
+      padding-left: 32px;
+      padding-top: 22px;
+      font-weight: 300;
+    }
     .header {
       height: 64px;
       width: 100%;
       background: $col_2;
-      margin-top: -8px;
       padding-left: 32px;
       color: $col_18;
       padding-top: 17px;
@@ -54,6 +61,26 @@ scui-article {
         font-size: 30px;
         vertical-align: -8px;
         margin-right: 10px;
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 6px;
+      right: -8px;
+      font-size: 13px;
+      padding: 9px 24px;
+      .btn {
+        color: $col_2;
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px 21px;
+        &.cancel {
+          background: $col_20;
+        }
+        &.remove {
+          margin-left: 8px;
+          background: $col_17;
+        }
       }
     }
   }

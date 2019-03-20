@@ -5,6 +5,8 @@ import { ScUiArticle } from '../../interfaces';
   selector: 'scui-article',
   template: `
     <article class="scui-article">
+
+
       <article class="delete" *ngIf="article.mode === 'delete'">
         <div class="bar"></div>
         <div class="header">
@@ -14,9 +16,16 @@ import { ScUiArticle } from '../../interfaces';
           </div>
         </div>
         <div class="content">
+          <div>Do you really want to remove this imported article?</div>
+        </div>
 
+        <div class="footer">
+          <div class="btn cancel">CANCEL</div>
+          <div class="btn remove">REMOVE</div>
         </div>
       </article>
+
+
       <article class="edit" *ngIf="article.mode === 'edit'">
         <figure [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="scui-article-img">
           <div class="img"></div>

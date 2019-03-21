@@ -2,23 +2,24 @@
 @import "grid/index";
 @import "typography/index";
 @import "components/index";
+@import "./global/_variables";
 
 // todo: move this to appropriate files
 
 .scui-content {
-  background-color: #ecf0f1;
+  background-color: $col_11;
 }
 
 .section-title {
   font-size: 1.25rem;
   font-family: sans-serif;
   margin-bottom: 10px;
-  color: #212121;
+  color: $col_12;
 }
 
 .submenu {
   font-family: sans-serif;
-  color: #979797;
+  color: $col_13;
 
   .submenu-title {
     font-size: 0.875rem;

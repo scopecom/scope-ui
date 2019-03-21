@@ -1,30 +1,33 @@
 <div class="scui-main-container">
-  <div class="scui-content">
-    <div class="scui-container">
-      <div class="scui-content">
-        <div class="scui-row">
-          <scui-article *ngFor="let article of articles" [article]="article" (articleImport)="openImportArticle = true;"></scui-article>
-        </div>
-      </div>
-    </div>
-  </div>
-  <scui-drawer [collapse]="false" [drawerPosition]="'right'" [drawerOpen]="openImportArticle" cssClass="article-menu">
-    <div class="import-progress"></div>
-    <section class="article-import">
-      <header class="article-import-header">
-        <div class="tab-nav">
-          <a class="tab">TAB 1</a>
-          <a class="tab">TAB 2</a>
-        </div>
+  <scui-drawer [collapse]="true" [drawerOpen]="true">
+    <section class="scui-submenu">
+      <header class="submenu-header">
+        <h1 class="submenu-title">Library</h1>
       </header>
-      <div class="article-import-content">
-        <textarea rows="10" placeholder="Your Comment..."></textarea>
-      </div>
-      <div class="article-import-actions">
-        <button (click)="openImportArticle = false;">Cancel</button>
-        <button>Import</button>
-      </div>
+      <hr>
+      <nav class="submenu-nav">
+        <h2 class="submenu-nav-title">MY PROJECTS</h2>
+        <ul class="submenu-nav-items">
+          <li class="submenu-nav-item">
+            <a>All</a>
+          </li>
+          <li *ngFor="let item of submenu" class="submenu-nav-item">
+            <a routerLink="project/{{item.id}}">
+              <span class="icon icon-app-store"></span>
+              <span class="submenu-nav-label">{{item.name}}</span>
+              <span class="submenu-nav-actions">
+                <button class="icon-btn-empty"><span class="icon icon-c-delete"></span></button>
+                <button class="icon-btn-empty"><span class="icon icon-settings-gear"></span></button>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </section>
   </scui-drawer>
+  <div class="scui-content">
+    <div class="scui-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
-

@@ -10,11 +10,20 @@ import { ArticleListStub } from '../../../constants/article.list';
   encapsulation: ViewEncapsulation.None
 })
 export class ProjectsComponent implements OnInit {
-  logo = AppMenuLogo;
-  footer = AppMenuFooter;
-  menuItems = AppMenu;
-  openImportArticle = false;
-  articles = ArticleListStub;
+  submenu = [
+    {
+      name: 'Kampagne expovina',
+      id: 1
+    },
+    {
+      name: 'Sales - Product Update',
+      id: 2
+    },
+    {
+      name: 'Intern 03/19',
+      id: 3
+    }
+  ]
 
   constructor() {
   }

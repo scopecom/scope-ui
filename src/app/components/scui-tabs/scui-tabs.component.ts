@@ -3,8 +3,12 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'scui-tabs',
   template: `
-    <section>
-      <h1>gaga</h1>
+    <section class="scui-tabs">
+      <div class="tabs">
+        <div class="tab">ITEM 1</div>
+        <div class="tab">ITEM 2</div>
+        <div class="tab">ITEM 3</div>
+      </div>
     </section>
   `,
   encapsulation: ViewEncapsulation.None

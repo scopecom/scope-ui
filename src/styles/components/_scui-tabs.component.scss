@@ -1,0 +1,12 @@
+.scui-tabs {
+  //background: red;
+  .tabs {
+    height: 32px;
+    margin-left: 64px;
+    border-bottom: 1px solid gray;
+    .tab {
+      display: inline-block;
+      width: 75px;
+    }
+  }
+}

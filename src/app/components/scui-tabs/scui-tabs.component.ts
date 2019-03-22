@@ -1,13 +1,19 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Tabs } from '../../constants/tabs';
 
 @Component({
   selector: 'scui-tabs',
   template: `
     <section class="scui-tabs">
       <div class="tabs">
-        <div class="tab">ITEM 1</div>
-        <div class="tab">ITEM 2</div>
-        <div class="tab">ITEM 3</div>
+        <div *ngFor="let key of objectKeys(tabs)"
+             [ngClass]="{'active-tab': key == activeTab}"
+             (click)="setActiveTab(key)"
+             class="tab">{{ tabs[key].title }}
+        </div>
+        <div class="border-wrap">
+          <div [ngStyle]="{left: activeTab*75 + 'px' }" class="border-bottom"></div>
+        </div>
       </div>
     </section>
   `,
@@ -15,12 +21,19 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ScuiTabsComponent implements OnInit {
 
-  @Input() activeClass = 'active-tab';
+  objectKeys = Object.keys;
+  activeTab = Number;
+  tabs = Tabs;
 
   constructor() {
   }
 
   ngOnInit() {
+    this.setActiveTab(0);
+  }
+
+  setActiveTab(key) {
+    this.activeTab = key;
   }
 
 }

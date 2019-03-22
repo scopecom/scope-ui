@@ -8,8 +8,8 @@ const routes: Routes = [
     component: DetailLayoutComponent,
     children: [
       {
-        path: 'projects',
-        loadChildren: '../../views/projects/projects.module#ProjectsModule'
+        path: 'project/:projectId',
+        loadChildren: '../../views/project-detail/project-detail.module#ProjectDetailModule'
       }
     ]
   }

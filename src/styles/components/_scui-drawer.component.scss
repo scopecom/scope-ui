@@ -10,7 +10,6 @@
 
   .drawer-inner {
     background-color: $col_7;
-    border-right: 2px solid $col_8;
     width: 100%;
   }
 
@@ -23,10 +22,14 @@
   }
 
   .drawer-collapse {
-    width: 12px;
+    width: 8px;
     min-height: 100vh;
     height: 100%;
     background-color: $col_8;
     cursor: pointer;
+
+    &:hover {
+      background-color: #3399ff;
+    }
   }
 }

@@ -3,12 +3,10 @@
     <div class="scui-container">
       <div class="scui-content">
         <div class="scui-row cards-wrap">
-          <div *ngFor="let btn of buttons" >
-            <scui-card [icon]="btn.icon"
-                       [description]="btn.description"
-                       [name]="btn.name">
-            </scui-card>
-          </div>
+          <scui-card *ngFor="let btn of buttons" [icon]="btn.icon"
+                     [description]="btn.description"
+                     [name]="btn.name">
+          </scui-card>
         </div>
       </div>
     </div>

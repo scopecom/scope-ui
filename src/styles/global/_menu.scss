@@ -1,4 +1,68 @@
 .scui-submenu {
-  padding: 24px 16px;
+  padding: 0;
   min-width: 280px;
+
+  .submenu-header, .submenu-nav {
+    padding: 20px;
+  }
+
+  .submenu-title {
+    font-size: 20px;
+    color: #0D0D0D;
+    font-weight: 700;
+  }
+
+  .submenu-nav-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #AEAEAE;
+    margin-top: 15px;
+  }
+
+  .submenu-nav-items {
+    margin-top: 20px;
+  }
+
+  .submenu-nav-item {
+    font-weight: 400;
+    font-size: 15px;
+    margin: 10px 0;
+
+    .icon {
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    a {
+      color: #6B6B6B;
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      line-height: 18px;
+    }
+
+    &:hover {
+      a {
+        color: #3399FF;
+      }
+
+      .submenu-nav-actions {
+        display: flex;
+      }
+    }
+  }
+
+  .submenu-nav-actions {
+    margin-left: auto;
+    display: none;
+
+    .icon-btn-empty {
+      color: #AEAEAE;
+    }
+  }
+
+  hr {
+    margin: 0;
+  }
 }

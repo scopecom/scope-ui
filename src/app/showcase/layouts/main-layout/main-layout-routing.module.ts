@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: '../../views/start/start.module#StartModule',
+      },
+      {
+        path: 'library',
+        loadChildren: '../../views/projects/projects.module#ProjectsModule',
       }
     ]
   }

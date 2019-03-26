@@ -1,0 +1,48 @@
+.article-menu {
+  position: fixed;
+  min-width: 300px;
+  top: 0;
+  right: 0;
+}
+
+.import-progress {
+  background-color: #d4d3d3;
+  height: 8px;
+}
+
+.article-import {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .article-import-header {
+
+  }
+
+  .tab-nav {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 8px solid #000;
+
+    .tab {
+      color: #000;
+      padding: 6px 20px;
+      background: #000;
+      margin-right: 5px;
+    }
+  }
+
+  .article-import-content {
+    margin-top: 30px;
+
+    textarea {
+      width: 100%;
+      resize: vertical;
+    }
+  }
+
+  .article-import-actions {
+    margin-top: auto;
+  }
+}

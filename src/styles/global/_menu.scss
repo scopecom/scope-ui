@@ -26,10 +26,33 @@
   }
 
   .submenu-nav-title {
+    position: relative;
     font-weight: 700;
     font-size: 14px;
     color: $col_28;
-    margin: 38px 0 20px 24px;
+    margin: 28px 0 -13px 0;
+    padding-left: 24px;
+    height: 40px;
+    cursor: pointer;
+    padding-top: 14px;
+    .icon {
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      display: none;
+      color: $col_3;
+      opacity: 0.6;
+      font-size: 16px;
+    }
+    &:hover {
+      background: $col_14;
+      .icon {
+        display: inline-block;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   .submenu-nav-items {
@@ -37,7 +60,8 @@
   }
 
   .submenu-divider {
-    background: $col_29;
+    height: 1px;
+    border-top: 1px solid $col_29;
   }
 
   .color_01 {
@@ -55,14 +79,20 @@
     padding: 12px 12px 0px 24px;
     cursor: pointer;
     &.active {
-      a span{
+      a span {
         color: $col_26 !important;
       }
     }
     &:hover {
       background: $col_14;
-      .submenu-nav-actions{
+      .submenu-nav-actions {
         display: flex;
+        .icon {
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+          }
+        }
       }
     }
     .icon2 {
@@ -75,9 +105,8 @@
     }
     .icon1 {
       color: $col_24;
-      font-weight: 600;
-      font-size: 14px;
-      margin-right: 4px;
+      font-size: 16px;
+      margin-right: 8px;
     }
 
     a {

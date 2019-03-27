@@ -4,9 +4,12 @@
       <header class="submenu-header">
         <h1 class="submenu-title">Projects</h1>
       </header>
-      <hr class="submenu-divider">
+      <div class="submenu-divider"></div>
       <nav class="submenu-nav">
-        <h2 class="submenu-nav-title color_01">MY PROJECTS ({{ submenu.length }})</h2>
+        <h2 class="submenu-nav-title color_01">
+          MY PROJECTS ({{ submenu.length }})
+          <span class="icon icon-e-add"></span>
+        </h2>
         <ul class="submenu-nav-items">
           <div class="nav-header-label">All</div>
           <li (click)="activateClass(item)"
@@ -24,9 +27,12 @@
           </li>
         </ul>
       </nav>
-      <hr class="submenu-divider">
+      <div class="submenu-divider"></div>
       <nav class="submenu-nav">
-        <h2 class="submenu-nav-title color_01">COMPANY PROJECTS ({{ submenu.length }})</h2>
+        <h2 class="submenu-nav-title color_01">
+          COMPANY PROJECTS ({{ submenu.length }})
+          <span class="icon icon-e-add"></span>
+        </h2>
         <ul class="submenu-nav-items">
           <div class="nav-header-label">All</div>
           <li (click)="activateClass(item)"
@@ -44,7 +50,7 @@
           </li>
         </ul>
       </nav>
-      <hr class="submenu-divider">
+      <div class="submenu-divider"></div>
     </section>
   </scui-drawer>
   <div class="scui-content">

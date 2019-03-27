@@ -5,6 +5,7 @@ import { StartComponent } from './start.component';
 import { ScUiNavModule } from '../../../components/scui-nav/scui-nav.module';
 import { ScUiDrawerModule } from '../../../components/scui-drawer/scui-drawer.module';
 import { ScUiCardModule } from '../../../components/scui-card/scui-card.module';
+import { ScuiTabsModule } from '../../../components/scui-tabs/scui-tabs.module';
 
 @NgModule({
   declarations: [StartComponent],
@@ -13,7 +14,8 @@ import { ScUiCardModule } from '../../../components/scui-card/scui-card.module';
     StartRoutingModule,
     ScUiNavModule,
     ScUiDrawerModule,
-    ScUiCardModule
+    ScUiCardModule,
+    ScuiTabsModule
   ]
 })
 export class StartModule {

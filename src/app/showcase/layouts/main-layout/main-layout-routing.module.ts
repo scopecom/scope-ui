@@ -12,7 +12,7 @@ const routes: Routes = [
         loadChildren: '../../views/start/start.module#StartModule',
       },
       {
-        path: 'library',
+        path: 'projects',
         loadChildren: '../../views/projects/projects.module#ProjectsModule',
       }
     ]

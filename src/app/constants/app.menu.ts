@@ -12,8 +12,8 @@ export const AppMenu: ScUiMenuItem[] = [
     iconClass: 'icon-book-39'
   },
   {
-    name: 'Start',
-    route: '/test',
+    name: 'Projects',
+    route: '/projects',
     iconClass: 'icon-app-store'
   },
   {

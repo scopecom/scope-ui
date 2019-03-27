@@ -1,0 +1,30 @@
+@import "../global/_variables";
+
+.scui-tabs {
+  .tabs {
+    height: 33px;
+    margin-left: 64px;
+    border-bottom: 1px solid $col_29;
+    .tab {
+      display: inline-block;
+      width: 75px;
+      cursor: pointer;
+    }
+  }
+  .active-tab {
+    color: gray;
+  }
+  .border-wrap {
+    position: relative;
+    .border-bottom {
+      width: 75px;
+      display: inline-block;
+      background: $col_3;
+      position: absolute;
+      height: 5px;
+      bottom: -17px;
+      transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+  }
+
+}

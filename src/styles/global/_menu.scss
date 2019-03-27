@@ -1,55 +1,92 @@
+@import "_variables";
+
 .scui-submenu {
   padding: 0;
   min-width: 280px;
 
-  .submenu-header, .submenu-nav {
-    padding: 20px;
+  .submenu-nav {
+    padding: 0 0 16px 0;
+  }
+  .submenu-header {
+    padding: 22px;
+    height: 64px;
+  }
+
+  .nav-header-label {
+    font-weight: 400;
+    font-size: 15px;
+    height: 40px;
+    padding: 12px 12px 0px 24px;
   }
 
   .submenu-title {
     font-size: 20px;
-    color: #0D0D0D;
-    font-weight: 700;
+    color: $col_6;
+    font-weight: 600;
   }
 
   .submenu-nav-title {
     font-weight: 700;
     font-size: 14px;
-    color: #AEAEAE;
-    margin-top: 15px;
+    color: $col_28;
+    margin: 38px 0 20px 24px;
   }
 
   .submenu-nav-items {
     margin-top: 20px;
   }
 
+  .submenu-divider {
+    background: $col_29;
+  }
+
+  .color_01 {
+    color: $col_23 !important;
+  }
+
+  .submenu-nav-label {
+    color: $col_24 !important;
+  }
+
   .submenu-nav-item {
     font-weight: 400;
     font-size: 15px;
-    margin: 10px 0;
-
-    .icon {
+    height: 40px;
+    padding: 12px 12px 0px 24px;
+    cursor: pointer;
+    &.active {
+      a span{
+        color: $col_26 !important;
+      }
+    }
+    &:hover {
+      background: $col_14;
+      .submenu-nav-actions{
+        display: flex;
+      }
+    }
+    .icon2 {
       font-weight: 600;
+      margin-left: 4px;
+      color: $col_24;
+      font-size: 14px;
+      padding: 2px;
+      cursor: pointer;
+    }
+    .icon1 {
+      color: $col_24;
+      font-weight: 600;
+      font-size: 14px;
       margin-right: 4px;
     }
 
     a {
-      color: #6B6B6B;
+      color: $col_27;
       text-decoration: none;
       display: flex;
       flex-direction: row;
       width: 100%;
       line-height: 18px;
-    }
-
-    &:hover {
-      a {
-        color: #3399FF;
-      }
-
-      .submenu-nav-actions {
-        display: flex;
-      }
     }
   }
 
@@ -58,7 +95,7 @@
     display: none;
 
     .icon-btn-empty {
-      color: #AEAEAE;
+      color: $col_28;
     }
   }
 

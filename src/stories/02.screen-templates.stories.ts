@@ -1,5 +1,4 @@
 import { moduleMetadata, storiesOf } from '@storybook/angular';
-import { ButtonComponent } from '../app/components/button/button.module';
 import { CommonModule } from '@angular/common';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ScUiNavComponent } from '../app/components/scui-nav/scui-nav.component';

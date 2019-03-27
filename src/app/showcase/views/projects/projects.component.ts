@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { SubmenuStub1, SubmenuStub2 } from '../../../constants/submenu';
 
 @Component({
   selector: 'scui-projects',
@@ -7,35 +8,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ProjectsComponent implements OnInit {
-  submenu = [
-    {
-      name: 'Kampagne expovina',
-      id: 1
-    },
-    {
-      name: 'Sales - Product Update',
-      id: 2
-    },
-    {
-      name: 'Intern 03/19',
-      id: 3
-    }
-  ];
+  submenu = SubmenuStub1;
 
-  submenu2 = [
-    {
-      name: 'Company Project 1',
-      id: 1
-    },
-    {
-      name: 'Company Project 2',
-      id: 2
-    },
-    {
-      name: 'Company Project 3',
-      id: 3
-    }
-  ];
+  submenu2 = SubmenuStub2;
 
   constructor() {
   }

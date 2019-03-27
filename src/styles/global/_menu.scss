@@ -17,6 +17,13 @@
     font-size: 15px;
     height: 40px;
     padding: 12px 12px 0px 24px;
+    cursor: pointer;
+    &:hover {
+      background: $col_14;
+    }
+    &.active {
+      color: $col_26 !important;
+    }
   }
 
   .submenu-title {

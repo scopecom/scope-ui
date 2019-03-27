@@ -11,7 +11,10 @@
           <span class="icon icon-e-add"></span>
         </h2>
         <ul class="submenu-nav-items">
-          <div class="nav-header-label">All</div>
+          <div (click)="activateFilter1()"
+               [ngClass]="{'active': filterisActive_1}"
+               class="nav-header-label">All
+          </div>
           <li (click)="activateClass(item)"
               [ngClass]="{'active': item.active}"
               *ngFor="let item of submenu"
@@ -34,7 +37,10 @@
           <span class="icon icon-e-add"></span>
         </h2>
         <ul class="submenu-nav-items">
-          <div class="nav-header-label">All</div>
+          <div (click)="activateFilter2()"
+               [ngClass]="{'active': filterisActive_2}"
+               class="nav-header-label">All
+          </div>
           <li (click)="activateClass(item)"
               [ngClass]="{'active': item.active}"
               *ngFor="let item of submenu2"

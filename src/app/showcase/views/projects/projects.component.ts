@@ -37,10 +37,21 @@ export class ProjectsComponent implements OnInit {
     }
   ];
 
+  filterisActive_1 = false;
+  filterisActive_2 = false;
+
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  activateFilter1() {
+    this.filterisActive_1 = !this.filterisActive_1;
+  }
+
+  activateFilter2() {
+    this.filterisActive_2 = !this.filterisActive_2;
   }
 
   activateClass(item) {

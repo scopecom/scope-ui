@@ -2,27 +2,49 @@
   <scui-drawer [collapse]="true" [drawerOpen]="true">
     <section class="scui-submenu">
       <header class="submenu-header">
-        <h1 class="submenu-title">Library</h1>
+        <h1 class="submenu-title">Projects</h1>
       </header>
-      <hr>
+      <hr class="submenu-divider">
       <nav class="submenu-nav">
-        <h2 class="submenu-nav-title">MY PROJECTS</h2>
+        <h2 class="submenu-nav-title color_01">MY PROJECTS ({{ submenu.length }})</h2>
         <ul class="submenu-nav-items">
-          <li class="submenu-nav-item">
-            <a>All</a>
-          </li>
-          <li *ngFor="let item of submenu" class="submenu-nav-item">
+          <div class="nav-header-label">All</div>
+          <li (click)="activateClass(item)"
+              [ngClass]="{'active': item.active}"
+              *ngFor="let item of submenu"
+              class="submenu-nav-item">
             <a routerLink="project/{{item.id}}">
-              <span class="icon icon-app-store"></span>
+              <span class="icon icon1 icon-app-store"></span>
               <span class="submenu-nav-label">{{item.name}}</span>
               <span class="submenu-nav-actions">
-                <button class="icon-btn-empty"><span class="icon icon-c-delete"></span></button>
-                <button class="icon-btn-empty"><span class="icon icon-settings-gear"></span></button>
+                <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
+                <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
               </span>
             </a>
           </li>
         </ul>
       </nav>
+      <hr class="submenu-divider">
+      <nav class="submenu-nav">
+        <h2 class="submenu-nav-title color_01">COMPANY PROJECTS ({{ submenu.length }})</h2>
+        <ul class="submenu-nav-items">
+          <div class="nav-header-label">All</div>
+          <li (click)="activateClass(item)"
+              [ngClass]="{'active': item.active}"
+              *ngFor="let item of submenu2"
+              class="submenu-nav-item">
+            <a routerLink="project/{{item.id}}">
+              <span class="icon icon1 icon-app-store"></span>
+              <span class="submenu-nav-label">{{item.name}}</span>
+              <span class="submenu-nav-actions">
+                <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
+                <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <hr class="submenu-divider">
     </section>
   </scui-drawer>
   <div class="scui-content">

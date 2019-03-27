@@ -1,58 +1,61 @@
-import { storiesOf } from '@storybook/angular';
-import { ButtonComponent } from '../app/components/button/button.module';
+import { moduleMetadata, storiesOf } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { ScUiArticleComponent } from '../app/components/scui-article/scui-article.component';
+import { ArticleListStub } from '../app/constants/article.list';
 
-storiesOf('Data Display/Table', module)
-  .add('test', () => ({
-    component: ButtonComponent,
+storiesOf('Data Display', module)
+  .addDecorator(
+    moduleMetadata({
+      imports: [CommonModule],
+      declarations: [ScUiArticleComponent]
+    })
+  )
+  .add('Article Default', () => ({
+    template: `<scui-article [article]="articleList[0]"></scui-article>`,
     props: {
-      text: '😀 😎 👍 💯',
+      articleList: ArticleListStub,
     },
-  }));
-
-storiesOf('Data Display/Grids/Warning, Error & Confirmation', module)
-  .add('test', () => ({
-    component: ButtonComponent,
+  }))
+  .add('Article Edit Mode', () => ({
+    template: `<scui-article [article]="articleList[1]"></scui-article>`,
     props: {
-      text: '😀 😎 👍 💯',
+      articleList: ArticleListStub,
     },
-  }));
-
-storiesOf('Data Display/Grids/Modality', module)
-  .add('test', () => ({
-    component: ButtonComponent,
+  }))
+  .add('Article Delete Mode', () => ({
+    template: `<scui-article [article]="articleList[2]"></scui-article>`,
     props: {
-      text: '😀 😎 👍 💯',
+      articleList: ArticleListStub,
     },
-  }));
-
-storiesOf('Data Display/Grids/Style', module)
-  .add('test', () => ({
-    component: ButtonComponent,
+  }))
+  .add('Article in Container', () => ({
+    template: `
+    <div class="scui-content">
+      <div class="scui-container">
+        <div class="scui-content">
+          <div class="scui-row">
+            <scui-article [article]="articleList[0]"></scui-article>
+          </div>
+        </div>
+      </div>
+    </div>`,
     props: {
-      text: '😀 😎 👍 💯',
-    },
-  }));
-
-storiesOf('Data Display/Color', module)
-  .add('test', () => ({
-    component: ButtonComponent,
+      articleList: ArticleListStub,
+    }
+  }))
+  .add('Article List', () => ({
+    template: `
+    <div class="scui-content">
+      <div class="scui-container">
+        <div class="scui-content">
+          <div class="scui-row">
+            <scui-article *ngFor="let article of articleList" [article]="article"></scui-article>
+          </div>
+        </div>
+      </div>
+    </div>
+    `,
     props: {
-      text: '😀 😎 👍 💯',
-    },
-  }));
-
-storiesOf('Data Display/Typography', module)
-  .add('test', () => ({
-    component: ButtonComponent,
-    props: {
-      text: '😀 😎 👍 💯',
-    },
-  }));
-
-storiesOf('Data Display/Iconography', module)
-  .add('test', () => ({
-    component: ButtonComponent,
-    props: {
-      text: '😀 😎 👍 💯',
-    },
+      articleList: ArticleListStub,
+    }
   }));

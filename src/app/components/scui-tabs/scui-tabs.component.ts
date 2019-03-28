@@ -12,7 +12,9 @@ import { Tabs } from '../../constants/tabs';
              class="tab">{{ tab.title }}
         </div>
         <div class="border-wrap">
-          <div [ngStyle]="{left: activeTab * 75 + 'px' }" class="border-bottom"></div>
+          <div [ngStyle]="{left: tabs[activeTab].underlineLeft, width:tabs[activeTab].underlineWidth }"
+               class="border-bottom">
+          </div>
         </div>
       </div>
     </section>

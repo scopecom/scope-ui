@@ -1,17 +1,17 @@
 export const Tabs = [
   {
-    title: 'ITEM 1',
+    title: 'FACEBOOK',
+    underlineWidth: '79px',
+    underlineLeft: '0'
   },
   {
-    title: 'ITEM 2',
+    title: 'LINKEDIN',
+    underlineWidth: '65px',
+    underlineLeft: '103px'
   },
   {
-    title: 'ITEM 3',
-  },
-  {
-    title: 'ITEM 4',
-  },
-  {
-    title: 'ITEM 5',
+    title: 'TWITTER',
+    underlineWidth: '63px',
+    underlineLeft: '194px'
   }
 ];

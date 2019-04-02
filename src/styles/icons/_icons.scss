@@ -187,6 +187,16 @@ $icon-google-wallet: unicode(eab5);
 $icon-google-drive: unicode(eab6);
 $icon-facebook: unicode(eab7);
 $icon-facebook-f: unicode(eab8);
+$icon-storybook-glypg: unicode(eab9);
+$icon-jira-glyph: unicode(eaba);
+$icon-home: unicode(eabb);
+$icon-menu-horz: unicode(eabc);
+$icon-menu-vert: unicode(eabd);
+$icon-t-delete-glyph: unicode(eabe);
+$icon-t-box-glyph: unicode(eabf);
+$icon-settings-gear-glyph: unicode(eac0);
+$icon-t-remove-glyph: unicode(eac1);
+$icon-t-add-glyph: unicode(eac2);
 $icon-uea44-: unicode(ea01);
 
 .icon-add-file::before {
@@ -915,6 +925,46 @@ $icon-uea44-: unicode(ea01);
 
 .icon-facebook-f::before {
   content: $icon-facebook-f;
+}
+
+.icon-storybook-glypg::before {
+  content: $icon-storybook-glypg;
+}
+
+.icon-jira-glyph::before {
+  content: $icon-jira-glyph;
+}
+
+.icon-home::before {
+  content: $icon-home;
+}
+
+.icon-menu-horz::before {
+  content: $icon-menu-horz;
+}
+
+.icon-menu-vert::before {
+  content: $icon-menu-vert;
+}
+
+.icon-t-delete-glyph::before {
+  content: $icon-t-delete-glyph;
+}
+
+.icon-t-box-glyph::before {
+  content: $icon-t-box-glyph;
+}
+
+.icon-settings-gear-glyph::before {
+  content: $icon-settings-gear-glyph;
+}
+
+.icon-t-remove-glyph::before {
+  content: $icon-t-remove-glyph;
+}
+
+.icon-t-add-glyph::before {
+  content: $icon-t-add-glyph;
 }
 
 .icon-uea44-::before {

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShowcaseModule } from './showcase/showcase.module';
+import { MainLayoutModule } from './showcase/layouts/main-layout/main-layout.module';
+import { DetailLayoutModule } from './showcase/layouts/detail-layout/detail-layout.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ShowcaseModule } from './showcase/showcase.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ShowcaseModule
+    MainLayoutModule,
+    DetailLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

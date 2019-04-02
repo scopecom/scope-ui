@@ -1,13 +1,15 @@
+@import  "../global/_variables";
+
 .scui-drawer {
   min-height: 100vh;
   height: 100%;
   overflow: auto;
   display: flex;
   flex-direction: row;
+  max-width: 300px;
 
   .drawer-inner {
-    background-color: #f8f8f5;
-    border-right: 2px solid #d4d3d3;
+    background-color: $col_7;
     width: 100%;
   }
 
@@ -20,10 +22,14 @@
   }
 
   .drawer-collapse {
-    width: 12px;
+    width: 8px;
     min-height: 100vh;
     height: 100%;
-    background-color: #d4d3d3;
+    background-color: $col_8;
     cursor: pointer;
+
+    &:hover {
+      background-color: #3399ff;
+    }
   }
 }

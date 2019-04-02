@@ -1,3 +1,5 @@
+@import "../../../../styles/global/_variables";
+
 .article-menu {
   position: fixed;
   min-width: 300px;
@@ -6,7 +8,7 @@
 }
 
 .import-progress {
-  background-color: #d4d3d3;
+  background-color: $col_8;
   height: 8px;
 }
 
@@ -16,19 +18,15 @@
   flex-direction: column;
   height: 100%;
 
-  .article-import-header {
-
-  }
-
   .tab-nav {
     display: flex;
     flex-direction: row;
-    border-bottom: 8px solid #000;
+    border-bottom: 8px solid $col_3;
 
     .tab {
-      color: #000;
+      color: $col_3;
       padding: 6px 20px;
-      background: #000;
+      background: $col_3;
       margin-right: 5px;
     }
   }

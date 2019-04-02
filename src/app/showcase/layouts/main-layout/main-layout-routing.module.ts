@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ShowcaseComponent } from './showcase.component';
+import { MainLayoutComponent } from './main-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ShowcaseComponent,
+    component: MainLayoutComponent,
     children: [
       {
-        path: 'start',
-        loadChildren: './views/start/start.module#StartModule',
+        path: 'dashboard',
+        loadChildren: '../../views/start/start.module#StartModule',
       },
       {
         path: 'projects',
-        loadChildren: './views/projects/projects.module#ProjectsModule'
+        loadChildren: '../../views/projects/projects.module#ProjectsModule',
       }
     ]
   }
@@ -23,5 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ShowcaseRoutingModule {
-}
+export class MainLayoutRoutingModule { }

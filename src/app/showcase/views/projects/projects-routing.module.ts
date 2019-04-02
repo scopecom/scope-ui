@@ -5,7 +5,16 @@ import { ProjectsComponent } from './projects.component';
 const routes: Routes = [
   {
     path: '',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    children: [
+      {
+        path: ''
+      },
+      {
+        path: 'project/:projectId',
+        loadChildren: '../../views/project-detail/project-detail.module#ProjectDetailModule'
+      }
+    ]
   }
 ];
 

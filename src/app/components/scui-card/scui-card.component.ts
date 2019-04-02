@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
       <div [ngClass]="{active:active}"
            (mouseover)="changeStyle($event)"
            (mouseout)="changeStyle($event)"
+           scuiBgHover
            class="scui-card">
-        <div class="overlay"></div>
         <div class="content">
           <div class="name">{{ name}}</div>
           <div class="description">{{ description}}</div>

@@ -4,7 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'start',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
+  },
+  {
+    path: 'start',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   }
 ];

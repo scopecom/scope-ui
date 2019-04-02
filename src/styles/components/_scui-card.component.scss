@@ -1,9 +1,9 @@
-$col_1: #2f00f3;
-$col_2: #fff;
-$col_3: #000;
+@import  "../global/_variables";
 
 .cards-wrap {
   justify-content: center;
+  padding-left: 41px;
+
 }
 
 .scui-card {
@@ -13,25 +13,12 @@ $col_3: #000;
   margin-bottom: 16px;
   height: 224px;
   background: $col_2;
+  border-left: 8px solid $col_1;
 
   &.active {
-    .overlay {
-      width: 100%;
-    }
-
     .content {
       color: $col_2;
     }
-  }
-
-  .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    transition: width 0.15s linear;
-    background: $col_1;
   }
 
   .content {
@@ -39,6 +26,7 @@ $col_3: #000;
     left: 28px;
     right: 23px;
     bottom: 22px;
+    z-index: 1;
     color: $col_3;
 
     .name {

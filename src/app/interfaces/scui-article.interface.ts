@@ -5,4 +5,5 @@ export interface ScUiArticle {
   photoUrl?: string;
   description?: string;
   date?: string;
+  mode?: string;
 }

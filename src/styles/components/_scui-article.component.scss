@@ -1,38 +1,129 @@
+@import "../global/_variables";
+
 scui-article {
-  width: 50%;
+  //margin: 40px;
+  //width: 520px;
 }
 
-.scui-article {
-  display: flex;
-  flex-direction: row;
-  background-color: #dadada;
-  padding: 6px;
-  margin: 6px;
+.default, .edit, .delete {
+  width: 392px;
+  height: 392px;
+  position: relative;
+}
+
+.scui-article article {
+  padding: 16px;
+  &.default {
+    background-color: $col_2;
+  }
+
+  &.edit {
+    background-color: $col_15;
+    .scui-article-footer {
+      margin-right: 0 !important;
+      margin-bottom: -7px;
+      .icon {
+        font-weight: 700;
+      }
+    }
+    .icon-btn {
+      background: $col_16;
+      margin-left: 9px;
+      // cursor: pointer;
+      padding: 9px 10px;
+      color: $col_2;
+    }
+  }
+
+  &.delete {
+    display: inherit;
+    position: relative;
+    padding: 0;
+    background: $col_14;
+    .bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: $col_18;
+    }
+    .content {
+      padding-left: 32px;
+      padding-top: 22px;
+      font-weight: 300;
+    }
+    .header {
+      height: 64px;
+      width: 100%;
+      background: $col_2;
+      padding-left: 32px;
+      color: $col_18;
+      padding-top: 17px;
+      .icon {
+        font-size: 30px;
+        vertical-align: -8px;
+        margin-right: 10px;
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 6px;
+      right: -8px;
+      font-size: 13px;
+      padding: 9px 24px;
+      .btn {
+        color: $col_2;
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px 21px;
+        &.cancel {
+          background: $col_20;
+        }
+        &.remove {
+          margin-left: 8px;
+          background: $col_17;
+        }
+      }
+    }
+  }
 
   .scui-article-img {
-    flex: .38;
-    margin-right: 6px;
-
-    img {
+    height: 190px;
+    background: $col_21;
+    .img {
       width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
 
   }
 
   .scui-article-content {
-    flex: .62;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    height: 186px;
 
     .scui-article-header {
       display: flex;
       justify-content: space-between;
-      font-size: 16px;
-      margin-bottom: 20px;
-
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-weight: 300;
+      .icon {
+        font-weight: 100;
+        font-size: 18px;
+        color: gray;
+        cursor: none;
+      }
       a {
         font-size: 18px;
-        color: #0D0D0D;
+        color: $col_6;
       }
     }
 
@@ -40,33 +131,54 @@ scui-article {
       h3 {
         font-size: 14px;
         font-weight: bold;
-        margin-bottom: 10px;
+        line-height: 20px;
       }
 
       p {
         font-size: 16px;
+        line-height: 20px;
+        font-weight: 300;
       }
 
       a {
-        color: #000;
+        color: $col_3;
         text-decoration: none;
       }
     }
 
     .scui-article-footer {
-      margin-top: auto;
+      height: 40px;
       display: flex;
       justify-content: flex-end;
-
-      button {
-        font-size: 16px;
-        padding: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 2px;
-        background-color: #bdbdbd;
-        color: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px 16px;
+      border-top: 1px solid $col_21;
+      .icon {
+        font-size: 20px;
+      }
+      .article-add {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        border-left: 1px solid $col_21;
+        .icon {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        &:hover {
+          background: $col_21;
+          .icon {
+            color: rgba(0, 0, 0, 1);
+          }
+        }
       }
     }
   }

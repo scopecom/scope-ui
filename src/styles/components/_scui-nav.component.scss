@@ -1,6 +1,7 @@
+@import "../global/_variables";
+
 .scui-nav {
-  background-color: #f8f8f5;
-  border-right: 2px solid #d4d3d3;
+  background-color: $col_9;
   position: fixed;
   left: 0;
   top: 0;
@@ -9,41 +10,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height:665px;
 
   .nav-header {
-    margin-top: 20px;
-  }
-
-  .nav-items, .nav-footer {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-top: 150px;
-    align-items: center;
-
-    .nav-item {
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      border-radius: 50%;
-      height: 40px;
-      width: 40px;
-    }
+    margin-bottom: 9px;
   }
 
   .nav-footer {
-    margin-bottom: 24px;
-    flex: inherit;
+    position: absolute;
+    bottom: 24px;
   }
 
-  .icon {
-    color: #404040;
-    font-size: 24px;
+  .nav-items {
+    margin-top: 55px;
   }
 
   .active-nav {
-    background-color: #f9de3e;
+    .scui-overlay {
+      display: none;
+    }
   }
+
+  .icon {
+    z-index: 1;
+    color: $col_10;
+    font-size: 24px;
+  }
+
+  .nav-item {
+    background: $col_9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 64px !important;
+    width: 64px;
+    position: relative;
+    &.active-nav {
+      background-color: $col_10;
+      .icon {
+        color: white;
+      }
+    }
+  }
+
 }

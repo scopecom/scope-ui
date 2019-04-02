@@ -1,15 +1,18 @@
 @import "../global/_variables";
 
 scui-article {
-  margin: 40px;
-  width: 520px;
+  //margin: 40px;
+  //width: 520px;
+}
+
+.default, .edit, .delete {
+  width: 392px;
+  height: 392px;
+  position: relative;
 }
 
 .scui-article article {
-  display: flex;
-  flex-direction: row;
-  padding: 8px 18px 8px 8px;
-  min-height: 258px;
+  padding: 16px;
   &.default {
     background-color: $col_2;
   }
@@ -26,7 +29,7 @@ scui-article {
     .icon-btn {
       background: $col_16;
       margin-left: 9px;
-      cursor: pointer;
+      // cursor: pointer;
       padding: 9px 10px;
       color: $col_2;
     }
@@ -86,34 +89,37 @@ scui-article {
   }
 
   .scui-article-img {
-    flex: .38;
-    margin-right: 16px;
-
+    height: 190px;
+    background: $col_21;
     .img {
-      width: 243px;
-      margin-right: 16px;
-      background: green;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
 
   }
 
   .scui-article-content {
-    margin-top: 12px;
-    margin-bottom: 15px;
-    flex: .62;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    height: 186px;
 
     .scui-article-header {
       display: flex;
       justify-content: space-between;
       font-size: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-weight: 300;
       .icon {
         font-weight: 100;
-        font-size: 22px;
+        font-size: 18px;
         color: gray;
+        cursor: none;
       }
       a {
         font-size: 18px;
@@ -125,11 +131,12 @@ scui-article {
       h3 {
         font-size: 14px;
         font-weight: bold;
-        margin-bottom: 10px;
+        line-height: 20px;
       }
 
       p {
         font-size: 16px;
+        line-height: 20px;
         font-weight: 300;
       }
 
@@ -140,23 +147,39 @@ scui-article {
     }
 
     .scui-article-footer {
-      margin-top: auto;
+      height: 40px;
       display: flex;
       justify-content: flex-end;
-      margin-right: 3px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px 16px;
+      border-top: 1px solid $col_21;
       .icon {
         font-size: 20px;
       }
-      //button {
-      //  font-size: 16px;
-      //  padding: 8px;
-      //  display: flex;
-      //  align-items: center;
-      //  justify-content: center;
-      //  margin: 0 2px;
-      //  background-color: $col_5;
-      //  color: $col_2;
-      //}
+      .article-add {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        border-left: 1px solid $col_21;
+        .icon {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        &:hover {
+          background: $col_21;
+          .icon {
+            color: rgba(0, 0, 0, 1);
+          }
+        }
+      }
     }
   }
 }

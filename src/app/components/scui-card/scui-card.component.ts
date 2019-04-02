@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'scui-card',
   template: `
-    <a [href]="url">
+    <a [routerLink]="url">
       <div [ngClass]="{active:active}"
            (mouseover)="changeStyle($event)"
            (mouseout)="changeStyle($event)"

@@ -4,18 +4,19 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ScUiNavComponent } from '../app/components/scui-nav/scui-nav.component';
 import { ScUiArticleComponent } from '../app/components/scui-article/scui-article.component';
 import { ScuiTabsComponent } from '../app/components/scui-tabs/scui-tabs.component';
-import { ScUiDrawerComponent } from '../app/components/scui-drawer/scui-drawer.component';
+import { ScUiDrawerComponent, ScUiDrawerNavComponent } from '../app/components/scui-drawer/scui-drawer.component';
 import { ScUiCardComponent } from '../app/components/scui-card/scui-card.component';
 import { StartComponent } from '../app/showcase/views/start/start.component';
 import { AppMenu, AppMenuFooter, AppMenuLogo } from '../app/constants/app.menu';
 import { ArticleListStub } from '../app/constants/article.list';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
+import { DragulaModule } from 'ng2-dragula';
 
 storiesOf('Screen Templates', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule, RouterTestingModule],
-      declarations: [ScUiNavComponent, ScUiArticleComponent, ScuiTabsComponent, ScUiDrawerComponent, ScUiCardComponent, StartComponent]
+      imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],
+      declarations: [ScUiNavComponent, ScUiArticleComponent, ScuiTabsComponent, ScUiDrawerComponent, ScUiCardComponent, StartComponent, ScUiDrawerNavComponent]
     })
   )
   .add('Start page', () => ({

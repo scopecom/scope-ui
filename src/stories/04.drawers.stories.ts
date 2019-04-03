@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ScUiDrawerComponent, ScUiDrawerNavComponent } from '../app/components/scui-drawer/scui-drawer.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
+import { DragulaModule } from 'ng2-dragula';
 
 storiesOf('Drawers', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule, RouterTestingModule],
+      imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],
       declarations: [ScUiDrawerComponent, ScUiDrawerNavComponent]
     })
   )

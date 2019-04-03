@@ -127,8 +127,11 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.dndService.destroy(this.sortable.toString());
-    this.subs.unsubscribe();
+    if (this.sortable) {
+      this.dndService.destroy(this.sortable.toString());
+      this.subs.unsubscribe();
+    }
+
   }
 
   selectItem(item: ScUiSubMenuItem) {

@@ -7,6 +7,7 @@
   .submenu-nav {
     padding: 0 0 16px 0;
   }
+
   .submenu-header {
     padding: 22px;
     height: 64px;
@@ -48,58 +49,72 @@
     color: $col_24 !important;
   }
 
-  .submenu-nav-item {
-    font-weight: 400;
-    font-size: 15px;
-    height: 40px;
-    padding: 12px 12px 0px 24px;
-    cursor: pointer;
-    &.active {
-      a span{
-        color: $col_26 !important;
-      }
-    }
-    &:hover {
-      background: $col_14;
-      .submenu-nav-actions{
-        display: flex;
-      }
-    }
-    .icon2 {
-      font-weight: 600;
-      margin-left: 4px;
-      color: $col_24;
-      font-size: 14px;
-      padding: 2px;
-      cursor: pointer;
-    }
-    .icon1 {
-      color: $col_24;
-      font-weight: 600;
-      font-size: 14px;
-      margin-right: 4px;
-    }
-
-    a {
-      color: $col_27;
-      text-decoration: none;
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      line-height: 18px;
-    }
-  }
-
-  .submenu-nav-actions {
-    margin-left: auto;
-    display: none;
-
-    .icon-btn-empty {
-      color: $col_28;
-    }
-  }
-
   hr {
     margin: 0;
+  }
+}
+
+.submenu-nav-item {
+  font-weight: 400;
+  font-size: 15px;
+  height: 40px;
+  padding: 12px 12px 0 24px;
+  cursor: pointer;
+  list-style: none;
+
+  &.active {
+    a span{
+      color: $col_26 !important;
+    }
+  }
+
+  &:hover {
+    background: $col_14;
+    .submenu-nav-actions{
+      display: flex;
+    }
+  }
+
+  &.gu-transit {
+    background: #f2f2f2 !important;
+    opacity: 1;
+
+    * {
+      visibility: hidden;
+    }
+  }
+
+  .icon2 {
+    font-weight: 600;
+    margin-left: 4px;
+    color: $col_24;
+    font-size: 14px;
+    padding: 2px;
+    cursor: pointer;
+  }
+
+  .icon1 {
+    color: $col_24;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  a {
+    color: $col_27;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    line-height: 18px;
+  }
+}
+
+.submenu-nav-actions {
+  margin-left: auto;
+  display: none;
+
+  .icon-btn-empty {
+    color: $col_28;
   }
 }

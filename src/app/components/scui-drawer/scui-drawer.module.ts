@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScUiDrawerComponent } from './scui-drawer.component';
+import { ScUiDrawerComponent, ScUiDrawerNavComponent } from './scui-drawer.component';
+import { RouterModule } from '@angular/router';
+import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
-  declarations: [ScUiDrawerComponent],
+  declarations: [ScUiDrawerComponent, ScUiDrawerNavComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    DragulaModule
   ],
-  exports: [ScUiDrawerComponent]
+  exports: [ScUiDrawerComponent, ScUiDrawerNavComponent]
 })
 export class ScUiDrawerModule {
 }

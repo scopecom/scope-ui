@@ -22,4 +22,7 @@ export class ProjectsComponent implements OnInit {
     item.active = !item.active;
   }
 
+  reorder(event) {
+    console.log(event);
+  }
 }

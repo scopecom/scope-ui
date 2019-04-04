@@ -53,7 +53,7 @@ export class ScUiDrawerComponent implements OnChanges {
     <nav class="submenu-nav">
       <h2 class="submenu-nav-title color_01">{{ title }} ({{ subMenuItems.length }})</h2>
       <ul class="submenu-nav-items">
-        <div *ngIf="sortable; else itemsTpl" dragula="saved-searches-bag" [dragulaModel]="subMenuItems">
+        <div *ngIf="sortable; else itemsTpl" [dragula]="sortable" [dragulaModel]="subMenuItems">
           <ng-container *ngTemplateOutlet="itemsTpl"></ng-container>
         </div>
       </ul>
@@ -66,7 +66,7 @@ export class ScUiDrawerComponent implements OnChanges {
         <a routerLink="project/{{item.id}}">
           <span *ngIf="sortable" class="icon icon1 icon-zoom-99 handle"></span>
           <span class="icon icon1 icon-app-store"></span>
-          <span class="submenu-nav-label">{{item.name}}</span>
+          <span class="submenu-nav-label">{{item.name || item.title}}</span>
           <span class="submenu-nav-actions">
               <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
               <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
@@ -81,7 +81,7 @@ export class ScUiDrawerComponent implements OnChanges {
 export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   @Input() subMenuItems: ScUiSubMenuItem[];
   @Input() title: string;
-  @Input() sortable: string | boolean = false;
+  @Input() sortable: string = null;
 
   @Output() onItemSelect = new EventEmitter<ScUiSubMenuItem>();
   @Output() onItemReorder = new EventEmitter<ScUiSubMenuItem[]>();
@@ -97,22 +97,22 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   ngOnInit() {
     if (this.sortable) {
       this.subs = new Subscription();
-
       this.subs.add(
-        this.dndService.dropModel(this.sortable.toString()).subscribe(({targetModel}) => {
+        this.dndService.dropModel(this.sortable).subscribe(({targetModel}) => {
           this.onItemReorder.emit(targetModel);
+          this.cd.markForCheck();
         })
       );
 
       this.subs.add(
-        this.dndService.drag(this.sortable.toString()).subscribe(() => {
+        this.dndService.drag(this.sortable).subscribe(() => {
           this.dragInProgress = true;
           this.cd.markForCheck();
         })
       );
 
       this.subs.add(
-        this.dndService.drop(this.sortable.toString()).subscribe(() => {
+        this.dndService.drop(this.sortable).subscribe(() => {
           this.dragInProgress = false;
           this.cd.markForCheck();
         })
@@ -131,7 +131,6 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
       this.dndService.destroy(this.sortable.toString());
       this.subs.unsubscribe();
     }
-
   }
 
   selectItem(item: ScUiSubMenuItem) {

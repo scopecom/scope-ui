@@ -5,7 +5,7 @@
         <h1 class="submenu-title">Projects</h1>
       </header>
       <hr class="submenu-divider">
-      <scui-drawer-nav sortable="projects-bag" [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
+      <scui-drawer-nav sortable="projects-bag" (onItemReorder)="reorder($event)" [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
       <hr class="submenu-divider">
       <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
       <hr class="submenu-divider">

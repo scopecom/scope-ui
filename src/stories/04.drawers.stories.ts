@@ -1,14 +1,15 @@
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { ScUiDrawerComponent } from '../app/components/scui-drawer/scui-drawer.component';
+import { ScUiDrawerComponent, ScUiDrawerNavComponent } from '../app/components/scui-drawer/scui-drawer.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
+import { DragulaModule } from 'ng2-dragula';
 
 storiesOf('Drawers', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule, RouterTestingModule],
-      declarations: [ScUiDrawerComponent]
+      imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],
+      declarations: [ScUiDrawerComponent, ScUiDrawerNavComponent]
     })
   )
   .add('Default open', () => ({
@@ -19,45 +20,9 @@ storiesOf('Drawers', module)
             <h1 class="submenu-title">Projects</h1>
           </header>
           <hr class="submenu-divider">
-          <nav class="submenu-nav">
-            <h2 class="submenu-nav-title color_01">MY PROJECTS ({{ submenu.length }})</h2>
-            <ul class="submenu-nav-items">
-              <div class="nav-header-label">All</div>
-              <li (click)="activateClass(item)"
-                  [ngClass]="{'active': item.active}"
-                  *ngFor="let item of submenu"
-                  class="submenu-nav-item">
-                <a routerLink="project/{{item.id}}">
-                  <span class="icon icon1 icon-app-store"></span>
-                  <span class="submenu-nav-label">{{item.name}}</span>
-                  <span class="submenu-nav-actions">
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <scui-drawer-nav [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
           <hr class="submenu-divider">
-          <nav class="submenu-nav">
-            <h2 class="submenu-nav-title color_01">COMPANY PROJECTS ({{ submenu.length }})</h2>
-            <ul class="submenu-nav-items">
-              <div class="nav-header-label">All</div>
-              <li (click)="activateClass(item)"
-                  [ngClass]="{'active': item.active}"
-                  *ngFor="let item of submenu2"
-                  class="submenu-nav-item">
-                <a routerLink="project/{{item.id}}">
-                  <span class="icon icon1 icon-app-store"></span>
-                  <span class="submenu-nav-label">{{item.name}}</span>
-                  <span class="submenu-nav-actions">
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
           <hr class="submenu-divider">
         </section>
       </scui-drawer>
@@ -76,45 +41,9 @@ storiesOf('Drawers', module)
             <h1 class="submenu-title">Projects</h1>
           </header>
           <hr class="submenu-divider">
-          <nav class="submenu-nav">
-            <h2 class="submenu-nav-title color_01">MY PROJECTS ({{ submenu.length }})</h2>
-            <ul class="submenu-nav-items">
-              <div class="nav-header-label">All</div>
-              <li (click)="activateClass(item)"
-                  [ngClass]="{'active': item.active}"
-                  *ngFor="let item of submenu"
-                  class="submenu-nav-item">
-                <a routerLink="project/{{item.id}}">
-                  <span class="icon icon1 icon-app-store"></span>
-                  <span class="submenu-nav-label">{{item.name}}</span>
-                  <span class="submenu-nav-actions">
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <scui-drawer-nav [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
           <hr class="submenu-divider">
-          <nav class="submenu-nav">
-            <h2 class="submenu-nav-title color_01">COMPANY PROJECTS ({{ submenu.length }})</h2>
-            <ul class="submenu-nav-items">
-              <div class="nav-header-label">All</div>
-              <li (click)="activateClass(item)"
-                  [ngClass]="{'active': item.active}"
-                  *ngFor="let item of submenu2"
-                  class="submenu-nav-item">
-                <a routerLink="project/{{item.id}}">
-                  <span class="icon icon1 icon-app-store"></span>
-                  <span class="submenu-nav-label">{{item.name}}</span>
-                  <span class="submenu-nav-actions">
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                    <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
           <hr class="submenu-divider">
         </section>
       </scui-drawer>`,
@@ -132,45 +61,9 @@ storiesOf('Drawers', module)
                 <h1 class="submenu-title">Projects</h1>
               </header>
               <hr class="submenu-divider">
-              <nav class="submenu-nav">
-                <h2 class="submenu-nav-title color_01">MY PROJECTS ({{ submenu.length }})</h2>
-                <ul class="submenu-nav-items">
-                  <div class="nav-header-label">All</div>
-                  <li (click)="activateClass(item)"
-                      [ngClass]="{'active': item.active}"
-                      *ngFor="let item of submenu"
-                      class="submenu-nav-item">
-                    <a routerLink="project/{{item.id}}">
-                      <span class="icon icon1 icon-app-store"></span>
-                      <span class="submenu-nav-label">{{item.name}}</span>
-                      <span class="submenu-nav-actions">
-                        <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                        <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              <scui-drawer-nav [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
               <hr class="submenu-divider">
-              <nav class="submenu-nav">
-                <h2 class="submenu-nav-title color_01">COMPANY PROJECTS ({{ submenu.length }})</h2>
-                <ul class="submenu-nav-items">
-                  <div class="nav-header-label">All</div>
-                  <li (click)="activateClass(item)"
-                      [ngClass]="{'active': item.active}"
-                      *ngFor="let item of submenu2"
-                      class="submenu-nav-item">
-                    <a routerLink="project/{{item.id}}">
-                      <span class="icon icon1 icon-app-store"></span>
-                      <span class="submenu-nav-label">{{item.name}}</span>
-                      <span class="submenu-nav-actions">
-                        <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                        <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
               <hr class="submenu-divider">
             </section>
           </scui-drawer>`,

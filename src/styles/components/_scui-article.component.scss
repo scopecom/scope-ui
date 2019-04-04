@@ -1,37 +1,46 @@
 @import "../global/_variables";
 
-scui-article {
-  //margin: 40px;
-  //width: 520px;
-}
-
 .default, .edit, .delete {
   width: 392px;
   height: 392px;
   position: relative;
+  box-shadow: 0 11px 8px -8px rgba(0, 0, 0, 0.2);
 }
 
 .scui-article article {
   padding: 16px;
   &.default {
     background-color: $col_2;
+    .article-action {
+      border-left: 1px solid $col_21;
+      .icon {
+        color: rgba(0, 0, 0, 0.7);
+      }
+      &:hover {
+        background: $col_21;
+        .icon {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
   }
 
   &.edit {
     background-color: $col_15;
     .scui-article-footer {
-      margin-right: 0 !important;
-      margin-bottom: -7px;
-      .icon {
-        font-weight: 700;
+      border-top: 1px solid $col_32 !important;
+      .article-action, .article-action-2 {
+        border-left: 1px solid $col_32;
+        .icon {
+          color: rgba(0, 0, 0, 0.7);
+        }
+        &:hover {
+          background: $col_32;
+          .icon {
+            color: $col_2;
+          }
+        }
       }
-    }
-    .icon-btn {
-      background: $col_16;
-      margin-left: 9px;
-      // cursor: pointer;
-      padding: 9px 10px;
-      color: $col_2;
     }
   }
 
@@ -40,26 +49,20 @@ scui-article {
     position: relative;
     padding: 0;
     background: $col_14;
-    .bar {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 8px;
-      background: $col_18;
-    }
     .content {
-      padding-left: 32px;
-      padding-top: 22px;
+      padding-left: 40px;
+      padding-top: 18px;
       font-weight: 300;
+      line-height: 22px;
     }
     .header {
+      border-top: 8px solid $col_18;
       height: 64px;
       width: 100%;
       background: $col_2;
-      padding-left: 32px;
+      padding-left: 40px;
       color: $col_18;
-      padding-top: 17px;
+      padding-top: 13px;
       .icon {
         font-size: 30px;
         vertical-align: -8px;
@@ -77,12 +80,20 @@ scui-article {
         display: inline-block;
         font-size: 14px;
         padding: 10px 21px;
+        border-radius: 4px;
+        cursor: pointer;
         &.cancel {
           background: $col_20;
+          &:hover {
+            background: $col_27
+          }
         }
         &.remove {
           margin-left: 8px;
           background: $col_17;
+          &:hover {
+            background: $col_18;
+          }
         }
       }
     }
@@ -108,7 +119,6 @@ scui-article {
     bottom: 0;
     padding: 16px;
     height: 186px;
-
     .scui-article-header {
       display: flex;
       justify-content: space-between;
@@ -149,35 +159,40 @@ scui-article {
     .scui-article-footer {
       height: 40px;
       display: flex;
-      justify-content: flex-end;
+      //justify-content: flex-end;
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 1px;
       padding: 10px 16px;
       border-top: 1px solid $col_21;
       .icon {
         font-size: 20px;
       }
-      .article-add {
+      .article-action {
         width: 40px;
         height: 40px;
         position: absolute;
         top: 0;
         right: 0;
         cursor: pointer;
-        border-left: 1px solid $col_21;
         .icon {
           position: absolute;
           top: 10px;
           left: 10px;
-          color: rgba(0, 0, 0, 0.7);
         }
-        &:hover {
-          background: $col_21;
-          .icon {
-            color: rgba(0, 0, 0, 1);
-          }
+      }
+      .article-action-2 {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        cursor: pointer;
+        .icon {
+          position: absolute;
+          top: 10px;
+          left: 10px;
         }
       }
     }

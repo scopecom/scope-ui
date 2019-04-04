@@ -1,6 +1,6 @@
 {
   "name": "@scopecom/scope-ui",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "scripts": {
     "cypress-open": "cypress open",
     "cypress-run": "cypress run",
@@ -18,18 +18,19 @@
     "scope-ui": "run-s clean packagr minify-css"
   },
   "peerDependencies": {
-    "@angular/animations": "~7.2.0",
-    "@angular/common": "~7.2.0",
-    "@angular/compiler": "~7.2.0",
-    "@angular/compiler-cli": "~7.2.0",
-    "@angular/core": "~7.2.0",
-    "@angular/forms": "~7.2.0",
-    "@angular/platform-browser": "~7.2.0",
-    "@angular/platform-browser-dynamic": "~7.2.0",
-    "@angular/router": "~7.2.0",
-    "core-js": "^2.5.4",
-    "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
+    "@angular/animations": ">=7.0.0",
+    "@angular/common": ">=7.0.0",
+    "@angular/compiler": ">=7.0.0",
+    "@angular/compiler-cli": ">=7.0.0",
+    "@angular/core": ">=7.0.0",
+    "@angular/forms": ">=7.0.0",
+    "@angular/platform-browser": ">=7.0.0",
+    "@angular/platform-browser-dynamic": ">=7.0.0",
+    "@angular/router": ">=7.0.0",
+    "ng2-dragula": "^2.1.1",
+    "core-js": ">=2.5.4",
+    "rxjs": ">=6.3.3",
+    "zone.js": ">=0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
@@ -45,6 +46,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "@babel/core": "^7.2.2",
+    "ng2-dragula": "^2.1.1",
     "@briebug/cypress-schematic": "^1.0.2",
     "@cypress/webpack-preprocessor": "4.0.3",
     "@storybook/addon-actions": "^5.0.5",

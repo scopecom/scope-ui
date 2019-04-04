@@ -28,14 +28,14 @@
   &.edit {
     background-color: $col_15;
     .scui-article-footer {
-      border-top: 1px solid $col_30 !important;
+      border-top: 1px solid $col_32 !important;
       .article-action, .article-action-2 {
-        border-left: 1px solid $col_30;
+        border-left: 1px solid $col_32;
         .icon {
           color: rgba(0, 0, 0, 0.7);
         }
         &:hover {
-          background: $col_30;
+          background: $col_32;
           .icon {
             color: $col_2;
           }
@@ -48,7 +48,7 @@
     display: inherit;
     position: relative;
     padding: 0;
-    background: $col_19;
+    background: $col_14;
     .content {
       padding-left: 40px;
       padding-top: 18px;

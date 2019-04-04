@@ -159,13 +159,40 @@
     .scui-article-footer {
       height: 40px;
       display: flex;
-      //justify-content: flex-end;
       position: absolute;
       left: 0;
       right: 0;
       bottom: 1px;
       padding: 10px 16px;
       border-top: 1px solid $col_21;
+      .pills-box {
+        //background: #ffa8a2;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        bottom: 8px;
+        color: $col_2;
+        height: 24px;
+        .pill {
+          background: $col_32;
+          font-size: 14px;
+          display: inline-block;
+          height: 100%;
+          padding: 5px 12px 0 12px;
+          border-radius: 12px;
+          margin-right: 8px;
+          .icon {
+            font-weight: 600;
+            margin-right: 8px;
+          }
+          .value {
+            vertical-align: 1px;
+          }
+          .icon, .value {
+            font-size: 14px;
+          }
+        }
+      }
       .icon {
         font-size: 20px;
       }

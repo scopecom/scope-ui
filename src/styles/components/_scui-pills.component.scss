@@ -1,0 +1,12 @@
+@import "../global/_variables";
+
+.pill {
+  //background: red;
+  font-size: 14px;
+  border: 1px solid $col_50;
+  padding: 6px 16px;
+  border-radius: 16px;
+  margin:20px; //todo for storybook view
+  font-weight: 300;
+  height:32px;
+}

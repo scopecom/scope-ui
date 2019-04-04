@@ -5,7 +5,7 @@ import { ScUiArticle } from '../../interfaces';
   selector: 'scui-article',
   template: `
     <article class="scui-article">
-<!--      <article class="delete" *ngIf="article.mode === 'delete'">
+      <article class="delete" *ngIf="article.mode === 'delete'">
         <div class="header">
           <div>
             <span class="icon icon-c-warning"></span>
@@ -19,7 +19,7 @@ import { ScUiArticle } from '../../interfaces';
           <div class="btn cancel">CANCEL</div>
           <div class="btn remove">REMOVE</div>
         </div>
-      </article>-->
+      </article>
       <article class="edit" *ngIf="article.mode === 'edit'">
         <figure class="scui-article-img">
           <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
@@ -53,7 +53,7 @@ import { ScUiArticle } from '../../interfaces';
           </footer>
         </aside>
       </article>
-<!--      <article class="default" *ngIf="article.mode === 'default'">
+      <article class="default" *ngIf="article.mode === 'default'">
         <figure class="scui-article-img">
           <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
         </figure>
@@ -72,7 +72,7 @@ import { ScUiArticle } from '../../interfaces';
             </span>
           </footer>
         </aside>
-      </article>-->
+      </article>
     </article>
   `,
   encapsulation: ViewEncapsulation.None

@@ -8,8 +8,9 @@ export interface ScUiMenuItem {
 
 export interface ScUiSubMenuItem {
   id?: any;
-  name: string;
+  name?: string;
   cssClass?: string;
   iconClass?: string;
   active?: boolean;
+  [t: string]: any;
 }

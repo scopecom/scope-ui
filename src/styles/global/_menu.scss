@@ -47,6 +47,8 @@
 
   .submenu-nav-label {
     color: $col_24 !important;
+    text-overflow: ellipsis;
+    word-break: break-word;
   }
 
   hr {
@@ -57,7 +59,7 @@
 .submenu-nav-item {
   font-weight: 400;
   font-size: 15px;
-  height: 40px;
+  min-height: 40px;
   padding: 12px 12px 0 24px;
   cursor: pointer;
   list-style: none;

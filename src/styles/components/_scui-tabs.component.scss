@@ -1,9 +1,9 @@
 @import "../global/_variables";
 
 .scui-tabs {
+  padding-top:32px;
   .tabs {
     height: 33px;
-    margin-left: 64px;
     border-bottom: 1px solid $col_main_1;
     .tab {
       display: inline-block;

@@ -48,11 +48,11 @@ storiesOf('Navigation', module)
       buttonList: ButtonListStub,
     },
   }))
-  .add('Menu start', () => ({
+  .add('Menu Start', () => ({
     template: `
       <scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>
         <div class="scui-container">
-          <scui-drawer [collapse]="true" [drawerOpen]="true">
+<!--          <scui-drawer [collapse]="true" [drawerOpen]="true">
             <section class="scui-submenu">
               <header class="submenu-header">
                 <h1 class="submenu-title">Projects</h1>
@@ -66,7 +66,7 @@ storiesOf('Navigation', module)
           </scui-drawer>
           <div class="scui-content">
 
-          </div>
+          </div>-->
         </div>`,
     props: {
       menuItems: AppMenu,
@@ -77,7 +77,7 @@ storiesOf('Navigation', module)
       drawerOpen: true
     },
   }))
-  .add('Menu collapsable', () => ({
+  .add('Menu Default', () => ({
     template: `
       <scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>
         <div class="scui-container">
@@ -105,21 +105,6 @@ storiesOf('Navigation', module)
       submenu2: SubmenuStub2,
       drawerOpen: true,
       collapse: true
-    },
-  }))
-  .add('Navigation', () => ({
-    template: `<scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>`,
-    props: {
-      menuItems: AppMenu,
-      logo: AppMenuLogo,
-      footer: AppMenuFooter
-    },
-  }))
-  .add('Navigation without footer', () => ({
-    template: `<scui-nav [logo]="logo" [menuItems]="menuItems"></scui-nav>`,
-    props: {
-      menuItems: AppMenu,
-      logo: AppMenuLogo,
     },
   }))
   .add('Tabs', () => ({

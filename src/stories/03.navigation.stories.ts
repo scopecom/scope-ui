@@ -48,7 +48,7 @@ storiesOf('Navigation', module)
       buttonList: ButtonListStub,
     },
   }))
-  .add('Menu default', () => ({
+  .add('Menu start', () => ({
     template: `
       <scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>
         <div class="scui-container">

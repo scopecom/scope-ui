@@ -5,3 +5,12 @@ export interface ScUiMenuItem {
   iconClass?: string;
   cssClass?: string;
 }
+
+export interface ScUiSubMenuItem {
+  id?: any;
+  name?: string;
+  cssClass?: string;
+  iconClass?: string;
+  active?: boolean;
+  [t: string]: any;
+}

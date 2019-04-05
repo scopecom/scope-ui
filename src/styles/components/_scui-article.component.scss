@@ -1,34 +1,46 @@
 @import "../global/_variables";
 
-scui-article {
-  margin: 40px;
-  width: 520px;
+.default, .edit, .delete {
+  width: 392px;
+  height: 392px;
+  position: relative;
+  box-shadow: 0 11px 8px -8px rgba(0, 0, 0, 0.2);
 }
 
 .scui-article article {
-  display: flex;
-  flex-direction: row;
-  padding: 8px 18px 8px 8px;
-  min-height: 258px;
+  padding: 16px;
   &.default {
-    background-color: $col_2;
+    background-color: $col_white;
+    .article-action {
+      border-left: 1px solid $col_main_2;
+      .icon {
+        color: rgba(0, 0, 0, 0.7);
+      }
+      &:hover {
+        background: $col_main_2;
+        .icon {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
   }
 
   &.edit {
-    background-color: $col_15;
+    background-color: $col_prim_1;
     .scui-article-footer {
-      margin-right: 0 !important;
-      margin-bottom: -7px;
-      .icon {
-        font-weight: 700;
+      border-top: 1px solid $col_prim_2 !important;
+      .article-action, .article-action-2 {
+        border-left: 1px solid $col_prim_2;
+        .icon {
+          color: rgba(0, 0, 0, 0.7);
+        }
+        &:hover {
+          background: $col_prim_3;
+          .icon {
+            color: $col_white;
+          }
+        }
       }
-    }
-    .icon-btn {
-      background: $col_16;
-      margin-left: 9px;
-      cursor: pointer;
-      padding: 9px 10px;
-      color: $col_2;
     }
   }
 
@@ -36,27 +48,21 @@ scui-article {
     display: inherit;
     position: relative;
     padding: 0;
-    background: $col_19;
-    .bar {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 8px;
-      background: $col_18;
-    }
+    background: $col_main_1;
     .content {
-      padding-left: 32px;
-      padding-top: 22px;
+      padding-left: 40px;
+      padding-top: 18px;
       font-weight: 300;
+      line-height: 22px;
     }
     .header {
+      border-top: 8px solid $col_sec_2;
       height: 64px;
       width: 100%;
-      background: $col_2;
-      padding-left: 32px;
-      color: $col_18;
-      padding-top: 17px;
+      background: $col_white;
+      padding-left: 40px;
+      color: $col_sec_2;
+      padding-top: 13px;
       .icon {
         font-size: 30px;
         vertical-align: -8px;
@@ -70,54 +76,64 @@ scui-article {
       font-size: 13px;
       padding: 9px 24px;
       .btn {
-        color: $col_2;
+        color: $col_white;
         display: inline-block;
         font-size: 14px;
         padding: 10px 21px;
+        border-radius: 4px;
+        cursor: pointer;
         &.cancel {
-          background: $col_20;
+          background: $col_main_3;
+          &:hover {
+            background: $col_main_6
+          }
         }
         &.remove {
           margin-left: 8px;
-          background: $col_17;
+          background: $col_sec_1;
+          &:hover {
+            background: $col_sec_2;
+          }
         }
       }
     }
   }
 
   .scui-article-img {
-    flex: .38;
-    margin-right: 16px;
-
+    height: 190px;
+    background: $col_main_2;
     .img {
-      width: 243px;
-      margin-right: 16px;
-      background: green;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
 
   }
 
   .scui-article-content {
-    margin-top: 12px;
-    margin-bottom: 15px;
-    flex: .62;
-    display: flex;
-    flex-direction: column;
-
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    height: 186px;
     .scui-article-header {
       display: flex;
       justify-content: space-between;
       font-size: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-weight: 300;
       .icon {
         font-weight: 100;
-        font-size: 22px;
+        font-size: 18px;
         color: gray;
+        cursor: none;
       }
       a {
         font-size: 18px;
-        color: $col_6;
+        color: $col_black;
       }
     }
 
@@ -125,38 +141,86 @@ scui-article {
       h3 {
         font-size: 14px;
         font-weight: bold;
-        margin-bottom: 10px;
+        line-height: 20px;
       }
 
       p {
         font-size: 16px;
+        line-height: 20px;
         font-weight: 300;
       }
 
       a {
-        color: $col_3;
+        color: $col_black;
         text-decoration: none;
       }
     }
 
     .scui-article-footer {
-      margin-top: auto;
+      height: 40px;
       display: flex;
-      justify-content: flex-end;
-      margin-right: 3px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 1px;
+      padding: 10px 16px;
+      border-top: 1px solid $col_main_2;
+      .pills-box {
+        position: absolute;
+        left: 16px;
+        top: 8px;
+        bottom: 8px;
+        color: $col_white;
+        height: 24px;
+        .pill-info {
+          background: $col_prim_2;
+          font-size: 14px;
+          display: inline-block;
+          height: 100%;
+          padding: 5px 12px 0 12px;
+          border-radius: 12px;
+          margin-right: 8px;
+          .icon {
+            font-weight: 600;
+            margin-right: 8px;
+          }
+          .value {
+            vertical-align: 1px;
+          }
+          .icon, .value {
+            font-size: 14px;
+          }
+        }
+      }
       .icon {
         font-size: 20px;
       }
-      //button {
-      //  font-size: 16px;
-      //  padding: 8px;
-      //  display: flex;
-      //  align-items: center;
-      //  justify-content: center;
-      //  margin: 0 2px;
-      //  background-color: $col_5;
-      //  color: $col_2;
-      //}
+      .article-action {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        .icon {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+      }
+      .article-action-2 {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        cursor: pointer;
+        .icon {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+      }
     }
   }
 }

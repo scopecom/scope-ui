@@ -5,10 +5,7 @@ import { ScUiArticle } from '../../interfaces';
   selector: 'scui-article',
   template: `
     <article class="scui-article">
-
-
       <article class="delete" *ngIf="article.mode === 'delete'">
-        <div class="bar"></div>
         <div class="header">
           <div>
             <span class="icon icon-c-warning"></span>
@@ -18,17 +15,14 @@ import { ScUiArticle } from '../../interfaces';
         <div class="content">
           <div>Do you really want to remove this imported article?</div>
         </div>
-
         <div class="footer">
           <div class="btn cancel">CANCEL</div>
           <div class="btn remove">REMOVE</div>
         </div>
       </article>
-
-
       <article class="edit" *ngIf="article.mode === 'edit'">
-        <figure [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="scui-article-img">
-          <div class="img"></div>
+        <figure class="scui-article-img">
+          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">
@@ -40,14 +34,28 @@ import { ScUiArticle } from '../../interfaces';
             <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
           </div>
           <footer class="scui-article-footer">
-            <button class="icon-btn" (click)="importArticle(article)"><span class="icon icon-pen-2"></span></button>
-            <button class="icon-btn"><span class="icon icon-check-single"></span></button>
+            <div class="pills-box">
+              <span class="pill-info">
+                <span class="icon icon-app-store"></span>
+                <span class="value">2</span>
+              </span>
+              <span class="pill-info">
+                <span class="icon icon-single-folded"></span>
+                <span class="value">2</span>
+              </span>
+            </div>
+            <span class="article-action-2">
+              <span class="icon icon-pen-2"></span>
+            </span>
+            <span class="article-action">
+              <span class="icon icon-e-remove"></span>
+            </span>
           </footer>
         </aside>
       </article>
       <article class="default" *ngIf="article.mode === 'default'">
-        <figure [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="scui-article-img">
-          <div class="img"></div>
+        <figure class="scui-article-img">
+          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">
@@ -59,7 +67,9 @@ import { ScUiArticle } from '../../interfaces';
             <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
           </div>
           <footer class="scui-article-footer">
-            <span class="icon icon-e-add"></span>
+            <span class="article-action">
+              <span class="icon icon-e-add"></span>
+            </span>
           </footer>
         </aside>
       </article>

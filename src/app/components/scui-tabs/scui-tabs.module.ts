@@ -9,5 +9,5 @@ import { ScuiTabsComponent } from './scui-tabs.component';
   ],
   exports: [ScuiTabsComponent]
 })
-export class ScuiTabsModule {
+export class ScUiTabsModule {
 }

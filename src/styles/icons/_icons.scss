@@ -197,6 +197,8 @@ $icon-t-box-glyph: unicode(eabf);
 $icon-settings-gear-glyph: unicode(eac0);
 $icon-t-remove-glyph: unicode(eac1);
 $icon-t-add-glyph: unicode(eac2);
+$icon-settings-gear-glyph-2: unicode(eac3);
+$icon-zoom-99: unicode(eac4);
 $icon-uea44-: unicode(ea01);
 
 .icon-add-file::before {
@@ -967,7 +969,14 @@ $icon-uea44-: unicode(ea01);
   content: $icon-t-add-glyph;
 }
 
+.icon-settings-gear-glyph-2::before {
+  content: $icon-settings-gear-glyph-2;
+}
+
+.icon-zoom-99::before {
+  content: $icon-zoom-99;
+}
+
 .icon-uea44-::before {
   content: $icon-uea44-;
 }
-

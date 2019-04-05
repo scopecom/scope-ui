@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutModule } from './showcase/layouts/main-layout/main-layout.module';
 import { DetailLayoutModule } from './showcase/layouts/detail-layout/detail-layout.module';
+import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailLayoutModule } from './showcase/layouts/detail-layout/detail-layo
     BrowserModule,
     AppRoutingModule,
     MainLayoutModule,
-    DetailLayoutModule
+    DetailLayoutModule,
+    DragulaModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

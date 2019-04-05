@@ -1,28 +1,34 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, OnInit, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
 import { Tabs } from '../../constants/tabs';
 
 @Component({
   selector: 'scui-tabs',
   template: `
     <section class="scui-tabs">
-      <div class="tabs">
-        <div *ngFor="let key of objectKeys(tabs)"
-             [ngClass]="{'active-tab': key == activeTab}"
-             (click)="setActiveTab(key)"
-             class="tab">{{ tabs[key].title }}
+      <div class="tabs" #tabContainer>
+        <div *ngFor="let tab of tabs, let i = index"
+             [ngClass]="{'active-tab': i === activeTab}"
+             (click)="setActiveTab(i, tabItem, tabContainer)"
+             #tabItem
+             class="tab">{{ tab.title }}
         </div>
         <div class="border-wrap">
-          <div [ngStyle]="{left: activeTab*75 + 'px' }" class="border-bottom"></div>
+          <div [ngStyle]="{left: (offsetLeft || 0) + 'px', width: (offsetWidth) + 'px' }"
+               class="border-bottom">
+          </div>
         </div>
       </div>
     </section>
   `,
   encapsulation: ViewEncapsulation.None
 })
-export class ScuiTabsComponent implements OnInit {
+export class ScuiTabsComponent implements OnInit, AfterViewInit {
+  activeTab: number;
+  offsetLeft: number;
+  offsetWidth: number;
 
-  objectKeys = Object.keys;
-  activeTab = Number;
+  @ViewChildren('tabItem') tabItems: QueryList<HTMLDivElement>;
+
   tabs = Tabs;
 
   constructor() {
@@ -32,8 +38,16 @@ export class ScuiTabsComponent implements OnInit {
     this.setActiveTab(0);
   }
 
-  setActiveTab(key) {
-    this.activeTab = key;
+  ngAfterViewInit() {
+    this.setActiveTab(0, this.tabItems.first);
   }
 
+  setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {
+    this.activeTab = key;
+
+    if (tab) {
+      this.offsetLeft = tabContainer ? tab.offsetLeft - tabContainer.offsetLeft : 0;
+      this.offsetWidth = tab.offsetWidth;
+    }
+  }
 }

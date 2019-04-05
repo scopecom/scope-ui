@@ -4,59 +4,11 @@
       <header class="submenu-header">
         <h1 class="submenu-title">Projects</h1>
       </header>
-      <div class="submenu-divider"></div>
-      <nav class="submenu-nav">
-        <h2 class="submenu-nav-title color_01">
-          MY PROJECTS ({{ submenu.length }})
-          <span class="icon icon-e-add"></span>
-        </h2>
-        <ul class="submenu-nav-items">
-          <div (click)="activateFilter1()"
-               [ngClass]="{'active': filterisActive_1}"
-               class="nav-header-label">All
-          </div>
-          <li (click)="activateClass(item)"
-              [ngClass]="{'active': item.active}"
-              *ngFor="let item of submenu"
-              class="submenu-nav-item">
-            <a routerLink="project/{{item.id}}">
-              <span class="icon icon1 icon-app-store"></span>
-              <span class="submenu-nav-label">{{item.name}}</span>
-              <span class="submenu-nav-actions">
-                <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="submenu-divider"></div>
-      <nav class="submenu-nav">
-        <h2 class="submenu-nav-title color_01">
-          COMPANY PROJECTS ({{ submenu.length }})
-          <span class="icon icon-e-add"></span>
-        </h2>
-        <ul class="submenu-nav-items">
-          <div (click)="activateFilter2()"
-               [ngClass]="{'active': filterisActive_2}"
-               class="nav-header-label">All
-          </div>
-          <li (click)="activateClass(item)"
-              [ngClass]="{'active': item.active}"
-              *ngFor="let item of submenu2"
-              class="submenu-nav-item">
-            <a routerLink="project/{{item.id}}">
-              <span class="icon icon1 icon-app-store"></span>
-              <span class="submenu-nav-label">{{item.name}}</span>
-              <span class="submenu-nav-actions">
-                <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-                <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="submenu-divider"></div>
+      <hr class="submenu-divider">
+      <scui-drawer-nav sortable="projects-bag" (onItemReorder)="reorder($event)" [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
+      <hr class="submenu-divider">
+      <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
+      <hr class="submenu-divider">
     </section>
   </scui-drawer>
   <div class="scui-content">

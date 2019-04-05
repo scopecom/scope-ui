@@ -9,7 +9,7 @@
   min-width: 420px;
 
   .drawer-inner {
-    background-color: $col_2;
+    background-color: $col_main_1;
     width: 100%;
   }
 
@@ -25,11 +25,11 @@
     width: 8px;
     min-height: 100vh;
     height: 100%;
-    background-color: $col_21;
+    background-color: $col_main_2;
     cursor: pointer;
 
     &:hover {
-      background-color: $col_30;
+      background-color: $col_prim_5;
     }
   }
 }

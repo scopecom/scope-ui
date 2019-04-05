@@ -35,11 +35,11 @@ import { ScUiArticle } from '../../interfaces';
           </div>
           <footer class="scui-article-footer">
             <div class="pills-box">
-              <span class="pill">
+              <span class="pill-info">
                 <span class="icon icon-app-store"></span>
                 <span class="value">2</span>
               </span>
-              <span class="pill">
+              <span class="pill-info">
                 <span class="icon icon-single-folded"></span>
                 <span class="value">2</span>
               </span>

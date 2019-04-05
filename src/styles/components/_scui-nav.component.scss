@@ -38,7 +38,7 @@
   }
 
   .nav-item {
-    background: $col_prim_1;
+    background: $col_prim_5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,9 +47,9 @@
     width: 64px;
     position: relative;
     &.active-nav {
-      background-color: $col_prim_2;
+      background-color: $col_prim_3;
       .icon {
-        color: white;
+        color: $col_white;
       }
     }
   }

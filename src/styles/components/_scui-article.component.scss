@@ -26,16 +26,16 @@
   }
 
   &.edit {
-    background-color: $col_prim_3;
+    background-color: $col_prim_1;
     .scui-article-footer {
-      border-top: 1px solid $col_prim_4 !important;
+      border-top: 1px solid $col_prim_2 !important;
       .article-action, .article-action-2 {
-        border-left: 1px solid $col_prim_4;
+        border-left: 1px solid $col_prim_2;
         .icon {
           color: rgba(0, 0, 0, 0.7);
         }
         &:hover {
-          background: $col_prim_4;
+          background: $col_prim_3;
           .icon {
             color: $col_white;
           }
@@ -166,15 +166,14 @@
       padding: 10px 16px;
       border-top: 1px solid $col_main_2;
       .pills-box {
-        //background: #ffa8a2;
         position: absolute;
         left: 16px;
         top: 8px;
         bottom: 8px;
         color: $col_white;
         height: 24px;
-        .pill {
-          background: $col_prim_5;
+        .pill-info {
+          background: $col_prim_2;
           font-size: 14px;
           display: inline-block;
           height: 100%;

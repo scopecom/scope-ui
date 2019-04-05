@@ -3,18 +3,20 @@ import { CommonModule } from '@angular/common';
 import { ScUiCardComponent } from '../app/components/scui-card/scui-card.component';
 import { ButtonListStub } from '../app/constants/button.list';
 import { BgHoverDirective } from '../app/directives/bg-hover.module';
-import { ScUiDrawerComponent } from '../app/components/scui-drawer/scui-drawer.component';
+import { ScUiDrawerComponent, ScUiDrawerNavComponent } from '../app/components/scui-drawer/scui-drawer.component';
 import { ScUiNavComponent } from '../app/components/scui-nav/scui-nav.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMenu, AppMenuFooter, AppMenuLogo } from '../app/constants/app.menu';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
 import { ScuiTabsComponent } from '../app/components/scui-tabs/scui-tabs.component';
+import { DragulaModule } from 'ng2-dragula';
+
 
 storiesOf('Navigation', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule, RouterTestingModule],
-      declarations: [ScUiCardComponent, ScuiTabsComponent, BgHoverDirective, ScUiDrawerComponent, ScUiNavComponent]
+      imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],
+      declarations: [ScUiCardComponent, ScuiTabsComponent, BgHoverDirective, ScUiDrawerComponent, ScUiNavComponent, ScUiDrawerNavComponent]
     })
   )
   .add('Card Default', () => ({

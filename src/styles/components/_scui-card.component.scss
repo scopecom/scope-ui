@@ -12,12 +12,12 @@
   margin-right: 16px;
   margin-bottom: 16px;
   height: 224px;
-  background: $col_2;
-  border-left: 8px solid $col_1;
+  background: $col_white;
+  border-left: 8px solid $col_prim_1;
 
   &.active {
     .content {
-      color: $col_2;
+      color: $col_white;
     }
   }
 
@@ -27,7 +27,7 @@
     right: 23px;
     bottom: 22px;
     z-index: 1;
-    color: $col_3;
+    color: $col_black;
 
     .name {
       font-size: 27px;

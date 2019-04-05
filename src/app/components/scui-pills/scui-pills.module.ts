@@ -6,16 +6,6 @@ import {
   NgModule
 } from '@angular/core';
 
-@NgModule({
-  declarations: [ScUiPillComponent],
-  imports: [
-    CommonModule,
-  ],
-  exports: [ScUiPillComponent]
-})
-export class ScUiDrawerModule {
-}
-
 @Component({
   selector: 'scui-pill',
   template: `
@@ -34,4 +24,16 @@ export class ScUiPillComponent implements OnInit {
   }
 
 }
+
+
+@NgModule({
+  declarations: [ScUiPillComponent],
+  imports: [
+    CommonModule
+  ],
+  exports: [ScUiPillComponent]
+})
+export class ScUiPillsModule {
+}
+
 

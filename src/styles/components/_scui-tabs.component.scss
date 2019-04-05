@@ -4,20 +4,20 @@
   .tabs {
     height: 33px;
     margin-left: 64px;
-    border-bottom: 1px solid $col_21;
+    border-bottom: 1px solid $col_main_1;
     .tab {
       display: inline-block;
       margin-right: 24px;
       cursor: pointer;
-      color: $col_40;
+      color: $col_main_7;
       height: 32px;
       font-size: 15px;
       font-weight: 400;
       &:hover {
-        color: $col_6;
+        color: $col_black;
       }
       &.active-tab {
-        color: $col_25;
+        color: $col_prim_5;
       }
     }
   }
@@ -27,7 +27,7 @@
     .border-bottom {
       width: 84px;
       display: inline-block;
-      background: $col_25;
+      background: $col_prim_5;
       position: absolute;
       height: 5px;
       bottom: 0;

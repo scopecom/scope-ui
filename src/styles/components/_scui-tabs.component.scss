@@ -1,7 +1,21 @@
 @import "../global/_variables";
 
 .scui-tabs {
-  padding-top:32px;
+  padding-top: 32px;
+  .disabled {
+    .border-wrap {
+      display: none;
+    }
+    .active-tab {
+      color: $col_main_5 !important;
+    }
+    .tab {
+      pointer-events: none;
+      &:hover {
+        color: $col_main_5 !important;
+      }
+    }
+  }
   .tabs {
     height: 33px;
     border-bottom: 1px solid $col_main_1;
@@ -9,12 +23,12 @@
       display: inline-block;
       margin-right: 24px;
       cursor: pointer;
-      color: $col_main_7;
+      color: $col_main_5;
       height: 32px;
       font-size: 15px;
       font-weight: 400;
       &:hover {
-        color: $col_black;
+        color: $col_main_7;
       }
       &.active-tab {
         color: $col_prim_4;

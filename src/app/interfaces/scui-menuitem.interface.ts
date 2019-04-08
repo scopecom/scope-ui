@@ -14,3 +14,8 @@ export interface ScUiSubMenuItem {
   active?: boolean;
   [t: string]: any;
 }
+
+export interface ScUiTabs {
+  title: string;
+  disabled?: boolean;
+}

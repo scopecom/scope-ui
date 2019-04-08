@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { Tabs } from '../../constants/tabs';
+import { AfterViewInit, Component, Input, OnInit, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { ScUiTabs } from '../../interfaces';
 
 @Component({
   selector: 'scui-tabs',
   template: `
     <section class="scui-tabs">
-      <div class="tabs" #tabContainer>
+      <div [ngClass]="{disabled:disabled}" class="tabs" #tabContainer>
         <div *ngFor="let tab of tabs, let i = index"
              [ngClass]="{'active-tab': i === activeTab}"
              (click)="setActiveTab(i, tabItem, tabContainer)"
@@ -28,8 +28,8 @@ export class ScuiTabsComponent implements OnInit, AfterViewInit {
   offsetWidth: number;
 
   @ViewChildren('tabItem') tabItems: QueryList<HTMLDivElement>;
-
-  tabs = Tabs;
+  @Input() tabs: ScUiTabs[];
+  @Input() disabled: boolean;
 
   constructor() {
   }
@@ -44,7 +44,6 @@ export class ScuiTabsComponent implements OnInit, AfterViewInit {
 
   setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {
     this.activeTab = key;
-
     if (tab) {
       this.offsetLeft = tabContainer ? tab.offsetLeft - tabContainer.offsetLeft : 0;
       this.offsetWidth = tab.offsetWidth;

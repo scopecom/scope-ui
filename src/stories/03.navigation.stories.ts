@@ -10,6 +10,7 @@ import { AppMenu, AppMenuFooter, AppMenuLogo } from '../app/constants/app.menu';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
 import { ScuiTabsComponent } from '../app/components/scui-tabs/scui-tabs.component';
 import { DragulaModule } from 'ng2-dragula';
+import { Tabs, DisabledTabs } from '../app/constants/tabs';
 
 
 storiesOf('Navigation', module)
@@ -108,5 +109,15 @@ storiesOf('Navigation', module)
     },
   }))
   .add('Tabs', () => ({
-    template: `<scui-tabs></scui-tabs>`
+    template: `<scui-tabs [tabs]="tabs"></scui-tabs>`,
+    props: {
+      tabs: Tabs
+    }
+  }))
+  .add('Disabled Tabs', () => ({
+    template: `<scui-tabs [disabled]="disabled" [tabs]="tabs"></scui-tabs>`,
+    props: {
+      tabs: DisabledTabs,
+      disabled: true
+    }
   }));

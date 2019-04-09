@@ -1,15 +1,18 @@
 export const SubmenuStub1 = [
   {
     name: 'Kampagne expovina',
-    id: 1
+    id: 1,
+    routerLink: 'project/1'
   },
   {
     name: 'Sales - Product Update',
-    id: 2
+    id: 2,
+    routerLink: 'project/2'
   },
   {
     name: 'Intern 03/19',
-    id: 3
+    id: 3,
+    routerLink: 'project/3'
   }
 ];
 

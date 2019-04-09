@@ -12,5 +12,6 @@ export interface ScUiSubMenuItem {
   cssClass?: string;
   iconClass?: string;
   active?: boolean;
+  routerLink?: string;
   [t: string]: any;
 }

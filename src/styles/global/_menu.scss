@@ -63,6 +63,7 @@
   padding: 12px 12px 0 24px;
   cursor: pointer;
   list-style: none;
+  word-break: break-all;
 
   &.active {
     a span{
@@ -73,7 +74,7 @@
   &:hover {
     background: $col_14;
     .submenu-nav-actions{
-      display: flex;
+      visibility: visible;
     }
   }
 
@@ -102,19 +103,25 @@
     margin-right: 4px;
   }
 
-  a {
+  .list-item {
     color: $col_27;
-    text-decoration: none;
     display: flex;
     flex-direction: row;
     width: 100%;
     line-height: 18px;
+    align-items: center;
+
+    a {
+      color: $col_27;
+      text-decoration: none !important;
+    }
   }
 }
 
 .submenu-nav-actions {
   margin-left: auto;
-  display: none;
+  visibility: hidden;
+  display: flex;
 
   .icon-btn-empty {
     color: $col_28;

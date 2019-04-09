@@ -7,21 +7,17 @@ export const Tabs = [
   },
   {
     title: 'LINKEDIN',
-  }
-];
-
-
-export const DisabledTabs = [
+  },
   {
-    title: 'FACEBOOK',
+    title: 'DISABLED',
     disabled: true
   },
   {
-    title: 'TWITTER',
+    title: 'DISABLED',
     disabled: true
   },
   {
-    title: 'LINKEDIN',
+    title: 'DISABLED',
     disabled: true
   }
 ];

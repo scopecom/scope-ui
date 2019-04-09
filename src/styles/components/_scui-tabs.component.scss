@@ -3,18 +3,7 @@
 .scui-tabs {
   padding-top: 32px;
   .disabled {
-    .border-wrap {
-      display: none;
-    }
-    .active-tab {
-      color: $col_main_6 !important;
-    }
-    .tab {
-      pointer-events: none;
-      &:hover {
-        color: $col_main_6 !important;
-      }
-    }
+    pointer-events: none;
   }
   .tabs {
     height: 32px;

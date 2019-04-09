@@ -22,6 +22,12 @@ storiesOf('Data Display', module)
       articleList: ArticleListStub,
     },
   }))
+  .add('Article Imported Mode', () => ({
+    template: `<scui-article [article]="articleList[3]"></scui-article>`,
+    props: {
+      articleList: ArticleListStub,
+    },
+  }))
   .add('Article Delete Mode', () => ({
     template: `<scui-article [article]="articleList[2]"></scui-article>`,
     props: {

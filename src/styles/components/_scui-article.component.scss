@@ -1,6 +1,6 @@
 @import "../global/_variables";
 
-.default, .edit, .delete {
+.default, .edit, .delete, .imported {
   width: 392px;
   height: 392px;
   position: relative;
@@ -41,6 +41,33 @@
           }
         }
       }
+    }
+  }
+
+  &.imported {
+    background-color: $col_prim_1;
+    .scui-article-footer {
+      border-top: 1px solid $col_prim_2 !important;
+      .article-action {
+        border-left: 1px solid $col_prim_2;
+        .icon {
+          color: rgba(0, 0, 0, 0.7);
+        }
+        &:hover {
+          background: $col_prim_3;
+          .icon {
+            color: $col_white;
+          }
+        }
+      }
+      .pills-box {
+        .pill-info {
+          background: $col_prim_4 !important;
+        }
+      }
+    }
+    .scui-article-img {
+      background: $col_white;
     }
   }
 

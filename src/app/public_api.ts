@@ -1,7 +1,7 @@
 /*
  * Public API Surface of scope-ui
  */
-export * from './components/button/button.module';
+export * from './components/scui-pills/scui-pills.module';
 export * from './components/scui-article/scui-article.module';
 export * from './components/scui-card/scui-card.module';
 export * from './components/scui-drawer/scui-drawer.module';

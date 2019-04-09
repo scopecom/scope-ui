@@ -10,7 +10,7 @@ export class BgHoverDirective implements OnInit {
 
   @Input('scuiBgHover')
   set setBgColor(value: string ) {
-    this.bgColor = value || '#2f00f3';
+    this.bgColor = value || '#3A00F8';
   }
 
   constructor(private renderer: Renderer2,

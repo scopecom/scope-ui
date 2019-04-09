@@ -1,6 +1,6 @@
 @import "../global/_variables";
 
-.default, .edit, .delete {
+.default, .edit, .delete, .imported {
   width: 392px;
   height: 392px;
   position: relative;
@@ -10,14 +10,14 @@
 .scui-article article {
   padding: 16px;
   &.default {
-    background-color: $col_2;
+    background-color: $col_white;
     .article-action {
-      border-left: 1px solid $col_21;
+      border-left: 1px solid $col_main_3;
       .icon {
         color: rgba(0, 0, 0, 0.7);
       }
       &:hover {
-        background: $col_21;
+        background: $col_main_3;
         .icon {
           color: rgba(0, 0, 0, 1);
         }
@@ -26,21 +26,48 @@
   }
 
   &.edit {
-    background-color: $col_15;
+    background-color: $col_prim_1;
     .scui-article-footer {
-      border-top: 1px solid $col_32 !important;
+      border-top: 1px solid $col_prim_2 !important;
       .article-action, .article-action-2 {
-        border-left: 1px solid $col_32;
+        border-left: 1px solid $col_prim_2;
         .icon {
           color: rgba(0, 0, 0, 0.7);
         }
         &:hover {
-          background: $col_32;
+          background: $col_prim_3;
           .icon {
-            color: $col_2;
+            color: $col_white;
           }
         }
       }
+    }
+  }
+
+  &.imported {
+    background-color: $col_prim_1;
+    .scui-article-footer {
+      border-top: 1px solid $col_prim_2 !important;
+      .article-action {
+        border-left: 1px solid $col_prim_2;
+        .icon {
+          color: rgba(0, 0, 0, 0.7);
+        }
+        &:hover {
+          background: $col_prim_3;
+          .icon {
+            color: $col_white;
+          }
+        }
+      }
+      .pills-box {
+        .pill-info {
+          background: $col_prim_4 !important;
+        }
+      }
+    }
+    .scui-article-img {
+      background: $col_white;
     }
   }
 
@@ -48,7 +75,7 @@
     display: inherit;
     position: relative;
     padding: 0;
-    background: $col_14;
+    background: $col_main_1;
     .content {
       padding-left: 40px;
       padding-top: 18px;
@@ -56,12 +83,12 @@
       line-height: 22px;
     }
     .header {
-      border-top: 8px solid $col_18;
+      border-top: 8px solid $col_sec_2;
       height: 64px;
       width: 100%;
-      background: $col_2;
+      background: $col_white;
       padding-left: 40px;
-      color: $col_18;
+      color: $col_sec_2;
       padding-top: 13px;
       .icon {
         font-size: 30px;
@@ -76,23 +103,23 @@
       font-size: 13px;
       padding: 9px 24px;
       .btn {
-        color: $col_2;
+        color: $col_white;
         display: inline-block;
         font-size: 14px;
         padding: 10px 21px;
         border-radius: 4px;
         cursor: pointer;
         &.cancel {
-          background: $col_20;
+          background: $col_main_4;
           &:hover {
-            background: $col_27
+            background: $col_main_7
           }
         }
         &.remove {
           margin-left: 8px;
-          background: $col_17;
+          background: $col_sec_1;
           &:hover {
-            background: $col_18;
+            background: $col_sec_2;
           }
         }
       }
@@ -101,7 +128,7 @@
 
   .scui-article-img {
     height: 190px;
-    background: $col_21;
+    background: $col_main_3;
     .img {
       width: 100%;
       height: 100%;
@@ -133,7 +160,7 @@
       }
       a {
         font-size: 18px;
-        color: $col_6;
+        color: $col_black;
       }
     }
 
@@ -151,7 +178,7 @@
       }
 
       a {
-        color: $col_3;
+        color: $col_black;
         text-decoration: none;
       }
     }
@@ -164,17 +191,16 @@
       right: 0;
       bottom: 1px;
       padding: 10px 16px;
-      border-top: 1px solid $col_21;
+      border-top: 1px solid $col_main_3;
       .pills-box {
-        //background: #ffa8a2;
         position: absolute;
         left: 16px;
         top: 8px;
         bottom: 8px;
-        color: $col_2;
+        color: $col_white;
         height: 24px;
-        .pill {
-          background: $col_25;
+        .pill-info {
+          background: $col_prim_4;
           font-size: 14px;
           display: inline-block;
           height: 100%;

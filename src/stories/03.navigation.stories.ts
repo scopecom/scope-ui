@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 import { ScUiCardComponent } from '../app/components/scui-card/scui-card.component';
 import { ButtonListStub } from '../app/constants/button.list';
 import { BgHoverDirective } from '../app/directives/bg-hover.module';
-import { ScUiDrawerComponent } from '../app/components/scui-drawer/scui-drawer.component';
+import { ScUiDrawerComponent, ScUiDrawerNavComponent } from '../app/components/scui-drawer/scui-drawer.component';
 import { ScUiNavComponent } from '../app/components/scui-nav/scui-nav.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMenu, AppMenuFooter, AppMenuLogo } from '../app/constants/app.menu';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
 import { ScuiTabsComponent } from '../app/components/scui-tabs/scui-tabs.component';
+import { DragulaModule } from 'ng2-dragula';
+import { Tabs, DisabledTabs } from '../app/constants/tabs';
+
 
 storiesOf('Navigation', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule, RouterTestingModule],
-      declarations: [ScUiCardComponent, ScuiTabsComponent, BgHoverDirective, ScUiDrawerComponent, ScUiNavComponent]
+      imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],
+      declarations: [ScUiCardComponent, ScuiTabsComponent, BgHoverDirective, ScUiDrawerComponent, ScUiNavComponent, ScUiDrawerNavComponent]
     })
   )
   .add('Card Default', () => ({
@@ -46,11 +49,11 @@ storiesOf('Navigation', module)
       buttonList: ButtonListStub,
     },
   }))
-  .add('Menu default', () => ({
+  .add('Menu Start', () => ({
     template: `
       <scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>
         <div class="scui-container">
-          <scui-drawer [collapse]="true" [drawerOpen]="true">
+<!--          <scui-drawer [collapse]="true" [drawerOpen]="true">
             <section class="scui-submenu">
               <header class="submenu-header">
                 <h1 class="submenu-title">Projects</h1>
@@ -64,7 +67,7 @@ storiesOf('Navigation', module)
           </scui-drawer>
           <div class="scui-content">
 
-          </div>
+          </div>-->
         </div>`,
     props: {
       menuItems: AppMenu,
@@ -75,7 +78,7 @@ storiesOf('Navigation', module)
       drawerOpen: true
     },
   }))
-  .add('Menu collapsable', () => ({
+  .add('Menu Default', () => ({
     template: `
       <scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>
         <div class="scui-container">
@@ -105,21 +108,16 @@ storiesOf('Navigation', module)
       collapse: true
     },
   }))
-  .add('Navigation', () => ({
-    template: `<scui-nav [logo]="logo" [menuItems]="menuItems" [footer]="footer"></scui-nav>`,
-    props: {
-      menuItems: AppMenu,
-      logo: AppMenuLogo,
-      footer: AppMenuFooter
-    },
-  }))
-  .add('Navigation without footer', () => ({
-    template: `<scui-nav [logo]="logo" [menuItems]="menuItems"></scui-nav>`,
-    props: {
-      menuItems: AppMenu,
-      logo: AppMenuLogo,
-    },
-  }))
   .add('Tabs', () => ({
-    template: `<scui-tabs></scui-tabs>`
+    template: `<scui-tabs [tabs]="tabs"></scui-tabs>`,
+    props: {
+      tabs: Tabs
+    }
+  }))
+  .add('Disabled Tabs', () => ({
+    template: `<scui-tabs [disabled]="disabled" [tabs]="tabs"></scui-tabs>`,
+    props: {
+      tabs: DisabledTabs,
+      disabled: true
+    }
   }));

@@ -22,14 +22,14 @@
 
   .submenu-title {
     font-size: 20px;
-    color: $col_6;
+    color: $col_black;
     font-weight: 600;
   }
 
   .submenu-nav-title {
     font-weight: 700;
     font-size: 14px;
-    color: $col_28;
+    color: $col_main_4;
     margin: 38px 0 20px 24px;
   }
 
@@ -37,16 +37,8 @@
     margin-top: 20px;
   }
 
-  .submenu-divider {
-    background: $col_29;
-  }
-
-  .color_01 {
-    color: $col_23 !important;
-  }
-
   .submenu-nav-label {
-    color: $col_24 !important;
+    color: $col_black !important;
     text-overflow: ellipsis;
     word-break: break-word;
   }
@@ -67,12 +59,12 @@
 
   &.active {
     a span{
-      color: $col_26 !important;
+      color: $col_prim_5 !important;
     }
   }
 
   &:hover {
-    background: $col_14;
+    background: $col_main_1;
     .submenu-nav-actions{
       visibility: visible;
     }
@@ -90,21 +82,21 @@
   .icon2 {
     font-weight: 600;
     margin-left: 4px;
-    color: $col_24;
+    color: $col_black;
     font-size: 14px;
     padding: 2px;
     cursor: pointer;
   }
 
   .icon1 {
-    color: $col_24;
+    color: $col_black;
     font-weight: 600;
     font-size: 14px;
     margin-right: 4px;
   }
 
   .list-item {
-    color: $col_27;
+    color: $col_$col_main_727;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -124,6 +116,6 @@
   display: flex;
 
   .icon-btn-empty {
-    color: $col_28;
+    color: $col_main_4;
   }
 }

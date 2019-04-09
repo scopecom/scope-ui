@@ -35,11 +35,11 @@ import { ScUiArticle } from '../../interfaces';
           </div>
           <footer class="scui-article-footer">
             <div class="pills-box">
-              <span class="pill">
+              <span class="pill-info">
                 <span class="icon icon-app-store"></span>
                 <span class="value">2</span>
               </span>
-              <span class="pill">
+              <span class="pill-info">
                 <span class="icon icon-single-folded"></span>
                 <span class="value">2</span>
               </span>
@@ -53,6 +53,34 @@ import { ScUiArticle } from '../../interfaces';
           </footer>
         </aside>
       </article>
+
+      <article class="imported" *ngIf="article.mode === 'imported'">
+        <figure class="scui-article-img">
+          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
+        </figure>
+        <aside class="scui-article-content">
+          <header class="scui-article-header">
+            <time>{{article.date}}</time>
+            <a href="#"><span class="icon icon-globe"></span></a>
+          </header>
+          <div class="scui-article-desc">
+            <h3>{{article.title}}</h3>
+            <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
+          </div>
+          <footer class="scui-article-footer">
+            <div class="pills-box">
+              <span class="pill-info">
+                <span class="icon icon-app-store"></span>
+                <span class="value">2</span>
+              </span>
+            </div>
+            <span class="article-action">
+              <span class="icon icon-e-remove"></span>
+            </span>
+          </footer>
+        </aside>
+      </article>
+
       <article class="default" *ngIf="article.mode === 'default'">
         <figure class="scui-article-img">
           <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>

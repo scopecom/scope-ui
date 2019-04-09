@@ -9,3 +9,19 @@ export const Tabs = [
     title: 'LINKEDIN',
   }
 ];
+
+
+export const DisabledTabs = [
+  {
+    title: 'FACEBOOK',
+    disabled: true
+  },
+  {
+    title: 'TWITTER',
+    disabled: true
+  },
+  {
+    title: 'LINKEDIN',
+    disabled: true
+  }
+];

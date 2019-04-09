@@ -1,4 +1,4 @@
-@import  "../global/_variables";
+@import "../global/_variables";
 
 .scui-drawer {
   min-height: 100vh;
@@ -6,10 +6,10 @@
   overflow: auto;
   display: flex;
   flex-direction: row;
-  max-width: 300px;
+  min-width: 420px;
 
   .drawer-inner {
-    background-color: $col_7;
+    background-color: $col_main_1;
     width: 100%;
   }
 
@@ -25,11 +25,11 @@
     width: 8px;
     min-height: 100vh;
     height: 100%;
-    background-color: $col_8;
+    background-color: $col_main_3;
     cursor: pointer;
 
     &:hover {
-      background-color: #3399ff;
+      background-color: $col_prim_5;
     }
   }
 }

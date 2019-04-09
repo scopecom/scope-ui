@@ -1,6 +1,4 @@
 import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
   EventEmitter,
   Input,
@@ -61,22 +59,22 @@ export class ScUiDrawerComponent implements OnChanges {
     <ng-template #itemsTpl>
       <li (click)="selectItem(item)"
           [ngClass]="{'active': item.active}"
+          routerLinkActive="active"
           *ngFor="let item of subMenuItems"
           class="submenu-nav-item">
-        <a routerLink="project/{{item.id}}">
+        <div class="list-item">
           <span *ngIf="sortable" class="icon icon1 icon-zoom-99 handle"></span>
           <span class="icon icon1 icon-app-store"></span>
-          <span class="submenu-nav-label">{{item.name || item.title}}</span>
+          <a [routerLink]="item.routerLink" class="submenu-nav-label">{{item.name || item.title}}</a>
           <span class="submenu-nav-actions">
-              <button class="icon-btn-empty"><span class="icon icon2 icon-c-delete"></span></button>
-              <button class="icon-btn-empty"><span class="icon icon2 icon-settings-gear"></span></button>
-            </span>
-        </a>
+            <button class="icon-btn-empty" (click)="deleteItem(item, $event)"><span class="icon icon2 icon-c-delete"></span></button>
+            <button class="icon-btn-empty" (click)="editItem(item, $event)"><span class="icon icon2 icon-settings-gear"></span></button>
+          </span>
+        </div>
       </li>
     </ng-template>
   `,
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  encapsulation: ViewEncapsulation.None
 })
 export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   @Input() subMenuItems: ScUiSubMenuItem[];
@@ -84,14 +82,15 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   @Input() sortable: string = null;
 
   @Output() onItemSelect = new EventEmitter<ScUiSubMenuItem>();
+  @Output() onItemEdit = new EventEmitter<ScUiSubMenuItem>();
+  @Output() onItemDelete = new EventEmitter<ScUiSubMenuItem>();
   @Output() onItemReorder = new EventEmitter<ScUiSubMenuItem[]>();
 
   dragInProgress = false;
 
   private subs: Subscription;
 
-  constructor(private dndService: DragulaService,
-              private cd: ChangeDetectorRef) {
+  constructor(private dndService: DragulaService) {
   }
 
   ngOnInit() {
@@ -100,21 +99,18 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
       this.subs.add(
         this.dndService.dropModel(this.sortable).subscribe(({targetModel}) => {
           this.onItemReorder.emit(targetModel);
-          this.cd.markForCheck();
         })
       );
 
       this.subs.add(
         this.dndService.drag(this.sortable).subscribe(() => {
           this.dragInProgress = true;
-          this.cd.markForCheck();
         })
       );
 
       this.subs.add(
         this.dndService.drop(this.sortable).subscribe(() => {
           this.dragInProgress = false;
-          this.cd.markForCheck();
         })
       );
 
@@ -135,5 +131,15 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
 
   selectItem(item: ScUiSubMenuItem) {
     this.onItemSelect.emit(item);
+  }
+
+  deleteItem(item: ScUiSubMenuItem, event) {
+    event.stopPropagation();
+    this.onItemDelete.emit(item);
+  }
+
+  editItem(item: ScUiSubMenuItem, event) {
+    event.stopPropagation();
+    this.onItemEdit.emit(item);
   }
 }

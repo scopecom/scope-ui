@@ -5,9 +5,9 @@ import { ScUiTabs } from '../../interfaces';
   selector: 'scui-tabs',
   template: `
     <section class="scui-tabs">
-      <div [ngClass]="{disabled:disabled}" class="tabs" #tabContainer>
+      <div class="tabs" #tabContainer>
         <div *ngFor="let tab of tabs, let i = index"
-             [ngClass]="{'active-tab': i === activeTab}"
+             [ngClass]="{'active-tab': i === activeTab, disabled:tab.disabled}"
              (click)="setActiveTab(i, tabItem, tabContainer)"
              #tabItem
              class="tab">{{ tab.title }}
@@ -43,6 +43,7 @@ export class ScuiTabsComponent implements OnInit, AfterViewInit {
   }
 
   setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {
+    console.log(888);
     this.activeTab = key;
     if (tab) {
       this.offsetLeft = tabContainer ? tab.offsetLeft - tabContainer.offsetLeft : 0;

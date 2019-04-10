@@ -43,7 +43,6 @@ export class ScuiTabsComponent implements OnInit, AfterViewInit {
   }
 
   setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {
-    console.log(888);
     this.activeTab = key;
     if (tab) {
       this.offsetLeft = tabContainer ? tab.offsetLeft - tabContainer.offsetLeft : 0;

@@ -4,6 +4,7 @@
   padding-top: 32px;
   .disabled {
     pointer-events: none;
+    color: $col_main_5 !important;
   }
   .tabs {
     height: 32px;

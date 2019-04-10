@@ -11,13 +11,5 @@ export const Tabs = [
   {
     title: 'DISABLED',
     disabled: true
-  },
-  {
-    title: 'DISABLED',
-    disabled: true
-  },
-  {
-    title: 'DISABLED',
-    disabled: true
   }
 ];

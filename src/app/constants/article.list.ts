@@ -6,7 +6,7 @@ export const ArticleListStub: ScUiArticle[] = [
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since...',
     url: 'http://google.com',
     date: '01/27/2019',
-    photoUrl: 'https://corporate.thescope.com/hs-fs/hubfs/homepage-images/discovery.png?width=336&name=discovery.png',
+    photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
     mode: 'default',
   },
   {
@@ -14,7 +14,7 @@ export const ArticleListStub: ScUiArticle[] = [
     description: 'Headline',
     url: 'http://google.com',
     date: '01/27/2019',
-    photoUrl: 'https://corporate.thescope.com/hs-fs/hubfs/homepage-images/discovery.png?width=336&name=discovery.png',
+    photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
     mode: 'edit',
   },
   {
@@ -22,7 +22,7 @@ export const ArticleListStub: ScUiArticle[] = [
     description: 'Headline',
     url: 'http://google.com',
     date: '01/27/2019',
-    photoUrl: 'https://corporate.thescope.com/hs-fs/hubfs/homepage-images/discovery.png?width=336&name=discovery.png',
+    photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
     mode: 'delete',
   },
   {
@@ -30,7 +30,7 @@ export const ArticleListStub: ScUiArticle[] = [
     description: 'Headline',
     url: 'http://google.com',
     date: '01/27/2019',
-    photoUrl: 'https://corporate.thescope.com/hs-fs/hubfs/homepage-images/discovery.png?width=336&name=discovery.png',
+    photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
     mode: 'imported'
   },
 ];

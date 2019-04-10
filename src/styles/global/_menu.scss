@@ -33,11 +33,29 @@
   .submenu-nav-title {
     font-weight: 700;
     font-size: 14px;
-    color: $col_main_4;
-    margin: 38px 0 20px 24px;
+    color: $col_main_6;
+    margin: 38px 0 20px 0px;
     cursor: pointer;
+    height: 40px;
+    padding-left: 24px;
+    padding-top: 14px;
+    position: relative;
+    .icon {
+      position: absolute;
+      right: 16px;
+      font-size: 14px;
+      color: $col_main_6;
+      visibility: hidden;
+      &:hover {
+        opacity: 1;
+        color: $col_prim_4;
+      }
+    }
     &:hover {
-      color: $col_black;
+      background: $col_main_1;
+      .icon {
+        visibility: visible;
+      }
     }
   }
 

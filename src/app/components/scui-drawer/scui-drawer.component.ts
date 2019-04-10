@@ -49,7 +49,9 @@ export class ScUiDrawerComponent implements OnChanges {
   selector: 'scui-drawer-nav',
   template: `
     <nav class="submenu-nav">
-      <h2 class="submenu-nav-title">{{ title }} ({{ subMenuItems.length }})</h2>
+      <h2 class="submenu-nav-title">{{ title }} ({{ subMenuItems.length }})
+        <span class="icon icon-e-add"></span>
+      </h2>
       <ul class="submenu-nav-items">
         <div *ngIf="sortable; else itemsTpl" [dragula]="sortable" [dragulaModel]="subMenuItems">
           <ng-container *ngTemplateOutlet="itemsTpl"></ng-container>
@@ -67,7 +69,7 @@ export class ScUiDrawerComponent implements OnChanges {
           <span class="icon icon1 icon-app-store"></span>
           <a [routerLink]="item.routerLink" class="submenu-nav-label">{{item.name || item.title}}</a>
           <span class="submenu-nav-actions">
-            <button class="icon-btn-empty" (click)="deleteItem(item, $event)"><span class="icon icon2 icon-c-delete"></span></button>
+            <button class="icon-btn-empty" (click)="deleteItem(item, $event)"><span class="icon icon2 icon-e-remove"></span></button>
             <button class="icon-btn-empty" (click)="editItem(item, $event)"><span class="icon icon2 icon-settings-gear"></span></button>
           </span>
         </div>

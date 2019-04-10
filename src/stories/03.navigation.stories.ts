@@ -58,11 +58,11 @@ storiesOf('Navigation', module)
               <header class="submenu-header">
                 <h1 class="submenu-title">Projects</h1>
               </header>
-              <hr class="submenu-divider">
+              <div class="submenu-divider"></div>
               <scui-drawer-nav [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
-              <hr class="submenu-divider">
+              <div class="submenu-divider"></div>
               <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
-              <hr class="submenu-divider">
+              <div class="submenu-divider"></div>
             </section>
           </scui-drawer>
           <div class="scui-content">
@@ -87,11 +87,11 @@ storiesOf('Navigation', module)
               <header class="submenu-header">
                 <h1 class="submenu-title">Projects</h1>
               </header>
-              <hr class="submenu-divider">
+              <div class="submenu-divider"></div>
               <scui-drawer-nav [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
-              <hr class="submenu-divider">
+              <div class="submenu-divider"></div>
               <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
-              <hr class="submenu-divider">
+              <div class="submenu-divider"></div>
             </section>
           </scui-drawer>
           <div class="scui-content">

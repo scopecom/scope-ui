@@ -13,6 +13,10 @@
     height: 64px;
   }
 
+  .submenu-divider {
+    border-bottom: 1px solid $col_main_3;
+  }
+
   .nav-header-label {
     font-weight: 400;
     font-size: 15px;
@@ -34,7 +38,7 @@
   }
 
   .submenu-nav-items {
-    margin-top: 20px;
+    margin-top: 2px;
   }
 
   .submenu-nav-label {
@@ -49,6 +53,7 @@
 }
 
 .submenu-nav-item {
+  margin-top:2px;
   font-weight: 400;
   font-size: 15px;
   min-height: 40px;
@@ -58,14 +63,14 @@
   word-break: break-all;
 
   &.active {
-    a span{
+    a span {
       color: $col_prim_5 !important;
     }
   }
 
   &:hover {
     background: $col_main_1;
-    .submenu-nav-actions{
+    .submenu-nav-actions {
       visibility: visible;
     }
   }
@@ -88,11 +93,13 @@
     cursor: pointer;
   }
 
+
+
   .icon1 {
     color: $col_black;
     font-weight: 600;
     font-size: 14px;
-    margin-right: 4px;
+    margin-right: 8px;
   }
 
   .list-item {

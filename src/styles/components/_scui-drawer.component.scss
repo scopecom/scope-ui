@@ -6,11 +6,10 @@
   overflow: auto;
   display: flex;
   flex-direction: row;
-  min-width: 420px;
 
   .drawer-inner {
-    background-color: $col_main_1;
-    width: 100%;
+    background-color: $col_white;
+    width: 420px;
   }
 
   &.drawer-pos-left {
@@ -19,6 +18,7 @@
 
   &.collapsed {
     z-index: -1;
+    background: $col_main_1;
   }
 
   .drawer-collapse {
@@ -29,7 +29,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $col_prim_5;
+      background-color: $col_prim_4;
     }
   }
 }

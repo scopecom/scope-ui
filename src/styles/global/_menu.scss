@@ -67,8 +67,22 @@
   word-break: break-all;
 
   &.active {
-    a span {
-      color: $col_prim_5 !important;
+    .list-item {
+      a {
+        color: $col_prim_4 !important;
+      }
+      .icon {
+        color: $col_prim_4 !important;
+      }
+      .submenu-nav-actions {
+        .icon {
+          opacity: 0.6;
+          color: $col_prim_4 !important;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 

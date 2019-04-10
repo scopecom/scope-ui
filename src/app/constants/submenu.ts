@@ -7,7 +7,8 @@ export const SubmenuStub1 = [
   {
     name: 'Sales - Product Update',
     id: 2,
-    routerLink: 'project/2'
+    routerLink: 'project/2'.toString(),
+    active: true
   },
   {
     name: 'Intern 03/19',

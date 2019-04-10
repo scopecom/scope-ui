@@ -18,7 +18,7 @@
 
   &.collapsed {
     z-index: -1;
-    background: red;
+    background: $col_main_1;
     .drawer-collapse {
       background-color: $col_main_4 !important;
     }

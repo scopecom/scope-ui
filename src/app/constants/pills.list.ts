@@ -1,6 +1,14 @@
 export const PillsListStub = [
   {
-    label: 'This is a test pill',
-    cssClass: 'test-class',
-  }
+    label: 'WP Injector',
+  },
+  {
+    label: 'Google Docs',
+  },
+  {
+    label: 'Scope Creator',
+  },
+  {
+    label: 'LinkedIn Integratiion',
+  },
 ];

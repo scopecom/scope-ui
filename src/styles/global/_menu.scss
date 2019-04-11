@@ -48,7 +48,7 @@
       visibility: hidden;
       &:hover {
         opacity: 1;
-        color: $col_prim_4;
+        color: $col_black !important;
       }
     }
     &:hover {
@@ -159,7 +159,7 @@
     opacity: 0.6;
     &:hover {
       opacity: 1;
-      color: $col_prim_4;
+      color: $col_black;
     }
   }
 

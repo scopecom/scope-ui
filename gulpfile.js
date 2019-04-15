@@ -4,7 +4,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 
-const scss = () => {
+const css = () => {
   return gulp.src('./src/styles/scope-ui.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -15,6 +15,11 @@ const scss = () => {
     .pipe(rename('scope-ui.min.css'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'));
+};
+
+const scss = () => {
+  return gulp.src('./src/styles/**/*.scss')
+    .pipe(gulp.dest('./dist/scss'));
 };
 
 const scssIcons = () => {
@@ -30,6 +35,6 @@ const scssIcons = () => {
     .pipe(gulp.dest('./dist/css'));
 };
 
-const build = gulp.parallel(scss, scssIcons);
+const build = gulp.parallel(css, scss, scssIcons);
 
 exports.default = build;

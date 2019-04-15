@@ -1,4 +1,41 @@
-.scui-dropdown{
-  //color:red;
+@import "../global/_variables";
+
+.scui-dropdown {
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 280px;
+  font-weight: 300;
+  .hidden {
+    display: none;
+  }
+  .main {
+    height: 40px;
+    background: $col_main_1;
+    padding: 13px 8px;
+    position: relative;
+    font-size: 14px;
+    &:hover {
+      background: $col_main_2;
+    }
+    .icon-small-down, .icon-small-up {
+      font-size: 24px;
+      position: absolute;
+      right: 5px;
+      top: 8px;
+    }
+  }
+  .options {
+    background: $col_white;
+    padding: 16px 0;
+    .option {
+      height: 40px;
+      padding: 13px 8px;
+      font-size: 14px;
+      &:hover {
+        background: $col_main_1;
+      }
+    }
+  }
 }
 

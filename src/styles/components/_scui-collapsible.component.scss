@@ -1,0 +1,42 @@
+.scui-collapsible {
+  background: $col_main_1;
+  padding: 8px 16px 0 16px;
+  &.expanded {
+    padding-bottom: 40px;
+  }
+
+  .collapsible-controls {
+    padding-top: 10px;
+    border-top: 1px solid $col_main_3;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $col_main_5;
+    .label {
+      padding-left: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      vertical-align: 1px;
+      &:hover {
+        color: $col_black;
+      }
+    }
+    .icon {
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        color: $col_black;
+      }
+    }
+    .icon-e-add {
+      padding-right: 6px;
+    }
+  }
+  .collapsible-content {
+    transition: all 1.3s linear;
+    background: $col_main_3;
+    padding: 8px;
+    min-height: 40px;
+  }
+}

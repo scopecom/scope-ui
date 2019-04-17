@@ -1,6 +1,7 @@
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { ScUiDrawerComponent, ScUiDrawerNavComponent } from '../app/components/scui-drawer/scui-drawer.component';
+import { ScUiCollapsibleComponent } from '../app/components/scui-collapsible/scui-collapsible.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
 import { DragulaModule } from 'ng2-dragula';
@@ -9,7 +10,7 @@ storiesOf('Drawers', module)
   .addDecorator(
     moduleMetadata({
       imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],
-      declarations: [ScUiDrawerComponent, ScUiDrawerNavComponent]
+      declarations: [ScUiDrawerComponent, ScUiDrawerNavComponent, ScUiCollapsibleComponent]
     })
   )
   .add('Default open', () => ({
@@ -73,4 +74,6 @@ storiesOf('Drawers', module)
       submenu: SubmenuStub1,
       submenu2: SubmenuStub2
     },
-  }));
+  })).add('Collapsible Section', () => ({
+  template: `<scui-collapsible></scui-collapsible> `,
+}));

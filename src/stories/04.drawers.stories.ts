@@ -75,5 +75,5 @@ storiesOf('Drawers', module)
       submenu2: SubmenuStub2
     },
   })).add('Collapsible Section', () => ({
-  template: `<scui-collapsible></scui-collapsible><scui-collapsible></scui-collapsible> `,
+  template: `<scui-collapsible></scui-collapsible>`,
 }));

@@ -18,6 +18,10 @@
     }
     .group {
       cursor: pointer;
+      .icon-right-arrow {
+        margin-left: -2px;
+        padding-right: 2px;
+      }
       &:hover {
         color: $col_black;
       }
@@ -27,9 +31,6 @@
       font-weight: 500;
       vertical-align: 1px;
       font-size: 13px;
-    }
-    .icon-e-add {
-      // padding-right: 6px;
     }
     .icon-wrap {
       display: inline-block;

@@ -9,6 +9,7 @@ export * from './components/scui-dropdown/scui-dropdown.module';
 export * from './components/scui-nav/scui-nav.module';
 export * from './components/scui-pills/scui-pills.module';
 export * from './components/scui-tabs/scui-tabs.module';
+export * from './components/scui-wizard-nav/scui-wizard-nav.module';
 // directives
 export * from './directives/bg-hover.module';
 // interfaces

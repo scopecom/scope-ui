@@ -1,0 +1,48 @@
+.scui-wizard-nav {
+  display: flex;
+  flex-direction: column;
+  background-color: $col_prim_5;
+
+  .scui-wizard-back {
+    margin-bottom: 20px;
+  }
+
+  .scui-wizard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 40px;
+  }
+
+  .scui-wizard-nav-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  .scui-wizard-nav-text {
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    top: 28px;
+    font-size: 14px;
+  }
+
+  .scui-wizard-nav-item {
+    color: $col_white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 7px;
+    padding-bottom: 20px;
+  }
+
+  .scui-wizard-nav-delimiter {
+    flex: 1;
+    border-bottom: 1px solid;
+  }
+}

@@ -5,14 +5,17 @@ import { ProjectDetailRoutingModule } from './project-detail-routing.module';
 import { ProjectDetailComponent } from './project-detail.component';
 import { ScUiDrawerModule } from '../../../components/scui-drawer/scui-drawer.module';
 import { ScUiArticleModule } from '../../../components/scui-article/scui-article.module';
+import { ScUiWizardNavModule } from '../../../components/scui-wizard-nav/scui-wizard-nav.module';
+import { MockComponent } from './mock/mock.component';
 
 @NgModule({
-  declarations: [ProjectDetailComponent],
+  declarations: [ProjectDetailComponent, MockComponent],
   imports: [
     CommonModule,
     ProjectDetailRoutingModule,
     ScUiDrawerModule,
-    ScUiArticleModule
+    ScUiArticleModule,
+    ScUiWizardNavModule
   ]
 })
 export class ProjectDetailModule { }

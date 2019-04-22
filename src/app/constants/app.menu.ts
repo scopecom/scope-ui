@@ -33,6 +33,25 @@ export const AppMenu: ScUiMenuItem[] = [
   }
 ];
 
+export const WizardMenu: ScUiMenuItem[] = [
+  {
+    name: 'Layout view',
+    route: 'layout'
+  },
+  {
+    name: 'Output properties',
+    route: 'output'
+  },
+  {
+    name: 'publish',
+    route: 'publish'
+  },
+  {
+    name: 'Overview',
+    route: 'overview'
+  }
+];
+
 export const AppMenuLogo: ScUiMenuItem = {
   name: 'Scope',
   route: '/start',

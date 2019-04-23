@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ScUiMenuItem } from '../../interfaces';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'scui-wizard-nav',
@@ -16,9 +15,8 @@ import { Location } from '@angular/common';
         <ng-container *ngFor="let navItem of navItems; let i = index">
           <a class="scui-wizard-nav-item"
              (click)="setStep(i)"
-             [ngClass]="{'active-step': activeStep >= i}"
-             [routerLink]="[navItem.route]"
-             [routerLinkActive]="activeClass">
+             [ngClass]="{'active-step': activeStep >= i,activeClass: i === activeStep}"
+          >
             <div class="scui-wizard-nav-icon"></div>
             <div class="scui-wizard-nav-text">{{navItem.name}}</div>
           </a>
@@ -32,20 +30,23 @@ import { Location } from '@angular/common';
 export class ScUiWizardNavComponent implements OnInit {
   @Input() navItems: ScUiMenuItem[];
   @Input() activeClass = 'active-nav';
+  @Input() activeStep = 0;
+  @Output() onStepSelect = new EventEmitter<number>();
 
-  activeStep = 0;
-
-  constructor(private location: Location) {
+  constructor() {
   }
 
   ngOnInit() {
   }
 
   goBack() {
-    this.location.back();
+    if (this.activeStep > 0) {
+      this.activeStep--;
+    }
   }
 
   setStep(index: number) {
     this.activeStep = index;
+    this.onStepSelect.emit(this.activeStep)
   }
 }

@@ -12,10 +12,6 @@
     width: 420px;
   }
 
-  &.drawer-pos-left {
-    margin-left: 64px;
-  }
-
   &.collapsed {
     z-index: -1;
     background: $col_main_1;

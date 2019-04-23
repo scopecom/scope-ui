@@ -29,7 +29,7 @@ export class ScUiDropdownComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedOption = this.options[0];
+    this.selectedOption = this.selectedOption || this.options[0];
   }
 
   toggle() {

@@ -2,9 +2,22 @@
   display: flex;
   flex-direction: column;
   background-color: $col_prim_5;
+  height: 160px;
+  padding: 0 32px;
 
   .scui-wizard-back {
-    margin-bottom: 20px;
+    height: 64px;
+    margin-bottom: 28px;
+    color: $col_white;
+    padding-top: 19px;
+    .label {
+      padding-left: 32px;
+      font-size: 21px;
+    }
+    .icon {
+      vertical-align: -1px;
+      font-size: 21px;
+    }
   }
 
   .scui-wizard {
@@ -12,15 +25,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 0 40px;
-  }
-
-  .scui-wizard-nav-icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: red;
+    padding: 0 17px 0 26px;
   }
 
   .scui-wizard-nav-text {
@@ -29,6 +34,8 @@
     text-align: center;
     top: 28px;
     font-size: 14px;
+    min-width: 143px;
+    padding-top: 12px;
   }
 
   .scui-wizard-nav-item {
@@ -39,10 +46,31 @@
     position: relative;
     margin: 0 7px;
     padding-bottom: 20px;
+    .scui-wizard-nav-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 4px solid $col_main_4;
+    }
   }
 
   .scui-wizard-nav-delimiter {
     flex: 1;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $col_main_4;
+    position: relative;
+    top: -10px;
+    &.active-step {
+      border-bottom: 1px solid red;
+
+    }
+  }
+  .active-nav{
+    .scui-wizard-nav-icon{
+
+    }
+    .scui-wizard-nav-text{
+
+    }
   }
 }

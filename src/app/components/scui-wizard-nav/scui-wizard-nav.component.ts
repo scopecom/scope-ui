@@ -7,7 +7,10 @@ import { Location } from '@angular/common';
   template: `
     <header class="scui-wizard-nav">
       <nav class="scui-wizard-back">
-        <a (click)="goBack()"><- Austeller Update</a>
+        <a (click)="goBack()">
+          <span class="icon icon-arrow-left"></span>
+          <span class="label">Austeller Update</span>
+        </a>
       </nav>
       <nav class="scui-wizard">
         <ng-container *ngFor="let navItem of navItems; let i = index">
@@ -32,7 +35,8 @@ export class ScUiWizardNavComponent implements OnInit {
 
   activeStep = 0;
 
-  constructor(private location: Location) { }
+  constructor(private location: Location) {
+  }
 
   ngOnInit() {
   }

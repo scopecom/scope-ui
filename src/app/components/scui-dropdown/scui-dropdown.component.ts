@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ScUiOption } from '../../interfaces';
 
 @Component({
   selector: 'scui-scui-dropdown',
@@ -19,9 +20,10 @@ import { Component, OnInit, Input } from '@angular/core';
     </div>`,
 })
 export class ScUiDropdownComponent implements OnInit {
-  @Input() options: any[];
+  @Input() options: ScUiOption[];
+  @Input() selectedOption: ScUiOption;
+  @Output() onSelectedOption = new EventEmitter<ScUiOption>();
   isOpen: boolean;
-  selectedOption: any;
 
   constructor() {
   }
@@ -36,6 +38,7 @@ export class ScUiDropdownComponent implements OnInit {
 
   selectOption(option) {
     this.selectedOption = option;
+    this.onSelectedOption.emit(this.selectedOption);
   }
 
 }

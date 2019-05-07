@@ -60,7 +60,7 @@ export class ScUiDrawerComponent implements OnChanges {
     </nav>
     <ng-template #itemsTpl>
       <li (click)="selectItem(item)"
-          [ngClass]="{'active': item.active}"
+          [ngClass]="{'active': item.active || (item.id === activeItemId)}"
           routerLinkActive="active"
           *ngFor="let item of subMenuItems"
           class="submenu-nav-item">
@@ -82,6 +82,7 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   @Input() subMenuItems: ScUiSubMenuItem[];
   @Input() title: string;
   @Input() sortable: string = null;
+  @Input() activeItemId: number;
 
   @Output() onItemSelect = new EventEmitter<ScUiSubMenuItem>();
   @Output() onItemEdit = new EventEmitter<ScUiSubMenuItem>();

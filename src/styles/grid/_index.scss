@@ -48,6 +48,10 @@
   margin-left: var(--gutter-compensation, -0.5rem);
 }
 
+.scui-row-wrap {
+  flex-wrap: wrap;
+}
+
 .scui-row.scui-reverse {
   flex-direction: row-reverse;
 }

@@ -72,7 +72,7 @@ storiesOf('Form Controls', module)
                    </mat-form-field>
                </div>`
   }))
-  .add('Form field', () => ({
+  .add('Scope Form field', () => ({
     template: `<div style="margin: 20px;" class="scui-form-field">
                   <div>
                     <mat-form-field>

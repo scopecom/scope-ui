@@ -1,3 +1,4 @@
+import { DOCUMENT } from '@angular/common';
 import {
   Component,
   EventEmitter,
@@ -7,7 +8,9 @@ import {
   OnInit,
   Output,
   SimpleChanges,
-  ViewEncapsulation
+  ViewEncapsulation,
+  Renderer2,
+  Inject
 } from '@angular/core';
 import { ScUiSubMenuItem } from '../../interfaces';
 import { DragulaService } from 'ng2-dragula';
@@ -33,7 +36,8 @@ export class ScUiDrawerComponent implements OnChanges {
 
   drawerState: boolean;
 
-  constructor() {
+  constructor(private renderer: Renderer2,
+              @Inject(DOCUMENT) private document: Document) {
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -42,6 +46,11 @@ export class ScUiDrawerComponent implements OnChanges {
 
   toggleDrawer() {
     this.drawerState = !this.drawerState;
+    if (this.drawerState) {
+      this.renderer.addClass(this.document.body, 'scui-drower-open');
+    } else {
+      this.renderer.removeClass(this.document.body, 'scui-drower-open');
+    }
   }
 }
 

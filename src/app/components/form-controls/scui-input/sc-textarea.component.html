@@ -1,0 +1,21 @@
+<div class="scope-form-group {{styleClass}}">
+    <label [ngClass]="{'label-hidden': hideLabel}" #label>
+        <ng-content></ng-content>
+    </label>
+    <div class="text-wrap">
+        <textarea [(ngModel)]="data" rows="{{rowCount}}" #input="ngModel" [disabled]="disabled"
+                  (focus)="showCounter = true;" (blur)="save(input, $event); showCounter = false;"
+                  class="form-control teal-control">
+        </textarea>
+        <div class="textarea-controls-wrap">
+            <div class="char-count" *ngIf="charCount && data && (showCounter || data?.length > charCount)"
+                 [ngClass]="{'char-count-alert': data?.length > charCount}">{{data?.length}}/{{charCount}}
+            </div>
+            <div class="input-controls" *ngIf="input.dirty && data !== initialData">
+                <fa-icon icon="check" (click)="save(input)"></fa-icon>
+                <fa-icon icon="times" (mousedown)="setDiscardProgress(true)" (click)="discard(input)" (mouseup)="setDiscardProgress(false)"></fa-icon>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

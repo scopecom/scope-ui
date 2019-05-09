@@ -1,0 +1,76 @@
+.scope-form-group {
+  position: relative;
+  margin-bottom: 10px !important;
+  &.abs-controls {
+    .textarea-controls-wrap {
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
+
+.label-hidden {
+  display: none !important;
+}
+
+.input-controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
+  color: #00b8ae;
+  transform: translateY(25px);
+
+  fa-icon {
+    cursor: pointer;
+    margin: 0 2px;
+  }
+}
+
+.text-wrap {
+  position: relative;
+
+  textarea {
+    display: block;
+    padding-bottom: 5px !important;
+  }
+
+  .textarea-controls-wrap {
+    position: relative;
+    .char-count {
+      display: inline-block;
+      position: relative;
+      float: left;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .input-controls {
+      float: right;
+      position: relative;
+      display: inline-block;
+      transform: none !important;
+      margin-top: -4px;
+    }
+  }
+}
+
+.char-count-alert {
+  color: red;
+}
+
+.article-comment {
+  textarea {
+    height: 58px;
+    font-size: 13px;
+    resize: vertical;
+    padding: 3px;
+  }
+  margin-bottom: 15px;
+  .input-controls {
+    margin-bottom: -15px;
+  }
+}
+
+.scui-input {
+  height: 40px;
+}

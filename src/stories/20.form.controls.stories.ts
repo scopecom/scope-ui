@@ -2,6 +2,7 @@ import 'hammerjs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FormControlsModule } from '../app/components/form-controls/form-controls.module';
 import {
   MatAutocompleteModule,
   MatCheckboxModule,
@@ -32,7 +33,8 @@ storiesOf('Form Controls', module)
       MatRadioModule,
       MatSelectModule,
       MatSliderModule,
-      MatSlideToggleModule
+      MatSlideToggleModule,
+      FormControlsModule
     ],
     providers: []
   }))
@@ -75,7 +77,8 @@ storiesOf('Form Controls', module)
   .add('Scope Form field', () => ({
     template: `<div style="margin: 20px;" class="scui-form-field">
                   <div>
-                    <mat-form-field>
+                  <scui-input></scui-input>
+     <!--               <mat-form-field>
                       <input matInput placeholder="Input">
                     </mat-form-field>
                     <br>
@@ -87,7 +90,7 @@ storiesOf('Form Controls', module)
                       <mat-select placeholder="Select">
                         <mat-option value="option">Option</mat-option>
                       </mat-select>
-                    </mat-form-field>
+                    </mat-form-field>-->
                   </div>
                </div>`
   }))

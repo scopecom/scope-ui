@@ -96,7 +96,7 @@ import { ScUiArticle } from '../../interfaces';
           </div>
           <footer class="scui-article-footer">
             <span class="article-action">
-              <span class="icon icon-e-add"></span>
+              <span class="icon icon-e-add" (click)="importArticle(article)"></span>
             </span>
           </footer>
         </aside>

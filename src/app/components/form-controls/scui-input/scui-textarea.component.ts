@@ -12,6 +12,7 @@ import { ScUiInputComponent } from './scui-input.component';
         </div>
         <textarea
           (input)="save($event)"
+          [value]="value"
           (focus)="inputState = 'scui-focus'"
           (blur)="inputState = ''"
           class="scui-input form-control"></textarea>

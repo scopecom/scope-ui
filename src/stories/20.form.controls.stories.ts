@@ -1,8 +1,8 @@
 import 'hammerjs';
 import {moduleMetadata, storiesOf} from '@storybook/angular';
-import {FormControl, ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {FormControlsModule} from '../app/components/form-controls/form-controls.module';
+import {ScUiFormControlsModule} from '../app/components/form-controls/form-controls.module';
 import {
   MatAutocompleteModule,
   MatCheckboxModule,
@@ -17,6 +17,9 @@ import {
 } from '@angular/material';
 
 const ctrl = new FormControl();
+const fromGroup = new FormBuilder().group({
+  name: ['', [Validators.maxLength(10)]]
+});
 
 storiesOf('Form Controls', module)
   .addDecorator(moduleMetadata({
@@ -34,7 +37,7 @@ storiesOf('Form Controls', module)
       MatSelectModule,
       MatSliderModule,
       MatSlideToggleModule,
-      FormControlsModule
+      ScUiFormControlsModule
     ],
     providers: []
   }))
@@ -75,24 +78,15 @@ storiesOf('Form Controls', module)
                </div>`
   }))
   .add('Scope Form field', () => ({
-    template: `<div style="margin: 20px;" class="scui-form-field">
-                  <div>
-                  <scui-input></scui-input>
-     <!--               <mat-form-field>
-                      <input matInput placeholder="Input">
-                    </mat-form-field>
-                    <br>
-                    <mat-form-field>
-                      <textarea matInput placeholder="Textarea"></textarea>
-                    </mat-form-field>
-                    <br>
-                    <mat-form-field>
-                      <mat-select placeholder="Select">
-                        <mat-option value="option">Option</mat-option>
-                      </mat-select>
-                    </mat-form-field>-->
-                  </div>
-               </div>`
+    template: `<form [formGroup]="myForm"><div style="margin: 20px; width:400px" class="scui-form-field">
+                  <scui-input formControlName="name" [maxLength]="maxLength" [label]="label"></scui-input>
+               </div>
+</form>`,
+    props: {
+      label: 'Project Title*',
+      maxLength: 10,
+      myForm: fromGroup
+    }
   }))
   .add('Input', () => ({
     template: `<div style="margin: 20px;" class="scui-input">

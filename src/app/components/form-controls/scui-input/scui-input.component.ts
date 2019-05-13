@@ -1,25 +1,27 @@
-import { Component, ElementRef, EventEmitter, Input, Optional, Output, Self, ViewChild } from '@angular/core';
-import { ControlValueAccessor, NgControl } from '@angular/forms';
-
+import {Component, EventEmitter, Input, Optional, Output, Self} from '@angular/core';
+import {ControlValueAccessor, NgControl} from '@angular/forms';
 
 @Component({
   selector: 'scui-input',
   template: `
-    <div class="scui-input {{styleClass}} {{inputState}}" [ngClass]="{'scui-error': !control.pristine && (control?.errors != null)}">
-      <label class="scui-input-label">
-        <div>
+    <div class="scui-input {{styleClass}} {{inputState}}" [ngClass]="{'scui-error': !control?.pristine && (control?.errors != null)}">
+      <div>
+        <div class="scui-input-label">
           {{label}}
         </div>
         <input [type]="inputType"
                (input)="save($event)"
                (focus)="inputState = 'scui-focus'"
                (blur)="inputState = ''"
-               class="scui-input form-control">
-        <span *ngIf="maxLength" class="scui-input-counter">{{value.length}} / {{maxLength}}</span>
-      </label>
+               [value]="value"
+               class="scui-input-field">
+        <div *ngIf="maxLength &&!control?.errors?.maxlength" class="scui-input-counter">
+          <div>Max {{maxLength}} chars</div>
+          <div>{{value?.length || 0 }} / {{maxLength}}</div>
+        </div>
+      </div>
       <div class="scui-input-messages">
-        <div *ngIf="maxLength && !control?.errors">Max {{maxLength}} chars</div>
-        <div *ngIf="control.errors?.maxlength">Greska</div>
+        <div *ngIf="control?.errors?.maxlength">This is the error message</div>
         <ng-content></ng-content>
       </div>
     </div>
@@ -47,7 +49,7 @@ export class ScUiInputComponent implements ControlValueAccessor {
   }
 
   propagateChange = (_: any) => {
-  }
+  };
 
   registerOnChange(fn) {
     this.propagateChange = fn;

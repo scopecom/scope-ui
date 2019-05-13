@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ButtonListStub } from '../../../constants/button.list';
 import { PillsListStub } from '../../../constants/pills.list';
-import { DropdownItems } from '../../../constants/dropdown.items';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -12,7 +11,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class StartComponent implements OnInit {
   buttons = ButtonListStub;
   pills = PillsListStub;
-  dropdownItems = DropdownItems;
 
   demoForm: FormGroup;
 

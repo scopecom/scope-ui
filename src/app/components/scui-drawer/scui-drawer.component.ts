@@ -67,7 +67,6 @@ export class ScUiDrawerComponent implements OnChanges {
     <ng-template #itemsTpl>
       <li (click)="selectItem(item)"
           [ngClass]="{'active': item.active || (item.id === activeItemId)}"
-          routerLinkActive="active"
           *ngFor="let item of subMenuItems"
           class="submenu-nav-item">
         <div class="list-item">

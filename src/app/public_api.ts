@@ -10,6 +10,8 @@ export * from './components/scui-nav/scui-nav.module';
 export * from './components/scui-pills/scui-pills.module';
 export * from './components/scui-tabs/scui-tabs.module';
 export * from './components/scui-wizard-nav/scui-wizard-nav.module';
+// form controls
+export * from './components/form-controls/form-controls.module';
 // directives
 export * from './directives/bg-hover.module';
 // interfaces

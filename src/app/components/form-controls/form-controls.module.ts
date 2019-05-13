@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScUiInputComponent } from './scui-input/sc-input.component';
 import { FormsModule } from '@angular/forms';
+import { ScUiInputComponent } from './scui-input/scui-input.component';
+import { ScUiTextareaComponent } from './scui-input/scui-textarea.component';
 
 
 @NgModule({
   declarations: [
-    ScUiInputComponent
+    ScUiInputComponent,
+    ScUiTextareaComponent
   ],
   imports: [
     CommonModule,
     FormsModule
   ],
   exports: [
-    ScUiInputComponent
+    ScUiInputComponent,
+    ScUiTextareaComponent
   ],
 })
-export class FormControlsModule {
+export class ScUiFormControlsModule {
 }

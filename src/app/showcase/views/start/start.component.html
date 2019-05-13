@@ -10,6 +10,15 @@
         <div class="scui-row cards-wrap start-page-top-content">
           <img class="logo" src="../.././../../assets/images/logo.png" alt="Scope Logo">
           <span class="start-page-top-label">Scope Content Suite</span>
+          <form [formGroup]="demoForm">
+            <scui-input formControlName="name" [maxLength]="15" [label]="'Ime'">
+              <div *ngIf="demoForm.get('name').hasError('email')">ne valja email</div>
+              <div *ngIf="demoForm.get('name').hasError('maxlength')">ne valja max length</div>
+            </scui-input>
+            <scui-textarea formControlName="lastName" label="Prezime">
+              <div *ngIf="demoForm.get('lastName').hasError('maxlength')">ne valja max length</div>
+            </scui-textarea>
+          </form>
         </div>
         <div class="scui-row cards-wrap start-page-pills">
           <scui-pill [label]="pill.label" *ngFor="let pill of pills"></scui-pill>

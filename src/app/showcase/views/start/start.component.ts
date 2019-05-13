@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonListStub } from '../../../constants/button.list';
 import { PillsListStub } from '../../../constants/pills.list';
 import { DropdownItems } from '../../../constants/dropdown.items';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'scui-start',
@@ -13,11 +14,21 @@ export class StartComponent implements OnInit {
   pills = PillsListStub;
   dropdownItems = DropdownItems;
 
-  constructor() {
+  demoForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
   }
 
   ngOnInit() {
-    console.log(this.pills);
+    this.demoForm = this.fb.group({
+      name: ['', [Validators.required, Validators.maxLength(15), Validators.email]],
+      lastName: ['', [Validators.maxLength(2)]]
+    });
+
+    this.demoForm.valueChanges.subscribe((val) => {
+      console.log(val);
+      console.log(this.demoForm.valid);
+    });
   }
 
 }

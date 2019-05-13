@@ -1,0 +1,25 @@
+@import "../global/_variables";
+
+.form-container {
+  min-height: 200px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 8px solid;
+  .form-container-menu {
+    height: 56px;
+    border-bottom: 1px solid $col_main_3;
+  }
+  .form-container-content {
+    padding: 24px;
+  }
+  &.form-default {
+    border-color: $col_main_5
+  }
+  &.form-active {
+    border-color: $col_prim_4
+  }
+  &.form-error {
+    border-color: $col_sec_2
+  }
+}

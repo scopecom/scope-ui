@@ -1,8 +1,8 @@
 import 'hammerjs';
-import { moduleMetadata, storiesOf } from '@storybook/angular';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { FormControlsModule } from '../app/components/form-controls/form-controls.module';
+import {moduleMetadata, storiesOf} from '@storybook/angular';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {FormControlsModule} from '../app/components/form-controls/form-controls.module';
 import {
   MatAutocompleteModule,
   MatCheckboxModule,
@@ -166,4 +166,25 @@ storiesOf('Form Controls', module)
     template: `<div style="margin: 20px;padding:20px;width:300px;" class="scui-slide-toggle">
                   <mat-slide-toggle>Slide me!</mat-slide-toggle>
                </div>`
+  }))
+  .add('Form Container default', () => ({
+    template: `<div style="margin: 20px;padding:20px;width:800px;">
+                  <scui-form-container></scui-form-container>
+               </div>`,
+  }))
+  .add('Form Container active', () => ({
+    template: `<div style="margin: 20px;padding:20px;width:800px;">
+                  <scui-form-container [cssClass]="cssClass"></scui-form-container>
+               </div>`,
+    props: {
+      cssClass: 'form-active'
+    }
+  }))
+  .add('Form Container error', () => ({
+    template: `<div style="margin: 20px;padding:20px;width:800px;">
+                  <scui-form-container [cssClass]="cssClass"></scui-form-container>
+               </div>`,
+    props: {
+      cssClass: 'form-error'
+    }
   }));

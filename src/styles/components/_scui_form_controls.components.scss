@@ -7,8 +7,18 @@
   border-bottom: 1px solid;
   border-left: 8px solid;
   .form-container-menu {
+    padding-left: 24px;
+    padding-top: 15px;
     height: 56px;
     border-bottom: 1px solid $col_main_3;
+    .info {
+      vertical-align: 5px;
+      padding-left: 8px;
+      font-size: 18px;
+    }
+    .icon {
+      font-size: 24px;
+    }
   }
   .form-container-content {
     padding: 24px;

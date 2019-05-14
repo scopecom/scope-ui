@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ScUiInputComponent } from './scui-input/scui-input.component';
 import { ScUiTextareaComponent } from './scui-input/scui-textarea.component';
+import {FormContainerComponent} from './form-container/form-container.component';
 
 
 @NgModule({
   declarations: [
     ScUiInputComponent,
-    ScUiTextareaComponent
+    ScUiTextareaComponent,
+    FormContainerComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { ScUiTextareaComponent } from './scui-input/scui-textarea.component';
   ],
   exports: [
     ScUiInputComponent,
-    ScUiTextareaComponent
+    ScUiTextareaComponent,
+    FormContainerComponent
   ],
 })
 export class ScUiFormControlsModule {

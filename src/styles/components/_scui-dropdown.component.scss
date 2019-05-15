@@ -6,18 +6,26 @@
   display: inline-block;
   min-width: 280px;
   font-weight: 300;
+  &.dropdown-expanded {
+    .main {
+      border-bottom: 1px solid $col_prim_5;
+      background: $col_prim_1;
+      color: $col_main_7;
+      .icon-small-up {
+        color: $col_main_7;
+      }
+    }
+  }
   .hidden {
     display: none;
   }
   .main {
     height: 40px;
-    background: $col_main_1;
-    padding: 13px 8px;
+    background: $col_main_2;
+    padding: 13px 16px;
     position: relative;
-    font-size: 14px;
-    &:hover {
-      background: $col_main_2;
-    }
+    font-size: 15px;
+    border-bottom: 1px solid $col_main_4;
     .icon-small-down, .icon-small-up {
       font-size: 24px;
       position: absolute;
@@ -27,7 +35,10 @@
   }
   .options {
     background: $col_white;
-    padding: 16px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid $col_main_4;
+    border-left: 1px solid $col_main_4;
+    border-right: 1px solid $col_main_4;
     .option {
       height: 40px;
       padding: 13px 8px;

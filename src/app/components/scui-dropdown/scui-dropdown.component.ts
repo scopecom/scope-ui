@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ScUiOption } from '../../interfaces';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {ScUiOption} from '../../interfaces';
 
 @Component({
-  selector: 'scui-scui-dropdown',
+  selector: 'scui-dropdown',
   template: `
-    <div class="scui-dropdown">
+    <div [ngClass]="{'dropdown-expanded': isOpen}" class="scui-dropdown">
       <div (click)="toggle()" class="main">{{ selectedOption.label }}
         <span *ngIf="!isOpen" class="icon icon-small-down"></span>
         <span *ngIf="isOpen" class="icon icon-small-up"></span>

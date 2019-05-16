@@ -1,10 +1,10 @@
 @import "../global/_variables";
 
 .scui-dropdown {
-  padding: 10px;
+  position: relative;
   cursor: pointer;
   display: inline-block;
-  min-width: 280px;
+  min-width: 300px;
   font-weight: 300;
   &.dropdown-expanded {
     .main {
@@ -13,6 +13,14 @@
       color: $col_main_7;
       .icon-small-up {
         color: $col_main_7;
+      }
+    }
+    &:hover {
+      .main {
+        color: $col_black !important;
+        .icon-small-up {
+          color: $col_black !important;
+        }
       }
     }
   }
@@ -39,9 +47,13 @@
     border-bottom: 1px solid $col_main_4;
     border-left: 1px solid $col_main_4;
     border-right: 1px solid $col_main_4;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    width: 100%;
     .option {
       height: 40px;
-      padding: 13px 8px;
+      padding: 13px 16px 0 16px;
       font-size: 14px;
       &:hover {
         background: $col_main_1;

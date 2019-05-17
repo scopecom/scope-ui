@@ -9,7 +9,7 @@
   &:hover {
     .main {
       background: $col_main_2;
-      border-bottom: 1px solid $col_main_3;
+      border-bottom: 1px solid $col_main_4;
     }
   }
   &.dropdown-expanded {
@@ -39,7 +39,7 @@
     padding: 13px 16px;
     position: relative;
     font-size: 15px;
-    border-bottom: 1px solid $col_main_4;
+    border-bottom: 1px solid $col_main_3;
     .icon-small-down, .icon-small-up {
       font-size: 24px;
       position: absolute;

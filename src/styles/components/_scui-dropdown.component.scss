@@ -6,6 +6,11 @@
   display: inline-block;
   min-width: 300px;
   font-weight: 300;
+  &:hover {
+    .main {
+      background: $col_main_2;
+    }
+  }
   &.dropdown-expanded {
     .main {
       border-bottom: 1px solid $col_prim_5;
@@ -29,7 +34,7 @@
   }
   .main {
     height: 40px;
-    background: $col_main_2;
+    background: $col_main_1;
     padding: 13px 16px;
     position: relative;
     font-size: 15px;

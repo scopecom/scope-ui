@@ -1,0 +1,63 @@
+@import "../global/_variables";
+
+.scui-large-button {
+  height: 40px;
+  padding: 0 24px 0 24px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 40px;
+  &.btn-large-default {
+    background: $col_main_2;
+    color: $col_main_9;
+    &:hover {
+      background: $col_main_3;
+    }
+  }
+  &.btn-large-blue {
+    background: $col_prim_5;
+    color: $col_white;
+    &:hover {
+      background: $col_prim_6;
+    }
+  }
+  &.btn-large-disabled {
+    cursor: default;
+    background: $col_main_5;
+    color: $col_main_3;
+  }
+}
+
+.scui-large-button-icon {
+  display: inline-block;
+  cursor: pointer;
+  .btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    .icon {
+      width: 40px;
+      font-size: 13px;
+      text-align: center;
+    }
+    .btn-label {
+      font-size: 14px;
+      padding: 0 16px 0 8px;
+    }
+  }
+
+  &.btn-large-icon-blue {
+    background: $col_prim_5;
+    color: $col_white;
+    &:hover {
+      background: $col_prim_6;
+    }
+  }
+
+  &.btn-large-icon-disabled {
+    cursor: default;
+    background: $col_main_5;
+    color: $col_main_3;
+  }
+}

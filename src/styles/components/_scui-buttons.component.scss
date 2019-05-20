@@ -7,6 +7,10 @@
   cursor: pointer;
   font-size: 14px;
   line-height: 40px;
+  .btn-label{
+    font-size: 14px;
+    font-weight: 300;
+  }
   &.btn-large-default {
     background: $col_main_2;
     color: $col_main_9;
@@ -38,12 +42,14 @@
     height: 40px;
     .icon {
       width: 40px;
-      font-size: 13px;
+      font-size: 14px;
       text-align: center;
+      font-weight: 600;
     }
     .btn-label {
       font-size: 14px;
       padding: 0 16px 0 8px;
+      font-weight: 300;
     }
   }
 

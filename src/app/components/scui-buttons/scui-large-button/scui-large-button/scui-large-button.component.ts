@@ -4,7 +4,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   selector: 'scui-large-button',
   template: `
     <div (click)="btnClick" class="scui-large-button {{cssClass}}">
-      <span>{{label}}</span>
+      <span class="btn-label">{{label}}</span>
     </div>
   `,
 })

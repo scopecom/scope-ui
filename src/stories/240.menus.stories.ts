@@ -13,7 +13,7 @@ import { DragulaModule } from 'ng2-dragula';
 import { Tabs } from '../app/constants/tabs';
 
 
-storiesOf('Navigation', module)
+storiesOf('Menus', module)
   .addDecorator(
     moduleMetadata({
       imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],

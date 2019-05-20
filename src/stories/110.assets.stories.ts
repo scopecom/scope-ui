@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ScUiArticleComponent } from '../app/components/scui-article/scui-article.component';
 import { ArticleListStub } from '../app/constants/article.list';
 
-storiesOf('Articles', module)
+storiesOf('Assets', module)
   .addDecorator(
     moduleMetadata({
       imports: [CommonModule],

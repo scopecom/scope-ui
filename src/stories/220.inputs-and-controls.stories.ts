@@ -3,6 +3,8 @@ import {moduleMetadata, storiesOf} from '@storybook/angular';
 import {FormBuilder, FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ScUiFormControlsModule} from '../app/components/form-controls/form-controls.module';
+import {ScuiDropdownModule} from '../app/components/scui-dropdown/scui-dropdown.module';
+import {ScUiProjectSelectorModule} from '../app/components/scui-project-selector/scui-project-selector.module';
 import {
   MatAutocompleteModule,
   MatCheckboxModule,
@@ -21,7 +23,7 @@ const fromGroup = new FormBuilder().group({
   name: ['', [Validators.maxLength(10)]]
 });
 
-storiesOf('Form Controls', module)
+storiesOf('Inputs and Controls', module)
   .addDecorator(moduleMetadata({
     imports: [
       NoopAnimationsModule,
@@ -37,7 +39,9 @@ storiesOf('Form Controls', module)
       MatSelectModule,
       MatSliderModule,
       MatSlideToggleModule,
-      ScUiFormControlsModule
+      ScUiFormControlsModule,
+      ScUiProjectSelectorModule,
+      ScuiDropdownModule
     ],
     providers: []
   }))
@@ -180,5 +184,45 @@ storiesOf('Form Controls', module)
                </div>`,
     props: {
       cssClass: 'form-error'
+    }
+  })).add('Standard select', () => ({
+  template: `<div style="padding:40px; background:white; ">
+                  <scui-dropdown [selectedOption]="selectedOption" [options]="options"></scui-dropdown>
+               </div>`,
+  props: {
+    options: [{
+      label: 'One',
+      id: 1
+    }, {
+      label: 'Two',
+      id: 2
+    }, {
+      label: 'Three',
+      id: 3
+    }],
+    selectedOption: {
+      label: 'Select Project',
+      id: 0
+    }
+  }
+}))
+  .add('Project selector', () => ({
+    template: `<div style="padding:40px; background:white; ">
+                    <scui-project-selector [options]="options"></scui-project-selector>
+               </div>`,
+    props: {
+      options: [{
+        label: 'Select Project',
+        id: 0
+      }, {
+        label: 'Internal 03/19',
+        id: 1
+      }, {
+        label: 'Sales - Product Update',
+        id: 2
+      }, {
+        label: 'Campaign expovina',
+        id: 3
+      }]
     }
   }));

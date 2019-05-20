@@ -10,7 +10,7 @@ export * from './components/scui-nav/scui-nav.module';
 export * from './components/scui-pills/scui-pills.module';
 export * from './components/scui-tabs/scui-tabs.module';
 export * from './components/scui-wizard-nav/scui-wizard-nav.module';
-export * from './components/scui-buttons/scui-buttons.module.ts';
+export * from './components/scui-buttons/scui-buttons.module';
 // form controls
 export * from './components/form-controls/form-controls.module';
 // directives

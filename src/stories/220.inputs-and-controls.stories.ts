@@ -85,7 +85,18 @@ storiesOf('Inputs and Controls', module)
     template: `<form [formGroup]="myForm"><div style="margin: 20px; width:400px" class="scui-form-field">
                   <scui-input formControlName="name" [maxLength]="maxLength" [label]="label"></scui-input>
                </div>
-</form>`,
+               </form>`,
+    props: {
+      label: 'Project Title*',
+      maxLength: 10,
+      myForm: fromGroup
+    }
+  }))
+  .add('Scope Textarea', () => ({
+    template: `<form [formGroup]="myForm"><div style="margin: 20px; width:400px" class="scui-form-field">
+                  <scui-textarea formControlName="name" [maxLength]="maxLength" [label]="label"></scui-textarea>
+               </div>
+               </form>`,
     props: {
       label: 'Project Title*',
       maxLength: 10,
@@ -212,9 +223,6 @@ storiesOf('Inputs and Controls', module)
                </div>`,
     props: {
       options: [{
-        label: 'Select Project',
-        id: 0
-      }, {
         label: 'Internal 03/19',
         id: 1
       }, {

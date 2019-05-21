@@ -13,6 +13,7 @@ export * from './components/scui-wizard-nav/scui-wizard-nav.module';
 export * from './components/scui-buttons/scui-buttons.module';
 // form controls
 export * from './components/form-controls/form-controls.module';
+export * from './components/scui-project-selector/scui-project-selector.module';
 // directives
 export * from './directives/bg-hover.module';
 // interfaces

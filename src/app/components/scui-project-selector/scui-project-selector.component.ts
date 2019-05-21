@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {ScUiOption} from '../../interfaces';
 
 @Component({
@@ -6,14 +6,13 @@ import {ScUiOption} from '../../interfaces';
   template: `
     <div class="scui-project-selector">
       <div [ngClass]="{'dropdown-expanded': isOpen}" class="scui-dropdown">
-        <div (click)="toggle()" class="main">{{ selectedOption.label }}
+        <div (click)="toggle()" class="main">{{ placeholder }}
           <span *ngIf="!isOpen" class="icon icon-small-down"></span>
           <span *ngIf="isOpen" class="icon icon-small-up"></span>
         </div>
-        <div *ngIf="isOpen" [ngClass]="{'no-items':options.length <= 1}" class="options">
-          <div (click)="toggle();selectOption(option);"
+        <div *ngIf="isOpen" [ngClass]="{'no-items':options.length === 0}" class="options">
+          <div (click)="selectOption(option);"
                class="option"
-               [ngClass]="{hidden:option.id === selectedOption.id}"
                *ngFor="let option of options">
             <span>{{ option.label }}</span>
           </div>
@@ -26,25 +25,13 @@ import {ScUiOption} from '../../interfaces';
       </div>
     </div>`,
 })
-export class ScUiProjectSelectorComponent implements OnInit {
+export class ScUiProjectSelectorComponent {
   @Input() options: ScUiOption[];
-  @Input() selectedOption: ScUiOption;
-  @Input() defaultOption: ScUiOption = {
-    label: 'Select Project',
-    id: 0
-  };
-  @Output() onSelectedOption = new EventEmitter<ScUiOption>();
-  @Output() onremovedOption = new EventEmitter<ScUiOption>();
-
+  @Input() placeholder = 'Select Project';
+  @Output() onSelectedOption = new EventEmitter<ScUiOption[]>();
+  @Output() onRemovedOption = new EventEmitter<ScUiOption[]>();
   isOpen: boolean;
   assignedProjects: ScUiOption[] = [];
-
-  constructor() {
-  }
-
-  ngOnInit() {
-    this.selectedOption = this.selectedOption || this.options[0];
-  }
 
   toggle() {
     this.isOpen = !this.isOpen;
@@ -53,16 +40,14 @@ export class ScUiProjectSelectorComponent implements OnInit {
   removeProject(option: ScUiOption) {
     this.assignedProjects = this.assignedProjects.filter(item => option.id !== item.id);
     this.options.push(option);
-    this.onSelectedOption.emit(option);
+    this.onSelectedOption.emit(this.assignedProjects);
   }
 
-  selectOption(option) {
-    this.selectedOption = option;
-    this.onSelectedOption.emit(this.selectedOption);
+  selectOption(option: ScUiOption) {
     this.assignedProjects.push(option);
     this.options = this.options.filter(item => option.id !== item.id);
-    this.selectedOption = this.defaultOption;
-    this.onSelectedOption.emit(option);
+    this.onSelectedOption.emit(this.assignedProjects);
+    this.toggle();
   }
 
 }

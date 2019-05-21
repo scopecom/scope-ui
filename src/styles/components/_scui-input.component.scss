@@ -57,9 +57,54 @@
 }
 
 .scui-textarea {
+  &.disabled {
+    .textarea-field {
+      border: 1px dashed $col_main_3;
+    }
+  }
   .scui-input-label {
     font-size: 13px;
     font-weight: 500;
     line-height: 32px;
+    color: $col_main_5;
   }
+  .textarea-field {
+    padding: 16px;
+    background: $col_main_1;
+    border: 1px solid $col_main_3;
+    width: 100%;
+    color: $col_black;
+    font-weight: 300;
+    font-size: 15px;
+    background: $col_main_1;
+    min-height: 190px;
+    resize: vertical;
+    &:focus {
+      border-color: $col_prim_5;
+      background: $col_prim_1;
+    }
+  }
+  .scui-input-counter {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    line-height: 32px;
+    font-size: 13px;
+  }
+  &.error {
+    .scui-input-label {
+      color: #D92227;
+    }
+    .textarea-field {
+      border: 1px solid #D92227;
+      background: #FFF0F1;
+    }
+    .textarea-error {
+      color: $col_sec_2;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 32px;
+    }
+  }
+
 }

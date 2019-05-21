@@ -93,14 +93,37 @@ storiesOf('Inputs and Controls', module)
     }
   }))
   .add('Scope Textarea', () => ({
-    template: `<form [formGroup]="myForm"><div style="margin: 20px; width:400px" class="scui-form-field">
-                  <scui-textarea formControlName="name" [maxLength]="maxLength" [label]="label"></scui-textarea>
+    template: `<div style="padding:20px; width:400px;background: white;" class="scui-form-field">
+                 <form [formGroup]="myForm">
+                   <scui-textarea 
+                   formControlName="name" 
+                   [maxLength]="maxLength" 
+                   [label]="label">This is the error message</scui-textarea>
+                 </form>
                </div>
-               </form>`,
+               `,
     props: {
       label: 'Project Title*',
       maxLength: 10,
       myForm: fromGroup
+    }
+  }))
+  .add('Scope Textarea disabled', () => ({
+    template: `<div style="padding:20px; width:400px;background: white;" class="scui-form-field">
+                 <form [formGroup]="myForm">
+                   <scui-textarea 
+                   formControlName="name" 
+                   [disabled]="disabled" 
+                   [maxLength]="maxLength" 
+                   [label]="label">This is the error message</scui-textarea>
+                 </form>
+               </div>
+               `,
+    props: {
+      label: 'Project Title*',
+      maxLength: 10,
+      myForm: fromGroup,
+      disabled: true
     }
   }))
   .add('Input', () => ({

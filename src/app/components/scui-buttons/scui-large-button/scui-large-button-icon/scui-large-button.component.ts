@@ -3,7 +3,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'scui-large-button-icon',
   template: `
-    <div (click)="btnClick" class="scui-large-button-icon {{cssClass}}">
+    <div (click)="btnClick()" class="scui-large-button-icon {{cssClass}}">
       <div class="btn-wrap">
         <div>
           <span class="icon {{ icon }}"></span>

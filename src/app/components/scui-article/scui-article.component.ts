@@ -26,8 +26,8 @@ import { ScUiArticle } from '../../interfaces';
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">
-            <time>{{article.date}}</time>
-            <a href="#"><span class="icon icon-globe"></span></a>
+            <time>{{ article.datePublished | date:'d.M.yyyy' }}</time>
+            <a target="_blank" [href]="article.url"><span class="icon icon-globe"></span></a>
           </header>
           <div class="scui-article-desc">
             <h3>{{article.title}}</h3>
@@ -60,8 +60,8 @@ import { ScUiArticle } from '../../interfaces';
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">
-            <time>{{article.date}}</time>
-            <a href="#"><span class="icon icon-globe"></span></a>
+            <time>{{article.datePublished | date:'d.M.yyyy' }}</time>
+            <a target="_blank" [href]="article.url"><span class="icon icon-globe"></span></a>
           </header>
           <div class="scui-article-desc">
             <h3>{{article.title}}</h3>
@@ -87,8 +87,8 @@ import { ScUiArticle } from '../../interfaces';
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">
-            <time>{{article.date}}</time>
-            <a href="#"><span class="icon icon-globe"></span></a>
+            <time>{{article.datePublished | date:'d.M.yyyy' }}</time>
+            <a [href]="article.url" target="_blank"><span class="icon icon-globe"></span></a>
           </header>
           <div class="scui-article-desc">
             <h3>{{article.title}}</h3>

@@ -42,8 +42,7 @@ storiesOf('Inputs and Controls', module)
       ScUiFormControlsModule,
       ScUiProjectSelectorModule,
       ScuiDropdownModule
-    ],
-    providers: []
+    ]
   }))
   .add('Autocomplete', () => ({
     template: `<div style="margin: 20px;" class="scui-autocomplete">
@@ -199,47 +198,27 @@ storiesOf('Inputs and Controls', module)
                   <mat-slide-toggle>Slide me!</mat-slide-toggle>
                </div>`
   }))
-  .add('Form Container default', () => ({
-    template: `<div style="margin: 20px;padding:20px;width:800px;">
-                  <scui-form-container></scui-form-container>
-               </div>`,
-  }))
-  .add('Form Container active', () => ({
-    template: `<div style="margin: 20px;padding:20px;width:800px;">
-                  <scui-form-container [cssClass]="cssClass"></scui-form-container>
-               </div>`,
-    props: {
-      cssClass: 'form-active'
-    }
-  }))
-  .add('Form Container error', () => ({
-    template: `<div style="margin: 20px;padding:20px;width:800px;">
-                  <scui-form-container [cssClass]="cssClass"></scui-form-container>
-               </div>`,
-    props: {
-      cssClass: 'form-error'
-    }
-  })).add('Standard select', () => ({
-  template: `<div style="padding:40px; background:white; ">
+  .add('Standard select', () => ({
+    template: `<div style="padding:40px; background:white; ">
                   <scui-dropdown [selectedOption]="selectedOption" [options]="options"></scui-dropdown>
                </div>`,
-  props: {
-    options: [{
-      label: 'One',
-      id: 1
-    }, {
-      label: 'Two',
-      id: 2
-    }, {
-      label: 'Three',
-      id: 3
-    }],
-    selectedOption: {
-      label: 'Select Project',
-      id: 0
+    props: {
+      options: [{
+        label: 'One',
+        id: 1
+      }, {
+        label: 'Two',
+        id: 2
+      }, {
+        label: 'Three',
+        id: 3
+      }],
+      selectedOption: {
+        label: 'Select Project',
+        id: 0
+      }
     }
-  }
-}))
+  }))
   .add('Project selector', () => ({
     template: `<div style="padding:40px; background:white; ">
                     <scui-project-selector [options]="options"></scui-project-selector>

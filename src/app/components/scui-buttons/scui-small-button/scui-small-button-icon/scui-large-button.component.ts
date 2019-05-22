@@ -1,9 +1,9 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'scui-large-button-icon',
+  selector: 'scui-small-button-icon',
   template: `
-    <div (click)="btnClick()" class="scui-button-icon {{cssClass}}">
+    <div (click)="btnClick()" class="scui-button-icon small {{cssClass}}">
       <div class="btn-wrap">
         <div>
           <span class="icon {{ icon }}"></span>
@@ -13,7 +13,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
     </div>
   `,
 })
-export class ScUiLargeButtonIconComponent implements OnInit {
+export class ScUiSmallButtonIconComponent implements OnInit {
   @Input() label: string;
   @Input() icon = 'icon-arrow-right';
   @Input() cssClass = 'btn-large-icon-blue';

@@ -1,14 +1,14 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'scui-large-button',
+  selector: 'scui-small-button',
   template: `
-    <div (click)="btnClick()" class="scui-button {{cssClass}}">
+    <div (click)="btnClick()" class="scui-button small {{cssClass}}">
       <span class="btn-label">{{label}}</span>
     </div>
   `,
 })
-export class ScUiLargeButtonComponent implements OnInit {
+export class ScUiSmallButtonComponent implements OnInit {
   @Input() label: string;
   @Input() cssClass = 'btn-large-default';
   @Output() onBtnClick = new EventEmitter<any>();

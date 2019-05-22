@@ -1,13 +1,12 @@
 @import "../global/_variables";
 
-.scui-large-button {
-  height: 40px;
+.scui-button {
   padding: 0 24px 0 24px;
   display: inline-block;
   cursor: pointer;
   font-size: 14px;
   line-height: 40px;
-  .btn-label{
+  .btn-label {
     font-size: 14px;
     font-weight: 300;
   }
@@ -30,9 +29,16 @@
     background: $col_main_5;
     color: $col_main_3;
   }
+  &.small {
+    line-height: 24px;
+    padding: 0 16px 0 16px;
+    .btn-label {
+      font-size: 12px;
+    }
+  }
 }
 
-.scui-large-button-icon {
+.scui-button-icon {
   display: inline-block;
   cursor: pointer;
   .btn-wrap {
@@ -65,5 +71,19 @@
     cursor: default;
     background: $col_main_5;
     color: $col_main_3;
+  }
+  &.small {
+    height: 24px;
+    .btn-wrap {
+      height: 24px;
+      .icon {
+        width: 32px;
+        vertical-align: -1px;
+      }
+      .btn-label {
+        font-size: 12px;
+        padding: 0 16px 0 8px;
+      }
+    }
   }
 }

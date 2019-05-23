@@ -18,9 +18,6 @@ import {
   MatSlideToggleModule
 } from '@angular/material';
 
-
-import {TimepickerModule} from 'ngx-bootstrap/timepicker';
-
 const ctrl = new FormControl();
 const fromGroup = new FormBuilder().group({
   name: ['', [Validators.maxLength(10)]]
@@ -44,8 +41,7 @@ storiesOf('Inputs and Controls', module)
       MatSlideToggleModule,
       ScUiFormControlsModule,
       ScUiProjectSelectorModule,
-      ScuiDropdownModule,
-      TimepickerModule.forRoot()
+      ScuiDropdownModule
     ]
   }))
   .add('Autocomplete', () => ({
@@ -241,9 +237,7 @@ storiesOf('Inputs and Controls', module)
     }
   })).add('Timepicker', () => ({
   template: `<div style="padding:40px; background:white; ">
-                    <timepicker [(ngModel)]="mytime"></timepicker>
+                    <scui-time-picker></scui-time-picker>
                </div>`,
-  props: {
-    mytime: new Date()
-  }
+
 }));

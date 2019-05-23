@@ -45,7 +45,7 @@ storiesOf('Inputs and Controls', module)
       ScUiFormControlsModule,
       ScUiProjectSelectorModule,
       ScuiDropdownModule,
-      TimepickerModule
+      TimepickerModule.forRoot()
     ]
   }))
   .add('Autocomplete', () => ({

@@ -226,10 +226,8 @@ storiesOf('Inputs and Controls', module)
   .add('Project selector', () => ({
     template: `<div style="padding:40px; background:white; ">
                     <scui-project-selector [options]="options"></scui-project-selector>
-                    <timepicker [(ngModel)]="mytime"></timepicker>
                </div>`,
     props: {
-      mytime: new Date(),
       options: [{
         label: 'Internal 03/19',
         id: 1
@@ -241,4 +239,11 @@ storiesOf('Inputs and Controls', module)
         id: 3
       }]
     }
-  }));
+  })).add('Timepicker', () => ({
+  template: `<div style="padding:40px; background:white; ">
+                    <timepicker [(ngModel)]="mytime"></timepicker>
+               </div>`,
+  props: {
+    mytime: new Date()
+  }
+}));

@@ -139,13 +139,39 @@ storiesOf('Inputs and Controls', module)
                </div>`
   }))
   .add('Radio button', () => ({
-    template: `<div style="margin: 20px;" class="scui-radio-button">
+    template: `<div style="padding: 20px;background:white;" class="scui-radio-button">
                    <label id="example-radio-group-label">Pick your favorite season</label>
                     <mat-radio-group
                       aria-labelledby="example-radio-group-label"
                       class="example-radio-group"
                       [(ngModel)]="favoriteSeason">
                       <mat-radio-button class="example-radio-button" *ngFor="let season of seasons">
+                        {{season}}
+                      </mat-radio-button>
+                    </mat-radio-group>
+                    <style>
+                      .example-radio-group {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 15px 0;
+                      }
+                      .example-radio-button {
+                        margin: 5px;
+                      }
+                   </style>
+               </div>`,
+    props: {
+      seasons: ['Winter', 'Spring', 'Summer', 'Autumn']
+    }
+  }))
+  .add('Radio button disabled', () => ({
+    template: `<div style="padding: 20px;background:white;" class="scui-radio-button">
+                   <label id="example-radio-group-label">Pick your favorite season</label>
+                    <mat-radio-group
+                      aria-labelledby="example-radio-group-label"
+                      class="example-radio-group"
+                      [(ngModel)]="favoriteSeason">
+                      <mat-radio-button [disabled]="true" class="example-radio-button" *ngFor="let season of seasons">
                         {{season}}
                       </mat-radio-button>
                     </mat-radio-group>
@@ -236,7 +262,7 @@ storiesOf('Inputs and Controls', module)
       }]
     }
   })).add('Timepicker', () => ({
-  template: `<div style="padding:40px; background:white; ">
+  template: `<div style="padding:40px; background:white;">
                     <scui-time-picker></scui-time-picker>
                </div>`,
 

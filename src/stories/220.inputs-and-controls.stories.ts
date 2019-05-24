@@ -64,11 +64,21 @@ storiesOf('Inputs and Controls', module)
     }
   }))
   .add('Checkbox', () => ({
-    template: `<div style="margin: 20px;" class="scui-checkbox">
-                   <mat-checkbox [(ngModel)]="checked">Checked</mat-checkbox>
+    template: `<div style="padding: 20px 0 60px 20px;background: white;">
+                   <scui-checkbox [label]="label" ></scui-checkbox>
                </div>`,
     props: {
       checked: true,
+      label: 'Enabled'
+    }
+  }))
+  .add('Checkbox disabled', () => ({
+    template: `<div style="padding: 20px 0 60px 20px;background: white;" >
+                   <scui-checkbox [disabled]="disabled" [label]="label" ></scui-checkbox>
+               </div>`,
+    props: {
+      disabled: true,
+      label: 'Disabled'
     }
   }))
   .add('Datepicker', () => ({

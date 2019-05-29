@@ -1,0 +1,203 @@
+@import "../global/_variables";
+
+.output-actions {
+  min-width: 224px !important;
+  .output-action {
+    height: 40px;
+    border-top: 1px solid $col_main_2;
+    padding-left: 12px;
+    &.disabled {
+      .icon {
+        color: $col_main_4;
+      }
+      .output-action-label {
+        color: $col_main_4;
+      }
+    }
+    .icon {
+      font-size: 18px;
+    }
+    .output-action-label {
+      padding-left: 14px;
+      position: relative;
+      top: -3px;
+    }
+  }
+  .output-action-last {
+    border-bottom: 1px solid $col_main_2;
+  }
+
+}
+
+.scui-article-status {
+  width: 304px;
+  display: inline-block;
+  margin-right: 24px;
+  &:hover {
+    outline: 8px solid $col_main_3;
+  }
+
+  .icons-wrap {
+    height: 204px;
+    background: $col_main_2;
+    padding: 20px 10px 24px 18px;
+    .item {
+      width: 47px;
+      height: 47px;
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      position: relative;
+      .icon-wrap {
+        width: 47px;
+        height: 47px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $col_white;
+        border-radius: 50%;
+        .icon {
+          font-size: 20px;
+        }
+        &.published {
+          .dot {
+            background: #01cc00;
+          }
+        }
+        &.scheduled {
+          opacity: 0.8;
+          .dot {
+            background: #ff6600;
+          }
+        }
+        &.defaultState {
+          background: $col_white !important;
+          .icon {
+            color: $col_black !important;
+          }
+        }
+      }
+      .dot {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        background: black;
+        border-radius: 50%;
+        border: 2px solid $col_main_2;
+      }
+    }
+  }
+
+  .info-wrap {
+    height: 204px;
+    padding: 16px;
+    background: $col_white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .info-top {
+      font-size: 16px;
+      font-weight: 400;
+      .info-author {
+        color: $col_main_5;
+        margin-bottom: 8px;
+      }
+      .info-title {
+
+      }
+    }
+    .info-bottom {
+      display: flex;
+      justify-content: space-between;
+      .counter {
+        background: $col_prim_5;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        color: $col_white;
+        position: relative;
+        span {
+          position: absolute;
+          top: 8px;
+          left: 12px;
+        }
+      }
+      .menu-trigger {
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+        right: 8px;
+        top: 8px;
+      }
+
+    }
+
+  }
+
+  .SCOPE_TO_EMAIL {
+    background: $col_mail !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .FACEBOOK_PAGE {
+    background: $col_fb !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .LINKEDIN_PAGE {
+    background: $col_linkedIn !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .TWITTER {
+    background: $col_twitt !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .WORDPRESS {
+    background: $col_wp !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .GOOGLE_DOC {
+    background: $col_gdoc !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .MAILCHIMP {
+    background: $col_mchimp !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .SALES_FORCE {
+    background: $col_sf !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+  .HUBSPOT {
+    background: $col_hubspot !important;
+    .icon {
+      color: $col_white;
+    }
+  }
+
+}

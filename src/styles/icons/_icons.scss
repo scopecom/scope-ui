@@ -71,7 +71,7 @@ $icon-unlocked: unicode(ea40);
 $icon-lock: unicode(ea41);
 $icon-menu-8: unicode(ea42);
 $icon-menu-7: unicode(ea43);
-$icon-menu-5: unicode(ea45);
+$icon-menu-del: unicode(ea45);
 $icon-menu-4: unicode(ea46);
 $icon-menu-3: unicode(ea47);
 $icon-menu-2: unicode(ea48);
@@ -151,12 +151,7 @@ $icon-shape-star: unicode(ea91);
 $icon-shape-arrow: unicode(ea92);
 $icon-components: unicode(ea93);
 $icon-tool-hand: unicode(ea94);
-$icon-bars-2: unicode(ea95);
-$icon-circle-02: unicode(ea96);
-$icon-circle-03: unicode(ea97);
-$icon-circle-04: unicode(ea98);
 $icon-l-circle: unicode(ea99);
-$icon-l-circles: unicode(ea9a);
 $icon-check-single: unicode(ea9b);
 $icon-geometry: unicode(ea9c);
 $icon-app-store: unicode(ea9d);
@@ -199,6 +194,30 @@ $icon-t-remove-glyph: unicode(eac1);
 $icon-t-add-glyph: unicode(eac2);
 $icon-settings-gear-glyph-2: unicode(eac3);
 $icon-zoom-99: unicode(eac4);
+$icon-HubSpot: unicode(eac5);
+$icon-mail-block: unicode(eac6);
+$icon-logo-fb-simple: unicode(eac7);
+$icon-mc-freddie-dark: unicode(eac8);
+$icon-menu-ham-horz: unicode(eacc);
+$icon-table-view-3x3: unicode(eacd);
+$icon-grid-view-9: unicode(eace);
+$icon-grid-interface: unicode(eacf);
+$icon-triangle-right: unicode(ead0);
+$icon-scope-schedule: unicode(ead1);
+$icon-scope-open: unicode(ead2);
+$icon-scope-published: unicode(ead3);
+$icon-scope-published-circle: unicode(ead4);
+$icon-scope-open-circle: unicode(ead5);
+$icon-scope-schedule-circle: unicode(ead6);
+$icon-small-triangle-down-2: unicode(ead7);
+$icon-small-triangle-left-2: unicode(ead8);
+$icon-small-triangle-right-2: unicode(ead9);
+$icon-small-triangle-up-2: unicode(eada);
+$icon-cloud-forecast: unicode(eadb);
+$icon-cloud-forecast-2: unicode(eadc);
+$icon-migration: unicode(eadd);
+$icon-logo-instagram: unicode(eade);
+$icon-logo-scope-pinterest: unicode(eadf);
 $icon-uea44-: unicode(ea01);
 
 .icon-add-file::before {
@@ -465,8 +484,8 @@ $icon-uea44-: unicode(ea01);
   content: $icon-menu-7;
 }
 
-.icon-menu-5::before {
-  content: $icon-menu-5;
+.icon-menu-del::before {
+  content: $icon-menu-del;
 }
 
 .icon-menu-4::before {
@@ -785,28 +804,8 @@ $icon-uea44-: unicode(ea01);
   content: $icon-tool-hand;
 }
 
-.icon-bars-2::before {
-  content: $icon-bars-2;
-}
-
-.icon-circle-02::before {
-  content: $icon-circle-02;
-}
-
-.icon-circle-03::before {
-  content: $icon-circle-03;
-}
-
-.icon-circle-04::before {
-  content: $icon-circle-04;
-}
-
 .icon-l-circle::before {
   content: $icon-l-circle;
-}
-
-.icon-l-circles::before {
-  content: $icon-l-circles;
 }
 
 .icon-check-single::before {
@@ -977,6 +976,103 @@ $icon-uea44-: unicode(ea01);
   content: $icon-zoom-99;
 }
 
+.icon-HubSpot::before {
+  content: $icon-HubSpot;
+}
+
+.icon-mail-block::before {
+  content: $icon-mail-block;
+}
+
+.icon-logo-fb-simple::before {
+  content: $icon-logo-fb-simple;
+}
+
+.icon-mc-freddie-dark::before {
+  content: $icon-mc-freddie-dark;
+}
+
+.icon-menu-ham-horz::before {
+  content: $icon-menu-ham-horz;
+}
+
+.icon-table-view-3x3::before {
+  content: $icon-table-view-3x3;
+}
+
+.icon-grid-view-9::before {
+  content: $icon-grid-view-9;
+}
+
+.icon-grid-interface::before {
+  content: $icon-grid-interface;
+}
+
+.icon-triangle-right::before {
+  content: $icon-triangle-right;
+}
+
+.icon-scope-schedule::before {
+  content: $icon-scope-schedule;
+}
+
+.icon-scope-open::before {
+  content: $icon-scope-open;
+}
+
+.icon-scope-published::before {
+  content: $icon-scope-published;
+}
+
+.icon-scope-published-circle::before {
+  content: $icon-scope-published-circle;
+}
+
+.icon-scope-open-circle::before {
+  content: $icon-scope-open-circle;
+}
+
+.icon-scope-schedule-circle::before {
+  content: $icon-scope-schedule-circle;
+}
+
+.icon-small-triangle-down-2::before {
+  content: $icon-small-triangle-down-2;
+}
+
+.icon-small-triangle-left-2::before {
+  content: $icon-small-triangle-left-2;
+}
+
+.icon-small-triangle-right-2::before {
+  content: $icon-small-triangle-right-2;
+}
+
+.icon-small-triangle-up-2::before {
+  content: $icon-small-triangle-up-2;
+}
+
+.icon-cloud-forecast::before {
+  content: $icon-cloud-forecast;
+}
+
+.icon-cloud-forecast-2::before {
+  content: $icon-cloud-forecast-2;
+}
+
+.icon-migration::before {
+  content: $icon-migration;
+}
+
+.icon-logo-instagram::before {
+  content: $icon-logo-instagram;
+}
+
+.icon-logo-scope-pinterest::before {
+  content: $icon-logo-scope-pinterest;
+}
+
 .icon-uea44-::before {
   content: $icon-uea44-;
 }
+

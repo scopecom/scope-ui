@@ -33,8 +33,20 @@
   width: 304px;
   display: inline-block;
   margin-right: 24px;
+  position: relative;
   &:hover {
     outline: 8px solid $col_main_3;
+  }
+
+  &.overlayActive {
+    &:hover {
+      outline: none !important;
+    }
+    .published-overlay {
+      height: 408px;
+      padding: 24px;
+      visibility: visible;
+    }
   }
 
   .icons-wrap {
@@ -119,6 +131,7 @@
         display: inline-block;
         color: $col_white;
         position: relative;
+        cursor: pointer;
         span {
           position: absolute;
           top: 8px;
@@ -135,6 +148,106 @@
 
     }
 
+  }
+
+  .published-overlay {
+    background: $col_prim_5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    transition: height 0.4s linear;
+    overflow: hidden;
+    visibility: hidden;
+    .published-files-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 33px;
+      &:hover {
+        .icon {
+          color: $col_black;
+        }
+      }
+      .files {
+        color: $col_white;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .icon {
+        color: $col_white;
+        font-size: 26px;
+        position: relative;
+        top: -5px;
+        right: -3px;
+        cursor: pointer;
+      }
+    }
+    .published-files-content {
+      .scheduled-item, .published-item {
+        height: 40px;
+        margin-bottom: 2px;
+      }
+      .published-item {
+        padding-left: 8px;
+        padding-top: 5px;
+        .icon {
+          color: rgba(255, 255, 255, 0.75);
+          position: relative;
+          top: 2px;
+          display: inline-block;
+          min-width: 16px;
+        }
+        .date-published, .time-published {
+          color: rgba(255, 255, 255, 0.75);
+          font-weight: 300;
+          font-size: 15px;
+        }
+        .date-published {
+          padding-left: 22px;
+        }
+        .time-published {
+          padding-left: 16px;
+        }
+      }
+      .scheduled-item {
+        .scheduled-item-wrap {
+          display: inline-block;
+          background: white;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          position: relative;
+          .icon {
+            color: $col_prim_5;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+          }
+        }
+        .date-published, .time-published {
+          color: $col_white;
+          font-weight: 300;
+          font-size: 15px;
+          vertical-align: 10px;
+        }
+        .date-published {
+          padding-left: 15px;
+        }
+        .time-published {
+          padding-left: 16px;
+        }
+        .settings {
+          color: $col_white;
+          position: relative;
+          top: -7px;
+          .icon-settings-gear {
+            padding-left: 38px;
+            padding-right: 6px;
+          }
+        }
+      }
+    }
   }
 
   .SCOPE_TO_EMAIL {

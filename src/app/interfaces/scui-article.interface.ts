@@ -1,5 +1,5 @@
 export interface ScUiArticle {
-  id?: number | string;
+  id?: number;
   url: string;
   title: string;
   photoUrl?: string;

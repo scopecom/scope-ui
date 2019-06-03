@@ -8,12 +8,12 @@ storiesOf('Containers', module)
     ]
   }))
   .add('Form Container default', () => ({
-    template: `<div style="margin: 20px;padding:20px;width:800px;">
+    template: `<div style="margin: 20px;padding:20px;width:800px; background:white;">
                   <scui-form-container></scui-form-container>
                </div>`,
   }))
   .add('Form Container active', () => ({
-    template: `<div style="margin: 20px;padding:20px;width:800px;">
+    template: `<div style="margin: 20px;padding:20px;width:800px;background:white;">
                   <scui-form-container [cssClass]="cssClass"></scui-form-container>
                </div>`,
     props: {
@@ -21,7 +21,7 @@ storiesOf('Containers', module)
     }
   }))
   .add('Form Container error', () => ({
-    template: `<div style="margin: 20px;padding:20px;width:800px;">
+    template: `<div style="margin: 20px;padding:20px;width:800px;background:white;">
                   <scui-form-container [cssClass]="cssClass"></scui-form-container>
                </div>`,
     props: {

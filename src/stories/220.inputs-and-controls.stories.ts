@@ -1,6 +1,6 @@
 import 'hammerjs';
 import {moduleMetadata, storiesOf} from '@storybook/angular';
-import {FormBuilder, FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ScUiFormControlsModule} from '../app/components/form-controls/form-controls.module';
 import {ScuiDropdownModule} from '../app/components/scui-dropdown/scui-dropdown.module';
@@ -19,9 +19,16 @@ import {
 } from '@angular/material';
 
 const ctrl = new FormControl();
+const ctrl1 = new FormControl(new Date());
+const ctrl2 = new FormControl(new Date());
+
+ctrl1.disable();
+
 const fromGroup = new FormBuilder().group({
   name: ['', [Validators.maxLength(10)]]
 });
+
+const vreme: Date = new Date();
 
 storiesOf('Inputs and Controls', module)
   .addDecorator(moduleMetadata({
@@ -29,6 +36,7 @@ storiesOf('Inputs and Controls', module)
       NoopAnimationsModule,
       MatCheckboxModule,
       MatAutocompleteModule,
+      FormsModule,
       ReactiveFormsModule,
       MatFormFieldModule,
       MatInputModule,
@@ -273,7 +281,16 @@ storiesOf('Inputs and Controls', module)
     }
   })).add('Timepicker', () => ({
   template: `<div style="padding:40px; background:white;">
-                    <scui-time-picker></scui-time-picker>
-               </div>`,
-
+                    <scui-time-picker [formControl]="myControl"></scui-time-picker>
+             </div>`,
+  props: {
+    myControl: ctrl2
+  }
+})).add('Timepicker disabled', () => ({
+  template: `<div style="padding:40px; background:white;">
+                    <scui-time-picker [formControl]="myControl">d</scui-time-picker>
+             </div>`,
+  props: {
+    myControl: ctrl1
+  }
 }));

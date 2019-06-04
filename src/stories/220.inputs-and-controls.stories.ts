@@ -99,13 +99,30 @@ storiesOf('Inputs and Controls', module)
                </div>`
   }))
   .add('Scope Form field', () => ({
-    template: `<form [formGroup]="myForm"><div style="margin: 20px; width:400px" class="scui-form-field">
+    template: `<div style="background: white;padding: 20px; width:400px">
+                 <form [formGroup]="myForm">
+                 <div class="scui-form-field">
                   <scui-input formControlName="name" [maxLength]="maxLength" [label]="label"></scui-input>
-               </div>
-               </form>`,
+                 </div>
+               </form>
+               </div>`,
     props: {
-      label: 'Project Title*',
+      label: 'FORM FIELD*',
       maxLength: 10,
+      myForm: fromGroup
+    }
+  }))
+  .add('Scope Form field disabled', () => ({
+    template: `<div style="background: white;padding: 20px; width:400px">
+                 <form [formGroup]="myForm">
+                 <div class="scui-form-field">
+                  <scui-input formControlName="name" [styleClass]="styleClass" [label]="label"></scui-input>
+                 </div>
+               </form>
+               </div>`,
+    props: {
+      label: 'FORM FIELD*',
+      styleClass: 'disabled',
       myForm: fromGroup
     }
   }))

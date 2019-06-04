@@ -17,7 +17,7 @@ import {ControlValueAccessor, NgControl} from '@angular/forms';
                class="scui-input-field">
         <div *ngIf="maxLength &&!control?.errors?.maxlength" class="scui-input-counter">
           <div>Max {{maxLength}} chars</div>
-          <div>{{value?.length || 0 }} / {{maxLength}}</div>
+          <div>{{value?.length || 0 }}/{{maxLength}}</div>
         </div>
       </div>
       <div class="scui-input-messages">

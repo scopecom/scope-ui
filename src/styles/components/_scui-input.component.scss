@@ -1,31 +1,40 @@
 @import "../global/_variables";
 
 .scui-input {
+  &.disabled{
+    pointer-events: none;
+  }
+
   &.scui-focus {
     .scui-input-field {
       border-bottom: 1px solid $col_prim_4;
       background: $col_prim_1;
-
+      font-weight: 300;
     }
     .scui-input-label {
-      color: $col_prim_4;
+      color: $col_prim_5;
     }
   }
 
   &.scui-error {
     .scui-input-field {
       border-bottom: 1px solid $col_sec_2;
-      background: $col_prim_1;
+      background: $col_sec_3;
     }
     .scui-input-label {
       color: $col_sec_2;
     }
+    .scui-input-messages {
+      font-weight: 300 !important;
+    }
   }
 
   .scui-input-label {
-    font-size: 13px;
-    color: $col_main_6;
+    color: $col_black;
     height: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 13px;
   }
   .scui-input-field {
     height: 40px;
@@ -33,6 +42,7 @@
     font-size: 15px;
     padding-left: 12px;
     background: $col_main_1;
+    font-weight: 300;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -43,6 +53,7 @@
     justify-content: space-between;
     align-items: flex-end;
     font-size: 13px;
+    font-weight: 400;
     height: 24px;
     color: $col_main_6;
   }

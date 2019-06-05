@@ -6,11 +6,12 @@ import {
   Component,
   Input,
   OnInit,
-  NgModule
+  NgModule, Output, EventEmitter
 } from '@angular/core';
+import {ScUiFile} from '../../interfaces';
 
 @Component({
-  selector: 'scui-article-status',
+  selector: 'scui-file',
   template: `
     <article [ngClass]="{overlayActive: overlayActive}" class="scui-article-status">
       <div class="icons-wrap">
@@ -25,8 +26,8 @@ import {
       </div>
       <div class="info-wrap">
         <div class="info-top">
-          <div class="info-author">{{ author }}</div>
-          <div class="info-title">{{ title }}</div>
+          <div (click)="selectFile()" class="info-author">{{ author }}</div>
+          <div (click)="selectFile()" class="info-title">{{ file.title }}</div>
         </div>
         <div class="info-bottom">
           <span (click)="toggleOverlay()" class="counter">
@@ -91,8 +92,9 @@ import {
 export class ScUiFileComponent implements OnInit {
 
   @Input() author: string;
-  @Input() title: string;
+  @Input() file: ScUiFile;
   @Input() outputChannels: any;
+  @Output() fileSelect = new EventEmitter<ScUiFile>();
   outputChannelsTotal = 0;
   overlayActive: boolean;
   readonly statusPublished = 'published';
@@ -145,6 +147,10 @@ export class ScUiFileComponent implements OnInit {
 
   toggleOverlay() {
     this.overlayActive = !this.overlayActive;
+  }
+
+  selectFile() {
+    this.fileSelect.emit(this.file);
   }
 
 }

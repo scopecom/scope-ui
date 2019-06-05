@@ -7,7 +7,7 @@ storiesOf('File Lists', module)
   }))
   .add('Article element', () => ({
     template: `<div style="padding: 20px;">
-      <scui-article-status [author]="author" [title]="title" [outputChannels]="outputChannels" ></scui-article-status>
+      <scui-file [author]="author" [title]="title" [outputChannels]="outputChannels" ></scui-file>
       </div>`,
     props: {
       author: 'Author',

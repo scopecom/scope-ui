@@ -21,9 +21,11 @@
           </form>
         </div>
         <div class="scui-row cards-wrap start-page-pills">
-          <scui-pill [label]="pill.label" *ngFor="let pill of pills"></scui-pill>
+<!--          <scui-pill [label]="pill.label" *ngFor="let pill of pills"></scui-pill>-->
+          <scui-tabs [tabs]="projectDetailTabs" (tabSelect)="activeTab = $event"></scui-tabs>
         </div>
         <div class="scui-row cards-wrap">
+
           <scui-card *ngFor="let btn of buttons" [icon]="btn.icon"
                      [description]="btn.description"
                      [name]="btn.name">

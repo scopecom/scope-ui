@@ -1,4 +1,14 @@
-import { AfterViewInit, Component, EventEmitter, Input, Output, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
+import {
+  AfterViewInit,
+  Component, ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+  ViewEncapsulation
+} from '@angular/core';
 import { ScUiTabs } from '../../interfaces';
 
 @Component({
@@ -7,7 +17,7 @@ import { ScUiTabs } from '../../interfaces';
     <section class="scui-tabs">
       <div class="tabs" #tabContainer>
         <div *ngFor="let tab of tabs, let i = index"
-             [ngClass]="{'active-tab': i === activeTab, disabled:tab.disabled}"
+             [ngClass]="{'active-tab': i === activeTabIndex, disabled:tab.disabled}"
              (click)="setActiveTab(i, tabItem, tabContainer)"
              #tabItem
              class="tab">{{ tab.title }}
@@ -23,11 +33,11 @@ import { ScUiTabs } from '../../interfaces';
   encapsulation: ViewEncapsulation.None
 })
 export class ScUiTabsComponent implements AfterViewInit {
-  activeTab: number;
   offsetLeft: number;
   offsetWidth: number;
 
   @ViewChildren('tabItem') tabItems: QueryList<HTMLDivElement>;
+  @ViewChild('tabContainer') tabContainer: ElementRef;
   @Input() tabs: ScUiTabs[];
   @Input() activeTabIndex = 0;
 
@@ -37,11 +47,11 @@ export class ScUiTabsComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.setActiveTab(this.activeTabIndex, this.tabItems.first);
+    this.setActiveTab(this.activeTabIndex, this.tabItems.first, this.tabContainer.nativeElement);
   }
 
   setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {
-    this.activeTab = key;
+    this.activeTabIndex = key;
     if (tab) {
       this.offsetLeft = tabContainer ? tab.offsetLeft - tabContainer.offsetLeft : 0;
       this.offsetWidth = tab.offsetWidth;

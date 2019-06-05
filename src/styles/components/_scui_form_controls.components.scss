@@ -162,6 +162,34 @@
     min-width: 24px;
     text-align: center;
   }
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
   .form-control:focus {
     box-shadow: none !important;
   }
@@ -177,6 +205,10 @@
       padding-right: 31px;
       padding-top: 8px;
       color: $col_black;
+    }
+    &.has-error {
+      background: $col_sec_3 !important;
+      border-color: $col_sec_2 !important;
     }
   }
   .bs-chevron {

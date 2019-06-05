@@ -53,7 +53,6 @@ import { ScUiArticle } from '../../interfaces';
           </footer>
         </aside>
       </article>
-
       <article class="imported" *ngIf="article.mode === 'imported'">
         <figure class="scui-article-img">
           <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
@@ -80,8 +79,7 @@ import { ScUiArticle } from '../../interfaces';
           </footer>
         </aside>
       </article>
-
-      <article class="default" *ngIf="article.mode === 'default'">
+x      <article class="default" *ngIf="article.mode === 'default'">
         <figure class="scui-article-img">
           <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
         </figure>

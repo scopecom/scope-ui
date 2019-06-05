@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
       <div class="form-container-menu">
         <div>
           <span class="icon icon-c-info"></span>
-          <span class="info">Project Info</span>
+          <span class="info">{{ label }}</span>
         </div>
       </div>
       <div class="form-container-content">
@@ -18,6 +18,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FormContainerComponent implements OnInit {
   @Input() cssClass = 'form-default';
+  @Input() label = 'Project Info';
 
   constructor() {
   }

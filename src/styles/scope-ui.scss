@@ -3,7 +3,7 @@
 @import "typography/index";
 @import "components/index";
 @import "./global/_variables";
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .scui-content {
   background-color: $col_main_1;

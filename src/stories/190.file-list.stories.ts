@@ -1,9 +1,10 @@
 import {moduleMetadata, storiesOf} from '@storybook/angular';
 import {ScUiFileModule} from '../app/components/scui-file/scui-file.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 storiesOf('File Lists', module)
   .addDecorator(moduleMetadata({
-    imports: [ScUiFileModule]
+    imports: [ScUiFileModule, BrowserAnimationsModule]
   }))
   .add('Article element', () => ({
     template: `<div style="padding: 20px;">

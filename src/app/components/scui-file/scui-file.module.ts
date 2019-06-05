@@ -1,6 +1,5 @@
 import {CommonModule} from '@angular/common';
 import {MatMenuModule} from '@angular/material/menu';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import {
   Component,
@@ -27,7 +26,7 @@ import {ScUiFile} from '../../interfaces';
       <div class="info-wrap">
         <div class="info-top">
           <div (click)="selectFile()" class="info-author">{{ author }}</div>
-          <div (click)="selectFile()" class="info-title">{{ file.title }}</div>
+          <div (click)="selectFile()" class="info-title">{{ file?.title }}</div>
         </div>
         <div class="info-bottom">
           <span (click)="toggleOverlay()" class="counter">
@@ -159,8 +158,7 @@ export class ScUiFileComponent implements OnInit {
   declarations: [ScUiFileComponent],
   imports: [
     CommonModule,
-    MatMenuModule,
-    NoopAnimationsModule
+    MatMenuModule
   ],
   exports: [ScUiFileComponent]
 })

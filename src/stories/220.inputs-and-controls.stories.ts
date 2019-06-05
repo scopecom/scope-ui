@@ -28,6 +28,10 @@ const fromGroup = new FormBuilder().group({
   name: ['', [Validators.maxLength(10)]]
 });
 
+const fromGroup2 = new FormBuilder().group({
+  name: ['', [Validators.maxLength(50)]]
+});
+
 const vreme: Date = new Date();
 
 storiesOf('Inputs and Controls', module)
@@ -158,6 +162,37 @@ storiesOf('Inputs and Controls', module)
       maxLength: 10,
       myForm: fromGroup,
       disabled: true
+    }
+  }))
+  .add('Password field', () => ({
+    template: `<div style="background: white;padding: 20px; width:400px">
+                 <form [formGroup]="myForm">
+                 <div class="scui-form-field">
+                  <scui-input formControlName="name" [maxLength]="maxLength" [inputType]="inputType" [label]="label"></scui-input>
+                 </div>
+               </form>
+               </div>`,
+    props: {
+      label: 'PASSWORD*',
+      inputType: 'password',
+      maxLength: 50,
+      myForm: fromGroup2
+    }
+  }))
+  .add('Password field invalid', () => ({
+    template: `<div style="background: white;padding: 20px; width:400px">
+                 <form [formGroup]="myForm">
+                 <div class="scui-form-field">
+                  <scui-input formControlName="name" [maxLength]="maxLength" [inputType]="inputType" [label]="label" [isInvalid]="isInvalid"></scui-input>
+                 </div>
+               </form>
+               </div>`,
+    props: {
+      label: 'PASSWORD*',
+      inputType: 'password',
+      isInvalid: true,
+      maxLength: 50,
+      myForm: fromGroup2
     }
   }))
   .add('Input', () => ({

@@ -4,7 +4,8 @@ import {ControlValueAccessor, NgControl} from '@angular/forms';
 @Component({
   selector: 'scui-input',
   template: `
-    <div class="scui-input {{styleClass}} {{inputState}}" [ngClass]="{'scui-error': !control?.pristine && (control?.errors != null)}">
+    <div class="scui-input scui-error {{styleClass}} {{inputState}}"
+         [ngClass]="{'scui-error': !control?.pristine && (control?.errors != null) || isInvalid}">
       <div>
         <div class="scui-input-label">
           {{label}}
@@ -15,7 +16,7 @@ import {ControlValueAccessor, NgControl} from '@angular/forms';
                (blur)="inputState = ''"
                [value]="value"
                class="scui-input-field">
-        <div *ngIf="maxLength &&!control?.errors?.maxlength" class="scui-input-counter">
+        <div *ngIf="maxLength &&!control?.errors?.maxlength && inputType !== 'password'" class="scui-input-counter">
           <div>Max {{maxLength}} chars</div>
           <div>{{value?.length || 0 }}/{{maxLength}}</div>
         </div>
@@ -32,6 +33,7 @@ export class ScUiInputComponent implements ControlValueAccessor {
   inputState: string;
 
   @Input() inputType = 'text';
+  @Input() isInvalid: boolean;
   @Input() styleClass: string;
   @Input() maxLength: number;
   @Input() label: string;

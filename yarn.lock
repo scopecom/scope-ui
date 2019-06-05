@@ -8519,7 +8519,7 @@ ng2-dragula@^2.1.1:
     "@types/dragula" "^2.1.34"
     dragula "^3.7.2"
 
-ngx-bootstrap@^4.2.0:
+ngx-bootstrap@4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-4.2.0.tgz#866e81b8976c0991b22fc23504df14d4fb36ca12"
   integrity sha512-+oqkTiNWgd0IOUI0+DDlBjbdYN40Ymqu5kBgsbfxTnySOVgWfdO4BLbbv5YuKRWNnzkCLECLiL5WWB6WrWmDsA==

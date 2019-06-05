@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, Output, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
 import { ScUiTabs } from '../../interfaces';
 
 @Component({
@@ -22,24 +22,22 @@ import { ScUiTabs } from '../../interfaces';
   `,
   encapsulation: ViewEncapsulation.None
 })
-export class ScuiTabsComponent implements OnInit, AfterViewInit {
+export class ScUiTabsComponent implements AfterViewInit {
   activeTab: number;
   offsetLeft: number;
   offsetWidth: number;
 
   @ViewChildren('tabItem') tabItems: QueryList<HTMLDivElement>;
   @Input() tabs: ScUiTabs[];
-  @Input() disabled: boolean;
+  @Input() activeTabIndex = 0;
+
+  @Output() tabSelect = new EventEmitter<number>();
 
   constructor() {
   }
 
-  ngOnInit() {
-    this.setActiveTab(0);
-  }
-
   ngAfterViewInit() {
-    this.setActiveTab(0, this.tabItems.first);
+    this.setActiveTab(this.activeTabIndex, this.tabItems.first);
   }
 
   setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {
@@ -48,5 +46,7 @@ export class ScuiTabsComponent implements OnInit, AfterViewInit {
       this.offsetLeft = tabContainer ? tab.offsetLeft - tabContainer.offsetLeft : 0;
       this.offsetWidth = tab.offsetWidth;
     }
+
+    this.tabSelect.emit(key);
   }
 }

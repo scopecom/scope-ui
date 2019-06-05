@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Optional, Output, Self} from '@angular/core';
-import {ControlValueAccessor, NgControl} from '@angular/forms';
+import { Component, EventEmitter, Input, Optional, Output, Self } from '@angular/core';
+import { ControlValueAccessor, NgControl } from '@angular/forms';
 
 @Component({
   selector: 'scui-input',
@@ -51,7 +51,7 @@ export class ScUiInputComponent implements ControlValueAccessor {
   }
 
   propagateChange = (_: any) => {
-  };
+  }
 
   registerOnChange(fn) {
     this.propagateChange = fn;

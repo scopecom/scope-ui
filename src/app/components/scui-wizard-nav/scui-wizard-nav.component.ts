@@ -47,6 +47,6 @@ export class ScUiWizardNavComponent implements OnInit {
 
   setStep(index: number) {
     this.activeStep = index;
-    this.onStepSelect.emit(this.activeStep)
+    this.onStepSelect.emit(this.activeStep);
   }
 }

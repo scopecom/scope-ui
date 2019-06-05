@@ -1,4 +1,5 @@
 import { moduleMetadata, storiesOf } from '@storybook/angular';
+import { action } from '@storybook/addon-actions';
 import { CommonModule } from '@angular/common';
 import { ScUiCardComponent } from '../app/components/scui-card/scui-card.component';
 import { ButtonListStub } from '../app/constants/button.list';
@@ -8,7 +9,7 @@ import { ScUiNavComponent } from '../app/components/scui-nav/scui-nav.component'
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMenu, AppMenuFooter, AppMenuLogo } from '../app/constants/app.menu';
 import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
-import { ScuiTabsComponent } from '../app/components/scui-tabs/scui-tabs.component';
+import { ScUiTabsComponent } from '../app/components/scui-tabs/scui-tabs.component';
 import { DragulaModule } from 'ng2-dragula';
 import { Tabs } from '../app/constants/tabs';
 
@@ -17,7 +18,7 @@ storiesOf('Menus', module)
   .addDecorator(
     moduleMetadata({
       imports: [CommonModule, RouterTestingModule, DragulaModule.forRoot()],
-      declarations: [ScUiCardComponent, ScuiTabsComponent, BgHoverDirective, ScUiDrawerComponent, ScUiNavComponent, ScUiDrawerNavComponent]
+      declarations: [ScUiCardComponent, ScUiTabsComponent, BgHoverDirective, ScUiDrawerComponent, ScUiNavComponent, ScUiDrawerNavComponent]
     })
   )
   .add('Card Default', () => ({
@@ -109,8 +110,9 @@ storiesOf('Menus', module)
     },
   }))
   .add('Tabs', () => ({
-    template: `<scui-tabs [tabs]="tabs"></scui-tabs>`,
+    template: `<scui-tabs [tabs]="tabs" (tabSelect)="tabEvt($event)"></scui-tabs>`,
     props: {
-      tabs: Tabs
+      tabs: Tabs,
+      tabEvt: action('Tab Select')
     }
   }));

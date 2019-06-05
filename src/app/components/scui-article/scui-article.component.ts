@@ -79,7 +79,7 @@ import { ScUiArticle } from '../../interfaces';
           </footer>
         </aside>
       </article>
-x      <article class="default" *ngIf="article.mode === 'default'">
+      <article class="default" *ngIf="article.mode === 'default'">
         <figure class="scui-article-img">
           <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
         </figure>

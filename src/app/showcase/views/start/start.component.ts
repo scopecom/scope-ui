@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonListStub } from '../../../constants/button.list';
 import { PillsListStub } from '../../../constants/pills.list';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ScUiTabs } from '../../../interfaces';
 
 @Component({
   selector: 'scui-start',
@@ -13,6 +14,22 @@ export class StartComponent implements OnInit {
   pills = PillsListStub;
 
   demoForm: FormGroup;
+  activeTab = 0;
+  projectDetailTabs: ScUiTabs[] = [
+    {
+      title: 'INFO'
+    },
+    {
+      title: 'ASSETS'
+    },
+    {
+      title: 'PUBLICATIONS'
+    },
+    {
+      title: 'HISTORY',
+      disabled: true
+    }
+  ];
 
   constructor(private fb: FormBuilder) {
   }

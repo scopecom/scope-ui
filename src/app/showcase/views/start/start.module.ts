@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ScUiPillsModule,
     ScuiDropdownModule,
     ScUiFormControlsModule,
+    ScUiTabsModule,
     ReactiveFormsModule
   ]
 })

@@ -33,10 +33,10 @@ import { ScUiTabs } from '../../interfaces';
   encapsulation: ViewEncapsulation.None
 })
 export class ScUiTabsComponent implements AfterViewInit {
-  offsetLeft: number;
-  offsetWidth: number;
+  offsetLeft = 0;
+  offsetWidth = 0;
 
-  @ViewChildren('tabItem') tabItems: QueryList<HTMLDivElement>;
+  @ViewChildren('tabItem') tabItems: QueryList<ElementRef>;
   @ViewChild('tabContainer') tabContainer: ElementRef;
   @Input() tabs: ScUiTabs[];
   @Input() activeTabIndex = 0;
@@ -47,7 +47,9 @@ export class ScUiTabsComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.setActiveTab(this.activeTabIndex, this.tabItems.first, this.tabContainer.nativeElement);
+    setTimeout(() => {
+      this.setActiveTab(this.activeTabIndex, this.tabItems.first.nativeElement, this.tabContainer.nativeElement);
+    });
   }
 
   setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {

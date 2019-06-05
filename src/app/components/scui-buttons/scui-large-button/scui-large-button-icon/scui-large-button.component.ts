@@ -17,7 +17,7 @@ export class ScUiLargeButtonIconComponent implements OnInit {
   @Input() label: string;
   @Input() icon = 'icon-arrow-right';
   @Input() cssClass = 'btn-large-icon-blue';
-  @Output() onBtnClick = new EventEmitter<any>();
+  @Output() onBtnClick = new EventEmitter();
 
   constructor() {
   }

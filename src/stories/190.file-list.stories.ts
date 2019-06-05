@@ -1,9 +1,9 @@
 import {moduleMetadata, storiesOf} from '@storybook/angular';
-import {ScUiArticleStatusModule} from '../app/components/scui-article-status/scui-article-status.module';
+import {ScUiFileModule} from '../app/components/scui-file/scui-file.module';
 
 storiesOf('File Lists', module)
   .addDecorator(moduleMetadata({
-    imports: [ScUiArticleStatusModule]
+    imports: [ScUiFileModule]
   }))
   .add('Article element', () => ({
     template: `<div style="padding: 20px;">

@@ -88,7 +88,7 @@ import {
     </article>
   `,
 })
-export class ScUiArticleStatusComponent implements OnInit {
+export class ScUiFileComponent implements OnInit {
 
   @Input() author: string;
   @Input() title: string;
@@ -150,15 +150,15 @@ export class ScUiArticleStatusComponent implements OnInit {
 }
 
 @NgModule({
-  declarations: [ScUiArticleStatusComponent],
+  declarations: [ScUiFileComponent],
   imports: [
     CommonModule,
     MatMenuModule,
     NoopAnimationsModule
   ],
-  exports: [ScUiArticleStatusComponent]
+  exports: [ScUiFileComponent]
 })
-export class ScUiArticleStatusModule {
+export class ScUiFileModule {
 }
 
 

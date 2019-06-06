@@ -2,9 +2,6 @@
 
 .form-container {
   min-height: 200px;
-  border-top: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
   border-left: 8px solid;
   background: $col_white;
   .form-container-menu {
@@ -25,7 +22,7 @@
     padding: 24px;
   }
   &.form-default {
-    border-color: $col_main_5
+    border-color: $col_main_3
   }
   &.form-active {
     border-color: $col_prim_4
@@ -150,6 +147,14 @@
 }
 
 .scui-time-picker {
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
   position: relative;
   .hoursFocused {
     background: #d9ecff !important;

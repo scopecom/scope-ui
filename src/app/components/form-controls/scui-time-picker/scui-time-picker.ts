@@ -51,7 +51,7 @@ export const TIMEPICKER2_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
         <tr [ngClass]="{timepickerDisabled:disabled}">
           <!-- hours -->
           <td [ngClass]="{hoursFocused:hoursFocused}" class="form-group" [class.has-error]="invalidHours">
-            <input type="text" [class.is-invalid]="invalidHours"
+            <input type="number" [class.is-invalid]="invalidHours"
                    class="form-control text-center bs-timepicker-field"
                    placeholder="HH"
                    maxlength="2"
@@ -68,7 +68,7 @@ export const TIMEPICKER2_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
           <td *ngIf="showMinutes">&nbsp;:&nbsp;</td>
           <!-- minutes -->
           <td [ngClass]="{minutesFocused:minutesFocused}" class="form-group" *ngIf="showMinutes" [class.has-error]="invalidMinutes">
-            <input type="text" [class.is-invalid]="invalidMinutes"
+            <input type="number" [class.is-invalid]="invalidMinutes"
                    class="form-control text-center bs-timepicker-field"
                    placeholder="MM"
                    maxlength="2"
@@ -86,7 +86,7 @@ export const TIMEPICKER2_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
           <td *ngIf="showSeconds">&nbsp;:&nbsp;</td>
           <!-- seconds -->
           <td [ngClass]="" class="form-group" *ngIf="showSeconds" [class.has-error]="invalidSeconds">
-            <input type="text" [class.is-invalid]="invalidSeconds"
+            <input type="number" [class.is-invalid]="invalidSeconds"
                    class="form-control text-center bs-timepicker-field"
                    placeholder="SS"
                    maxlength="2"
@@ -156,6 +156,7 @@ export class ScUiTimePickerComponent extends TimepickerComponent {
 
   hoursFocused = false;
   minutesFocused = false;
+  showMeridian = false;
 
   toggleHours() {
     this.hoursFocused = !this.hoursFocused;

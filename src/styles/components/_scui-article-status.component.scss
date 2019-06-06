@@ -26,7 +26,16 @@
   .output-action-last {
     border-bottom: 1px solid $col_main_2;
   }
-
+  &:hover {
+    .disabled {
+      background: $col_white;
+      cursor: default !important;
+      pointer-events: none;
+      span {
+        cursor: default !important;
+      }
+    }
+  }
 }
 
 .scui-article-status {

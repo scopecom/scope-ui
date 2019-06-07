@@ -11,7 +11,6 @@ export const TIMEPICKER2_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
   multi: true
 };
 
-
 @Component({
   selector: 'scui-time-picker',
   providers: [TIMEPICKER2_CONTROL_VALUE_ACCESSOR, TimepickerStore],
@@ -56,8 +55,9 @@ export const TIMEPICKER2_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
                    placeholder="HH"
                    maxlength="2"
                    [readonly]="readonlyInput"
-                   [disabled]="disabled"
+                   [disabled]="disabled ||invalidMinutes"
                    [value]="hours"
+                   (input)="limitLength($event)"
                    (focus)="toggleHours()"
                    (blur)="toggleHours()"
                    (wheel)="prevDef($event);changeHours(hourStep * wheelSign($event), 'wheel')"
@@ -72,8 +72,9 @@ export const TIMEPICKER2_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
                    class="form-control text-center bs-timepicker-field"
                    placeholder="MM"
                    maxlength="2"
+                   (input)="limitLength($event)"
                    [readonly]="readonlyInput"
-                   [disabled]="disabled"
+                   [disabled]="disabled || invalidHours"
                    [value]="minutes"
                    (focus)="toggleMinutes()"
                    (blur)="toggleMinutes()"
@@ -164,5 +165,13 @@ export class ScUiTimePickerComponent extends TimepickerComponent {
 
   toggleMinutes() {
     this.minutesFocused = !this.minutesFocused;
+  }
+
+  limitLength(evt) {
+    let value = evt.target.value.toString();
+    if (value.length > 2) {
+      evt.target.value = parseInt(value.substring(0, 2));
+      evt.preventDefault();
+    }
   }
 }

@@ -8,11 +8,18 @@ storiesOf('File Lists', module)
   }))
   .add('Article element', () => ({
     template: `<div style="padding: 20px;">
-      <scui-file [author]="author" [title]="title" [outputChannels]="outputChannels" ></scui-file>
+      <scui-file [author]="author" [file]="file" [outputChannels]="outputChannels" ></scui-file>
       </div>`,
     props: {
       author: 'Author',
-      title: 'Title',
+      file: {
+        title: 'Title',
+        body: '',
+        meta: '',
+        status: '',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
       outputChannels: [
         {
           type: 'SCOPE_TO_EMAIL',

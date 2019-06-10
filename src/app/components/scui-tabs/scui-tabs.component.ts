@@ -9,7 +9,7 @@ import {
   ViewChildren,
   ViewEncapsulation
 } from '@angular/core';
-import { ScUiTabs } from '../../interfaces';
+import {ScUiTabs} from '../../interfaces';
 
 @Component({
   selector: 'scui-tabs',
@@ -24,7 +24,7 @@ import { ScUiTabs } from '../../interfaces';
         </div>
         <div class="border-wrap">
           <div [ngStyle]="{left: (offsetLeft || 0) + 'px', width: (offsetWidth) + 'px' }"
-               class="border-bottom">
+               class="border-top">
           </div>
         </div>
       </div>

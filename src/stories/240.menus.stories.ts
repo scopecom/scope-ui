@@ -108,11 +108,4 @@ storiesOf('Menus', module)
       drawerOpen: true,
       collapse: true
     },
-  }))
-  .add('Tabs', () => ({
-    template: `<scui-tabs [tabs]="tabs" (tabSelect)="tabEvt($event)"></scui-tabs>`,
-    props: {
-      tabs: Tabs,
-      tabEvt: action('Tab Select')
-    }
   }));

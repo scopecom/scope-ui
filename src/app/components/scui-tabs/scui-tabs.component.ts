@@ -14,7 +14,7 @@ import {ScUiTabs} from '../../interfaces';
 @Component({
   selector: 'scui-tabs',
   template: `
-    <section class="scui-tabs">
+    <section class="scui-tabs {{ cssClass }}">
       <div class="tabs" #tabContainer>
         <div *ngFor="let tab of tabs, let i = index"
              [ngClass]="{'active-tab': i === activeTabIndex, disabled:tab.disabled}"
@@ -40,6 +40,7 @@ export class ScUiTabsComponent implements AfterViewInit {
   @ViewChild('tabContainer') tabContainer: ElementRef;
   @Input() tabs: ScUiTabs[];
   @Input() activeTabIndex = 0;
+  @Input() cssClass: string;
 
   @Output() tabSelect = new EventEmitter<number>();
 

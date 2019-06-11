@@ -22,4 +22,14 @@ storiesOf('Tabs', module)
       tabs: Tabs,
       tabEvt: action('Tab Select')
     }
+  }))
+  .add('Tabs drawer', () => ({
+    template: `<div style="background: white; margin:20px;">
+              <scui-tabs [cssClass]="cssClass" [tabs]="tabs" (tabSelect)="tabEvt($event)"></scui-tabs>
+            </div>`,
+    props: {
+      tabs: Tabs,
+      cssClass: 'tabs-drawer',
+      tabEvt: action('Tab Select')
+    }
   }));

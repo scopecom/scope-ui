@@ -98,6 +98,9 @@
           .dot {
             background: #ff6600;
           }
+          &:hover {
+            opacity: 1;
+          }
         }
         &.defaultState {
           background: $col_white !important;

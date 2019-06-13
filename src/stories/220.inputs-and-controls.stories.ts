@@ -77,19 +77,21 @@ storiesOf('Inputs and Controls', module)
   }))
   .add('Checkbox', () => ({
     template: `<div style="padding: 20px 0 60px 20px;background: white;">
-                   <scui-checkbox [label]="label" ></scui-checkbox>
+                   <scui-checkbox [groupLabel]="groupLabel" [label]="label" ></scui-checkbox>
                </div>`,
     props: {
       checked: true,
+      groupLabel: 'CHECKBOX GROUP',
       label: 'Enabled'
     }
   }))
   .add('Checkbox disabled', () => ({
     template: `<div style="padding: 20px 0 60px 20px;background: white;" >
-                   <scui-checkbox [disabled]="disabled" [label]="label" ></scui-checkbox>
+                   <scui-checkbox [groupLabel]="groupLabel"  [disabled]="disabled" [label]="label" ></scui-checkbox>
                </div>`,
     props: {
       disabled: true,
+      groupLabel: 'CHECKBOX GROUP',
       label: 'Disabled'
     }
   }))

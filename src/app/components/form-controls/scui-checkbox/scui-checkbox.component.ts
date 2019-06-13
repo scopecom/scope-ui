@@ -4,15 +4,19 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   selector: 'scui-checkbox',
   template: `
     <div (click)="toggleCheckbox()" [ngClass]="{checked:checked,disabled:disabled}" class="scui-checkbox">
+      <div class="group-label">{{ groupLabel }}</div>
+      <div class="checkbox-wrap">
         <span class="checkbox-container">
           <span *ngIf="checked" class="icon icon-i-remove"></span>
         </span>
-      <span class="checkbox-label">{{label}}</span>
+        <span class="checkbox-label">{{label}}</span>
+      </div>
     </div>
   `,
 })
 export class ScUiCheckboxComponent implements OnInit {
   @Input() label: string;
+  @Input() groupLabel: string;
   @Input() checked: boolean;
   @Input() disabled: true;
   @Input() value: any;

@@ -22,7 +22,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
         </div>
       </div>
       <div class="scui-input-messages">
-        <div *ngIf="control?.errors?.maxlength">This is the error message</div>
+        <div *ngIf="control?.errors?.maxlength || isInvalid">This is the error message</div>
         <ng-content></ng-content>
       </div>
     </div>

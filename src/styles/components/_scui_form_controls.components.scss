@@ -32,16 +32,45 @@
   }
 }
 
+.scui-radio-button {
+  .example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  .example-radio-button {
+    margin: 5px;
+  }
+  .example-radio-group-label {
+    color: $col_main_5;
+    font-size: 13px;
+    text-transform: uppercase;
+    height: 32px;
+    //padding-left: 6px;
+    padding-top: 10px;
+    display: inline-block;
+  }
+  .mat-radio-group {
+    margin-top: 0 !important;
+  }
+}
+
 .mat-radio-button {
   height: 40px;
+  padding-top: 8px;
+  margin: 0 !important;
+  .mat-radio-label {
+    &:hover {
+      .mat-radio-outer-circle {
+        background: $col_prim_1;
+        border: 1px solid $col_prim_4;
+      }
+    }
+  }
   .mat-radio-container {
     .mat-radio-outer-circle {
       border: 1px solid $col_main_9;
       background: $col_main_1;
-      &:hover {
-        background: $col_prim_1;
-        border: 1px solid $col_prim_4;
-      }
     }
   }
 

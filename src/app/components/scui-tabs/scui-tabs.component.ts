@@ -20,7 +20,8 @@ import {ScUiTabs} from '../../interfaces';
              [ngClass]="{'active-tab': i === activeTabIndex, disabled:tab.disabled}"
              (click)="setActiveTab(i, tabItem, tabContainer)"
              #tabItem
-             class="tab">{{tab.title}}</div>
+             class="tab">{{tab.title}}
+        </div>
         <div class="border-wrap">
           <div [ngStyle]="{left: (offsetLeft || 0) + 'px', width: (offsetWidth) + 'px' }"
                class="border-top">

@@ -19,4 +19,6 @@ export interface ScUiSubMenuItem {
 export interface ScUiTabs {
   title: string;
   disabled?: boolean;
+  routerLink?: string;
+  [t: string]: any;
 }

@@ -21,8 +21,14 @@ import { ScUiArticle } from '../../interfaces';
         </div>
       </article>
       <article class="edit" *ngIf="article.mode === 'edit'">
+        <span class="icon icon-cloud-forecast-2"></span>
         <figure class="scui-article-img">
-          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
+          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img">
+            <div class="article-no-image" *ngIf="!article.photoUrl">
+              <div class="no-image-1">Sorry.</div>
+              <div class="no-image-2">No preview available this time.</div>
+            </div>
+          </div>
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">
@@ -54,8 +60,14 @@ import { ScUiArticle } from '../../interfaces';
         </aside>
       </article>
       <article class="imported" *ngIf="article.mode === 'imported'">
+        <span class="icon icon-cloud-forecast-2"></span>
         <figure class="scui-article-img">
-          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
+          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img">
+            <div class="article-no-image" *ngIf="!article.photoUrl">
+              <div class="no-image-1">Sorry.</div>
+              <div class="no-image-2">No preview available this time.</div>
+            </div>
+          </div>
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">
@@ -80,8 +92,14 @@ import { ScUiArticle } from '../../interfaces';
         </aside>
       </article>
       <article class="default" *ngIf="article.mode === 'default'">
+        <span class="icon icon-cloud-forecast-2"></span>
         <figure class="scui-article-img">
-          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img"></div>
+          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img">
+            <div class="article-no-image" *ngIf="!article.photoUrl">
+              <div class="no-image-1">Sorry.</div>
+              <div class="no-image-2">No preview available this time.</div>
+            </div>
+          </div>
         </figure>
         <aside class="scui-article-content">
           <header class="scui-article-header">

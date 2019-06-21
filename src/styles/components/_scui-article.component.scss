@@ -128,7 +128,7 @@
 
   .scui-article-img {
     height: 190px;
-    background: $col_main_3;
+    background: #8d9093;
     .img {
       width: 100%;
       height: 100%;
@@ -136,7 +136,27 @@
       background-size: contain;
       background-position: center;
     }
+  }
 
+  .icon-cloud-forecast-2 {
+    color: $col_white;
+    font-size: 24px;
+    position: absolute;
+    right: 28px;
+    top: 28px;
+  }
+  .article-no-image {
+    font-size:20px;
+    padding-top: 20px;
+    padding-left: 16px;
+    font-weight: 700;
+    .no-image-1 {
+      color: $col_black;
+      padding-bottom: 8px;
+    }
+    .no-image-2 {
+      color: $col_white;
+    }
   }
 
   .scui-article-content {

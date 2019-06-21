@@ -30,7 +30,7 @@ import { ScUiArticle } from '../../interfaces';
             <a target="_blank" [href]="article.url"><span class="icon icon-globe"></span></a>
           </header>
           <div class="scui-article-desc">
-            <h3>{{article.title}}</h3>
+            <h3><a [href]="article.url" target="_blank">{{article.title}}</a></h3>
             <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
           </div>
           <footer class="scui-article-footer">
@@ -63,7 +63,7 @@ import { ScUiArticle } from '../../interfaces';
             <a target="_blank" [href]="article.url"><span class="icon icon-globe"></span></a>
           </header>
           <div class="scui-article-desc">
-            <h3>{{article.title}}</h3>
+            <h3><a [href]="article.url" target="_blank">{{article.title}}</a></h3>
             <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
           </div>
           <footer class="scui-article-footer">
@@ -89,7 +89,7 @@ import { ScUiArticle } from '../../interfaces';
             <a [href]="article.url" target="_blank"><span class="icon icon-globe"></span></a>
           </header>
           <div class="scui-article-desc">
-            <h3>{{article.title}}</h3>
+            <h3><a [href]="article.url" target="_blank">{{article.title}}</a></h3>
             <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
           </div>
           <footer class="scui-article-footer">

@@ -9,6 +9,7 @@ export const ArticleListStub: ScUiArticle[] = [
     date: '01/27/2019',
     photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
     mode: 'default',
+    publisher: 'Source',
   },
   {
     title: 'Kress News',
@@ -17,6 +18,7 @@ export const ArticleListStub: ScUiArticle[] = [
     date: '01/27/2019',
     photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
     mode: 'edit',
+    publisher: 'Source',
   },
   {
     title: 'Kress News',
@@ -25,6 +27,7 @@ export const ArticleListStub: ScUiArticle[] = [
     date: '01/27/2019',
     photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
     mode: 'delete',
+    publisher: 'Source',
   },
   {
     title: 'Kress News',
@@ -32,6 +35,36 @@ export const ArticleListStub: ScUiArticle[] = [
     url: 'http://google.com',
     date: '01/27/2019',
     photoUrl: 'https://files.slack.com/files-pri/T030LBJ5G-FHHQCH601/scope-image-dummy.png',
-    mode: 'imported'
+    mode: 'imported',
+    publisher: 'Source',
+  },
+  {
+    title: 'Kress News',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' +
+      ' Lorem Ipsum has been the industry\'s standard dummy text ever since...',
+    url: 'http://google.com',
+    date: '01/27/2019',
+    photoUrl: '',
+    mode: 'default',
+    publisher: 'Source',
+  },
+  {
+    title: 'Kress News',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' +
+      ' Lorem Ipsum has been the industry\'s standard dummy text ever since...',
+    url: 'http://google.com',
+    date: '01/27/2019',
+    photoUrl: '',
+    mode: 'imported',
+    publisher: 'Source',
+  },
+  {
+    title: 'Kress News',
+    description: 'Headline',
+    url: 'http://google.com',
+    date: '01/27/2019',
+    photoUrl: '',
+    mode: 'edit',
+    publisher: 'Source',
   },
 ];

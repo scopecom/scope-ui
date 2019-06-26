@@ -1,276 +1,562 @@
 @import "../global/_variables";
 
-.default, .edit, .delete, .imported {
-  width: 392px;
-  height: 392px;
+// article component
+.default, .edit, .imported {
+  width: 390px;
+  height: 390px;
   position: relative;
-  box-shadow: 0 11px 8px -8px rgba(0, 0, 0, 0.2);
 }
 
-.scui-article article {
-  padding: 16px;
-  &.default {
+// colors (image present)
+.scui-article {
+
+  article.default {
     background-color: $col_white;
+    &:hover {
+      outline: 8px solid $col_main_2;
+      .image-overlay {
+        background: $col_main_3;
+        opacity: 0.2;
+      }
+    }
+
+    .scui-article-img {
+      .no-image-1 {
+        color: $col_main_5;
+      }
+    }
+
     .article-action {
-      border-left: 1px solid $col_main_3;
       .icon {
-        color: rgba(0, 0, 0, 0.7);
+        color: $col_main_6;
       }
       &:hover {
-        background: $col_main_3;
+        background: $col_main_2;
         .icon {
-          color: rgba(0, 0, 0, 1);
+          color: $col_black;
         }
       }
     }
-  }
 
-  &.edit {
-    background-color: $col_prim_1;
-    .scui-article-footer {
-      border-top: 1px solid $col_prim_2 !important;
-      .article-action, .article-action-2 {
-        border-left: 1px solid $col_prim_2;
-        .icon {
-          color: rgba(0, 0, 0, 0.7);
+    .image-overlay {
+      background: $col_main_2;
+      opacity: 0;
+    }
+
+    .scui-article-content {
+      .scui-article-header {
+        color: $col_main_5;
+        a {
+          color: $col_black;
         }
+      }
+
+      .scui-article-desc {
         &:hover {
-          background: $col_prim_3;
-          .icon {
-            color: $col_white;
+          h3 {
+            a {
+              color: $col_black !important;
+            }
           }
         }
+        h3 {
+          a {
+            color: $col_main_7;
+          }
+        }
+      }
+    }
+
+  }
+
+  article.edit {
+    background-color: $col_main_2;
+    &:hover {
+      outline: 8px solid #cdd0d3;
+    }
+
+    .scui-article-content {
+      .scui-article-header {
+        color: $col_main_5;
+        a {
+          color: $col_black;
+        }
+      }
+
+      .scui-article-desc {
+        &:hover {
+          h3 {
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+        h3 {
+          a {
+            color: $col_main_7;
+          }
+        }
+      }
+    }
+
+    .scui-article-footer {
+      .article-action, .article-action-2 {
+        .icon {
+          color: $col_main_6;
+        }
+        &:hover {
+          background: $col_main_3;
+          .icon {
+            color: $col_black;
+          }
+        }
+      }
+      .pills-box {
+        .pill-info {
+          background: $col_prim_5 !important;
+          color: $col_white;
+          &:hover {
+            background: $col_prim_6 !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  article.imported {
+    background-color: $col_main_2;
+    &:hover {
+      outline: 8px solid #cdd0d3;
+      .image-overlay {
+        background: $col_main_9;
+        opacity: 0.4;
+      }
+    }
+
+    .scui-article-content {
+      .scui-article-header {
+        color: $col_main_5;
+        a {
+          color: $col_black;
+        }
+      }
+
+      .scui-article-desc {
+        &:hover {
+          h3 {
+            a {
+              color: $col_black !important;
+            }
+          }
+        }
+        h3 {
+          a {
+            color: $col_main_7;
+          }
+        }
+      }
+    }
+
+    .scui-article-footer {
+      .article-action {
+        .icon {
+          color: $col_main_6;
+        }
+        &:hover {
+          background: $col_main_3;
+          .icon {
+            color: $col_black;
+          }
+        }
+      }
+      .pills-box {
+        .pill-info {
+          background: $col_prim_5 !important;
+          color: $col_white;
+          &:hover {
+            background: $col_prim_6 !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  //HOVER
+  &:hover {
+
+  }
+}
+
+// no image
+.scui-article.noImage {
+
+  article.default {
+    background-color: $col_white;
+    &:hover {
+      outline: 8px solid $col_main_2;
+      .article-no-image {
+        background: $col_main_3;
+      }
+    }
+
+    .scui-article-img {
+      .no-image-1 {
+        color: $col_main_5;
+      }
+    }
+
+    .article-no-image {
+      background: $col_main_2;
+    }
+
+    .scui-article-content {
+      .scui-article-header {
+        color: $col_main_5;
+        a {
+          color: $col_black;
+        }
+      }
+
+      .scui-article-desc {
+
+        h3 {
+          a {
+            color: $col_main_7;
+          }
+        }
+      }
+    }
+
+  }
+
+  article.edit {
+    background-color: $col_main_2;
+    &:hover {
+      outline: 8px solid #cdd0d3;
+      .image-overlay {
+      }
+    }
+
+    .scui-article-img {
+      .no-image-1 {
+        color: $col_white;
+      }
+      .no-image-2 {
+        color: $col_main_2;
+      }
+    }
+
+    .image-overlay {
+    }
+
+    .article-no-image {
+      background: #97989a;
+    }
+
+    .scui-article-content {
+      .scui-article-header {
+        color: $col_main_5;
+        a {
+          color: $col_black;
+        }
+      }
+
+      .scui-article-desc {
+        h3 {
+          a {
+            color: $col_main_7;
+          }
+        }
+      }
+    }
+
+    .scui-article-footer {
+      .article-action, .article-action-2 {
+        .icon {
+          color: $col_main_6;
+        }
+        &:hover {
+          background: $col_main_3;
+          .icon {
+            color: $col_black;
+          }
+        }
+      }
+      .pills-box {
+        .pill-info {
+          background: $col_prim_5 !important;
+          color: $col_white;
+          &:hover {
+            background: $col_prim_6 !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  article.imported {
+    background-color: $col_main_2;
+    &:hover {
+      outline: 8px solid #cdd0d3;
+      .article-no-image {
+        background: $col_main_6;
+      }
+    }
+
+    .article-no-image {
+      background: $col_main_5;
+    }
+
+    .scui-article-img {
+      .no-image-1 {
+        color: $col_white;
+      }
+      .no-image-2 {
+        color: $col_main_2;
+      }
+    }
+
+    .scui-article-content {
+      .scui-article-header {
+        color: $col_main_5;
+        a {
+          color: $col_black;
+        }
+      }
+
+      .scui-article-desc {
+        h3 {
+          a {
+            color: $col_main_7;
+          }
+        }
+      }
+    }
+
+    .scui-article-footer {
+      .article-action {
+        .icon {
+          color: $col_main_6;
+        }
+        &:hover {
+          background: $col_main_3;
+          .icon {
+            color: $col_black;
+          }
+        }
+      }
+      .pills-box {
+        .pill-info {
+          background: $col_prim_5 !important;
+          color: $col_white;
+          &:hover {
+            background: $col_prim_6 !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  //HOVER
+  &:hover {
+
+  }
+}
+
+.scui-article article {
+
+  &.edit {
+    .article-action {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 8px;
+      bottom: 5px;
+      .icon {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        font-size: 23px;
+      }
+      &:hover {
+        border-radius: 50%;
+      }
+    }
+    .article-action-2 {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 48px;
+      bottom: 5px;
+      .icon {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        font-size: 27px;
+      }
+      &:hover {
+        border-radius: 50%;
       }
     }
   }
 
   &.imported {
-    background-color: $col_prim_1;
-    .scui-article-footer {
-      border-top: 1px solid $col_prim_2 !important;
-      .article-action {
-        border-left: 1px solid $col_prim_2;
-        .icon {
-          color: rgba(0, 0, 0, 0.7);
-        }
-        &:hover {
-          background: $col_prim_3;
-          .icon {
-            color: $col_white;
-          }
-        }
-      }
-      .pills-box {
-        .pill-info {
-          background: $col_prim_4 !important;
-        }
-      }
-    }
-    .scui-article-img {
-      background: #8d9093;
-      position: relative;
-    }
-  }
-
-  &.delete {
-    display: inherit;
-    position: relative;
-    padding: 0;
-    background: $col_main_1;
-    .content {
-      padding-left: 40px;
-      padding-top: 18px;
-      font-weight: 300;
-      line-height: 22px;
-    }
-    .header {
-      border-top: 8px solid $col_sec_2;
-      height: 64px;
-      width: 100%;
-      background: $col_white;
-      padding-left: 40px;
-      color: $col_sec_2;
-      padding-top: 13px;
-      .icon {
-        font-size: 30px;
-        vertical-align: -8px;
-        margin-right: 10px;
-      }
-    }
-    .footer {
+    .article-action {
       position: absolute;
-      bottom: 6px;
-      right: -8px;
-      font-size: 13px;
-      padding: 9px 24px;
-      .btn {
-        color: $col_white;
-        display: inline-block;
-        font-size: 14px;
-        padding: 10px 21px;
-        border-radius: 4px;
-        cursor: pointer;
-        &.cancel {
-          background: $col_main_4;
-          &:hover {
-            background: $col_main_7
-          }
-        }
-        &.remove {
-          margin-left: 8px;
-          background: $col_sec_1;
-          &:hover {
-            background: $col_sec_2;
-          }
-        }
+      right: 8px;
+      bottom: 8px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      .icon {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        font-size: 27px;
+      }
+      &:hover {
+        border-radius: 50%;
       }
     }
   }
 
-  .scui-article-img {
-    height: 190px;
-    background: #8d9093;
-    position: relative;
-    .img {
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
+  &.default {
+    .article-action {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      .icon {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        font-size: 27px;
+      }
+      &:hover {
+        border-radius: 50%;
+      }
     }
   }
 
+  // common article styles
   .icon-cloud-forecast-2 {
     color: $col_white;
     font-size: 24px;
     position: absolute;
-    right: 28px;
-    top: 28px;
+    right: 12px;
+    top: 12px;
+    z-index: 1;
+  }
+
+  .scui-article-footer {
+    height: 40px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    padding: 10px 16px;
+    .pills-box {
+      position: absolute;
+      left: 16px;
+      bottom: 12px;
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+      .pill-info {
+        font-size: 16px;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        .value {
+          position: absolute;
+          top: 7px;
+          left: 11px;
+          color: $col_white;
+        }
+      }
+    }
+    .icon {
+      font-size: 20px;
+    }
+  }
+
+}
+
+// article image component
+.scui-article-img {
+  height: 195px;
+  position: relative;
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   .article-no-image {
-    font-size:20px;
+    font-size: 20px;
     padding-top: 20px;
     padding-left: 16px;
     font-weight: 700;
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     .no-image-1 {
-      color: $col_black;
       padding-bottom: 8px;
-    }
-    .no-image-2 {
-      color: $col_white;
     }
   }
 
-  .scui-article-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 16px;
-    height: 186px;
+  .img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+}
+
+// article content component
+.scui-article-content {
+  &.default {
     .scui-article-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-      margin-bottom: 10px;
-      font-weight: 300;
-      .icon {
-        font-weight: 100;
-        font-size: 18px;
-        color: gray;
-        cursor: none;
-      }
-      a {
-        font-size: 18px;
-        color: $col_black;
-      }
+      font-weight: 400;
     }
+  }
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  height: 195px;
+  .scui-article-header {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    a {
+      font-size: 18px;
+    }
+  }
 
-    .scui-article-desc {
-      h3 {
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 20px;
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 300;
-      }
-
+  .scui-article-desc {
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
       a {
-        color: $col_black;
         text-decoration: none;
       }
     }
 
-    .scui-article-footer {
-      height: 40px;
-      display: flex;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 1px;
-      padding: 10px 16px;
-      border-top: 1px solid $col_main_3;
-      .pills-box {
-        position: absolute;
-        left: 16px;
-        top: 8px;
-        bottom: 8px;
-        color: $col_white;
-        height: 24px;
-        .pill-info {
-          background: $col_prim_4;
-          font-size: 14px;
-          display: inline-block;
-          height: 100%;
-          padding: 5px 12px 0 12px;
-          border-radius: 12px;
-          margin-right: 8px;
-          .icon {
-            font-weight: 600;
-            margin-right: 8px;
-          }
-          .value {
-            vertical-align: 1px;
-          }
-          .icon, .value {
-            font-size: 14px;
-          }
-        }
-      }
-      .icon {
-        font-size: 20px;
-      }
-      .article-action {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        cursor: pointer;
-        .icon {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-        }
-      }
-      .article-action-2 {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        right: 40px;
-        cursor: pointer;
-        .icon {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-        }
-      }
-    }
   }
+
 }

@@ -1,59 +1,30 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
-import { ScUiArticle } from '../../interfaces';
+import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
+import {ScUiArticle} from '../../interfaces';
 
 @Component({
   selector: 'scui-article',
   template: `
-    <article class="scui-article">
-      <article class="delete" *ngIf="article.mode === 'delete'">
-        <div class="header">
-          <div>
-            <span class="icon icon-c-warning"></span>
-            <span>REMOVE ARTICLE</span>
-          </div>
-        </div>
-        <div class="content">
-          <div>Do you really want to remove this imported article?</div>
-        </div>
-        <div class="footer">
-          <div class="btn cancel">CANCEL</div>
-          <div class="btn remove">REMOVE</div>
-        </div>
-      </article>
+    <article [ngClass]="{noImage: !article.photoUrl}" class="scui-article">
       <article class="edit" *ngIf="article.mode === 'edit'">
         <span class="icon icon-cloud-forecast-2"></span>
-        <figure class="scui-article-img">
-          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img">
-            <div class="article-no-image" *ngIf="!article.photoUrl">
-              <div class="no-image-1">Sorry.</div>
-              <div class="no-image-2">No preview available this time.</div>
-            </div>
-          </div>
-        </figure>
+        <scui-article-image [photoUrl]="article.photoUrl"></scui-article-image>
         <aside class="scui-article-content">
-          <header class="scui-article-header">
-            <time>{{ article.datePublished | date:'d.M.yyyy' }}</time>
-            <a target="_blank" [href]="article.url"><span class="icon icon-globe"></span></a>
-          </header>
-          <div class="scui-article-desc">
-            <h3><a [href]="article.url" target="_blank">{{article.title}}</a></h3>
-            <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
-          </div>
+          <scui-article-content [date]="article.date"
+                                [url]="article.url"
+                                [mode]="article.mode"
+                                [headline]="article.title"
+                                [source]="article.publisher">
+          </scui-article-content>
           <footer class="scui-article-footer">
             <div class="pills-box">
               <span class="pill-info">
-                <span class="icon icon-app-store"></span>
-                <span class="value">2</span>
-              </span>
-              <span class="pill-info">
-                <span class="icon icon-single-folded"></span>
                 <span class="value">2</span>
               </span>
             </div>
-            <span class="article-action-2">
+            <span class="article-action">
               <span class="icon icon-pen-2"></span>
             </span>
-            <span class="article-action">
+            <span class="article-action-2">
               <span class="icon icon-e-remove"></span>
             </span>
           </footer>
@@ -61,27 +32,17 @@ import { ScUiArticle } from '../../interfaces';
       </article>
       <article class="imported" *ngIf="article.mode === 'imported'">
         <span class="icon icon-cloud-forecast-2"></span>
-        <figure class="scui-article-img">
-          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img">
-            <div class="article-no-image" *ngIf="!article.photoUrl">
-              <div class="no-image-1">Sorry.</div>
-              <div class="no-image-2">No preview available this time.</div>
-            </div>
-          </div>
-        </figure>
+        <scui-article-image [state]="article.mode" [photoUrl]="article.photoUrl"></scui-article-image>
         <aside class="scui-article-content">
-          <header class="scui-article-header">
-            <time>{{article.datePublished | date:'d.M.yyyy' }}</time>
-            <a target="_blank" [href]="article.url"><span class="icon icon-globe"></span></a>
-          </header>
-          <div class="scui-article-desc">
-            <h3><a [href]="article.url" target="_blank">{{article.title}}</a></h3>
-            <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
-          </div>
+          <scui-article-content [date]="article.date"
+                                [url]="article.url"
+                                [mode]="article.mode"
+                                [headline]="article.title"
+                                [source]="article.publisher">
+          </scui-article-content>
           <footer class="scui-article-footer">
             <div class="pills-box">
               <span class="pill-info">
-                <span class="icon icon-app-store"></span>
                 <span class="value">2</span>
               </span>
             </div>
@@ -92,24 +53,14 @@ import { ScUiArticle } from '../../interfaces';
         </aside>
       </article>
       <article class="default" *ngIf="article.mode === 'default'">
-        <span class="icon icon-cloud-forecast-2"></span>
-        <figure class="scui-article-img">
-          <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}" class="img">
-            <div class="article-no-image" *ngIf="!article.photoUrl">
-              <div class="no-image-1">Sorry.</div>
-              <div class="no-image-2">No preview available this time.</div>
-            </div>
-          </div>
-        </figure>
+        <scui-article-image [state]="article.mode" [photoUrl]="article.photoUrl"></scui-article-image>
         <aside class="scui-article-content">
-          <header class="scui-article-header">
-            <time>{{article.datePublished | date:'d.M.yyyy' }}</time>
-            <a [href]="article.url" target="_blank"><span class="icon icon-globe"></span></a>
-          </header>
-          <div class="scui-article-desc">
-            <h3><a [href]="article.url" target="_blank">{{article.title}}</a></h3>
-            <p><a [href]="article.url" target="_blank">{{article.description}}</a></p>
-          </div>
+          <scui-article-content [date]="article.date"
+                                [url]="article.url"
+                                [mode]="article.mode"
+                                [headline]="article.title"
+                                [source]="article.publisher">
+          </scui-article-content>
           <footer class="scui-article-footer">
             <span class="article-action">
               <span class="icon icon-e-add" (click)="importArticle(article)"></span>

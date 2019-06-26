@@ -1,35 +1,49 @@
-import { moduleMetadata, storiesOf } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
-import { ScUiArticleComponent } from '../app/components/scui-article/scui-article.component';
-import { ArticleListStub } from '../app/constants/article.list';
+import {moduleMetadata, storiesOf} from '@storybook/angular';
+import {ArticleListStub} from '../app/constants/article.list';
+import {CommonModule} from '@angular/common';
+import {ScUiArticleComponent} from '../app/components/scui-article/scui-article.component';
+import {ScUiArticleImageComponent} from '../app/components/scui-article/scui-article-image/scui-article-image.component';
+import {ScuiArticleContentComponent} from '../app/components/scui-article/scui-article-content/scui-article-content.component';
 
 storiesOf('Assets', module)
   .addDecorator(
     moduleMetadata({
       imports: [CommonModule],
-      declarations: [ScUiArticleComponent]
+      declarations: [ScUiArticleComponent, ScUiArticleImageComponent, ScuiArticleContentComponent]
     })
   )
   .add('Article Default', () => ({
-    template: `<scui-article [article]="articleList[0]"></scui-article>`,
+    template: `<div style="margin:20px;"><scui-article [article]="articleList[0]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
   .add('Article Edit Mode', () => ({
-    template: `<scui-article [article]="articleList[1]"></scui-article>`,
+    template: `<div style="margin:20px;"><scui-article [article]="articleList[1]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
   .add('Article Imported Mode', () => ({
-    template: `<scui-article [article]="articleList[3]"></scui-article>`,
+    template: `<div style="margin:20px;"><scui-article [article]="articleList[3]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
-  .add('Article Delete Mode', () => ({
-    template: `<scui-article [article]="articleList[2]"></scui-article>`,
+  .add('Article Default (no image)', () => ({
+    template: `<div style="margin:20px;"><scui-article [article]="articleList[4]"></scui-article></div>`,
+    props: {
+      articleList: ArticleListStub,
+    },
+  }))
+  .add('Article Imported Mode article (no image)', () => ({
+    template: `<div style="margin:20px;"><scui-article [article]="articleList[5]"></scui-article></div>`,
+    props: {
+      articleList: ArticleListStub,
+    },
+  }))
+  .add('Article Edit Mode (no image)', () => ({
+    template: `<div style="margin:20px;"><scui-article [article]="articleList[6]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },

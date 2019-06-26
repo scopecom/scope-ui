@@ -12,37 +12,37 @@ storiesOf('Assets', module)
       declarations: [ScUiArticleComponent, ScUiArticleImageComponent, ScuiArticleContentComponent]
     })
   )
-  .add('Article Default', () => ({
+  .add('Asset Discovery Default', () => ({
     template: `<div style="margin:20px;"><scui-article [article]="articleList[0]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
-  .add('Article Edit Mode', () => ({
+  .add('Asset Library Default', () => ({
     template: `<div style="margin:20px;"><scui-article [article]="articleList[1]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
-  .add('Article Imported Mode', () => ({
+  .add('Asset Discovery Imported', () => ({
     template: `<div style="margin:20px;"><scui-article [article]="articleList[3]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
-  .add('Article Default (no image)', () => ({
+  .add('Asset Discovery Default (No Image)', () => ({
     template: `<div style="margin:20px;"><scui-article [article]="articleList[4]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
-  .add('Article Imported Mode article (no image)', () => ({
+  .add('Asset Discovery Imported (No Image)', () => ({
     template: `<div style="margin:20px;"><scui-article [article]="articleList[5]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,
     },
   }))
-  .add('Article Edit Mode (no image)', () => ({
+  .add('Asset Library Default (No Image)', () => ({
     template: `<div style="margin:20px;"><scui-article [article]="articleList[6]"></scui-article></div>`,
     props: {
       articleList: ArticleListStub,

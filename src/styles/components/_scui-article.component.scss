@@ -2,8 +2,8 @@
 
 // article component
 .default, .edit, .imported {
-  width: 390px;
-  height: 390px;
+  width: 392px;
+  height: 392px;
   position: relative;
 }
 
@@ -183,10 +183,6 @@
 
   }
 
-  //HOVER
-  &:hover {
-
-  }
 }
 
 // no image
@@ -220,7 +216,6 @@
       }
 
       .scui-article-desc {
-
         h3 {
           a {
             color: $col_main_7;
@@ -361,10 +356,6 @@
 
   }
 
-  //HOVER
-  &:hover {
-
-  }
 }
 
 .scui-article article {
@@ -492,7 +483,7 @@
 
 // article image component
 .scui-article-img {
-  height: 195px;
+  height: 196px;
   position: relative;
   .image-overlay {
     position: absolute;

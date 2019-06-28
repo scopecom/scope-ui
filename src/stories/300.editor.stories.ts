@@ -1,20 +1,17 @@
 import {moduleMetadata, storiesOf} from '@storybook/angular';
-import {ArticleListStub} from '../app/constants/article.list';
 import {CommonModule} from '@angular/common';
-import {ScUiArticleComponent} from '../app/components/scui-article/scui-article.component';
-import {ScUiArticleImageComponent} from '../app/components/scui-article/scui-article-image/scui-article-image.component';
-import {ScuiArticleContentComponent} from '../app/components/scui-article/scui-article-content/scui-article-content.component';
+import {ScUiEditorArticleModule} from '../app/components/scui-editor/scui-editor-article/scui-editor-article.module';
+import {ArticleListStub} from '../app/constants/article.list';
 
 storiesOf('Editor', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule],
-      declarations: [ScUiArticleComponent, ScUiArticleImageComponent, ScuiArticleContentComponent]
+      imports: [CommonModule, ScUiEditorArticleModule],
     })
   )
   .add('Content element background when dragged', () => ({
     template: `
-<div style="background: white;padding:20px;">
+    <div style="background: white;padding:20px;">
     <div class="editor-content-element">
       <style>
       .editor-content-element{
@@ -88,8 +85,8 @@ storiesOf('Editor', module)
   }))
   .add('Content element on drag', () => ({
     template: `
-<div style="background: white;padding:20px;">
-   <div class="editor-content-element">
+    <div style="background: white;padding:20px;">
+    <div class="editor-content-element">
       <style>
       .editor-content-element{
        background:#e4e6e8;
@@ -122,4 +119,46 @@ storiesOf('Editor', module)
     </div>
 </div>
     `,
+  }))
+  .add('Editor Article default + hover', () => ({
+    template: `
+    <div style="background: white;padding:20px;">
+       <scui-editor-article [article]="articleList[0]"></scui-editor-article>
+    </div>
+    `,
+    props: {
+      articleList: ArticleListStub,
+    }
+  }))
+  .add('Editor Article default on drag', () => ({
+    template: `
+    <div style="background: white;padding:20px;">
+       <scui-editor-article [dragActive]="true" [article]="articleList[0]"></scui-editor-article>
+    </div>
+    `,
+    props: {
+      articleList: ArticleListStub,
+    }
+  }))
+  .add('Editor Article linked + hover', () => ({
+    template: `
+    <div style="background: white;padding:20px;">
+       <scui-editor-article [article]="articleList[0]" [state]="state"></scui-editor-article>
+    </div>
+    `,
+    props: {
+      state: 'linked',
+      articleList: ArticleListStub,
+    }
+  }))
+  .add('Editor Article linked on drag', () => ({
+    template: `
+    <div style="background: white;padding:20px;">
+       <scui-editor-article [dragActive]="true" [article]="articleList[0]" [state]="state"></scui-editor-article>
+    </div>
+    `,
+    props: {
+      state: 'linked',
+      articleList: ArticleListStub,
+    }
   }));

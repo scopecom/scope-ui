@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
       <div [ngClass]="{active:active}"
            (mouseover)="changeStyle($event)"
            (mouseout)="changeStyle($event)"
-           scuiBgHover
+           scuiBgHover="#06f"
            class="scui-card">
         <div class="content">
           <div class="name">{{ name}}</div>

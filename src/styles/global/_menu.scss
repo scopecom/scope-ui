@@ -31,14 +31,13 @@
   }
 
   .submenu-nav-title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
-    color: $col_main_6;
+    color: $col_main_5;
     margin: 38px 0 20px 0px;
     cursor: pointer;
     height: 40px;
-    padding-left: 24px;
-    padding-top: 14px;
+    padding: 24px 0 8px 0;
     position: relative;
     .icon {
       position: absolute;
@@ -67,6 +66,7 @@
     color: $col_black !important;
     text-overflow: ellipsis;
     word-break: break-word;
+    font-weight: 300;
   }
 
   hr {

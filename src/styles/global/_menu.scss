@@ -34,10 +34,11 @@
     font-weight: 500;
     font-size: 14px;
     color: $col_main_5;
-    margin: 38px 0 20px 0px;
+    margin: 24px 0 8px 0;
     cursor: pointer;
     height: 40px;
-    padding: 24px 0 8px 0;
+    padding-left: 24px;
+    padding-top: 14px;
     position: relative;
     .icon {
       position: absolute;

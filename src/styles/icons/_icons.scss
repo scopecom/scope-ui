@@ -26,11 +26,11 @@ $icon-books-46: unicode(ea13);
 $icon-books: unicode(ea14);
 $icon-box: unicode(ea15);
 $icon-bullet-list-69: unicode(ea16);
-$icon-calendar: unicode(ea17);
+$icon-scope-calendar-2: unicode(ea17);
 $icon-calendar-event-create: unicode(ea18);
 $icon-b-chart: unicode(ea19);
 $icon-chat: unicode(ea1a);
-$icon-circle-08: unicode(ea1b);
+$icon-scope-user: unicode(ea1b);
 $icon-c-add: unicode(ea1c);
 $icon-c-delete: unicode(ea1d);
 $icon-frame-c-arrow-down: unicode(ea1e);
@@ -83,7 +83,7 @@ $icon-up-arrow: unicode(ea4d);
 $icon-paragraph: unicode(ea4e);
 $icon-pin-2: unicode(ea4f);
 $icon-pin-3: unicode(ea50);
-$icon-puzzle-10: unicode(ea51);
+$icon-puzzle-10-2: unicode(ea51);
 $icon-send: unicode(ea52);
 $icon-settings-gear: unicode(ea53);
 $icon-upload: unicode(ea54);
@@ -184,7 +184,7 @@ $icon-facebook: unicode(eab7);
 $icon-facebook-f: unicode(eab8);
 $icon-storybook-glypg: unicode(eab9);
 $icon-jira-glyph: unicode(eaba);
-$icon-home: unicode(eabb);
+$icon-scope-home: unicode(eabb);
 $icon-menu-horz: unicode(eabc);
 $icon-menu-vert: unicode(eabd);
 $icon-t-delete-glyph: unicode(eabe);
@@ -218,6 +218,16 @@ $icon-cloud-forecast-2: unicode(eadc);
 $icon-migration: unicode(eadd);
 $icon-logo-instagram: unicode(eade);
 $icon-logo-scope-pinterest: unicode(eadf);
+$icon-salesforce-icon-blank: unicode(eae0);
+$icon-salesforce-icon: unicode(eae1);
+$icon-bulb-63-2: unicode(eae2);
+$icon-scope-icon-project: unicode(eae5);
+$icon-scope-assets: unicode(eae6);
+$icon-scope-statistic-2: unicode(eae8);
+$icon-scope-create: unicode(eae9);
+$icon-scope-publish-2: unicode(eaea);
+$icon-scope-projects-2: unicode(eaeb);
+$icon-door: unicode(eaec);
 $icon-uea44-: unicode(ea01);
 
 .icon-add-file::before {
@@ -304,8 +314,8 @@ $icon-uea44-: unicode(ea01);
   content: $icon-bullet-list-69;
 }
 
-.icon-calendar::before {
-  content: $icon-calendar;
+.icon-scope-calendar-2::before {
+  content: $icon-scope-calendar-2;
 }
 
 .icon-calendar-event-create::before {
@@ -320,8 +330,8 @@ $icon-uea44-: unicode(ea01);
   content: $icon-chat;
 }
 
-.icon-circle-08::before {
-  content: $icon-circle-08;
+.icon-scope-user::before {
+  content: $icon-scope-user;
 }
 
 .icon-c-add::before {
@@ -532,8 +542,8 @@ $icon-uea44-: unicode(ea01);
   content: $icon-pin-3;
 }
 
-.icon-puzzle-10::before {
-  content: $icon-puzzle-10;
+.icon-puzzle-10-2::before {
+  content: $icon-puzzle-10-2;
 }
 
 .icon-send::before {
@@ -936,8 +946,8 @@ $icon-uea44-: unicode(ea01);
   content: $icon-jira-glyph;
 }
 
-.icon-home::before {
-  content: $icon-home;
+.icon-scope-home::before {
+  content: $icon-scope-home;
 }
 
 .icon-menu-horz::before {
@@ -1070,6 +1080,46 @@ $icon-uea44-: unicode(ea01);
 
 .icon-logo-scope-pinterest::before {
   content: $icon-logo-scope-pinterest;
+}
+
+.icon-salesforce-icon-blank::before {
+  content: $icon-salesforce-icon-blank;
+}
+
+.icon-salesforce-icon::before {
+  content: $icon-salesforce-icon;
+}
+
+.icon-bulb-63-2::before {
+  content: $icon-bulb-63-2;
+}
+
+.icon-scope-icon-project::before {
+  content: $icon-scope-icon-project;
+}
+
+.icon-scope-assets::before {
+  content: $icon-scope-assets;
+}
+
+.icon-scope-statistic-2::before {
+  content: $icon-scope-statistic-2;
+}
+
+.icon-scope-create::before {
+  content: $icon-scope-create;
+}
+
+.icon-scope-publish-2::before {
+  content: $icon-scope-publish-2;
+}
+
+.icon-scope-projects-2::before {
+  content: $icon-scope-projects-2;
+}
+
+.icon-door::before {
+  content: $icon-door;
 }
 
 .icon-uea44-::before {

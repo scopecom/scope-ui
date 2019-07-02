@@ -4,33 +4,19 @@ export const AppMenu: ScUiMenuItem[] = [
   {
     name: 'Projects',
     route: '/test',
-    iconClass: 'icon-magnifier'
+    iconClass: 'icon-bulb-63-2'
   },
   {
     name: 'Start',
     route: '/library',
-    iconClass: 'icon-book-39'
+    iconClass: 'icon-scope-assets'
   },
   {
     name: 'Projects',
     route: '/projects',
-    iconClass: 'icon-app-store'
+    iconClass: 'icon-scope-projects-2'
   },
-  {
-    name: 'Projects',
-    route: '/test',
-    iconClass: 'icon-send'
-  },
-  {
-    name: 'Projects',
-    route: '/test',
-    iconClass: 'icon-calendar'
-  },
-  {
-    name: 'Projects',
-    route: '/test',
-    iconClass: 'icon-pin-2'
-  }
+
 ];
 
 export const WizardMenu: ScUiMenuItem[] = [
@@ -55,18 +41,18 @@ export const WizardMenu: ScUiMenuItem[] = [
 export const AppMenuLogo: ScUiMenuItem = {
   name: 'Scope',
   route: '/start',
-  iconClass: 'icon-home'
+  iconClass: 'icon-scope-home'
 };
 
 export const AppMenuFooter: ScUiMenuItem[] = [
   {
     name: 'Discover',
     route: '/discover',
-    iconClass: 'icon-settings-gear'
+    iconClass: 'icon-settings-gear-glyph-2'
   },
   {
     name: 'Curate',
     route: '/curate',
-    iconClass: 'icon-circle-08'
+    iconClass: 'icon-door'
   }
 ];

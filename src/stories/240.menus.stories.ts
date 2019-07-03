@@ -33,6 +33,18 @@ storiesOf('Menus', module)
       buttonList: ButtonListStub,
     },
   }))
+  .add('Card Disabled', () => ({
+    template: `
+      <scui-card [icon]="'icon-scope-calendar-2'"
+         [description]="'Calendar-based Overview'"
+         [disabled]="disabled"
+         [name]="'Media Planner'">
+      </scui-card>
+    `,
+    props: {
+      disabled: true,
+    },
+  }))
   .add('Card List', () => ({
     template: `
       <div class="scui-container">

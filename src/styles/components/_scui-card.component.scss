@@ -3,7 +3,48 @@
 .cards-wrap {
   justify-content: center;
   padding-left: 41px;
+}
 
+.disabled {
+  cursor: default;
+  &:hover {
+    .name {
+      color: #868686 !important;
+    }
+    .description {
+      color: $col_main_4 !important;
+    }
+    .icon {
+      color: $col_main_5;
+    }
+  }
+  .scui-card {
+    border-left: 8px solid $col_main_5;
+    .card-disabled {
+      position: absolute;
+      font-weight: 700;
+      font-size: 21px;
+      color: #868686;
+      padding-left: 16px;
+      padding-top: 16px;
+    }
+    .scui-overlay {
+      display: none;
+    }
+    .content {
+      .name {
+        color: #868686;
+        pointer-events: none;
+      }
+      .description {
+        color: $col_main_4;
+        pointer-events: none;
+      }
+      .icon {
+        color: $col_main_5
+      }
+    }
+  }
 }
 
 .scui-card {
@@ -22,27 +63,40 @@
     }
   }
 
+  &:hover {
+    .content {
+      .name {
+        color: $col_white;
+      }
+      .description {
+        color: $col_prim_3;
+      }
+    }
+  }
+
   .content {
     position: absolute;
-    left: 28px;
+    left: 16px;
     right: 23px;
     bottom: 22px;
     z-index: 1;
     color: $col_black;
 
     .name {
-      font-size: 27px;
-      margin-bottom: 9px;
-      font-weight: 500;
+      font-size: 21px;
+      margin-bottom: 5px;
+      font-weight: 300;
+      color: $col_main_9;
     }
 
     .description {
       font-weight: 300;
-      color: $col_main_5;
+      color: $col_main_6;
+      font-size: 21px;
     }
 
     .icon {
-      font-size: 34px;
+      font-size: 28px;
       right: 0;
       position: absolute;
       bottom: 3px;

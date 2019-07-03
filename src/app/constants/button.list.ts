@@ -1,6 +1,6 @@
 export const ButtonListStub = [
   {
-    icon: 'icon-magnifier',
+    icon: 'icon-bulb-63-2',
     name: 'Search',
     description: 'Find your content',
     url: '',
@@ -44,5 +44,5 @@ export const ButtonListStub = [
     name: 'Account',
     description: 'Setup and configuration',
     url: '',
-  }
+  },
 ];

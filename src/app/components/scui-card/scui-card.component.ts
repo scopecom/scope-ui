@@ -26,8 +26,8 @@ export class ScUiCardComponent implements OnInit {
   @Input() name = '';
   @Input() description = '';
   @Input() url = '';
-  active = false;
   @Input() disabled = false;
+  active = false;
 
   constructor() {
   }

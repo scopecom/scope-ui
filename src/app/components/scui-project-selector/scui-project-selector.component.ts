@@ -1,5 +1,5 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {ScUiOption} from '../../interfaces';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { ScUiOption } from '../../interfaces';
 
 @Component({
   selector: 'scui-project-selector',
@@ -10,10 +10,10 @@ import {ScUiOption} from '../../interfaces';
           <span *ngIf="!isOpen" class="icon icon-small-down"></span>
           <span *ngIf="isOpen" class="icon icon-small-up"></span>
         </div>
-        <div *ngIf="isOpen" [ngClass]="{'no-items':options.length === 0}" class="options">
+        <div *ngIf="isOpen" [ngClass]="{'no-items':optionList.length === 0}" class="options">
           <div (click)="selectOption(option);"
                class="option"
-               *ngFor="let option of options">
+               *ngFor="let option of optionList">
             <span>{{ option.label }}</span>
           </div>
         </div>
@@ -25,13 +25,20 @@ import {ScUiOption} from '../../interfaces';
       </div>
     </div>`,
 })
-export class ScUiProjectSelectorComponent {
+export class ScUiProjectSelectorComponent implements OnChanges {
   @Input() options: ScUiOption[];
   @Input() placeholder = 'Select Project';
   @Output() onSelectedOption = new EventEmitter<ScUiOption[]>();
   @Output() onRemovedOption = new EventEmitter<ScUiOption[]>();
+
   isOpen: boolean;
+  optionList: ScUiOption[] = [];
   assignedProjects: ScUiOption[] = [];
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.optionList = changes.options.currentValue;
+    this.assignedProjects = [];
+  }
 
   toggle() {
     this.isOpen = !this.isOpen;
@@ -39,13 +46,13 @@ export class ScUiProjectSelectorComponent {
 
   removeProject(option: ScUiOption) {
     this.assignedProjects = this.assignedProjects.filter(item => option.id !== item.id);
-    this.options.push(option);
+    this.optionList.push(option);
     this.onSelectedOption.emit(this.assignedProjects);
   }
 
   selectOption(option: ScUiOption) {
     this.assignedProjects.push(option);
-    this.options = this.options.filter(item => option.id !== item.id);
+    this.optionList = this.optionList.filter(item => option.id !== item.id);
     this.onSelectedOption.emit(this.assignedProjects);
     this.toggle();
   }

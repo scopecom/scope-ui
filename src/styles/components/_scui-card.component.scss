@@ -9,7 +9,7 @@
   cursor: default;
   &:hover {
     .name {
-      color: #868686 !important;
+      color: $col_main_5 !important;
     }
     .description {
       color: $col_main_4 !important;
@@ -24,7 +24,7 @@
       position: absolute;
       font-weight: 700;
       font-size: 21px;
-      color: #868686;
+      color: $col_main_5;
       padding-left: 16px;
       padding-top: 16px;
     }
@@ -33,7 +33,7 @@
     }
     .content {
       .name {
-        color: #868686;
+        color: $col_main_5;
         pointer-events: none;
       }
       .description {

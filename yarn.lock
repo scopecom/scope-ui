@@ -1259,6 +1259,18 @@
     ngx-bootstrap "4.2.0"
     tslib "^1.9.0"
 
+"@scopecom/scope-ui@^0.0.447":
+  version "0.0.447"
+  resolved "https://registry.yarnpkg.com/@scopecom/scope-ui/-/scope-ui-0.0.447.tgz#2e6fca0e78cb775717c0f2f8418cd86b556aafa4"
+  integrity sha512-MWjtHy0a3UwCS5XCnPlFRL5S+sIpzltuNbNY+6qE71HC90KMCc47GO17c/NA9/kgb/sHInnvcqwUsbhSJN0tpA==
+  dependencies:
+    "@angular/cdk" "^7.3.7"
+    "@angular/material" "^7.3.7"
+    "@scopecom/scope-ui" "^0.0.444"
+    hammerjs "^2.0.8"
+    ngx-bootstrap "4.2.0"
+    tslib "^1.9.0"
+
 "@storybook/addon-actions@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.0.5.tgz#9179d08262c326c865021f5ecd173708c82edc87"

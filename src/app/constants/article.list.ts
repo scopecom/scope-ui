@@ -18,6 +18,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'edit',
     publisher: 'Source',
+    linked: true
   },
   {
     title: 'Kress News',

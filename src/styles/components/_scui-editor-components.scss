@@ -1,134 +1,130 @@
 @import "../global/_variables";
 
+scui-editor-article {
+  width: 174px;
+  height: 174px;
+  position: relative;
+  cursor: move;
+  display: inline-flex;
+  margin: 10px;
+}
+
 .scui-editor-article {
   width: 174px;
   height: 174px;
   position: relative;
   cursor: move;
 
-  &.drag {
-    outline: 8px solid $col_prim_5 !important;
+  .editor-article-overlay {
+    position: absolute;
+    visibility: hidden;
+    height: 87px;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
-  &.default {
-    .editor-article-overlay, .editor-article-img {
-      position: absolute;
-      height: 87px;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-    .editor-article-date, .icon, .editor-article-title {
-      position: absolute;
-      color: $col_white;
-    }
-    .icon {
-      right: 10px;
-      top: 10px;
-      z-index: 4;
-    }
-    .editor-article-date {
-      top: 12px;
+  .editor-article-img {
+    height: 87px;
+    background-color: $col_main_5;
+    position: static;
+  }
+
+  .editor-article-date, .icon, .editor-article-title {
+    position: absolute;
+    color: $col_white;
+  }
+
+  .icon {
+    right: 10px;
+    top: 10px;
+    z-index: 4;
+  }
+
+  .editor-article-date {
+    top: 12px;
+    font-size: 13px;
+    left: 10px;
+    visibility: hidden;
+    font-weight: 300;
+  }
+
+  .editor-article-title {
+    font-size: 13px;
+    font-weight: 500;
+    top: 28px;
+    left: 10px;
+    visibility: hidden;
+  }
+
+  .editor-article-overlay {
+    background: $col_black;
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  .editor-article-content-wrap {
+    height: 87px;
+    background: $col_main_2;
+
+    .editor-article-content {
+      padding: 8px;
       font-size: 13px;
-      left: 10px;
-      visibility: hidden;
       font-weight: 300;
     }
-    .editor-article-title {
-      font-size: 13px;
-      font-weight: 500;
-      top: 28px;
-      left: 10px;
-      visibility: hidden;
-    }
+  }
+
+  &:hover {
+    outline: 8px solid $col_main_3;
+
     .editor-article-overlay {
-      background: $col_black;
-      opacity: 0.4;
-      z-index: 0;
+      visibility: visible;
     }
 
-    .editor-article-content-wrap {
-      position: absolute;
-      height: 87px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: $col_main_2;
-      .editor-article-content {
-        padding: 8px;
-        font-size: 13px;
-        font-weight: 300;
-      }
-    }
-    &:hover {
-      outline: 8px solid $col_main_3;
-      .editor-article-overlay {
-        z-index: 1;
-      }
-      .editor-article-date, .editor-article-title {
-        visibility: visible;
-        z-index: 5;
-      }
+    .editor-article-date, .editor-article-title {
+      visibility: visible;
+      z-index: 5;
     }
   }
 
   &.linked {
-    .editor-article-overlay, .editor-article-img {
-      position: absolute;
-      height: 87px;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-    .editor-article-date, .icon, .editor-article-title {
-      position: absolute;
-      color: $col_white;
-    }
-    .icon {
-      right: 10px;
-      top: 10px;
-      z-index: 4;
-    }
-    .editor-article-date {
-      top: 12px;
-      font-size: 13px;
-      left: 10px;
-      visibility: hidden;
-      font-weight: 300;
-    }
-    .editor-article-title {
-      font-size: 13px;
-      font-weight: 500;
-      top: 28px;
-      left: 10px;
-      visibility: hidden;
-    }
-    .editor-article-overlay {
-      background: $col_black;
-      opacity: 0.4;
-      z-index: 1;
+    .editor-article-content-wrap {
+      background-color: $col_main_5;
+
+      .editor-article-content {
+        color: $col_white;
+      }
     }
 
-    .editor-article-content-wrap {
-      position: absolute;
-      height: 87px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: $col_main_5;
-      color: $col_white;
-      .editor-article-content {
-        padding: 8px;
-        font-size: 13px;
-        font-weight: 300;
-      }
+    .editor-article-overlay {
+      visibility: visible !important;
     }
-    &:hover {
-      outline: 8px solid $col_main_3;
-      .editor-article-date, .editor-article-title {
-        visibility: visible;
-        z-index: 5;
-      }
-    }
+
+  }
+}
+
+.gu-mirror {
+  opacity: 1 !important;
+}
+
+.gu-mirror .scui-editor-article {
+  outline: 8px solid $col_prim_5 !important;
+  .editor-article-overlay {
+    visibility: visible !important;
+  }
+
+  .editor-article-date, .editor-article-title {
+    visibility: visible !important;
+    z-index: 5;
+  }
+}
+
+.gu-transit .scui-editor-article {
+  background-color: $col_main_5 !important;
+  color: $col_main_5 !important;
+  opacity: 1 !important;
+
+  * {
+    visibility: hidden !important;
   }
 }

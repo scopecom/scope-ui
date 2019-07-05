@@ -26,13 +26,13 @@ scui-editor-article {
 
   .editor-article-img {
     height: 87px;
-    background-color: $col_main_5;
+    background-color: $main_5;
     position: static;
   }
 
   .editor-article-date, .icon, .editor-article-title {
     position: absolute;
-    color: $col_white;
+    color: $blank_2;
   }
 
   .icon {
@@ -58,14 +58,14 @@ scui-editor-article {
   }
 
   .editor-article-overlay {
-    background: $col_black;
+    background: $blank_1;
     opacity: 0.4;
     z-index: 0;
   }
 
   .editor-article-content-wrap {
     height: 87px;
-    background: $col_main_2;
+    background: $main_2;
 
     .editor-article-content {
       padding: 8px;
@@ -75,7 +75,7 @@ scui-editor-article {
   }
 
   &:hover {
-    outline: 8px solid $col_main_3;
+    outline: 8px solid $main_3;
 
     .editor-article-overlay {
       visibility: visible;
@@ -89,10 +89,10 @@ scui-editor-article {
 
   &.linked {
     .editor-article-content-wrap {
-      background-color: $col_main_5;
+      background-color: $main_5;
 
       .editor-article-content {
-        color: $col_white;
+        color: $blank_2;
       }
     }
 
@@ -108,7 +108,7 @@ scui-editor-article {
 }
 
 .gu-mirror .scui-editor-article {
-  outline: 8px solid $col_prim_5 !important;
+  outline: 8px solid $prim_5 !important;
   .editor-article-overlay {
     visibility: visible !important;
   }
@@ -120,8 +120,8 @@ scui-editor-article {
 }
 
 .gu-transit .scui-editor-article {
-  background-color: $col_main_5 !important;
-  color: $col_main_5 !important;
+  background-color: $main_5 !important;
+  color: $main_5 !important;
   opacity: 1 !important;
 
   * {

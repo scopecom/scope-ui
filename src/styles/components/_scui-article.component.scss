@@ -11,43 +11,43 @@
 .scui-article {
 
   article.default {
-    background-color: $col_white;
+    background-color: $blank_2;
     &:hover {
-      outline: 8px solid $col_main_2;
+      outline: 8px solid $main_2;
       .image-overlay {
-        background: $col_main_3;
+        background: $main_3;
         opacity: 0.2;
       }
     }
 
     .scui-article-img {
       .no-image-1 {
-        color: $col_main_5;
+        color: $main_5;
       }
     }
 
     .article-action {
       .icon {
-        color: $col_main_6;
+        color: $main_6;
       }
       &:hover {
-        background: $col_main_2;
+        background: $main_2;
         .icon {
-          color: $col_black;
+          color: $blank_1;
         }
       }
     }
 
     .image-overlay {
-      background: $col_main_2;
+      background: $main_2;
       opacity: 0;
     }
 
     .scui-article-content {
       .scui-article-header {
-        color: $col_main_5;
+        color: $main_5;
         a {
-          color: $col_black;
+          color: $blank_1;
         }
       }
 
@@ -55,13 +55,13 @@
         &:hover {
           h3 {
             a {
-              color: $col_black !important;
+              color: $blank_1 !important;
             }
           }
         }
         h3 {
           a {
-            color: $col_main_7;
+            color: $main_7;
           }
         }
       }
@@ -70,16 +70,16 @@
   }
 
   article.edit {
-    background-color: $col_main_2;
+    background-color: $main_2;
     &:hover {
-      outline: 8px solid #cdd0d3;
+      outline: 8px solid $main_3;
     }
 
     .scui-article-content {
       .scui-article-header {
-        color: $col_main_5;
+        color: $main_5;
         a {
-          color: $col_black;
+          color: $blank_1;
         }
       }
 
@@ -93,7 +93,7 @@
         }
         h3 {
           a {
-            color: $col_main_7;
+            color: $main_7;
           }
         }
       }
@@ -102,21 +102,21 @@
     .scui-article-footer {
       .article-action, .article-action-2 {
         .icon {
-          color: $col_main_6;
+          color: $main_6;
         }
         &:hover {
-          background: $col_main_3;
+          background: $main_3;
           .icon {
-            color: $col_black;
+            color: $blank_1;
           }
         }
       }
       .pills-box {
         .pill-info {
-          background: $col_prim_5 !important;
-          color: $col_white;
+          background: $prim_5 !important;
+          color: $blank_2;
           &:hover {
-            background: $col_prim_6 !important;
+            background: $prim_6 !important;
           }
         }
       }
@@ -125,20 +125,20 @@
   }
 
   article.imported {
-    background-color: $col_main_2;
+    background-color: $main_2;
     &:hover {
-      outline: 8px solid #cdd0d3;
+      outline: 8px solid $main_3;
       .image-overlay {
-        background: $col_main_9;
+        background: $main_9;
         opacity: 0.4;
       }
     }
 
     .scui-article-content {
       .scui-article-header {
-        color: $col_main_5;
+        color: $main_5;
         a {
-          color: $col_black;
+          color: $blank_1;
         }
       }
 
@@ -146,13 +146,13 @@
         &:hover {
           h3 {
             a {
-              color: $col_black !important;
+              color: $blank_1 !important;
             }
           }
         }
         h3 {
           a {
-            color: $col_main_7;
+            color: $main_7;
           }
         }
       }
@@ -161,21 +161,21 @@
     .scui-article-footer {
       .article-action {
         .icon {
-          color: $col_main_6;
+          color: $main_6;
         }
         &:hover {
-          background: $col_main_3;
+          background: $main_3;
           .icon {
-            color: $col_black;
+            color: $blank_1;
           }
         }
       }
       .pills-box {
         .pill-info {
-          background: $col_prim_5 !important;
-          color: $col_white;
+          background: $prim_5 !important;
+          color: $blank_2;
           &:hover {
-            background: $col_prim_6 !important;
+            background: $prim_6 !important;
           }
         }
       }
@@ -189,36 +189,36 @@
 .scui-article.noImage {
 
   article.default {
-    background-color: $col_white;
+    background-color: $blank_2;
     &:hover {
-      outline: 8px solid $col_main_2;
+      outline: 8px solid $main_2;
       .article-no-image {
-        background: $col_main_3;
+        background: $main_3;
       }
     }
 
     .scui-article-img {
       .no-image-1 {
-        color: $col_main_5;
+        color: $main_5;
       }
     }
 
     .article-no-image {
-      background: $col_main_2;
+      background: $main_2;
     }
 
     .scui-article-content {
       .scui-article-header {
-        color: $col_main_5;
+        color: $main_5;
         a {
-          color: $col_black;
+          color: $blank_1;
         }
       }
 
       .scui-article-desc {
         h3 {
           a {
-            color: $col_main_7;
+            color: $main_7;
           }
         }
       }
@@ -227,19 +227,19 @@
   }
 
   article.edit {
-    background-color: $col_main_2;
+    background-color: $main_2;
     &:hover {
-      outline: 8px solid #cdd0d3;
+      outline: 8px solid $main_3;
       .image-overlay {
       }
     }
 
     .scui-article-img {
       .no-image-1 {
-        color: $col_white;
+        color: $blank_2;
       }
       .no-image-2 {
-        color: $col_main_2;
+        color: $main_2;
       }
     }
 
@@ -252,16 +252,16 @@
 
     .scui-article-content {
       .scui-article-header {
-        color: $col_main_5;
+        color: $main_5;
         a {
-          color: $col_black;
+          color: $blank_1;
         }
       }
 
       .scui-article-desc {
         h3 {
           a {
-            color: $col_main_7;
+            color: $main_7;
           }
         }
       }
@@ -270,21 +270,21 @@
     .scui-article-footer {
       .article-action, .article-action-2 {
         .icon {
-          color: $col_main_6;
+          color: $main_6;
         }
         &:hover {
-          background: $col_main_3;
+          background: $main_3;
           .icon {
-            color: $col_black;
+            color: $blank_1;
           }
         }
       }
       .pills-box {
         .pill-info {
-          background: $col_prim_5 !important;
-          color: $col_white;
+          background: $prim_5 !important;
+          color: $blank_2;
           &:hover {
-            background: $col_prim_6 !important;
+            background: $prim_6 !important;
           }
         }
       }
@@ -293,39 +293,39 @@
   }
 
   article.imported {
-    background-color: $col_main_2;
+    background-color: $main_2;
     &:hover {
-      outline: 8px solid #cdd0d3;
+      outline: 8px solid $main_3;
       .article-no-image {
-        background: $col_main_6;
+        background: $main_6;
       }
     }
 
     .article-no-image {
-      background: $col_main_5;
+      background: $main_5;
     }
 
     .scui-article-img {
       .no-image-1 {
-        color: $col_white;
+        color: $blank_2;
       }
       .no-image-2 {
-        color: $col_main_2;
+        color: $main_2;
       }
     }
 
     .scui-article-content {
       .scui-article-header {
-        color: $col_main_5;
+        color: $main_5;
         a {
-          color: $col_black;
+          color: $blank_1;
         }
       }
 
       .scui-article-desc {
         h3 {
           a {
-            color: $col_main_7;
+            color: $main_7;
           }
         }
       }
@@ -334,21 +334,21 @@
     .scui-article-footer {
       .article-action {
         .icon {
-          color: $col_main_6;
+          color: $main_6;
         }
         &:hover {
-          background: $col_main_3;
+          background: $main_3;
           .icon {
-            color: $col_black;
+            color: $blank_1;
           }
         }
       }
       .pills-box {
         .pill-info {
-          background: $col_prim_5 !important;
-          color: $col_white;
+          background: $prim_5 !important;
+          color: $blank_2;
           &:hover {
-            background: $col_prim_6 !important;
+            background: $prim_6 !important;
           }
         }
       }
@@ -437,7 +437,7 @@
 
   // common article styles
   .icon-cloud-forecast-2 {
-    color: $col_white;
+    color: $blank_2;
     font-size: 24px;
     position: absolute;
     right: 12px;
@@ -470,7 +470,7 @@
           position: absolute;
           top: 7px;
           left: 11px;
-          color: $col_white;
+          color: $blank_2;
         }
       }
     }

@@ -8,7 +8,7 @@
   flex-direction: row;
 
   .drawer-inner {
-    background-color: $col_white;
+    background-color: $blank_2;
     width: 420px;
   }
 
@@ -18,9 +18,9 @@
 
   &.collapsed {
     z-index: -1;
-    background: $col_main_1;
+    background: $main_1;
     .drawer-collapse {
-      background-color: $col_main_4 !important;
+      background-color: $main_4 !important;
     }
   }
 
@@ -28,10 +28,10 @@
     width: 8px;
     min-height: 100vh;
     height: 100%;
-    background-color: $col_main_3;
+    background-color: $main_3;
     cursor: pointer;
     &:hover {
-      background-color: $col_prim_4 !important;
+      background-color: $prim_4 !important;
     }
   }
 }

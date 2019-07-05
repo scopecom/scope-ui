@@ -2,11 +2,11 @@
 
 .scui-tabs {
   padding-left: 24px;
-  background: $col_main_9;
+  background: $main_9;
   border-top: 1px solid #696d75;
   .disabled {
     pointer-events: none;
-    color: $col_main_5 !important;
+    color: $main_5 !important;
   }
   .tabs {
     height: 63px;
@@ -17,14 +17,14 @@
       padding-right: 16px;
       display: inline-block;
       cursor: pointer;
-      color: $col_white;
+      color: $blank_2;
       font-size: 13px;
       font-weight: 300;
       &:hover {
-        background: $col_main_7;
+        background: $main_7;
       }
       &.active-tab {
-        background: $col_main_8;
+        background: $main_8;
       }
     }
   }
@@ -33,7 +33,7 @@
     position: relative;
     .border-top {
       display: inline-block;
-      background: $col_prim_5;
+      background: $prim_5;
       position: absolute;
       height: 4px;
       bottom: 59px;
@@ -42,26 +42,26 @@
   }
 
   &.tabs-drawer {
-    background: $col_prim_7;
-    border-top: 1px solid $col_prim_7;
+    background: $prim_7;
+    border-top: 1px solid $prim_7;
     .disabled {
-      color: $col_prim_5 !important;
+      color: $prim_5 !important;
     }
     .border-wrap {
       .border-top {
-        background: $col_prim_3;
+        background: $prim_3;
         bottom: 59px;
       }
     }
     .tabs {
       height: 63px;
       .tab {
-        color: $col_white;
+        color: $blank_2;
         &:hover {
-          background: $col_prim_6;
+          background: $prim_6;
         }
         &.active-tab {
-          background: $col_prim_5;
+          background: $prim_5;
         }
       }
     }

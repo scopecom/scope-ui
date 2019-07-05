@@ -1,7 +1,7 @@
 @import "../global/_variables";
 
 .scui-nav {
-  background-color: $col_prim_5;
+  background-color: $prim_5;
   position: fixed;
   left: 0;
   top: 0;
@@ -29,12 +29,12 @@
 
   .icon {
     z-index: 1;
-    color: $col_white;
+    color: $blank_2;
     font-size: 28px;
   }
 
   .nav-item {
-    background: $col_prim_5;
+    background: $prim_5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,9 +43,9 @@
     width: 64px;
     position: relative;
     &.active-nav {
-      background-color: $col_black;
+      background-color: $blank_1;
       .icon {
-        color: $col_white;
+        color: $blank_2;
       }
     }
   }

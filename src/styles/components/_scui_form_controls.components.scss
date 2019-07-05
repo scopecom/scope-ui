@@ -3,12 +3,12 @@
 .form-container {
   min-height: 200px;
   border-left: 8px solid;
-  background: $col_white;
+  background: $blank_2;
   .form-container-menu {
     padding-left: 24px;
     padding-top: 15px;
     height: 56px;
-    border-bottom: 1px solid $col_main_3;
+    border-bottom: 1px solid $main_3;
     .info {
       vertical-align: 5px;
       padding-left: 8px;
@@ -22,13 +22,13 @@
     padding: 24px;
   }
   &.form-default {
-    border-color: $col_main_3
+    border-color: $main_3
   }
   &.form-active {
-    border-color: $col_prim_4
+    border-color: $prim_4
   }
   &.form-error {
-    border-color: $col_sec_2
+    border-color: $sec_2
   }
 }
 
@@ -42,7 +42,7 @@
     margin: 5px;
   }
   .example-radio-group-label {
-    color: $col_main_5;
+    color: $main_5;
     font-size: 13px;
     text-transform: uppercase;
     height: 32px;
@@ -61,22 +61,22 @@
   .mat-radio-label {
     &:hover {
       .mat-radio-outer-circle {
-        background: $col_prim_1;
-        border: 1px solid $col_prim_4;
+        background: $prim_1;
+        border: 1px solid $prim_4;
       }
     }
   }
   .mat-radio-container {
     .mat-radio-outer-circle {
-      border: 1px solid $col_main_9;
-      background: $col_main_1;
+      border: 1px solid $main_9;
+      background: $main_1;
     }
   }
 
   .mat-radio-label-content {
     font-size: 15px !important;
     font-weight: 300;
-    color: $col_black;
+    color: $blank_1;
   }
 
   .mat-radio-persistent-ripple {
@@ -89,26 +89,26 @@
 
   &.mat-radio-checked {
     .mat-radio-inner-circle {
-      background: $col_prim_5 !important;
+      background: $prim_5 !important;
     }
     .mat-radio-outer-circle {
-      border: 1px solid $col_prim_5 !important;
+      border: 1px solid $prim_5 !important;
     }
   }
 
   &.mat-radio-checked {
     .mat-radio-outer-circle {
-      background: $col_prim_1 !important;
+      background: $prim_1 !important;
     }
   }
 
   &.mat-radio-disabled {
     .mat-radio-label-content {
-      color: $col_main_6;
+      color: $main_6;
     }
     .mat-radio-outer-circle {
-      background: $col_main_1 !important;
-      border: 1px solid $col_main_5 !important;
+      background: $main_1 !important;
+      border: 1px solid $main_5 !important;
     }
   }
 
@@ -122,7 +122,7 @@
     padding-top: 10px;
   }
   .group-label {
-    color: $col_main_5;
+    color: $main_5;
     font-size: 13px;
     text-transform: uppercase;
     height: 32px;
@@ -134,12 +134,12 @@
     height: 20px;
     display: inline-block;
     margin-right: 8px;
-    background: $col_main_1;
-    border: 1px solid $col_main_9;
+    background: $main_1;
+    border: 1px solid $main_9;
     cursor: pointer;
     position: relative;
     .icon {
-      color: $col_white;
+      color: $blank_2;
       position: absolute;
       font-size: 24px;
       top: -3px;
@@ -155,16 +155,16 @@
   &.disabled {
     pointer-events: none;
     .checkbox-container {
-      background: $col_main_1;
-      border-color: $col_main_5;
+      background: $main_1;
+      border-color: $main_5;
     }
     .checkbox-label {
-      color: $col_main_6;
+      color: $main_6;
     }
     &:hover {
       .checkbox-container {
-        background: $col_main_1 !important;
-        border-color: $col_main_5 !important;
+        background: $main_1 !important;
+        border-color: $main_5 !important;
       }
 
     }
@@ -172,15 +172,15 @@
 
   &.checked {
     .checkbox-container {
-      background: $col_prim_5 !important;
-      border-color: $col_prim_5 !important;
+      background: $prim_5 !important;
+      border-color: $prim_5 !important;
     }
   }
 
   &:hover {
     .checkbox-container {
-      background: $col_prim_1;
-      border-color: $col_prim_5;
+      background: $prim_1;
+      border-color: $prim_5;
     }
   }
 
@@ -198,11 +198,11 @@
   position: relative;
   .hoursFocused {
     background: #d9ecff !important;
-    border-bottom: 1px solid $col_prim_5 !important;
+    border-bottom: 1px solid $prim_5 !important;
   }
   .minutesFocused {
     background: #d9ecff !important;
-    border-bottom: 1px solid $col_prim_5 !important;
+    border-bottom: 1px solid $prim_5 !important;
   }
   td {
     min-width: 24px;
@@ -240,21 +240,21 @@
     box-shadow: none !important;
   }
   .form-group {
-    background: $col_main_1;
+    background: $main_1;
     width: 70px;
     height: 39px;
-    border-bottom: 1px solid $col_main_3;
+    border-bottom: 1px solid $main_3;
     .bs-timepicker-field {
       background: transparent;
       border: none;
       font-weight: 300;
       padding-right: 31px;
       padding-top: 8px;
-      color: $col_black;
+      color: $blank_1;
     }
     &.has-error {
-      background: $col_sec_3 !important;
-      border-color: $col_sec_2 !important;
+      background: $sec_3 !important;
+      border-color: $sec_2 !important;
     }
   }
   .bs-chevron {
@@ -273,7 +273,7 @@
       left: 26px;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-bottom: 7px solid $col_main_6;
+      border-bottom: 7px solid $main_6;
       border-top: none;
     }
     .bs-chevron-down {
@@ -282,21 +282,21 @@
       top: -21px;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-top: 7px solid $col_main_6;
+      border-top: 7px solid $main_6;
       border-bottom: none;
     }
   }
 
   .timepickerDisabled {
     .form-group {
-      background: $col_main_2;
-      border-bottom: 1px solid $col_main_3;
+      background: $main_2;
+      border-bottom: 1px solid $main_3;
       input {
-        color: $col_main_5;
+        color: $main_5;
       }
     }
     .btn-link {
-      color: $col_main_5 !important;
+      color: $main_5 !important;
     }
   }
 }

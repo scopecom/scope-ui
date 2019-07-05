@@ -3,21 +3,21 @@
 $maxWidth: 1280px;
 
 .start-page {
-  background: $col_main_1;
+  background: $main_1;
 
   .scui-content {
     max-width: $maxWidth;
     margin: auto;
-    background: $col_main_1;
+    background: $main_1;
   }
   .start-page-header {
-    background: $col_white;
+    background: $blank_2;
     position: absolute;
     top: 0;
     left: 64px;
     right: 0;
     height: 64px;
-    border-bottom: 1px solid $col_main_3;
+    border-bottom: 1px solid $main_3;
     .start-page-header-inner {
       max-width: $maxWidth;
       margin: auto;

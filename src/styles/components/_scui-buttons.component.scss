@@ -11,23 +11,23 @@
     font-weight: 300;
   }
   &.btn-large-default {
-    background: $col_main_2;
-    color: $col_main_9;
+    background: $main_2;
+    color: $main_9;
     &:hover {
-      background: $col_main_3;
+      background: $main_3;
     }
   }
   &.btn-large-blue {
-    background: $col_prim_5;
-    color: $col_white;
+    background: $prim_5;
+    color: $blank_2;
     &:hover {
-      background: $col_prim_6;
+      background: $prim_6;
     }
   }
   &.btn-large-disabled {
     cursor: default;
-    background: $col_main_5;
-    color: $col_main_3;
+    background: $main_5;
+    color: $main_3;
   }
   &.small {
     line-height: 24px;
@@ -60,17 +60,17 @@
   }
 
   &.btn-large-icon-blue {
-    background: $col_prim_5;
-    color: $col_white;
+    background: $prim_5;
+    color: $blank_2;
     &:hover {
-      background: $col_prim_6;
+      background: $prim_6;
     }
   }
 
   &.btn-large-icon-disabled {
     cursor: default;
-    background: $col_main_5;
-    color: $col_main_3;
+    background: $main_5;
+    color: $main_3;
   }
   &.small {
     height: 24px;

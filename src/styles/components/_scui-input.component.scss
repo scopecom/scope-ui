@@ -4,32 +4,32 @@
   &.disabled {
     pointer-events: none;
     .scui-input-label {
-      color: $col_main_4;
+      color: $main_4;
     }
     .scui-input-field {
-      color: $col_main_5;
-      border-bottom: 1px solid $col_main_2;
+      color: $main_5;
+      border-bottom: 1px solid $main_2;
     }
   }
 
   &.scui-focus {
     .scui-input-field {
-      border-bottom: 1px solid $col_prim_4;
-      background: $col_prim_1;
+      border-bottom: 1px solid $prim_4;
+      background: $prim_1;
       font-weight: 300;
     }
     .scui-input-label {
-      color: $col_prim_5;
+      color: $prim_5;
     }
   }
 
   &.scui-error {
     .scui-input-field {
-      border-bottom: 1px solid $col_sec_2;
-      background: $col_sec_3;
+      border-bottom: 1px solid $sec_2;
+      background: $sec_3;
     }
     .scui-input-label {
-      color: $col_sec_2;
+      color: $sec_2;
     }
     .scui-input-messages {
       font-weight: 300 !important;
@@ -37,7 +37,7 @@
   }
 
   .scui-input-label {
-    color: $col_main_5;
+    color: $main_5;
     height: 32px;
     font-weight: 500;
     text-transform: uppercase;
@@ -49,12 +49,12 @@
     width: 100%;
     font-size: 15px;
     padding-left: 12px;
-    background: $col_main_1;
+    background: $main_1;
     font-weight: 300;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid $col_main_3;
+    border-bottom: 1px solid $main_3;
   }
   .scui-input-counter {
     display: flex;
@@ -70,7 +70,7 @@
     align-items: flex-end;
     height: 24px;
     font-size: 13px;
-    color: $col_sec_2;
+    color: $sec_2;
   }
 
 }
@@ -78,29 +78,29 @@
 .scui-textarea {
   &.disabled {
     .textarea-field {
-      border: 1px dashed $col_main_3;
+      border: 1px dashed $main_3;
     }
   }
   .scui-input-label {
     font-size: 13px;
     font-weight: 500;
     line-height: 32px;
-    color: $col_main_5;
+    color: $main_5;
   }
   .textarea-field {
     padding: 16px;
-    background: $col_main_1;
-    border: 1px solid $col_main_3;
+    background: $main_1;
+    border: 1px solid $main_3;
     width: 100%;
-    color: $col_black;
+    color: $blank_1;
     font-weight: 300;
     font-size: 15px;
-    background: $col_main_1;
+    background: $main_1;
     min-height: 190px;
     resize: vertical;
     &:focus {
-      border-color: $col_prim_5;
-      background: $col_prim_1;
+      border-color: $prim_5;
+      background: $prim_1;
     }
   }
   .scui-input-counter {
@@ -119,7 +119,7 @@
       background: #FFF0F1;
     }
     .textarea-error {
-      color: $col_sec_2;
+      color: $sec_2;
       font-size: 13px;
       font-weight: 300;
       line-height: 32px;

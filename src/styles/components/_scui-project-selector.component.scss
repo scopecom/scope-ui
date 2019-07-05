@@ -4,8 +4,8 @@
   .selected-projects {
     position: relative;;
     height: 40px;
-    background: $col_prim_1;
-    border-bottom: 1px solid $col_white;
+    background: $prim_1;
+    border-bottom: 1px solid $blank_2;
     padding: 12px 16px 3px 16px;
     .icon-i-remove {
       cursor: pointer;
@@ -14,7 +14,7 @@
       top: 10px;
       font-size: 20px;
       &:hover {
-        color: $col_prim_4;
+        color: $prim_4;
       }
     }
     .project-label {

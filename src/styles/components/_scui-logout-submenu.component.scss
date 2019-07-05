@@ -6,13 +6,13 @@
   &.username {
     font-weight: 500;
     font-size: 13px;
-    color: $col_main_5;
+    color: $main_5;
     border-bottom: 1px solid #dadada;
     pointer-events: none;
     padding-bottom: 10px;
     border-bottom: 1px solid #dadada;
     &:hover {
-      background: $col_white !important;
+      background: $blank_2 !important;
       cursor: default !important;
     }
     span {
@@ -24,7 +24,7 @@
   &.logout {
     font-weight: 300;
     font-size: 13px;
-    color: $col_black;
+    color: $blank_1;
     &:hover {
       background: #F2F2F2 !important;
     }

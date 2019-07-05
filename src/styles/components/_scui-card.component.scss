@@ -9,22 +9,22 @@
   cursor: default;
   &:hover {
     .name {
-      color: $col_main_5 !important;
+      color: $main_5 !important;
     }
     .description {
-      color: $col_main_4 !important;
+      color: $main_4 !important;
     }
     .icon {
-      color: $col_main_5;
+      color: $main_5;
     }
   }
   .scui-card {
-    border-left: 8px solid $col_main_5;
+    border-left: 8px solid $main_5;
     .card-disabled {
       position: absolute;
       font-weight: 700;
       font-size: 21px;
-      color: $col_main_5;
+      color: $main_5;
       padding-left: 16px;
       padding-top: 16px;
     }
@@ -33,15 +33,15 @@
     }
     .content {
       .name {
-        color: $col_main_5;
+        color: $main_5;
         pointer-events: none;
       }
       .description {
-        color: $col_main_4;
+        color: $main_4;
         pointer-events: none;
       }
       .icon {
-        color: $col_main_5
+        color: $main_5
       }
     }
   }
@@ -53,22 +53,22 @@
   margin-right: 16px;
   margin-bottom: 16px;
   height: 224px;
-  background: $col_white;
-  border-left: 8px solid $col_prim_5;
+  background: $blank_2;
+  border-left: 8px solid $prim_5;
 
   &.active {
     .content {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   &:hover {
     .content {
       .name {
-        color: $col_white;
+        color: $blank_2;
       }
       .description {
-        color: $col_prim_3;
+        color: $prim_3;
       }
     }
   }
@@ -79,18 +79,18 @@
     right: 23px;
     bottom: 22px;
     z-index: 1;
-    color: $col_black;
+    color: $blank_1;
 
     .name {
       font-size: 21px;
       margin-bottom: 5px;
       font-weight: 300;
-      color: $col_main_9;
+      color: $main_9;
     }
 
     .description {
       font-weight: 300;
-      color: $col_main_6;
+      color: $main_6;
       font-size: 21px;
     }
 
@@ -99,7 +99,7 @@
       right: 0;
       position: absolute;
       bottom: 3px;
-      color: $col_main_9;
+      color: $main_9;
     }
   }
 }

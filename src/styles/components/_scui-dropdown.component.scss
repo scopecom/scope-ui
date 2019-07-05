@@ -9,24 +9,24 @@
   width: 100%;
   &:hover {
     .main {
-      background: $col_main_2;
-      border-bottom: 1px solid $col_main_4;
+      background: $main_2;
+      border-bottom: 1px solid $main_4;
     }
   }
   &.dropdown-expanded {
     .main {
-      border-bottom: 1px solid $col_prim_5;
-      background: $col_prim_1;
-      color: $col_main_7;
+      border-bottom: 1px solid $prim_5;
+      background: $prim_1;
+      color: $main_7;
       .icon-small-up {
-        color: $col_main_7;
+        color: $main_7;
       }
     }
     &:hover {
       .main {
-        color: $col_black !important;
+        color: $blank_1 !important;
         .icon-small-up {
-          color: $col_black !important;
+          color: $blank_1 !important;
         }
       }
     }
@@ -36,11 +36,11 @@
   }
   .main {
     height: 40px;
-    background: $col_main_1;
+    background: $main_1;
     padding: 13px 16px;
     position: relative;
     font-size: 15px;
-    border-bottom: 1px solid $col_main_3;
+    border-bottom: 1px solid $main_3;
     .icon-small-down, .icon-small-up {
       font-size: 24px;
       position: absolute;
@@ -49,11 +49,11 @@
     }
   }
   .options {
-    background: $col_white;
+    background: $blank_2;
     padding: 8px 0;
-    border-bottom: 1px solid $col_main_3;
-    border-left: 1px solid $col_main_3;
-    border-right: 1px solid $col_main_3;
+    border-bottom: 1px solid $main_3;
+    border-left: 1px solid $main_3;
+    border-right: 1px solid $main_3;
     position: absolute;
     top: 40px;
     z-index: 1;
@@ -64,7 +64,7 @@
       padding: 13px 16px 0 16px;
       font-size: 14px;
       &:hover {
-        background: $col_main_1;
+        background: $main_1;
       }
     }
   }

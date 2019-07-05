@@ -4,14 +4,14 @@
   min-width: 224px !important;
   .output-action {
     height: 40px;
-    border-top: 1px solid $col_main_2;
+    border-top: 1px solid $main_2;
     padding-left: 12px;
     &.disabled {
       .icon {
-        color: $col_main_4;
+        color: $main_4;
       }
       .output-action-label {
-        color: $col_main_4;
+        color: $main_4;
       }
     }
     .icon {
@@ -24,11 +24,11 @@
     }
   }
   .output-action-last {
-    border-bottom: 1px solid $col_main_2;
+    border-bottom: 1px solid $main_2;
   }
   &:hover {
     .disabled {
-      background: $col_white;
+      background: $blank_2;
       cursor: default !important;
       pointer-events: none;
       span {
@@ -44,7 +44,7 @@
   margin-right: 24px;
   position: relative;
   &:hover {
-    outline: 8px solid $col_main_3;
+    outline: 8px solid $main_3;
   }
 
   &.overlayActive {
@@ -60,7 +60,7 @@
 
   .icons-wrap {
     height: 204px;
-    background: $col_main_2;
+    background: $main_2;
     padding: 20px 10px 24px 18px;
     .item {
       width: 47px;
@@ -71,9 +71,9 @@
       position: relative;
       &:hover {
         .icon-wrap.defaultState {
-          background: $col_main_6 !important;
+          background: $main_6 !important;
           .icon {
-            color: $col_white !important;
+            color: $blank_2 !important;
           }
         }
       }
@@ -83,7 +83,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: $col_white;
+        background: $blank_2;
         border-radius: 50%;
         .icon {
           font-size: 20px;
@@ -103,9 +103,9 @@
           }
         }
         &.defaultState {
-          background: $col_white !important;
+          background: $blank_2 !important;
           .icon {
-            color: $col_black !important;
+            color: $blank_1 !important;
           }
         }
       }
@@ -117,7 +117,7 @@
         height: 15px;
         background: black;
         border-radius: 50%;
-        border: 2px solid $col_main_2;
+        border: 2px solid $main_2;
       }
     }
   }
@@ -125,7 +125,7 @@
   .info-wrap {
     height: 204px;
     padding: 16px;
-    background: $col_white;
+    background: $blank_2;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -133,7 +133,7 @@
       font-size: 16px;
       font-weight: 400;
       .info-author {
-        color: $col_main_5;
+        color: $main_5;
         margin-bottom: 8px;
       }
       .info-title {
@@ -145,14 +145,14 @@
       justify-content: space-between;
       .counter {
         &:hover {
-          background: $col_prim_6;
+          background: $prim_6;
         }
-        background: $col_prim_5;
+        background: $prim_5;
         border-radius: 50%;
         width: 32px;
         height: 32px;
         display: inline-block;
-        color: $col_white;
+        color: $blank_2;
         position: relative;
         cursor: pointer;
         span {
@@ -174,7 +174,7 @@
   }
 
   .published-overlay {
-    background: $col_prim_5;
+    background: $prim_5;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -189,16 +189,16 @@
       margin-bottom: 33px;
       &:hover {
         .icon {
-          color: $col_black;
+          color: $blank_1;
         }
       }
       .files {
-        color: $col_white;
+        color: $blank_2;
         font-weight: 500;
         font-size: 18px;
       }
       .icon {
-        color: $col_white;
+        color: $blank_2;
         font-size: 26px;
         position: relative;
         top: -5px;
@@ -242,14 +242,14 @@
           border-radius: 50%;
           position: relative;
           .icon {
-            color: $col_prim_5;
+            color: $prim_5;
             position: absolute;
             top: 8px;
             left: 8px;
           }
         }
         .date-published, .time-published {
-          color: $col_white;
+          color: $blank_2;
           font-weight: 300;
           font-size: 15px;
           vertical-align: 10px;
@@ -261,7 +261,7 @@
           padding-left: 16px;
         }
         .settings {
-          color: $col_white;
+          color: $blank_2;
           position: relative;
           top: -7px;
           .icon-settings-gear {
@@ -274,65 +274,65 @@
   }
 
   .SCOPE_TO_EMAIL {
-    background: $col_mail !important;
+    background: $brand_1 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .FACEBOOK_PAGE {
-    background: $col_fb !important;
+    background: $brand_2 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .LINKEDIN_PAGE {
-    background: $col_linkedIn !important;
+    background: $brand_3 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .TWITTER {
-    background: $col_twitt !important;
+    background: $brand_4 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .WORDPRESS {
-    background: $col_wp !important;
+    background: $brand_6 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .GOOGLE_DOC {
-    background: $col_gdoc !important;
+    background: $brand_9 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .MAILCHIMP {
-    background: $col_mchimp !important;
+    background: $brand_8 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .SALES_FORCE {
-    background: $col_sf !important;
+    background: $brand_7 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 
   .HUBSPOT {
-    background: $col_hubspot !important;
+    background: $brand_5 !important;
     .icon {
-      color: $col_white;
+      color: $blank_2;
     }
   }
 

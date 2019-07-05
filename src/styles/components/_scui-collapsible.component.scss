@@ -1,5 +1,5 @@
 .scui-collapsible {
-  background: $col_main_1;
+  background: $main_1;
   padding: 0 16px 0 16px;
   &.expanded {
     padding-bottom: 40px;
@@ -7,12 +7,12 @@
 
   .collapsible-controls {
     padding-top: 10px;
-    border-top: 1px solid $col_main_3;
+    border-top: 1px solid $main_3;
     height: 40px;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    color: $col_main_5;
+    color: $main_5;
     .icon-down-arrow {
       padding-right: 3px;
     }
@@ -23,7 +23,7 @@
         padding-right: 4px;
       }
       &:hover {
-        color: $col_black;
+        color: $blank_1;
       }
     }
     .label {
@@ -45,14 +45,14 @@
         right: 0;
         top: 11px;
         &:hover {
-          color: $col_black;
+          color: $blank_1;
         }
       }
     }
   }
   .collapsible-content {
     transition: all 1.3s linear;
-    background: $col_main_3;
+    background: $main_3;
     padding: 8px;
     min-height: 40px;
   }

@@ -1,12 +1,12 @@
-import {moduleMetadata, storiesOf} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
-import {ScUiEditorArticleModule} from '../app/components/scui-editor/scui-editor-article/scui-editor-article.module';
-import {ArticleListStub} from '../app/constants/article.list';
+import { moduleMetadata, storiesOf } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { ArticleListStub } from '../app/constants/article.list';
+import { ScUiEditorModule } from '../app/components/scui-editor/scui-editor.module';
 
 storiesOf('Editor', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule, ScUiEditorArticleModule],
+      imports: [CommonModule, ScUiEditorModule],
     })
   )
   .add('Content element background when dragged', () => ({
@@ -132,8 +132,8 @@ storiesOf('Editor', module)
   }))
   .add('Editor Article default on drag', () => ({
     template: `
-    <div style="background: white;padding:20px;">
-       <scui-editor-article [dragActive]="true" [article]="articleList[0]"></scui-editor-article>
+    <div style="background: white;padding:20px;" class="gu-mirror">
+       <scui-editor-article [article]="articleList[0]"></scui-editor-article>
     </div>
     `,
     props: {
@@ -143,22 +143,20 @@ storiesOf('Editor', module)
   .add('Editor Article linked + hover', () => ({
     template: `
     <div style="background: white;padding:20px;">
-       <scui-editor-article [article]="articleList[0]" [state]="state"></scui-editor-article>
+       <scui-editor-article [article]="articleList[1]"></scui-editor-article>
     </div>
     `,
     props: {
-      state: 'linked',
       articleList: ArticleListStub,
     }
   }))
   .add('Editor Article linked on drag', () => ({
     template: `
-    <div style="background: white;padding:20px;">
-       <scui-editor-article [dragActive]="true" [article]="articleList[0]" [state]="state"></scui-editor-article>
+    <div style="background: white;padding:20px;" class="gu-mirror">
+       <scui-editor-article [article]="articleList[1]"></scui-editor-article>
     </div>
     `,
     props: {
-      state: 'linked',
       articleList: ArticleListStub,
     }
   }));

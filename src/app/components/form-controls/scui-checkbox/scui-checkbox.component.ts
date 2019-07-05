@@ -18,7 +18,7 @@ export class ScUiCheckboxComponent implements OnInit {
   @Input() label: string;
   @Input() groupLabel: string;
   @Input() checked: boolean;
-  @Input() disabled: true;
+  @Input() disabled = true;
   @Input() value: any;
 
   @Output() onToggleCheckbox = new EventEmitter<any>();

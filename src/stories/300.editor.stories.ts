@@ -11,114 +11,29 @@ storiesOf('Editor', module)
   )
   .add('Content element background when dragged', () => ({
     template: `
-    <div style="background: white;padding:20px;">
-    <div class="editor-content-element">
-      <style>
-      .editor-content-element{
-       background:#f2f2f2;
-       display:flex;
-       width:170px;
-       height:170px;
-       position: relative;
-      }
-      .editor-content-element-text{
-      font-size: 70px;
-      position: absolute;
-      top: 37px;
-      left:64px;
-      color:#bbbec5;
-      }
-      .editor-content-element-text-2{
-      font-size: 14px;
-      width:100%;
-      position: absolute;
-      bottom: 12px;
-      text-align: center;
-      color:#bbbec5;
-      font-weight: 300;
-      }
-      </style>
-      <span class="editor-content-element-text">T</span>
-      <div class="editor-content-element-text-2">TEXT EDITOR</div>
-    </div>
-</div>
+      <div style="background: #fff; padding: 20px;">
+        <scui-editor-element [elementMeta]="elementMeta"></scui-editor-element>
+      </div>
     `,
-  }))
-  .add('Content element default + hover', () => ({
-    template: `
-    <div style="background: white;padding:20px;">
-    <div class="editor-content-element">
-      <style>
-      .editor-content-element{
-       background:#e4e6e8;
-       display:flex;
-       width:170px;
-       height:170px;
-       position: relative;
-       cursor:move;
+    props: {
+      elementMeta: {
+        label: 'Article Container',
+        iconClass: 'icon-microsoft'
       }
-      .editor-content-element-text{
-      font-size: 70px;
-      position: absolute;
-      top: 37px;
-      left:64px;
-      color:#000;
-      }
-      .editor-content-element-text-2{
-      font-size: 14px;
-      width:100%;
-      position: absolute;
-      bottom: 12px;
-      text-align: center;
-      color:#000;
-      font-weight: 300;
-      }
-      .editor-content-element:hover{
-       outline:8px solid #cdd0d3;
-      }
-      </style>
-      <span class="editor-content-element-text">T</span>
-      <div class="editor-content-element-text-2">TEXT EDITOR</div>
-    </div>
-</div>
-    `,
+    }
   }))
   .add('Content element on drag', () => ({
     template: `
-    <div style="background: white;padding:20px;">
-    <div class="editor-content-element">
-      <style>
-      .editor-content-element{
-       background:#e4e6e8;
-       display:flex;
-       width:170px;
-       height:170px;
-       position: relative;
-       outline:8px solid #0066FF;
-       cursor:move;
-      }
-      .editor-content-element-text{
-      font-size: 70px;
-      position: absolute;
-      top: 37px;
-      left:64px;
-      color:#0066FF;
-      }
-      .editor-content-element-text-2{
-      font-size: 14px;
-      width:100%;
-      position: absolute;
-      bottom: 12px;
-      text-align: center;
-      color:#0066FF;
-      font-weight: 300;
-      }
-      </style>
-      <span class="editor-content-element-text">T</span>
-      <div class="editor-content-element-text-2">TEXT EDITOR</div>
-    </div>
-</div>
+      <div style="background: #fff; padding: 20px;" class="gu-mirror">
+        <scui-editor-element [elementMeta]="elementMeta"></scui-editor-element>
+      </div>
     `,
+    props: {
+      elementMeta: {
+        label: 'Text Editor',
+        iconClass: 'icon-align-left-2'
+      }
+    }
   }))
   .add('Editor Article default + hover', () => ({
     template: `

@@ -3,14 +3,14 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'scui-small-button-icon',
   template: `
-    <div (click)="btnClick()" class="scui-button-icon small {{cssClass}}">
+    <button (click)="btnClick()" class="scui-button-icon small {{cssClass}}">
       <div class="btn-wrap">
         <div>
           <span class="icon {{ icon }}"></span>
         </div>
         <div class="btn-label">{{label}}</div>
       </div>
-    </div>
+    </button>
   `,
 })
 export class ScUiSmallButtonIconComponent implements OnInit {

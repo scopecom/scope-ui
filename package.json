@@ -1,6 +1,6 @@
 {
   "name": "@scopecom/scope-ui",
-  "version": "0.0.460",
+  "version": "0.0.461",
   "scripts": {
     "cypress-open": "cypress open",
     "cypress-run": "cypress run",

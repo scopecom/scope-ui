@@ -6,6 +6,8 @@
   cursor: pointer;
   font-size: 14px;
   line-height: 40px;
+  outline: 0;
+
   .btn-label {
     font-size: 14px;
     font-weight: 300;
@@ -41,6 +43,8 @@
 .scui-button-icon {
   display: inline-block;
   cursor: pointer;
+  outline: 0;
+
   .btn-wrap {
     display: flex;
     justify-content: center;

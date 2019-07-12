@@ -3,9 +3,9 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'scui-small-button',
   template: `
-    <div (click)="btnClick()" class="scui-button small {{cssClass}}">
+    <button (click)="btnClick()" class="scui-button small {{cssClass}}">
       <span class="btn-label">{{label}}</span>
-    </div>
+    </button>
   `,
 })
 export class ScUiSmallButtonComponent implements OnInit {

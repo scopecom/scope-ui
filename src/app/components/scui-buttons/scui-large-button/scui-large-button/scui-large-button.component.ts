@@ -1,15 +1,16 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'scui-large-button',
   template: `
-    <button (click)="btnClick()" class="scui-button {{cssClass}}">
+    <button (click)="btnClick()" class="scui-button {{cssClass}}" [disabled]="disabled">
       <span class="btn-label">{{label}}</span>
     </button>
   `,
 })
 export class ScUiLargeButtonComponent implements OnInit {
   @Input() label: string;
+  @Input() disabled: boolean;
   @Input() cssClass = 'btn-large-default';
   @Output() onBtnClick = new EventEmitter<any>();
 

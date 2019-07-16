@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'scui-large-button',
   template: `
-    <button (click)="btnClick()" class="scui-button {{cssClass}}" [disabled]="disabled">
+    <button (click)="btnClick()" [ngClass]="{'btn-large-disabled': disabled}" class="scui-button {{cssClass}}" [disabled]="disabled">
       <span class="btn-label">{{label}}</span>
     </button>
   `,

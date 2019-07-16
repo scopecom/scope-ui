@@ -49,7 +49,7 @@ export class ScUiTabsComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.setActiveTab(this.activeTabIndex, this.tabItems.first.nativeElement, this.tabContainer.nativeElement);
+      this.setActiveTab(this.activeTabIndex, this.tabItems.toArray()[this.activeTabIndex].nativeElement, this.tabContainer.nativeElement);
     });
   }
 

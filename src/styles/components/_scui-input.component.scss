@@ -127,12 +127,12 @@
 
   &.error {
     .scui-input-label {
-      color: #D92227;
+      color: $sec_2;
     }
 
     .textarea-field {
-      border: 1px solid #D92227;
-      background: #FFF0F1;
+      border: 1px solid $sec_2;
+      background: $main_1;
     }
 
     .textarea-error {

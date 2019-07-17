@@ -90,13 +90,13 @@
         }
         &.published {
           .dot {
-            background: #01cc00;
+            background: $info_2;
           }
         }
         &.scheduled {
           opacity: 0.8;
           .dot {
-            background: #ff6600;
+            background: $col_hubspot;
           }
           &:hover {
             opacity: 1;
@@ -274,63 +274,63 @@
   }
 
   .SCOPE_TO_EMAIL {
-    background: $brand_1 !important;
+    background: $col_mail !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .FACEBOOK_PAGE {
-    background: $brand_2 !important;
+    background: $col_fb !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .LINKEDIN_PAGE {
-    background: $brand_3 !important;
+    background: $col_linkedIn !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .TWITTER {
-    background: $brand_4 !important;
+    background: $col_twitt !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .WORDPRESS {
-    background: $brand_6 !important;
+    background: $col_wp !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .GOOGLE_DOC {
-    background: $brand_9 !important;
+    background: $col_gdoc !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .MAILCHIMP {
-    background: $brand_8 !important;
+    background: $col_mchimp !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .SALES_FORCE {
-    background: $brand_7 !important;
+    background: $col_sf !important;
     .icon {
       color: $blank_2;
     }
   }
 
   .HUBSPOT {
-    background: $brand_5 !important;
+    background: $col_hubspot !important;
     .icon {
       color: $blank_2;
     }

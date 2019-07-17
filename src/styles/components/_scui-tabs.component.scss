@@ -3,7 +3,7 @@
 .scui-tabs {
   padding-left: 24px;
   background: $main_9;
-  border-top: 1px solid #696d75;
+  border-top: 1px solid $main_6;
   .disabled {
     pointer-events: none;
     color: $main_5 !important;

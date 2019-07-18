@@ -2,35 +2,7 @@
   <div class="scui-content">
     <div class="scui-container">
       <div class="scui-content">
-        <div class="start-page-header">
-          <div class="start-page-header-inner">
-            <!--<scui-scui-dropdown [options]="dropdownItems"></scui-scui-dropdown>-->
-          </div>
-        </div>
-        <div class="scui-row cards-wrap start-page-top-content">
-          <img class="logo" src="../.././../../assets/images/logo.png" alt="Scope Logo">
-          <span class="start-page-top-label">Scope Content Suite</span>
-          <form [formGroup]="demoForm">
-            <scui-input formControlName="name" [maxLength]="15" [label]="'Ime'">
-              <div *ngIf="demoForm.get('name').hasError('email')">ne valja email</div>
-              <div *ngIf="demoForm.get('name').hasError('maxlength')">ne valja max length</div>
-            </scui-input>
-            <scui-textarea formControlName="lastName" label="Prezime">
-              <div *ngIf="demoForm.get('lastName').hasError('maxlength')">ne valja max length</div>
-            </scui-textarea>
-          </form>
-        </div>
-        <div class="scui-row cards-wrap start-page-pills">
-<!--          <scui-pill [label]="pill.label" *ngFor="let pill of pills"></scui-pill>-->
-          <scui-tabs [tabs]="projectDetailTabs" [activeTabIndex]="2" (tabSelect)="activeTab = $event"></scui-tabs>
-        </div>
-        <div class="scui-row cards-wrap">
-
-          <scui-card *ngFor="let btn of buttons" [icon]="btn.icon"
-                     [description]="btn.description"
-                     [name]="btn.name">
-          </scui-card>
-        </div>
+        <scui-article [article]="articleList[0]"></scui-article>
       </div>
     </div>
   </div>

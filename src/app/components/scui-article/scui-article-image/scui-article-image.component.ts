@@ -9,7 +9,7 @@ import {
   template: `
     <figure class="scui-article-img {{state}}">
       <div class="image-overlay"></div>
-      <div [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}" class="img">
+      <div scuiImageCropper="bgImage" [photoUrl]="photoUrl" class="img">
         <div class="article-no-image" *ngIf="!photoUrl">
           <div class="article-no-image-content">
             <div class="no-image-1">{{ label1 }}</div>

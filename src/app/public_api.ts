@@ -18,5 +18,6 @@ export * from './components/form-controls/form-controls.module';
 export * from './components/scui-project-selector/scui-project-selector.module';
 // directives
 export * from './directives/bg-hover.module';
+export * from './directives/image-crop.module';
 // interfaces
 export * from './interfaces';

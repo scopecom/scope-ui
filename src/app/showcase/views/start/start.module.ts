@@ -10,6 +10,7 @@ import { ScUiPillsModule } from '../../../components/scui-pills/scui-pills.modul
 import { ScuiDropdownModule } from '../../../components/scui-dropdown/scui-dropdown.module';
 import { ScUiFormControlsModule } from '../../../components/form-controls/form-controls.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ScUiArticleModule } from '../../../components/scui-article/scui-article.module';
 
 @NgModule({
   declarations: [StartComponent],
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ScuiDropdownModule,
     ScUiFormControlsModule,
     ScUiTabsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScUiArticleModule
   ]
 })
 export class StartModule {

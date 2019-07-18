@@ -6,7 +6,7 @@ import { ScUiArticle } from '../../../interfaces';
   template: `
     <div class="scui-editor-article" [ngClass]="{'linked': article.linked}">
       <div class="editor-article-overlay"></div>
-      <div [ngStyle]="{'background-image': 'url(' + article.photoUrl + ')'}"
+      <div scuiImageCropper="bgImage" [photoUrl]="article.photoUrl"
            class="editor-article-img">
       </div>
       <span class="icon icon-cloud-forecast-2" *ngIf="!article.linked;"></span>

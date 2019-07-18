@@ -6,6 +6,7 @@
 
     .scui-input-label {
       color: $main_4;
+      text-transform: uppercase;
     }
 
     .scui-input-field {
@@ -23,6 +24,7 @@
 
     .scui-input-label {
       color: $prim_5;
+      text-transform: uppercase;
     }
   }
 
@@ -34,6 +36,7 @@
 
     .scui-input-label {
       color: $sec_2;
+      text-transform: uppercase;
     }
 
     .scui-input-messages {
@@ -96,6 +99,7 @@
     font-weight: 500;
     line-height: 32px;
     color: $main_5;
+    text-transform: uppercase;
   }
 
   .textarea-field {
@@ -128,6 +132,7 @@
   &.error {
     .scui-input-label {
       color: $sec_2;
+      text-transform: uppercase;
     }
 
     .textarea-field {

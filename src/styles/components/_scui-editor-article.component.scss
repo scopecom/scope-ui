@@ -28,6 +28,9 @@ scui-editor-article {
     height: 87px;
     background-color: $main_5;
     position: static;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .editor-article-date, .icon, .editor-article-title {

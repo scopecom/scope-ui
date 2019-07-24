@@ -5,6 +5,9 @@ import { ScUiOption } from '../../interfaces';
   selector: 'scui-project-selector',
   template: `
     <div class="scui-project-selector">
+      <div class="scui-project-selector-label" *ngIf="label">
+        {{label}}
+      </div>
       <div [ngClass]="{'dropdown-expanded': isOpen}" class="scui-dropdown">
         <div (click)="toggle()" class="main">{{ placeholder }}
           <span *ngIf="!isOpen" class="icon icon-small-down"></span>
@@ -27,6 +30,7 @@ import { ScUiOption } from '../../interfaces';
 })
 export class ScUiProjectSelectorComponent implements OnChanges {
   @Input() options: ScUiOption[];
+  @Input() label: string;
   @Input() placeholder = 'Select Project';
   @Output() onSelectedOption = new EventEmitter<ScUiOption[]>();
   @Output() onRemovedOption = new EventEmitter<ScUiOption[]>();

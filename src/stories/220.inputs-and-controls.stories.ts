@@ -323,7 +323,25 @@ storiesOf('Inputs and Controls', module)
         id: 3
       }]
     }
-  })).add('Timepicker', () => ({
+  }))
+  .add('Project selector with Label', () => ({
+    template: `<div style="padding:40px; background:white; ">
+                    <scui-project-selector [options]="options" label="Projects"></scui-project-selector>
+               </div>`,
+    props: {
+      options: [{
+        label: 'Internal 03/19',
+        id: 1
+      }, {
+        label: 'Sales - Product Update',
+        id: 2
+      }, {
+        label: 'Campaign expovina',
+        id: 3
+      }]
+    }
+  }))
+  .add('Timepicker', () => ({
   template: `<div style="padding:40px; background:white;">
                     <scui-time-picker [formControl]="myControl"></scui-time-picker>
              </div>`,

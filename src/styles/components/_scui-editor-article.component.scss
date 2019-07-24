@@ -110,7 +110,7 @@ scui-editor-article {
   opacity: 1 !important;
 }
 
-.gu-mirror .scui-editor-article {
+.gu-mirror .scui-editor-article, .gu-mirror .scui-editor-article-box {
   outline: 8px solid $prim_5 !important;
   .editor-article-overlay {
     visibility: visible !important;
@@ -122,12 +122,84 @@ scui-editor-article {
   }
 }
 
-.gu-transit .scui-editor-article {
+.gu-transit .scui-editor-article, .gu-transit .scui-editor-article-box {
   background-color: $main_5 !important;
   color: $main_5 !important;
   opacity: 1 !important;
 
   * {
     visibility: hidden !important;
+  }
+}
+
+scui-editor-article.gu-transit {
+  width: 100% !important;
+  height: 104px !important;
+  display: block !important;
+}
+
+.gu-transit .scui-editor-article {
+  display: block !important;
+  width: 100% !important;
+  height: 104px !important;
+  outline: none !important;
+}
+
+scui-editor-article-box {
+  width: 100%;
+  height: 104px;
+  position: relative;
+  cursor: move;
+  display: inline-flex;
+  margin: 10px;
+}
+
+.scui-editor-article-box {
+  width: 100%;
+  display: flex;
+  background-color: $main_1;
+  position: relative;
+
+  .remove-article {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    border-radius: 50%;
+    height: 28px;
+
+    &:hover {
+      background-color: $main_3;
+      color: $blank_2;
+      cursor: pointer;
+    }
+  }
+
+  .editor-article-img {
+    width: 208px;
+    height: 100%;
+  }
+
+  .scui-editor-article-box-meta {
+    flex: 1;
+    padding-left: 16px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .box-info {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      strong {
+        width: 80px;
+        display: inline-block;
+        font-weight: 500;
+      }
+    }
   }
 }

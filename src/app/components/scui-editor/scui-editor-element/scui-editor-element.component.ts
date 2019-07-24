@@ -4,6 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'scui-editor-element',
   template: `
     <div class="scui-editor-element">
+      <div class="handle"></div>
       <div class="scui-editor-element-icon">
         <span class="icon" [ngClass]="elementMeta?.iconClass"></span>
       </div>

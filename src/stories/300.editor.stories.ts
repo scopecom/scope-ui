@@ -74,4 +74,19 @@ storiesOf('Editor', module)
     props: {
       articleList: ArticleListStub,
     }
+  }))
+  .add('Editor Article In Article List', () => ({
+    template: `
+    <div style="background: white;padding:20px;" >
+       <scui-editor-article-box [article]="articleItem"></scui-editor-article-box>
+    </div>
+    `,
+    props: {
+      articleItem: {
+        articleImageUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
+        articleSource: '12313',
+        articleTitle: '123123',
+        articleComment: '123123'
+      },
+    }
   }));

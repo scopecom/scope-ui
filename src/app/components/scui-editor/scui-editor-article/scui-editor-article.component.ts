@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ScUiArticle } from '../../../interfaces';
 
 @Component({
@@ -23,6 +23,48 @@ import { ScUiArticle } from '../../../interfaces';
 })
 export class ScUiEditorArticleComponent implements OnInit {
   @Input() article: ScUiArticle;
+
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
+}
+
+@Component({
+  selector: 'scui-editor-article-box',
+  template: `
+    <div class="scui-editor-article-box">
+      <div class="remove-article" (click)="removeArticle.emit()">
+        <span class="icon icon-i-remove"></span>
+      </div>
+      <div scuiImageCropper="bgImage" [photoUrl]="article.articleImageUrl"
+           class="editor-article-img">
+      </div>
+      <div class="scui-editor-article-box-meta">
+        <div class="box-info">
+          <strong>Source</strong><span>{{article.articleSource}}</span>
+        </div>
+        <div class="box-info">
+          <strong>Title</strong><span>{{article.articleTitle}}</span>
+        </div>
+        <div class="box-info">
+          <strong>Comment</strong><span>{{article.articleComment}}</span>
+        </div>
+      </div>
+    </div>
+  `
+})
+export class ScUiEditorArticleBoxComponent implements OnInit {
+  @Input() article: {
+    articleImageUrl: string;
+    articleSource: string;
+    articleTitle: string;
+    articleComment: string;
+  };
+
+  @Output() removeArticle = new EventEmitter();
 
   constructor() {
   }

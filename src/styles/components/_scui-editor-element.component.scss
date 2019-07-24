@@ -16,6 +16,17 @@ scui-editor-element {
   width: 100%;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  .handle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: transparent;
+  }
 
   &:hover {
     outline:8px solid $main_3;

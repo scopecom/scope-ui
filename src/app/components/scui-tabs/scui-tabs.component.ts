@@ -9,7 +9,7 @@ import {
   ViewChildren,
   ViewEncapsulation
 } from '@angular/core';
-import {ScUiTabs} from '../../interfaces';
+import { ScUiTabs } from '../../interfaces';
 
 @Component({
   selector: 'scui-tabs',
@@ -42,7 +42,7 @@ export class ScUiTabsComponent implements AfterViewInit {
   @Input() activeTabIndex = 0;
   @Input() cssClass: string;
 
-  @Output() tabSelect = new EventEmitter<number>();
+  @Output() tabSelect = new EventEmitter<{index: number, tab: ScUiTabs}>();
 
   constructor() {
   }
@@ -60,6 +60,9 @@ export class ScUiTabsComponent implements AfterViewInit {
       this.offsetWidth = tab.offsetWidth;
     }
 
-    this.tabSelect.emit(key);
+    this.tabSelect.emit({
+      index: key,
+      tab: this.tabs[key]
+    });
   }
 }

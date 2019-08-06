@@ -178,6 +178,9 @@ scui-editor-article-box {
   .editor-article-img {
     width: 208px;
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .scui-editor-article-box-meta {

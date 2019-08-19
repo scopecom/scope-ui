@@ -229,9 +229,11 @@ $icon-scope-publish-2: unicode(eaea);
 $icon-scope-projects-2: unicode(eaeb);
 $icon-door: unicode(eaec);
 $icon-scope-post: unicode(eaed);
+$icon-scope-article-list: unicode(eaee);
 $icon-scope-simple-text: unicode(eaef);
 $icon-scope-text-area: unicode(eaf0);
-$icon-scope-article-list: unicode(eaee);
+$icon-scope-editor-template-4: unicode(eaf1);
+$icon-scope-content-production: unicode(eaf2);
 $icon-uea44-: unicode(ea01);
 
 .icon-add-file::before {
@@ -1130,6 +1132,10 @@ $icon-uea44-: unicode(ea01);
   content: $icon-scope-post;
 }
 
+.icon-scope-article-list::before {
+  content: $icon-scope-article-list;
+}
+
 .icon-scope-simple-text::before {
   content: $icon-scope-simple-text;
 }
@@ -1138,10 +1144,15 @@ $icon-uea44-: unicode(ea01);
   content: $icon-scope-text-area;
 }
 
-.icon-scope-article-list::before {
-  content: $icon-scope-article-list;
+.icon-scope-editor-template-4::before {
+  content: $icon-scope-editor-template-4;
+}
+
+.icon-scope-content-production::before {
+  content: $icon-scope-content-production;
 }
 
 .icon-uea44-::before {
   content: $icon-uea44-;
 }
+

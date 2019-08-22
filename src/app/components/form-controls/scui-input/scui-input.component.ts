@@ -7,7 +7,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
     <div class="scui-input scui-error {{styleClass}} {{inputState}}"
          [ngClass]="{'scui-error': !control?.pristine && (control?.errors != null) || isInvalid}">
       <div>
-        <div class="scui-input-label">
+        <div class="scui-input-label" *ngIf="label">
           {{label}}
         </div>
         <input [type]="inputType"

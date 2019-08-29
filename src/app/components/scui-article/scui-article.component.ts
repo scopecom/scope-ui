@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
-import {ScUiArticle} from '../../interfaces';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { ScUiArticle } from '../../interfaces';
 
 @Component({
   selector: 'scui-article',
@@ -21,10 +21,10 @@ import {ScUiArticle} from '../../interfaces';
                 <span class="value">2</span>
               </span>
             </div>
-            <span class="article-action">
+            <span class="article-action" (click)="editArticle(article)">
               <span class="icon icon-pen-2"></span>
             </span>
-            <span class="article-action-2">
+            <span class="article-action-2" (click)="removeArticle(article)">
               <span class="icon icon-e-remove"></span>
             </span>
           </footer>
@@ -46,7 +46,7 @@ import {ScUiArticle} from '../../interfaces';
                 <span class="value">2</span>
               </span>
             </div>
-            <span class="article-action">
+            <span class="article-action" (click)="removeArticle(article)">
               <span class="icon icon-e-remove"></span>
             </span>
           </footer>
@@ -62,8 +62,8 @@ import {ScUiArticle} from '../../interfaces';
                                 [source]="article.publisher">
           </scui-article-content>
           <footer class="scui-article-footer">
-            <span class="article-action">
-              <span class="icon icon-e-add" (click)="importArticle(article)"></span>
+            <span class="article-action" (click)="importArticle(article)">
+              <span class="icon icon-e-add"></span>
             </span>
           </footer>
         </aside>
@@ -72,19 +72,23 @@ import {ScUiArticle} from '../../interfaces';
   `,
   encapsulation: ViewEncapsulation.None
 })
-export class ScUiArticleComponent implements OnInit {
+export class ScUiArticleComponent {
   @Input() article: ScUiArticle;
 
   @Output() articleImport = new EventEmitter<ScUiArticle>();
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
+  @Output() articleEdit = new EventEmitter<ScUiArticle>();
+  @Output() articleRemove = new EventEmitter<ScUiArticle>();
 
   importArticle(article: ScUiArticle) {
     this.articleImport.emit(article);
+  }
+
+  removeArticle(article: ScUiArticle) {
+    this.articleRemove.emit(article);
+  }
+
+  editArticle(article: ScUiArticle) {
+    this.articleEdit.emit(article);
   }
 
 }

@@ -324,6 +324,24 @@ storiesOf('Inputs and Controls', module)
       }]
     }
   }))
+  .add('Project selector with initial state', () => ({
+    template: `<div style="padding:40px; background:white; ">
+                    <scui-project-selector [options]="options" [selectedOptionIds]="selectedIds"></scui-project-selector>
+               </div>`,
+    props: {
+      options: [{
+        label: 'Internal 03/19',
+        id: 1
+      }, {
+        label: 'Sales - Product Update',
+        id: 2
+      }, {
+        label: 'Campaign expovina',
+        id: 3
+      }],
+      selectedIds: [1, 2]
+    }
+  }))
   .add('Project selector with Label', () => ({
     template: `<div style="padding:40px; background:white; ">
                     <scui-project-selector [options]="options" label="Projects"></scui-project-selector>

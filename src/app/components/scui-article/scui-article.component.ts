@@ -16,17 +16,17 @@ import { ScUiArticle } from '../../interfaces';
                                 [source]="article.publisher">
           </scui-article-content>
           <footer class="scui-article-footer">
-            <div class="pills-box">
-              <span class="pill-info">
-                <span class="value">2</span>
-              </span>
-            </div>
+<!--            <div class="pills-box">-->
+<!--              <span class="pill-info">-->
+<!--                <span class="value">2</span>-->
+<!--              </span>-->
+<!--            </div>-->
             <span class="article-action" (click)="editArticle(article)">
               <span class="icon icon-pen-2"></span>
             </span>
-            <span class="article-action-2" (click)="removeArticle(article)">
-              <span class="icon icon-e-remove"></span>
-            </span>
+<!--            <span class="article-action-2" (click)="removeArticle(article)">-->
+<!--              <span class="icon icon-e-remove"></span>-->
+<!--            </span>-->
           </footer>
         </aside>
       </article>
@@ -41,11 +41,11 @@ import { ScUiArticle } from '../../interfaces';
                                 [source]="article.publisher">
           </scui-article-content>
           <footer class="scui-article-footer">
-            <div class="pills-box">
-              <span class="pill-info">
-                <span class="value">2</span>
-              </span>
-            </div>
+<!--            <div class="pills-box">-->
+<!--              <span class="pill-info">-->
+<!--                <span class="value">2</span>-->
+<!--              </span>-->
+<!--            </div>-->
             <span class="article-action" (click)="removeArticle(article)">
               <span class="icon icon-e-remove"></span>
             </span>

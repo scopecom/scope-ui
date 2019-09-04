@@ -30,6 +30,7 @@ import { ScUiOption } from '../../interfaces';
 })
 export class ScUiProjectSelectorComponent implements OnChanges {
   @Input() options: ScUiOption[];
+  @Input() selectedOptionIds: number[] = [];
   @Input() label: string;
   @Input() placeholder = 'Select Project';
   @Output() onSelectedOption = new EventEmitter<ScUiOption[]>();
@@ -39,9 +40,14 @@ export class ScUiProjectSelectorComponent implements OnChanges {
   optionList: ScUiOption[] = [];
   assignedProjects: ScUiOption[] = [];
 
-  ngOnChanges(changes: SimpleChanges): void {
-    this.optionList = changes.options.currentValue;
-    this.assignedProjects = [];
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.options) {
+      this.optionList = changes.options.currentValue.filter(option => !this.selectedOptionIds.includes(option.id));
+      this.assignedProjects = changes.options.currentValue.filter(option => this.selectedOptionIds.includes(option.id));
+    } else if (changes.selectedOptionIds) {
+      this.optionList = this.options.filter(option => !changes.selectedOptionIds.currentValue.includes(option.id));
+      this.assignedProjects = this.options.filter(option => changes.selectedOptionIds.currentValue.includes(option.id));
+    }
   }
 
   toggle() {

@@ -4,11 +4,12 @@ import {CommonModule} from '@angular/common';
 import {ScUiArticleComponent} from '../app/components/scui-article/scui-article.component';
 import {ScUiArticleImageComponent} from '../app/components/scui-article/scui-article-image/scui-article-image.component';
 import {ScuiArticleContentComponent} from '../app/components/scui-article/scui-article-content/scui-article-content.component';
+import { ImageCropModule } from '../app/directives/image-crop.module';
 
 storiesOf('Assets', module)
   .addDecorator(
     moduleMetadata({
-      imports: [CommonModule],
+      imports: [CommonModule, ImageCropModule],
       declarations: [ScUiArticleComponent, ScUiArticleImageComponent, ScuiArticleContentComponent]
     })
   )

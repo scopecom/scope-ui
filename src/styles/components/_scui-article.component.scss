@@ -12,8 +12,10 @@
 
   article.default {
     background-color: $blank_2;
+
     &:hover {
       outline: 8px solid $main_2;
+
       .image-overlay {
         background: $main_3;
         opacity: 0.2;
@@ -30,8 +32,10 @@
       .icon {
         color: $main_6;
       }
+
       &:hover {
         background: $main_2;
+
         .icon {
           color: $blank_1;
         }
@@ -46,6 +50,7 @@
     .scui-article-content {
       .scui-article-header {
         color: $main_5;
+
         a {
           color: $blank_1;
         }
@@ -59,6 +64,7 @@
             }
           }
         }
+
         h3 {
           a {
             color: $main_7;
@@ -71,6 +77,7 @@
 
   article.edit {
     background-color: $main_2;
+
     &:hover {
       outline: 8px solid $main_3;
     }
@@ -78,6 +85,7 @@
     .scui-article-content {
       .scui-article-header {
         color: $main_5;
+
         a {
           color: $blank_1;
         }
@@ -91,6 +99,7 @@
             }
           }
         }
+
         h3 {
           a {
             color: $main_7;
@@ -104,17 +113,21 @@
         .icon {
           color: $main_6;
         }
+
         &:hover {
           background: $main_3;
+
           .icon {
             color: $blank_1;
           }
         }
       }
+
       .pills-box {
         .pill-info {
           background: $prim_5 !important;
           color: $blank_2;
+
           &:hover {
             background: $prim_6 !important;
           }
@@ -126,8 +139,10 @@
 
   article.imported {
     background-color: $main_2;
+
     &:hover {
       outline: 8px solid $main_3;
+
       .image-overlay {
         background: $main_9;
         opacity: 0.4;
@@ -137,6 +152,7 @@
     .scui-article-content {
       .scui-article-header {
         color: $main_5;
+
         a {
           color: $blank_1;
         }
@@ -150,6 +166,7 @@
             }
           }
         }
+
         h3 {
           a {
             color: $main_7;
@@ -163,17 +180,21 @@
         .icon {
           color: $main_6;
         }
+
         &:hover {
           background: $main_3;
+
           .icon {
             color: $blank_1;
           }
         }
       }
+
       .pills-box {
         .pill-info {
           background: $prim_5 !important;
           color: $blank_2;
+
           &:hover {
             background: $prim_6 !important;
           }
@@ -190,8 +211,10 @@
 
   article.default {
     background-color: $blank_2;
+
     &:hover {
       outline: 8px solid $main_2;
+
       .article-no-image {
         background: $main_3;
       }
@@ -210,6 +233,7 @@
     .scui-article-content {
       .scui-article-header {
         color: $main_5;
+
         a {
           color: $blank_1;
         }
@@ -228,8 +252,10 @@
 
   article.edit {
     background-color: $main_2;
+
     &:hover {
       outline: 8px solid $main_3;
+
       .image-overlay {
       }
     }
@@ -238,6 +264,7 @@
       .no-image-1 {
         color: $blank_2;
       }
+
       .no-image-2 {
         color: $main_2;
       }
@@ -253,6 +280,7 @@
     .scui-article-content {
       .scui-article-header {
         color: $main_5;
+
         a {
           color: $blank_1;
         }
@@ -272,17 +300,21 @@
         .icon {
           color: $main_6;
         }
+
         &:hover {
           background: $main_3;
+
           .icon {
             color: $blank_1;
           }
         }
       }
+
       .pills-box {
         .pill-info {
           background: $prim_5 !important;
           color: $blank_2;
+
           &:hover {
             background: $prim_6 !important;
           }
@@ -294,8 +326,10 @@
 
   article.imported {
     background-color: $main_2;
+
     &:hover {
       outline: 8px solid $main_3;
+
       .article-no-image {
         background: $main_6;
       }
@@ -309,6 +343,7 @@
       .no-image-1 {
         color: $blank_2;
       }
+
       .no-image-2 {
         color: $main_2;
       }
@@ -317,6 +352,7 @@
     .scui-article-content {
       .scui-article-header {
         color: $main_5;
+
         a {
           color: $blank_1;
         }
@@ -336,17 +372,21 @@
         .icon {
           color: $main_6;
         }
+
         &:hover {
           background: $main_3;
+
           .icon {
             color: $blank_1;
           }
         }
       }
+
       .pills-box {
         .pill-info {
           background: $prim_5 !important;
           color: $blank_2;
+
           &:hover {
             background: $prim_6 !important;
           }
@@ -367,28 +407,34 @@
       height: 40px;
       right: 8px;
       bottom: 5px;
+      cursor: pointer;
+
       .icon {
         position: absolute;
         top: 8px;
         left: 10px;
         font-size: 23px;
       }
+
       &:hover {
         border-radius: 50%;
       }
     }
+
     .article-action-2 {
       position: absolute;
       width: 40px;
       height: 40px;
       right: 48px;
       bottom: 5px;
+
       .icon {
         position: absolute;
         top: 7px;
         left: 7px;
         font-size: 27px;
       }
+
       &:hover {
         border-radius: 50%;
       }
@@ -403,12 +449,14 @@
       width: 40px;
       height: 40px;
       cursor: pointer;
+
       .icon {
         position: absolute;
         top: 7px;
         left: 7px;
         font-size: 27px;
       }
+
       &:hover {
         border-radius: 50%;
       }
@@ -423,12 +471,14 @@
       width: 40px;
       height: 40px;
       cursor: pointer;
+
       .icon {
         position: absolute;
         top: 7px;
         left: 7px;
         font-size: 27px;
       }
+
       &:hover {
         border-radius: 50%;
       }
@@ -453,6 +503,7 @@
     right: 0;
     bottom: 1px;
     padding: 10px 16px;
+
     .pills-box {
       position: absolute;
       left: 16px;
@@ -460,12 +511,14 @@
       height: 32px;
       width: 32px;
       cursor: pointer;
+
       .pill-info {
         font-size: 16px;
         display: inline-block;
         height: 100%;
         width: 100%;
         border-radius: 50%;
+
         .value {
           position: absolute;
           top: 7px;
@@ -474,6 +527,7 @@
         }
       }
     }
+
     .icon {
       font-size: 20px;
     }
@@ -485,6 +539,7 @@
 .scui-article-img {
   height: 196px;
   position: relative;
+
   .image-overlay {
     position: absolute;
     top: 0;
@@ -492,6 +547,7 @@
     left: 0;
     right: 0;
   }
+
   .article-no-image {
     font-size: 20px;
     padding-top: 20px;
@@ -502,6 +558,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+
     .no-image-1 {
       padding-bottom: 8px;
     }
@@ -524,16 +581,19 @@
       font-weight: 400;
     }
   }
+
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   padding: 16px;
   height: 195px;
+
   .scui-article-header {
     font-size: 16px;
     margin-bottom: 5px;
     font-weight: 300;
+
     a {
       font-size: 18px;
     }
@@ -543,6 +603,7 @@
     h3 {
       font-size: 16px;
       line-height: 20px;
+
       a {
         text-decoration: none;
       }

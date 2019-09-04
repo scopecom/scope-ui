@@ -10,7 +10,7 @@ import {Component, OnInit, Input} from '@angular/core';
            scuiBgHover="#06f"
            class="scui-card">
         <div *ngIf="disabled" class="card-disabled">
-          Coming soon
+          Work in progress
         </div>
         <div class="content">
           <div class="name">{{ name}}</div>

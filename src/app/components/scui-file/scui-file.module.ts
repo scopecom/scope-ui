@@ -35,26 +35,26 @@ import {ScUiFile} from '../../interfaces';
           <span>
             <span [matMenuTriggerFor]="menu" class="icon icon-menu-ham-horz menu-trigger"></span>
                   <mat-menu class="output-actions" #menu="matMenu">
-                    <div class="output-action disabled" mat-menu-item>
+                    <div class="output-action" (click)="selectFile()"  mat-menu-item>
                       <span class="icon icon-pen-2"></span>
                       <span class="output-action-label"> Edit</span>
                     </div>
-                    <div class="output-action" mat-menu-item>
-                      <span class="icon icon-preview"></span>
-                      <span class="output-action-label"> View</span>
-                    </div>
-                    <div class="output-action" mat-menu-item>
-                      <span class="icon icon-box"></span>
-                      <span class="output-action-label"> Archive</span>
-                    </div>
-                    <div class="output-action" mat-menu-item>
-                      <span class="icon icon-send"></span>
-                      <span class="output-action-label"> Publish</span>
-                    </div>
-                    <div class="output-action output-action-last" mat-menu-item>
-                      <span class="icon icon-bin"></span>
-                      <span class="output-action-label"> Delete</span>
-                    </div>
+<!--                    <div class="output-action" mat-menu-item>-->
+<!--                      <span class="icon icon-preview"></span>-->
+<!--                      <span class="output-action-label"> View</span>-->
+<!--                    </div>-->
+<!--                    <div class="output-action" mat-menu-item>-->
+<!--                      <span class="icon icon-box"></span>-->
+<!--                      <span class="output-action-label"> Archive</span>-->
+<!--                    </div>-->
+<!--                    <div class="output-action" mat-menu-item>-->
+<!--                      <span class="icon icon-send"></span>-->
+<!--                      <span class="output-action-label"> Publish</span>-->
+<!--                    </div>-->
+<!--                    <div class="output-action output-action-last" mat-menu-item>-->
+<!--                      <span class="icon icon-bin"></span>-->
+<!--                      <span class="output-action-label"> Delete</span>-->
+<!--                    </div>-->
                   </mat-menu>
           </span>
         </div>

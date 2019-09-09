@@ -7,7 +7,7 @@ import { ScUiArticle } from '../../interfaces';
     <article [ngClass]="{noImage: !article.photoUrl}" class="scui-article">
       <article class="edit" *ngIf="article.mode === 'edit'">
         <span class="icon icon-cloud-forecast-2"></span>
-        <scui-article-image [photoUrl]="article.photoUrl"></scui-article-image>
+        <scui-article-image [url]="article.url" [photoUrl]="article.photoUrl"></scui-article-image>
         <aside class="scui-article-content">
           <scui-article-content [date]="article.date"
                                 [url]="article.url"
@@ -32,7 +32,7 @@ import { ScUiArticle } from '../../interfaces';
       </article>
       <article class="imported" *ngIf="article.mode === 'imported'">
         <span class="icon icon-cloud-forecast-2"></span>
-        <scui-article-image [state]="article.mode" [photoUrl]="article.photoUrl"></scui-article-image>
+        <scui-article-image [url]="article.url" [state]="article.mode" [photoUrl]="article.photoUrl"></scui-article-image>
         <aside class="scui-article-content">
           <scui-article-content [date]="article.date"
                                 [url]="article.url"
@@ -53,7 +53,7 @@ import { ScUiArticle } from '../../interfaces';
         </aside>
       </article>
       <article class="default" *ngIf="article.mode === 'default'">
-        <scui-article-image [state]="article.mode" [photoUrl]="article.photoUrl"></scui-article-image>
+        <scui-article-image [url]="article.url" [state]="article.mode" [photoUrl]="article.photoUrl"></scui-article-image>
         <aside class="scui-article-content">
           <scui-article-content [date]="article.date"
                                 [url]="article.url"

@@ -26,6 +26,10 @@
       .no-image-1 {
         color: $main_5;
       }
+
+      .no-image-2 {
+        color: $blank_1;
+      }
     }
 
     .article-action {
@@ -538,6 +542,7 @@
 // article image component
 .scui-article-img {
   height: 196px;
+  display: block;
   position: relative;
 
   .image-overlay {

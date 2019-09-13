@@ -22,19 +22,6 @@ const scss = () => {
     .pipe(gulp.dest('./dist/scss'));
 };
 
-const scssIcons = () => {
-  return gulp.src('./src/styles/icons/scope-ui.icons.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed',
-      errLogToConsole: false
-    }).on('error', sass.logError))
-    .pipe(autoprefixer({browsers: ['last 3 versions']}))
-    .pipe(rename('scope-ui.icons.min.css'))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./dist/css'));
-};
-
-const build = gulp.parallel(css, scss, scssIcons);
+const build = gulp.parallel(css, scss);
 
 exports.default = build;

@@ -1,0 +1,18 @@
+@import "../global/_variables";
+
+
+.projects-content-header {
+    padding: 20px 0;
+    margin: 0 24px;
+    border-bottom: 1px solid $main_5;
+}
+
+.content-header-title {
+    font-size: 20px;
+}
+
+.projects-content-wrap {
+    max-width: 980px;
+    padding-left: 24px;
+    margin-top: 32px;
+}

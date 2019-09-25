@@ -13,6 +13,7 @@ export * from './components/scui-wizard-nav/scui-wizard-nav.module';
 export * from './components/scui-buttons/scui-buttons.module';
 export * from './components/scui-file/scui-file.module';
 export * from './components/scui-editor/scui-editor.module';
+export * from './components/scui-no-results/scui-no-results.module';
 // form controls
 export * from './components/form-controls/form-controls.module';
 export * from './components/scui-project-selector/scui-project-selector.module';

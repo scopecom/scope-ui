@@ -96,8 +96,8 @@ export class ScUiFileComponent implements OnInit {
   @Output() fileSelect = new EventEmitter<ScUiFile>();
   outputChannelsTotal = 0;
   overlayActive: boolean;
-  readonly statusPublished = 'published';
-  readonly statusScheduled = 'scheduled';
+  readonly statusPublished = 'PUBLISHED';
+  readonly statusScheduled = 'SCHEDULED';
 
   channelsConfig = {
     TWITTER: {

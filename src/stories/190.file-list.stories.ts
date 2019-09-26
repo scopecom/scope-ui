@@ -27,33 +27,38 @@ storiesOf('File Lists', module)
         },
         {
           type: 'FACEBOOK_PAGE',
-          status: 'published',
+          status: 'PUBLISHED',
           datePublished: '27.04.2019',
-          timePublished: '18.15'
+          timePublished: '18.15',
+          publicationDate: '2019-08-22T09:10:32Z'
         },
         {
           type: 'LINKEDIN_PAGE',
-          status: 'published',
+          status: 'PUBLISHED',
           datePublished: '27.04.2019',
-          timePublished: '18.15'
+          timePublished: '18.15',
+          publicationDate: '2019-08-22T09:10:32Z'
         },
         {
           type: 'TWITTER',
-          status: 'scheduled',
+          status: 'SCHEDULED',
           datePublished: '20.05.2019',
-          timePublished: '09.15'
+          timePublished: '09.15',
+          publicationDate: '2019-08-22T09:10:32Z'
         },
         {
           type: 'WORDPRESS',
-          status: 'published',
+          status: 'PUBLISHED',
           datePublished: '27.04.2019',
-          timePublished: '18.15'
+          timePublished: '18.15',
+          publicationDate: '2019-08-22T09:10:32Z'
         },
         {
           type: 'GOOGLE_DOC',
-          status: 'scheduled',
+          status: 'SCHEDULED',
           datePublished: '20.05.2019',
-          timePublished: '09.15'
+          timePublished: '09.15',
+          publicationDate: '2019-08-22T09:10:32Z'
         },
         {
           type: 'MAILCHIMP',

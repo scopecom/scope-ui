@@ -70,8 +70,7 @@ import {ScUiFile} from '../../interfaces';
               <span class="scheduled-item-wrap">
                 <span class="icon {{ channelsConfig[item.type].icon }}"></span>
               </span>
-              <span class="date-published">{{ item.datePublished }}</span>
-              <span class="time-published">{{ item.timePublished }}</span>
+              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. hh:mm' }}</span>
               <span class="settings">
                 <span class="icon icon-settings-gear"></span>
                 <span class="icon icon-bin"></span>
@@ -79,8 +78,7 @@ import {ScUiFile} from '../../interfaces';
             </div>
             <div class="published-item" *ngIf="item.status === statusPublished">
               <span class="icon {{ channelsConfig[item.type].icon }}"></span>
-              <span class="date-published">{{ item.datePublished }}</span>
-              <span class="time-published">{{ item.timePublished }}</span>
+              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. hh:mm' }}</span>
             </div>
           </div>
         </div>

@@ -2,35 +2,43 @@
 
 .output-actions {
   min-width: 224px !important;
+
   .output-action {
     height: 40px;
     border-top: 1px solid $main_2;
     padding-left: 12px;
+
     &.disabled {
       .icon {
         color: $main_4;
       }
+
       .output-action-label {
         color: $main_4;
       }
     }
+
     .icon {
       font-size: 18px;
     }
+
     .output-action-label {
       padding-left: 14px;
       position: relative;
       top: -3px;
     }
   }
+
   .output-action-last {
     border-bottom: 1px solid $main_2;
   }
+
   &:hover {
     .disabled {
       background: $blank_2;
       cursor: default !important;
       pointer-events: none;
+
       span {
         cursor: default !important;
       }
@@ -43,6 +51,7 @@
   display: inline-block;
   margin-right: 24px;
   position: relative;
+
   &:hover {
     outline: 8px solid $main_3;
   }
@@ -51,6 +60,7 @@
     &:hover {
       outline: none !important;
     }
+
     .published-overlay {
       height: 408px;
       padding: 24px;
@@ -62,6 +72,7 @@
     height: 204px;
     background: $main_2;
     padding: 20px 10px 24px 18px;
+
     .item {
       width: 47px;
       height: 47px;
@@ -69,14 +80,17 @@
       margin-right: 8px;
       margin-bottom: 8px;
       position: relative;
+
       &:hover {
         .icon-wrap.defaultState {
           background: $main_6 !important;
+
           .icon {
             color: $blank_2 !important;
           }
         }
       }
+
       .icon-wrap {
         width: 47px;
         height: 47px;
@@ -85,30 +99,38 @@
         align-items: center;
         background: $blank_2;
         border-radius: 50%;
+
         .icon {
           font-size: 20px;
         }
+
         &.published {
           .dot {
             background: $info_2;
           }
         }
+
         &.scheduled {
           opacity: 0.8;
+
           .dot {
             background: $col_hubspot;
           }
+
           &:hover {
             opacity: 1;
           }
         }
+
         &.defaultState {
           background: $blank_2 !important;
+
           .icon {
             color: $blank_1 !important;
           }
         }
       }
+
       .dot {
         position: absolute;
         right: 0;
@@ -129,24 +151,30 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
     .info-top {
       font-size: 16px;
       font-weight: 400;
+
       .info-author {
         color: $main_5;
         margin-bottom: 8px;
       }
+
       .info-title {
         cursor: pointer;
       }
     }
+
     .info-bottom {
       display: flex;
       justify-content: space-between;
+
       .counter {
         &:hover {
           background: $prim_6;
         }
+
         background: $prim_5;
         border-radius: 50%;
         width: 32px;
@@ -155,12 +183,14 @@
         color: $blank_2;
         position: relative;
         cursor: pointer;
+
         span {
           position: absolute;
           top: 8px;
           left: 12px;
         }
       }
+
       .menu-trigger {
         font-size: 20px;
         cursor: pointer;
@@ -183,20 +213,24 @@
     transition: height 0.4s linear;
     overflow: hidden;
     visibility: hidden;
+
     .published-files-header {
       display: flex;
       justify-content: space-between;
       margin-bottom: 33px;
+
       &:hover {
         .icon {
           color: $blank_1;
         }
       }
+
       .files {
         color: $blank_2;
         font-weight: 500;
         font-size: 18px;
       }
+
       .icon {
         color: $blank_2;
         font-size: 26px;
@@ -206,14 +240,17 @@
         cursor: pointer;
       }
     }
+
     .published-files-content {
       .scheduled-item, .published-item {
         height: 40px;
         margin-bottom: 2px;
       }
+
       .published-item {
         padding-left: 8px;
         padding-top: 5px;
+
         .icon {
           color: rgba(255, 255, 255, 0.75);
           position: relative;
@@ -221,18 +258,18 @@
           display: inline-block;
           min-width: 16px;
         }
-        .date-published, .time-published {
+
+        .date-published {
           color: rgba(255, 255, 255, 0.75);
           font-weight: 300;
           font-size: 15px;
         }
+
         .date-published {
           padding-left: 22px;
         }
-        .time-published {
-          padding-left: 16px;
-        }
       }
+
       .scheduled-item {
         .scheduled-item-wrap {
           display: inline-block;
@@ -241,6 +278,7 @@
           height: 32px;
           border-radius: 50%;
           position: relative;
+
           .icon {
             color: $prim_5;
             position: absolute;
@@ -248,22 +286,23 @@
             left: 8px;
           }
         }
-        .date-published, .time-published {
+
+        .date-published {
           color: $blank_2;
           font-weight: 300;
           font-size: 15px;
           vertical-align: 10px;
         }
+
         .date-published {
           padding-left: 15px;
         }
-        .time-published {
-          padding-left: 16px;
-        }
+
         .settings {
           color: $blank_2;
           position: relative;
           top: -7px;
+
           .icon-settings-gear {
             padding-left: 38px;
             padding-right: 6px;
@@ -275,6 +314,7 @@
 
   .SCOPE_TO_EMAIL {
     background: $col_mail !important;
+
     .icon {
       color: $blank_2;
     }
@@ -282,6 +322,7 @@
 
   .FACEBOOK_PAGE {
     background: $col_fb !important;
+
     .icon {
       color: $blank_2;
     }
@@ -289,6 +330,7 @@
 
   .LINKEDIN_PAGE {
     background: $col_linkedIn !important;
+
     .icon {
       color: $blank_2;
     }
@@ -296,6 +338,7 @@
 
   .TWITTER {
     background: $col_twitt !important;
+
     .icon {
       color: $blank_2;
     }
@@ -303,6 +346,7 @@
 
   .WORDPRESS {
     background: $col_wp !important;
+
     .icon {
       color: $blank_2;
     }
@@ -310,6 +354,7 @@
 
   .GOOGLE_DOC {
     background: $col_gdoc !important;
+
     .icon {
       color: $blank_2;
     }
@@ -317,6 +362,7 @@
 
   .MAILCHIMP {
     background: $col_mchimp !important;
+
     .icon {
       color: $blank_2;
     }
@@ -324,6 +370,7 @@
 
   .SALES_FORCE {
     background: $col_sf !important;
+
     .icon {
       color: $blank_2;
     }
@@ -331,6 +378,7 @@
 
   .HUBSPOT {
     background: $col_hubspot !important;
+
     .icon {
       color: $blank_2;
     }

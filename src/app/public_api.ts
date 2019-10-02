@@ -14,6 +14,8 @@ export * from './components/scui-buttons/scui-buttons.module';
 export * from './components/scui-file/scui-file.module';
 export * from './components/scui-editor/scui-editor.module';
 export * from './components/scui-no-results/scui-no-results.module';
+export * from './components/scui-image/scui-image.module';
+export * from './components/scui-imagelist/scui-imagelist.module';
 // form controls
 export * from './components/form-controls/form-controls.module';
 export * from './components/scui-project-selector/scui-project-selector.module';

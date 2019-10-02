@@ -49,3 +49,9 @@ $col_mchimp:#684c46;
 $col_gdoc:#4d8df5;
 $col_mail0:rgb(187, 89, 160);
 $col_mail1:rgb(218, 79, 97);
+
+//Brakepoints
+$break-small: (min-width : 30em); /* 480px */
+$break-medium: (min-width : 48em); /* 768px */
+$break-large: (min-width : 60em); /* 960px */
+$break-xlarge: (min-width : 75em); /* 1200px */

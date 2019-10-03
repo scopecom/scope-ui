@@ -37,7 +37,7 @@ export class ScUiTabsComponent implements AfterViewInit {
   offsetWidth = 0;
 
   @ViewChildren('tabItem') tabItems: QueryList<ElementRef>;
-  @ViewChild('tabContainer') tabContainer: ElementRef;
+  @ViewChild('tabContainer', { static: true }) tabContainer: ElementRef;
   @Input() tabs: ScUiTabs[];
   @Input() activeTabIndex = 0;
   @Input() cssClass: string;

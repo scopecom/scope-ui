@@ -113,9 +113,9 @@ export class ScUiFileComponent implements OnInit {
     LINKEDIN_PAGE: {
       icon: 'icon-linkedin-in'
     },
-    // LINKEDIN_PROFILE: {
-    //   icon: ''
-    // },
+    LINKEDIN_PROFILE: {
+      icon: 'icon-linkedin-in'
+    },
     GOOGLE_DOC: {
       icon: 'icon-google-drive'
     },

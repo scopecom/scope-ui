@@ -34,4 +34,13 @@
       background-color: $prim_4 !important;
     }
   }
+  .icon-zoom-99 {
+    margin-left: -17px;
+    opacity: 0;
+  }
+}
+.submenu-nav-item:hover {
+  .icon-zoom-99 {
+    opacity: 1;
+  }
 }

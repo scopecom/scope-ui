@@ -25,11 +25,17 @@ const ctrl2 = new FormControl(new Date());
 ctrl1.disable();
 
 const fromGroup = new FormBuilder().group({
-  name: ['', [Validators.maxLength(10)]]
+  name:  new FormControl('', {
+    validators: Validators.email,
+    updateOn: 'blur'
+  })
 });
 
 const fromGroup2 = new FormBuilder().group({
-  name: ['', [Validators.maxLength(50)]]
+  name: new FormControl('', {
+    validators: Validators.maxLength(50),
+    updateOn: 'blur'
+  })
 });
 
 const vreme: Date = new Date();

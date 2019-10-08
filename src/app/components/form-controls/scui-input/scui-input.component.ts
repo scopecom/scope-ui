@@ -13,7 +13,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
         <input [type]="inputType"
                (input)="save($event)"
                (focus)="inputState = 'scui-focus'"
-               (blur)="inputState = ''"
+               (blur)="inputState = ''; onTouched($event)"
                [value]="value"
                class="scui-input-field">
         <div *ngIf="maxLength &&!control?.errors?.maxlength && inputType !== 'password'" class="scui-input-counter">
@@ -51,17 +51,26 @@ export class ScUiInputComponent implements ControlValueAccessor {
   }
 
   propagateChange = (_: any) => {
-  }
+  };
+
+  propagateChangeTouched = (_: any) => {
+  };
 
   registerOnChange(fn) {
     this.propagateChange = fn;
   }
 
-  registerOnTouched() {
+  registerOnTouched(fn) {
+    this.propagateChangeTouched = fn;
   }
 
   save(event: any) {
     this.value = event.target.value;
     this.propagateChange(this.value);
+  }
+
+  onTouched(event: any) {
+    this.value = event.target.value;
+    this.propagateChangeTouched(this.value);
   }
 }

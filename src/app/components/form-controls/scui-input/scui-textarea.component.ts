@@ -14,6 +14,7 @@ import {ScUiInputComponent} from './scui-input.component';
               <textarea
                 [disabled]="disabled"
                 (input)="save($event)"
+                (blur)="onTouched($event)"
                 [value]="value"
                 class="textarea-field"></textarea>
       </div>

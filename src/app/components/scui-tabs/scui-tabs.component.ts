@@ -1,20 +1,30 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { Tabs } from '../../constants/tabs';
+import {
+  AfterViewInit,
+  Component, ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+  ViewEncapsulation
+} from '@angular/core';
+import { ScUiTabs } from '../../interfaces';
 
 @Component({
   selector: 'scui-tabs',
   template: `
-    <section class="scui-tabs">
+    <section class="scui-tabs {{ cssClass }}">
       <div class="tabs" #tabContainer>
         <div *ngFor="let tab of tabs, let i = index"
-             [ngClass]="{'active-tab': i === activeTab}"
+             [ngClass]="{'active-tab': i === activeTabIndex, disabled:tab.disabled}"
              (click)="setActiveTab(i, tabItem, tabContainer)"
              #tabItem
-             class="tab">{{ tab.title }}
+             class="tab">{{tab.title}}
         </div>
         <div class="border-wrap">
           <div [ngStyle]="{left: (offsetLeft || 0) + 'px', width: (offsetWidth) + 'px' }"
-               class="border-bottom">
+               class="border-top">
           </div>
         </div>
       </div>
@@ -22,32 +32,37 @@ import { Tabs } from '../../constants/tabs';
   `,
   encapsulation: ViewEncapsulation.None
 })
-export class ScuiTabsComponent implements OnInit, AfterViewInit {
-  activeTab: number;
-  offsetLeft: number;
-  offsetWidth: number;
+export class ScUiTabsComponent implements AfterViewInit {
+  offsetLeft = 0;
+  offsetWidth = 0;
 
-  @ViewChildren('tabItem') tabItems: QueryList<HTMLDivElement>;
+  @ViewChildren('tabItem') tabItems: QueryList<ElementRef>;
+  @ViewChild('tabContainer', { static: true }) tabContainer: ElementRef;
+  @Input() tabs: ScUiTabs[];
+  @Input() activeTabIndex = 0;
+  @Input() cssClass: string;
 
-  tabs = Tabs;
+  @Output() tabSelect = new EventEmitter<{index: number, tab: ScUiTabs}>();
 
   constructor() {
   }
 
-  ngOnInit() {
-    this.setActiveTab(0);
-  }
-
   ngAfterViewInit() {
-    this.setActiveTab(0, this.tabItems.first);
+    setTimeout(() => {
+      this.setActiveTab(this.activeTabIndex, this.tabItems.toArray()[this.activeTabIndex].nativeElement, this.tabContainer.nativeElement);
+    });
   }
 
   setActiveTab(key, tab?: HTMLDivElement, tabContainer?: HTMLDivElement) {
-    this.activeTab = key;
-
+    this.activeTabIndex = key;
     if (tab) {
       this.offsetLeft = tabContainer ? tab.offsetLeft - tabContainer.offsetLeft : 0;
       this.offsetWidth = tab.offsetWidth;
     }
+
+    this.tabSelect.emit({
+      index: key,
+      tab: this.tabs[key]
+    });
   }
 }

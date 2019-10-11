@@ -9,17 +9,12 @@ import { SubmenuStub1, SubmenuStub2 } from '../../../constants/submenu';
 })
 export class ProjectsComponent implements OnInit {
   submenu = SubmenuStub1;
-
   submenu2 = SubmenuStub2;
-
-  constructor() {
-  }
 
   ngOnInit() {
   }
 
-  activateClass(item) {
-    item.active = !item.active;
+  reorder(event) {
+    console.log(event);
   }
-
 }

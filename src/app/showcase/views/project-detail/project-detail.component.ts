@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { AppMenu, AppMenuFooter, AppMenuLogo } from '../../../constants/app.menu';
+import { AppMenu, AppMenuFooter, AppMenuLogo, WizardMenu } from '../../../constants/app.menu';
 import { ArticleListStub } from '../../../constants/article.list';
 
 @Component({
@@ -14,6 +14,8 @@ export class ProjectDetailComponent implements OnInit {
   menuItems = AppMenu;
   openImportArticle = false;
   articles = ArticleListStub;
+
+  wizardMenu = WizardMenu;
 
   constructor() {
   }

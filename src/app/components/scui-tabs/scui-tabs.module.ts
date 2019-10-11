@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScuiTabsComponent } from './scui-tabs.component';
+import { ScUiTabsComponent } from './scui-tabs.component';
 
 @NgModule({
-  declarations: [ScuiTabsComponent],
+  declarations: [ScUiTabsComponent],
   imports: [
     CommonModule,
   ],
-  exports: [ScuiTabsComponent]
+  exports: [ScUiTabsComponent]
 })
 export class ScUiTabsModule {
 }

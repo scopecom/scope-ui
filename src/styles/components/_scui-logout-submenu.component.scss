@@ -1,0 +1,40 @@
+@import "../global/_variables";
+
+.logout-item {
+  height: 40px !important;
+  width: 224px;
+  &.username {
+    font-weight: 500;
+    font-size: 13px;
+    color: $main_5;
+    border-bottom: 1px solid $main_1;
+    pointer-events: none;
+    padding-bottom: 10px;
+    &:hover {
+      background: $blank_2 !important;
+      cursor: default !important;
+    }
+    span {
+      display: inline-block;
+      position: relative;
+      top: -7px;
+    }
+  }
+  &.logout {
+    font-weight: 300;
+    font-size: 13px;
+    color: $blank_1;
+    &:hover {
+      background: #F2F2F2 !important;
+    }
+    span {
+      display: inline-block;
+      position: relative;
+      top: -4px;
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,74 @@
+@import "../global/_variables";
+
+.scui-dropdown {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 300px;
+  font-weight: 300;
+  width: 100%;
+  &:hover {
+    .main {
+      background: $main_2;
+      border-bottom: 1px solid $main_4;
+    }
+  }
+  &.dropdown-expanded {
+    .main {
+      border-bottom: 1px solid $prim_5;
+      background: $prim_1;
+      color: $main_7;
+      .icon-small-up {
+        color: $main_7;
+      }
+    }
+    &:hover {
+      .main {
+        color: $blank_1 !important;
+        .icon-small-up {
+          color: $blank_1 !important;
+        }
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .main {
+    height: 40px;
+    background: $main_1;
+    padding: 13px 16px;
+    position: relative;
+    font-size: 15px;
+    border-bottom: 1px solid $main_3;
+    .icon-small-down, .icon-small-up {
+      font-size: 24px;
+      position: absolute;
+      right: 5px;
+      top: 8px;
+    }
+  }
+  .options {
+    background: $blank_2;
+    padding: 8px 0;
+    border-bottom: 1px solid $main_3;
+    border-left: 1px solid $main_3;
+    border-right: 1px solid $main_3;
+    position: absolute;
+    top: 40px;
+    overflow-y: scroll;
+    max-height: 500px;
+    z-index: 2;
+    width: 100%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+    .option {
+      height: 40px;
+      padding: 13px 16px 0 16px;
+      font-size: 14px;
+      &:hover {
+        background: $main_1;
+      }
+    }
+  }
+}
+

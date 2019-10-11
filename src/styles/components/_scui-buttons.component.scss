@@ -1,0 +1,100 @@
+@import "../global/_variables";
+
+.scui-button {
+  padding: 0 24px 0 24px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 40px;
+  outline: 0;
+
+  .btn-label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  &.btn-large-default {
+    background: $main_2;
+    color: $main_9;
+    border: none;
+    outline: none;
+    &:hover {
+      background: $main_3;
+    }
+  }
+  &.btn-large-blue {
+    background: $prim_5;
+    color: $blank_2;
+    border: none;
+    outline: none;
+    &:hover {
+      background: $prim_6;
+    }
+  }
+  &.btn-large-disabled {
+    cursor: default;
+    background: $main_5;
+    color: $main_3;
+  }
+  &.small {
+    line-height: 24px;
+    padding: 0 16px 0 16px;
+    .btn-label {
+      font-size: 12px;
+    }
+  }
+}
+
+.scui-button-icon {
+  display: inline-block;
+  cursor: pointer;
+  outline: 0;
+
+  .btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    .icon {
+      width: 40px;
+      font-size: 14px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .btn-label {
+      font-size: 14px;
+      padding: 0 16px 0 8px;
+      font-weight: 300;
+    }
+  }
+
+  &.btn-large-icon-blue {
+    background: $prim_5;
+    color: $blank_2;
+    border: none;
+    outline: none;
+    &:hover {
+      background: $prim_6;
+    }
+  }
+
+  &.btn-large-icon-disabled {
+    cursor: default;
+    background: $main_5;
+    color: $main_3;
+  }
+  &.small {
+    height: 24px;
+    padding-top: 0;
+    .btn-wrap {
+      height: 24px;
+      .icon {
+        width: 32px;
+        vertical-align: -1px;
+      }
+      .btn-label {
+        font-size: 12px;
+        padding: 0 16px 0 8px;
+      }
+    }
+  }
+}

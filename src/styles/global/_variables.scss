@@ -1,33 +1,58 @@
-$col_1: #2f00f3;
-$col_2: #fff;
-$col_3: #000;
-$col_4: #dadada;
-$col_5: #bdbdbd;
-$col_6: #0D0D0D;
-$col_7: #f8f8f5;
-$col_8: #d4d3d3;
-$col_9: #3A00F8;
-$col_10: #89C5FC;
-$col_11: #ecf0f1;
-$col_12: #212121;
-$col_13: #979797;
-$col_14: #F2F2F2;
-$col_15: #CADCF6;
-$col_16: #A6C8F9;
-$col_17: #F45357;
-$col_18: #D9272D;
-$col_19: #f2f2f2;
-$col_20: #bcbcbc;
-$col_21: #E5E5E5;
-$col_22: #DADAD;
-$col_23: #868686;
-$col_24: #0D0D0D;
-$col_25: #0099FF;
-$col_26: #3399FF;
-$col_27: #6B6B6B;
-$col_28: #AEAEAE;
-$col_29: #d2d2d2;
-$col_30: #b4cae7;
-$col_31: #e1e1e1;
-$col_32: #a6bddc;
-$col_40: #414141;
+// Blank Colors
+$blank_1: #000;
+$blank_2: #fff;
+
+//Primary Colors
+$prim_1: #F2F5FF;
+$prim_2: #B0D8FD;
+$prim_3: #89C5FC;
+$prim_4: #0099FF;
+$prim_5: #0066FF;
+$prim_6: #004FE5;
+$prim_7: #0035C1;
+$prim_8: #001DBC;
+$prim_9: #00039B;
+
+//Main Colors
+$main_1: #F2F2F2;
+$main_2: #E4E6E8;
+$main_3: #CDD0D3;
+$main_4: #BBBEC5;
+$main_5: #8E939C;
+$main_6: #70757E;
+$main_7: #545962;
+$main_8: #40454E;
+$main_9: #202428;
+
+// Info Colors
+$info_1: #DAFCE4;
+$info_2: #00CC00;
+$info_3: #FEF8E5;
+$info_4: #FDD13A;
+$info_5: #FFF0F1;
+$info_6: #D92227;
+
+//Obsolete
+$sec_1: #F45357;
+$sec_2: #D9272D;
+$sec_3: #F4E3E6;
+
+//Brands
+$col_mail:#cb005d;
+$col_fb:#1877f1;
+$col_linkedIn:#0e76a8;
+$col_twitt:#38a1f3;
+$col_hubspot:#ff7a59;
+$col_wp:#0073aa;
+$col_sf:#f49700;
+$col_mchimp:#684c46;
+$col_gdoc:#4d8df5;
+$col_mail0:rgb(187, 89, 160);
+$col_mail1:rgb(218, 79, 97);
+
+//Brakepoints
+$break-small: (min-width : 30em); /* 480px */
+$break-medium: (min-width : 48em); /* 768px */
+$break-large: (min-width : 60em); /* 960px */
+$break-xlarge: (min-width : 75em); /* 1200px */
+

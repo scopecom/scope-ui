@@ -4,7 +4,6 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'scui-detail-layout',
   template: `
-    <button (click)="goBack()"><- BACK</button>
     <router-outlet></router-outlet>
   `
 })

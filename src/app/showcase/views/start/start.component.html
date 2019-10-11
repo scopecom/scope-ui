@@ -1,15 +1,9 @@
-<div class="scui-main-container">
+<div class="start-page">
   <div class="scui-content">
     <div class="scui-container">
       <div class="scui-content">
-        <div class="scui-row cards-wrap">
-          <scui-card *ngFor="let btn of buttons" [icon]="btn.icon"
-                     [description]="btn.description"
-                     [name]="btn.name">
-          </scui-card>
-        </div>
+        <scui-article [article]="articleList[0]"></scui-article>
       </div>
     </div>
   </div>
 </div>
-

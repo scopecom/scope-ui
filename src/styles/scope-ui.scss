@@ -3,31 +3,15 @@
 @import "typography/index";
 @import "components/index";
 @import "./global/_variables";
-
-// todo: move this to appropriate files
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .scui-content {
-  background-color: $col_11;
+  background-color: $main_1;
 }
 
 .section-title {
   font-size: 1.25rem;
   font-family: sans-serif;
   margin-bottom: 10px;
-  color: $col_12;
-}
-
-.submenu {
-  font-family: sans-serif;
-  color: $col_13;
-
-  .submenu-title {
-    font-size: 0.875rem;
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-
-  .submenu-items {
-    font-size: 0.875rem;
-  }
+  color: $blank_1;
 }

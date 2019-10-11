@@ -5,5 +5,8 @@ export interface ScUiArticle {
   photoUrl?: string;
   description?: string;
   date?: string;
-  mode?: string;
+  mode?: 'default' | 'delete' | 'edit' | 'imported';
+  publisher?: string;
+  datePublished?: string;
+  linked?: boolean;
 }

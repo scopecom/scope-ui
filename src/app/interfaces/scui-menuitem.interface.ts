@@ -8,8 +8,17 @@ export interface ScUiMenuItem {
 
 export interface ScUiSubMenuItem {
   id?: any;
-  name: string;
+  name?: string;
   cssClass?: string;
   iconClass?: string;
   active?: boolean;
+  routerLink?: string;
+  [t: string]: any;
+}
+
+export interface ScUiTabs {
+  title: string;
+  disabled?: boolean;
+  routerLink?: string;
+  [t: string]: any;
 }

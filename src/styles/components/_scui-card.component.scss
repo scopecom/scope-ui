@@ -1,9 +1,50 @@
-@import  "../global/_variables";
+@import "../global/_variables";
 
 .cards-wrap {
   justify-content: center;
   padding-left: 41px;
+}
 
+.disabled {
+  cursor: default;
+  &:hover {
+    .name {
+      color: $main_5 !important;
+    }
+    .description {
+      color: $main_4 !important;
+    }
+    .icon {
+      color: $main_5;
+    }
+  }
+  .scui-card {
+    border-left: 8px solid $main_5;
+    .card-disabled {
+      position: absolute;
+      font-weight: 700;
+      font-size: 21px;
+      color: $main_5;
+      padding-left: 16px;
+      padding-top: 16px;
+    }
+    .scui-overlay {
+      display: none;
+    }
+    .content {
+      .name {
+        color: $main_5;
+        pointer-events: none;
+      }
+      .description {
+        color: $main_4;
+        pointer-events: none;
+      }
+      .icon {
+        color: $main_5
+      }
+    }
+  }
 }
 
 .scui-card {
@@ -12,38 +53,53 @@
   margin-right: 16px;
   margin-bottom: 16px;
   height: 224px;
-  background: $col_2;
-  border-left: 8px solid $col_1;
+  background: $blank_2;
+  border-left: 8px solid $prim_5;
 
   &.active {
     .content {
-      color: $col_2;
+      color: $blank_2;
+    }
+  }
+
+  &:hover {
+    .content {
+      .name {
+        color: $blank_2;
+      }
+      .description {
+        color: $prim_3;
+      }
     }
   }
 
   .content {
     position: absolute;
-    left: 28px;
+    left: 16px;
     right: 23px;
     bottom: 22px;
     z-index: 1;
-    color: $col_3;
+    color: $blank_1;
 
     .name {
-      font-size: 27px;
-      margin-bottom: 9px;
-      font-weight: 500;
+      font-size: 21px;
+      margin-bottom: 5px;
+      font-weight: 300;
+      color: $main_9;
     }
 
     .description {
       font-weight: 300;
+      color: $main_6;
+      font-size: 21px;
     }
 
     .icon {
-      font-size: 34px;
+      font-size: 28px;
       right: 0;
       position: absolute;
       bottom: 3px;
+      color: $main_9;
     }
   }
 }

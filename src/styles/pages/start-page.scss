@@ -1,0 +1,52 @@
+@import "../global/_variables";
+
+$maxWidth: 1280px;
+
+.start-page {
+  background: $main_1;
+
+  .scui-content {
+    max-width: $maxWidth;
+    margin: auto;
+    background: $main_1;
+  }
+  .start-page-header {
+    background: $blank_2;
+    position: absolute;
+    top: 0;
+    left: 64px;
+    right: 0;
+    height: 64px;
+    border-bottom: 1px solid $main_3;
+    .start-page-header-inner {
+      max-width: $maxWidth;
+      margin: auto;
+      padding-left: 56px;
+    }
+  }
+  .start-page-top-content {
+    margin-bottom: 12px;
+    margin-top: 64px;
+    &.cards-wrap {
+      justify-content: left;
+      padding-left: 53px;
+    }
+    .start-page-top-label {
+      font-weight: 300;
+      font-size: 32px;
+      padding-left: 16px;
+      padding-top: 8px;
+    }
+    .logo {
+      height: 50px;
+    }
+  }
+  .start-page-pills {
+    justify-content: left;
+    padding-left: 56px;
+    margin-bottom: 88px;
+    .pill {
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+@import "../global/_variables";
+
+.scui-input {
+  &.disabled {
+    pointer-events: none;
+
+    .scui-input-label {
+      color: $main_4;
+      text-transform: uppercase;
+    }
+
+    .scui-input-field {
+      color: $main_5;
+      border-bottom: 1px solid $main_2;
+    }
+  }
+
+  &.scui-focus {
+    .scui-input-field {
+      border-bottom: 1px solid $prim_4;
+      background: $prim_1;
+      font-weight: 300;
+    }
+
+    .scui-input-label {
+      color: $prim_5;
+      text-transform: uppercase;
+    }
+  }
+
+  &.scui-error {
+    .scui-input-field {
+      border-bottom: 1px solid $sec_2;
+      background: $sec_3;
+    }
+
+    .scui-input-label {
+      color: $sec_2;
+      text-transform: uppercase;
+    }
+
+    .scui-input-messages {
+      font-weight: 300 !important;
+    }
+  }
+
+  .scui-input-label {
+    color: $main_5;
+    height: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-top: 10px;
+  }
+
+  .scui-input-field {
+    height: 40px;
+    width: 100%;
+    font-size: 15px;
+    padding-left: 12px;
+    background: $main_1;
+    font-weight: 300;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $main_3;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .scui-input-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 13px;
+    font-weight: 400;
+    height: 24px;
+    color: #868686;
+  }
+
+  .scui-input-messages {
+    display: flex;
+    align-items: flex-end;
+    font-size: 13px;
+    color: $sec_2;
+  }
+
+}
+
+.scui-textarea {
+  &.disabled {
+    .textarea-field {
+      border: 1px dashed $main_3;
+    }
+  }
+
+  .scui-input-label {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 32px;
+    color: $main_5;
+    text-transform: uppercase;
+  }
+
+  .textarea-field {
+    padding: 16px;
+    background: $main_1;
+    border: 1px solid $main_3;
+    width: 100%;
+    color: $blank_1;
+    font-weight: 300;
+    font-size: 15px;
+    background: $main_1;
+    min-height: 190px;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif;
+
+    &:focus {
+      border-color: $prim_5;
+      background: $prim_1;
+    }
+  }
+
+  .scui-input-counter {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    line-height: 32px;
+    font-size: 13px;
+  }
+
+  &.error {
+    .scui-input-label {
+      color: $sec_2;
+      text-transform: uppercase;
+    }
+
+    .textarea-field {
+      border: 1px solid $sec_2;
+      background: $main_1;
+    }
+
+    .textarea-error {
+      color: $sec_2;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 32px;
+    }
+  }
+
+}

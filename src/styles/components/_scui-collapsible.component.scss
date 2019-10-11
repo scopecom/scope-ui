@@ -1,0 +1,59 @@
+.scui-collapsible {
+  background: $main_1;
+  padding: 0 16px 0 16px;
+  &.expanded {
+    padding-bottom: 40px;
+  }
+
+  .collapsible-controls {
+    padding-top: 10px;
+    border-top: 1px solid $main_3;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $main_5;
+    .icon-down-arrow {
+      padding-right: 3px;
+    }
+    .group {
+      cursor: pointer;
+      .icon-right-arrow {
+        margin-left: -2px;
+        padding-right: 4px;
+      }
+      &:hover {
+        color: $blank_1;
+      }
+    }
+    .label {
+      padding-left: 4px;
+      font-weight: 500;
+      vertical-align: 1px;
+      font-size: 13px;
+    }
+    .icon-wrap {
+      display: inline-block;
+      width: 40px;
+      height: 39px;
+      position: relative;
+      top: -10px;
+      .icon {
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 11px;
+        &:hover {
+          color: $blank_1;
+        }
+      }
+    }
+  }
+  .collapsible-content {
+    transition: all 1.3s linear;
+    background: $main_3;
+    padding: 8px;
+    min-height: 40px;
+  }
+}

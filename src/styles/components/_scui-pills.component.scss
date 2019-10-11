@@ -1,0 +1,11 @@
+@import "../global/_variables";
+
+.pill {
+  font-size: 14px;
+  border: 1px solid $main_4;
+  padding: 6px 16px;
+  border-radius: 16px;
+  margin-right: 8px;
+  font-weight: 300;
+  height: 32px;
+}

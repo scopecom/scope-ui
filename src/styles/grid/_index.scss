@@ -6,7 +6,7 @@
 
 .scui-content {
   flex: 1;
-  padding: 24px;
+  overflow:hidden;
 }
 
 :root {
@@ -30,6 +30,8 @@
 .scui-container-fluid, .scui-container {
   margin-right: auto;
   margin-left: auto;
+  background: $main_1;
+  height:100vh;
 }
 
 .scui-container-fluid {
@@ -42,9 +44,12 @@
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
-  flex-wrap: wrap;
   margin-right: var(--gutter-compensation, -0.5rem);
   margin-left: var(--gutter-compensation, -0.5rem);
+}
+
+.scui-row-wrap {
+  flex-wrap: wrap;
 }
 
 .scui-row.scui-reverse {

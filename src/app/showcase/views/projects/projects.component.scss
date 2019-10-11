@@ -8,7 +8,7 @@
 }
 
 .import-progress {
-  background-color: $col_8;
+  background-color: $main_3;
   height: 8px;
 }
 
@@ -21,12 +21,12 @@
   .tab-nav {
     display: flex;
     flex-direction: row;
-    border-bottom: 8px solid $col_3;
+    border-bottom: 8px solid $blank_1;
 
     .tab {
-      color: $col_3;
+      color: $blank_1;
       padding: 6px 20px;
-      background: $col_3;
+      background: $blank_1;
       margin-right: 5px;
     }
   }

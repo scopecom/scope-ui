@@ -1,0 +1,38 @@
+@import "../global/_variables";
+
+.scui-project-selector {
+  .scui-project-selector-label {
+    color: $main_5;
+    height: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .selected-projects {
+    position: relative;;
+    height: 40px;
+    background: $prim_1;
+    border-bottom: 1px solid $blank_2;
+    padding: 12px 16px 3px 16px;
+    .icon-i-remove {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 20px;
+      &:hover {
+        color: $prim_4;
+      }
+    }
+    .project-label {
+      font-size: 15px;
+      font-weight: 300;
+      padding-left: 8px;
+      vertical-align: 2px;
+    }
+  }
+  .no-items {
+    visibility: hidden;
+  }
+}

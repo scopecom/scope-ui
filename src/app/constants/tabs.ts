@@ -1,11 +1,15 @@
 export const Tabs = [
   {
-    title: 'FACEBOOK',
+    title: 'DEFAULT',
   },
   {
-    title: 'TWITTER',
+    title: 'DEFAULT',
   },
   {
-    title: 'LINKEDIN',
+    title: 'ACTIVE',
+  },
+  {
+    title: 'DISABLED',
+    disabled: true
   }
 ];

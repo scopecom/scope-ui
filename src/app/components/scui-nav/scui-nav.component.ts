@@ -7,7 +7,7 @@ import { ScUiMenuItem } from '../../interfaces';
     <aside class="scui-nav">
       <header class="nav-header" *ngIf="logo">
         <a [routerLink]="[logo.route]"
-           scuiBgHover="#2A00A0"
+           scuiBgHover="#004FE5"
            class="nav-item"
            [routerLinkActive]="activeClass"
            [ngClass]="logo.cssClass">
@@ -17,7 +17,7 @@ import { ScUiMenuItem } from '../../interfaces';
       <nav class="nav-items">
         <a class="nav-item"
            *ngFor="let menuItem of menuItems"
-           scuiBgHover="#2A00A0"
+           scuiBgHover="#004FE5"
            [routerLink]="[menuItem.route]"
            [routerLinkActive]="activeClass">
           <span class="icon" [ngClass]="menuItem.iconClass"></span>
@@ -25,7 +25,7 @@ import { ScUiMenuItem } from '../../interfaces';
       </nav>
       <footer class="nav-footer" *ngIf="footer">
         <a class="nav-item"
-           scuiBgHover="#2A00A0"
+           scuiBgHover="#004FE5"
            *ngFor="let menuItem of footer"
            [routerLink]="[menuItem.route]"
            [routerLinkActive]="activeClass">

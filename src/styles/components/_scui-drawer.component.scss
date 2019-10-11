@@ -1,4 +1,4 @@
-@import  "../global/_variables";
+@import "../global/_variables";
 
 .scui-drawer {
   min-height: 100vh;
@@ -6,11 +6,10 @@
   overflow: auto;
   display: flex;
   flex-direction: row;
-  max-width: 300px;
 
   .drawer-inner {
-    background-color: $col_7;
-    width: 100%;
+    background-color: $blank_2;
+    width: 420px;
   }
 
   &.drawer-pos-left {
@@ -19,17 +18,29 @@
 
   &.collapsed {
     z-index: -1;
+    background: $main_1;
+    .drawer-collapse {
+      background-color: $main_4 !important;
+    }
   }
 
   .drawer-collapse {
     width: 8px;
     min-height: 100vh;
     height: 100%;
-    background-color: $col_8;
+    background-color: $main_3;
     cursor: pointer;
-
     &:hover {
-      background-color: #3399ff;
+      background-color: $prim_4 !important;
     }
+  }
+  .icon-zoom-99 {
+    margin-left: -17px;
+    opacity: 0;
+  }
+}
+.submenu-nav-item:hover {
+  .icon-zoom-99 {
+    opacity: 1;
   }
 }

@@ -61,7 +61,7 @@ import {ScUiFile} from '../../interfaces';
       </div>
       <div class="published-overlay">
         <div class="published-files-header">
-          <span class="files">Published Files</span>
+          <span class="files">Publications</span>
           <span (click)="toggleOverlay()" class="icon icon-e-remove"></span>
         </div>
         <div class="published-files-content">
@@ -70,7 +70,7 @@ import {ScUiFile} from '../../interfaces';
               <span class="scheduled-item-wrap">
                 <span class="icon {{ channelsConfig[item.type].icon }}"></span>
               </span>
-              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. hh:mm' }}</span>
+              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. HH:mm' }}</span>
               <span class="settings">
                 <span class="icon icon-settings-gear"></span>
                 <span class="icon icon-bin"></span>
@@ -78,7 +78,7 @@ import {ScUiFile} from '../../interfaces';
             </div>
             <div class="published-item" *ngIf="item.status === statusPublished">
               <span class="icon {{ channelsConfig[item.type].icon }}"></span>
-              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. hh:mm' }}</span>
+              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. HH:mm' }}</span>
             </div>
           </div>
         </div>

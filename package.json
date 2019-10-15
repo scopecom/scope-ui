@@ -17,7 +17,7 @@
     "minify-css": "gulp",
     "scope-ui": "run-s clean packagr minify-css"
   },
-  "peerDependencies": {
+  "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.6",
     "@angular/animations": "^8.2.9",
     "@angular/cdk": "^8.2.2",
@@ -87,5 +87,6 @@
   "bugs": {
     "url": "https://github.com/scopecom/scope-ui/issues"
   },
-  "homepage": "https://github.com/scopecom/scope-ui#readme"
+  "homepage": "https://github.com/scopecom/scope-ui#readme",
+  "dependencies": {}
 }

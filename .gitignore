@@ -39,6 +39,9 @@ testem.log
 /typings
 .firebase
 
+# local scripts
+local.sh
+
 # System Files
 .DS_Store
 Thumbs.db

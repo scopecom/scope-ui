@@ -1,18 +1,18 @@
-import {moduleMetadata, storiesOf} from '@storybook/angular';
-import {action} from '@storybook/addon-actions';
-import {CommonModule} from '@angular/common';
-import {ScUiCardComponent} from '../app/components/scui-card/scui-card.component';
-import {ButtonListStub} from '../app/constants/button.list';
-import {BgHoverDirective} from '../app/directives/bg-hover.module';
-import {ScUiDrawerComponent, ScUiDrawerNavComponent} from '../app/components/scui-drawer/scui-drawer.component';
-import {ScUiNavComponent} from '../app/components/scui-nav/scui-nav.component';
-import {RouterTestingModule} from '@angular/router/testing';
-import {AppMenu, AppMenuFooter, AppMenuLogo} from '../app/constants/app.menu';
-import {SubmenuStub1, SubmenuStub2} from '../app/constants/submenu';
-import {ScUiTabsComponent} from '../app/components/scui-tabs/scui-tabs.component';
-import {DragulaModule} from 'ng2-dragula';
-import {MatMenuModule} from '@angular/material/menu';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { moduleMetadata, storiesOf } from '@storybook/angular';
+import { action } from '@storybook/addon-actions';
+import { CommonModule } from '@angular/common';
+import { ScUiCardComponent } from '../app/components/scui-card/scui-card.component';
+import { ButtonListStub } from '../app/constants/button.list';
+import { BgHoverDirective } from '../app/directives/bg-hover.module';
+import { ScUiDrawerComponent, ScUiDrawerNavComponent } from '../app/components/scui-drawer/scui-drawer.component';
+import { ScUiNavComponent } from '../app/components/scui-nav/scui-nav.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppMenu, AppMenuFooter, AppMenuLogo } from '../app/constants/app.menu';
+import { SubmenuStub1, SubmenuStub2 } from '../app/constants/submenu';
+import { ScUiTabsComponent } from '../app/components/scui-tabs/scui-tabs.component';
+import { DragulaModule } from 'ng2-dragula';
+import { MatMenuModule } from '@angular/material';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 storiesOf('Menus', module)

@@ -1,10 +1,10 @@
 import 'hammerjs';
-import {moduleMetadata, storiesOf} from '@storybook/angular';
-import {FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {ScUiFormControlsModule} from '../app/components/form-controls/form-controls.module';
-import {ScuiDropdownModule} from '../app/components/scui-dropdown/scui-dropdown.module';
-import {ScUiProjectSelectorModule} from '../app/components/scui-project-selector/scui-project-selector.module';
+import { moduleMetadata, storiesOf } from '@storybook/angular';
+import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ScUiFormControlsModule } from '../app/components/form-controls/form-controls.module';
+import { ScuiDropdownModule } from '../app/components/scui-dropdown/scui-dropdown.module';
+import { ScUiProjectSelectorModule } from '../app/components/scui-project-selector/scui-project-selector.module';
 import {
   MatAutocompleteModule,
   MatCheckboxModule,
@@ -25,7 +25,7 @@ const ctrl2 = new FormControl(new Date());
 ctrl1.disable();
 
 const fromGroup = new FormBuilder().group({
-  name:  new FormControl('', {
+  name: new FormControl('', {
     validators: Validators.email,
     updateOn: 'blur'
   })
@@ -364,19 +364,4 @@ storiesOf('Inputs and Controls', module)
         id: 3
       }]
     }
-  }))
-  .add('Timepicker', () => ({
-  template: `<div style="padding:40px; background:white;">
-                    <scui-time-picker [formControl]="myControl"></scui-time-picker>
-             </div>`,
-  props: {
-    myControl: ctrl2
-  }
-})).add('Timepicker disabled', () => ({
-  template: `<div style="padding:40px; background:white;">
-                    <scui-time-picker [formControl]="myControl">d</scui-time-picker>
-             </div>`,
-  props: {
-    myControl: ctrl1
-  }
-}));
+  }));

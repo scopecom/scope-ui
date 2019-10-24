@@ -22,7 +22,7 @@ import {
 })
 export class ScUiArticleImageComponent implements OnInit {
   @Input() label1 = 'Sorry.';
-  @Input() label2 = 'No preview available this time.';
+  @Input() label2 = 'No preview image available.';
   @Input() photoUrl: string;
   @Input() url: string;
   @Input() state: string;

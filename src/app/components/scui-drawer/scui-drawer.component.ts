@@ -70,11 +70,11 @@ export class ScUiDrawerComponent implements OnChanges {
           *ngFor="let item of subMenuItems"
           class="submenu-nav-item handle">
         <div class="list-item">
-          <span  class="icon icon1 icon-zoom-99"></span>
+          <span *ngIf="sortable" class="icon icon1 icon-zoom-99"></span>
           <span class="icon icon1 icon-app-store"></span>
           <a [routerLink]="item.routerLink" class="submenu-nav-label">{{item.name || item.title}}</a>
           <span class="submenu-nav-actions">
-            <button class="icon-btn-empty btn-edit" (click)="editItem(item, $event)">Edit</button>
+            <button class="btn-edit" (click)="editItem(item, $event)">Edit</button>
           </span>
         </div>
       </li>

@@ -21,7 +21,7 @@
     font-weight: 400;
     font-size: 15px;
     height: 40px;
-    padding: 12px 12px 0px 24px;
+    padding: 12px 12px 0 24px;
   }
 
   .submenu-title {
@@ -114,7 +114,7 @@
 
   &.gu-transit {
     background: #f2f2f2 !important;
-    opacity: 1;
+    opacity: 0.2;
 
     * {
       visibility: hidden;
@@ -144,6 +144,7 @@
     width: 100%;
     line-height: 18px;
     align-items: center;
+    pointer-events: none;
 
     a {
       color: $main_7;
@@ -166,5 +167,16 @@
 
   .icon-btn-empty {
     color: $main_4;
+  }
+
+  .btn-edit {
+    padding: 3px 5px;
+    color: $blank_1;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+      color: $prim_4;
+    }
   }
 }

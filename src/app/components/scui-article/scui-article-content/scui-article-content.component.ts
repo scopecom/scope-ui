@@ -9,8 +9,8 @@ import {
   template: `
     <div class="scui-article-content {{ mode }}">
       <header class="scui-article-header">
-        <time>{{ date | date:'d.M.yyyy' }}</time>
-        -
+        <time *ngIf="date && date !== ''">{{ date | date:'d.M.yyyy' }}</time>
+        <ng-container *ngIf="date && date !== ''">-</ng-container>
         <span>{{ source }}</span>
       </header>
       <div class="scui-article-desc">
@@ -21,10 +21,10 @@ import {
 })
 export class ScuiArticleContentComponent implements OnInit {
   @Input() mode: string;
-  @Input() date = '01/27/2019';
+  @Input() date: string;
   @Input() source = 'Source';
   @Input() url = '';
-  @Input() headline: 'Headline';
+  @Input() headline = 'Headline';
 
   constructor() {
   }

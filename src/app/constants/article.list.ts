@@ -5,7 +5,7 @@ export const ArticleListStub: ScUiArticle[] = [
     title: 'Kress News',
     description: 'Headline',
     url: 'http://google.com',
-    date: '01/27/2019',
+    date: '',
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'default',
     publisher: 'Source',

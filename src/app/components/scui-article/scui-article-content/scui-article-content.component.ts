@@ -10,7 +10,7 @@ import {
     <div class="scui-article-content {{ mode }}">
       <header class="scui-article-header">
         <time *ngIf="date && date !== ''">{{ date | date:'d.M.yyyy' }}</time>
-        <ng-container *ngIf="date && date !== ''">-</ng-container>
+        <span *ngIf="date && date !== ''"> - </span>
         <span>{{ source }}</span>
       </header>
       <div class="scui-article-desc">

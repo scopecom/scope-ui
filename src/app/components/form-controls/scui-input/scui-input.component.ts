@@ -11,6 +11,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
           {{label}}
         </div>
         <input [type]="inputType"
+               [placeholder]="placeholder"
                (input)="save($event)"
                (focus)="inputState = 'scui-focus'"
                (blur)="inputState = ''; onTouched($event)"
@@ -35,6 +36,7 @@ export class ScUiInputComponent implements ControlValueAccessor {
   @Input() inputType = 'text';
   @Input() isInvalid: boolean;
   @Input() styleClass: string;
+  @Input() placeholder = '';
   @Input() maxLength: number;
   @Input() label: string;
 

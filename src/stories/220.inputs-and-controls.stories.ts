@@ -114,7 +114,7 @@ storiesOf('Inputs and Controls', module)
     template: `<div style="background: white;padding: 20px; width:400px">
                  <form [formGroup]="myForm">
                  <div class="scui-form-field">
-                  <scui-input formControlName="name" [maxLength]="maxLength" [label]="label"></scui-input>
+                  <scui-input formControlName="name" [placeholder]="'Test'" [maxLength]="maxLength" [label]="label"></scui-input>
                  </div>
                </form>
                </div>`,

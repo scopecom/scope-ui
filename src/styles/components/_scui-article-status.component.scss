@@ -204,7 +204,7 @@
   }
 
   .published-overlay {
-    background: $prim_5;
+    background: $main_2;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -213,6 +213,7 @@
     transition: height 0.4s linear;
     overflow: hidden;
     visibility: hidden;
+    border: 8px solid $main_3;
 
     .published-files-header {
       display: flex;
@@ -226,18 +227,20 @@
       }
 
       .files {
-        color: $blank_2;
         font-weight: 500;
         font-size: 18px;
       }
 
       .icon {
-        color: $blank_2;
         font-size: 26px;
         position: relative;
         top: -5px;
         right: -3px;
         cursor: pointer;
+
+        &:hover {
+          color: $prim_5;
+        }
       }
     }
 

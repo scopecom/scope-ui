@@ -66,21 +66,24 @@ import { ScUiFile } from '../../interfaces';
         </div>
         <div class="published-files-content">
           <div *ngFor="let item of outputChannels">
-            <div class="scheduled-item" *ngIf="item.status === statusScheduled">
-              <span class="scheduled-item-wrap">
+            <div *ngIf="item.length > 0 else noResults">
+              <div class="scheduled-item" *ngIf="item.status === statusScheduled">
+                <span class="scheduled-item-wrap">
+                  <span class="icon {{ channelsConfig[item.type].icon }}"></span>
+                </span>
+                <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. HH:mm' }}</span>
+                <span class="settings">
+                  <span class="icon icon-settings-gear"></span>
+                  <span class="icon icon-bin"></span>
+                </span>
+              </div>
+              <div class="published-item" *ngIf="item.status === statusPublished">
                 <span class="icon {{ channelsConfig[item.type].icon }}"></span>
-              </span>
-              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. HH:mm' }}</span>
-              <span class="settings">
-                <span class="icon icon-settings-gear"></span>
-                <span class="icon icon-bin"></span>
-              </span>
-            </div>
-            <div class="published-item" *ngIf="item.status === statusPublished">
-              <span class="icon {{ channelsConfig[item.type].icon }}"></span>
-              <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. HH:mm' }}</span>
+                <span class="date-published">{{ item.publicationDate | date: 'dd. MM. yyyy. HH:mm' }}</span>
+              </div>
             </div>
           </div>
+          <div #noResults>This publication has not been published on any channel.</div>
         </div>
       </div>
     </article>

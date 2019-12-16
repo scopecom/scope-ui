@@ -65,8 +65,8 @@ import { ScUiFile } from '../../interfaces';
           <span (click)="toggleOverlay()" class="icon icon-e-remove"></span>
         </div>
         <div class="published-files-content">
-          <div *ngFor="let item of outputChannels">
-            <div *ngIf="item.length > 0 else noResults">
+          <div *ngIf="outputChannels?.lenth > 0; else noResults">
+            <div *ngFor="let item of outputChannels">
               <div class="scheduled-item" *ngIf="item.status === statusScheduled">
                 <span class="scheduled-item-wrap">
                   <span class="icon {{ channelsConfig[item.type].icon }}"></span>
@@ -83,7 +83,7 @@ import { ScUiFile } from '../../interfaces';
               </div>
             </div>
           </div>
-          <div #noResults>This publication has not been published on any channel.</div>
+          <ng-template #noResults>This publication has not been published on any channel.</ng-template>
         </div>
       </div>
     </article>

@@ -65,7 +65,7 @@ import { ScUiFile } from '../../interfaces';
           <span (click)="toggleOverlay()" class="icon icon-e-remove"></span>
         </div>
         <div class="published-files-content">
-          <div *ngIf="outputChannels?.lenth > 0; else noResults">
+          <div *ngIf="outputChannelsTotal > 0; else noResults;">
             <div *ngFor="let item of outputChannels">
               <div class="scheduled-item" *ngIf="item.status === statusScheduled">
                 <span class="scheduled-item-wrap">

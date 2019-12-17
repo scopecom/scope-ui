@@ -65,6 +65,7 @@
       height: 408px;
       padding: 24px;
       visibility: visible;
+      color: $main_9;
     }
   }
 
@@ -255,7 +256,7 @@
         padding-top: 5px;
 
         .icon {
-          color: rgba(255, 255, 255, 0.75);
+          color: $prim_5;
           position: relative;
           top: 2px;
           display: inline-block;
@@ -263,7 +264,6 @@
         }
 
         .date-published {
-          color: rgba(255, 255, 255, 0.75);
           font-weight: 300;
           font-size: 15px;
         }
@@ -291,7 +291,6 @@
         }
 
         .date-published {
-          color: $blank_2;
           font-weight: 300;
           font-size: 15px;
           vertical-align: 10px;
@@ -302,7 +301,6 @@
         }
 
         .settings {
-          color: $blank_2;
           position: relative;
           top: -7px;
 

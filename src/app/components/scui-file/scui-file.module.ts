@@ -39,13 +39,13 @@ import { ScUiFile } from '../../interfaces';
                       <span class="icon icon-pen-2"></span>
                       <span class="output-action-label"> Edit</span>
                     </div>
+                    <div class="output-action" (click)="archiveFile()" mat-menu-item>
+                      <span class="icon icon-box"></span>
+                      <span class="output-action-label"> {{ file?.status === 'ARCHIVED' ? 'Un-Archive' : 'Archive' }}</span>
+                    </div>
                     <!--                    <div class="output-action" mat-menu-item>-->
                     <!--                      <span class="icon icon-preview"></span>-->
                     <!--                      <span class="output-action-label"> View</span>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="output-action" mat-menu-item>-->
-                    <!--                      <span class="icon icon-box"></span>-->
-                    <!--                      <span class="output-action-label"> Archive</span>-->
                     <!--                    </div>-->
                     <!--                    <div class="output-action" mat-menu-item>-->
                     <!--                      <span class="icon icon-send"></span>-->
@@ -95,6 +95,7 @@ export class ScUiFileComponent implements OnInit {
   @Input() file: ScUiFile;
   @Input() outputChannels: any;
   @Output() fileSelect = new EventEmitter<ScUiFile>();
+  @Output() fileUpdate = new EventEmitter<ScUiFile>();
   outputChannelsTotal = 0;
   overlayActive: boolean;
   readonly statusPublished = 'PUBLISHED';
@@ -151,6 +152,13 @@ export class ScUiFileComponent implements OnInit {
 
   selectFile() {
     this.fileSelect.emit(this.file);
+  }
+
+  archiveFile() {
+    this.fileSelect.emit({
+      ...this.file,
+      status: this.file.status === 'ARCHIVED' ? 'ACTIVE' : 'ARCHIVED'
+    });
   }
 
 }

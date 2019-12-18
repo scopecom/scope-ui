@@ -155,7 +155,7 @@ export class ScUiFileComponent implements OnInit {
   }
 
   archiveFile() {
-    this.fileSelect.emit({
+    this.fileUpdate.emit({
       ...this.file,
       status: this.file.status === 'ARCHIVED' ? 'ACTIVE' : 'ARCHIVED'
     });

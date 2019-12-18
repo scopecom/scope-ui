@@ -7,4 +7,5 @@ export interface ScUiFile {
   status: any;
   createdAt: Date;
   updatedAt: Date;
+  hasScheduledPublications?: boolean;
 }

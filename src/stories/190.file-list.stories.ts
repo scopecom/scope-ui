@@ -142,6 +142,10 @@ storiesOf('File Lists', module)
           status: ''
         },
         {
+          type: 'PARDOT',
+          status: ''
+        },
+        {
           type: 'HUBSPOT',
           status: ''
         }

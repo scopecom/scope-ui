@@ -124,7 +124,10 @@ export class ScUiFileComponent implements OnInit {
       icon: 'icon-google-drive'
     },
     SALES_FORCE: {
-      icon: 'icon-typo3'
+      icon: 'icon-salesforce-icon'
+    },
+    PARDOT: {
+      icon: 'icon-salesforce-icon'
     },
     SCOPE_TO_EMAIL: {
       icon: 'icon-mail-block'

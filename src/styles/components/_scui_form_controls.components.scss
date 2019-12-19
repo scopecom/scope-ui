@@ -22,13 +22,16 @@
     padding: 24px;
   }
   &.form-default {
-    border-color: $main_3
+    border-color: $main_3;
   }
   &.form-active {
-    border-color: $prim_4
+    border-color: $prim_4;
   }
   &.form-error {
-    border-color: $sec_2
+    border-color: $sec_2;
+  }
+  &.form-success {
+    border-color: $info_2;
   }
 }
 

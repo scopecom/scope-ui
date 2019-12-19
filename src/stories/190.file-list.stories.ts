@@ -69,6 +69,10 @@ storiesOf('File Lists', module)
           status: ''
         },
         {
+          type: 'PARDOT',
+          status: ''
+        },
+        {
           type: 'HUBSPOT',
           status: ''
         }
@@ -135,6 +139,10 @@ storiesOf('File Lists', module)
         },
         {
           type: 'SALES_FORCE',
+          status: ''
+        },
+        {
+          type: 'PARDOT',
           status: ''
         },
         {

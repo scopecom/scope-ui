@@ -43,13 +43,13 @@ export class ScUiEditorArticleComponent implements OnInit {
            class="editor-article-img">
       </div>
       <div class="scui-editor-article-box-meta">
+      <div class="box-info">
+          <strong class="scui-editor-article-box-title">Title</strong>
+          <span class="scui-editor-article-box-content">{{article.articleTitle}}</span>
+        </div>
         <div class="box-info">
           <strong class="scui-editor-article-box-title">Source</strong>
           <span class="scui-editor-article-box-content">{{article.articleSource}}</span>
-        </div>
-        <div class="box-info">
-          <strong class="scui-editor-article-box-title">Title</strong>
-          <span class="scui-editor-article-box-content">{{article.articleTitle}}</span>
         </div>
         <div class="box-info">
           <strong class="scui-editor-article-box-title">Comment</strong>

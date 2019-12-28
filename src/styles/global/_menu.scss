@@ -35,12 +35,12 @@
     font-size: 14px;
     color: $main_5;
     margin: 24px 0 8px 0;
-    cursor: pointer;
     height: 40px;
     padding-left: 24px;
     padding-top: 14px;
     position: relative;
     .icon {
+      text-decoration: none;
       position: absolute;
       right: 16px;
       font-size: 14px;

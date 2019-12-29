@@ -56,7 +56,7 @@ export class ScUiDrawerComponent implements OnChanges {
   template: `
     <nav class="submenu-nav">
       <h2 class="submenu-nav-title">{{ title }}n ({{ subMenuItems.length }})
-        <a class="icon icon-e-add">{{ link }}</a>
+        <a href="link" class="icon icon-e-add"></a>
       </h2>
       <ul class="submenu-nav-items">
         <div *ngIf="sortable; else itemsTpl" [dragula]="sortable" [dragulaModel]="subMenuItems">

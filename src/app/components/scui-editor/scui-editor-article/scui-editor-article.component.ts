@@ -48,12 +48,13 @@ export class ScUiEditorArticleComponent implements OnInit {
           <span class="scui-editor-article-box-content">{{article.articleTitle}}</span>
         </div>
         <div class="box-info">
-          <strong class="scui-editor-article-box-title">Source</strong>
+          <strong class="scui-editor-article-box-title">Publisher</strong>
           <span class="scui-editor-article-box-content">{{article.articleSource}}</span>
         </div>
         <div class="box-info">
           <strong class="scui-editor-article-box-title">Comment</strong>
-          <span class="scui-editor-article-box-content">{{article.articleComment}}</span>
+          <span class="scui-editor-article-box-content" *ngIf="article.articleComment; else noComment">{{article.articleComment}}</span>
+          <ng-template #noComment>(no comment)</ng-template>
         </div>
       </div>
     </div>

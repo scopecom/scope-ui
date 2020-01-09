@@ -74,7 +74,7 @@ export class ScUiDrawerComponent implements OnChanges {
           <span class="icon icon1 icon-app-store"></span>
           <a [routerLink]="item.routerLink" class="submenu-nav-label">{{item.name || item.title}}</a>
           <span class="submenu-nav-actions">
-            <button class="btn-edit" (click)="editItem(item, $event)">Edit</button>
+            <button *ngIf="sortable === 'saved-searches'" class="btn-edit" (click)="editItem(item, $event)">Edit</button>
           </span>
         </div>
       </li>

@@ -15,6 +15,7 @@ import {
       </header>
       <div class="scui-article-desc">
         <h3><a [href]="url" target="_blank">{{headline}}</a></h3>
+        <p class="scui-article-desc__comment">{{comment}}</p>
       </div>
     </div>
   `,
@@ -25,6 +26,7 @@ export class ScuiArticleContentComponent implements OnInit {
   @Input() source = 'Source';
   @Input() url = '';
   @Input() headline = 'Headline';
+  @Input() comment = 'Comment';
 
   constructor() {
   }

@@ -13,7 +13,8 @@ import { ScUiArticle } from '../../interfaces';
                                 [url]="article.url"
                                 [mode]="article.mode"
                                 [headline]="article.title"
-                                [source]="article.publisher">
+                                [source]="article.publisher"
+                                [comment]="article.comment">
           </scui-article-content>
           <footer class="scui-article-footer">
 <!--            <div class="pills-box">-->
@@ -38,7 +39,8 @@ import { ScUiArticle } from '../../interfaces';
                                 [url]="article.url"
                                 [mode]="article.mode"
                                 [headline]="article.title"
-                                [source]="article.publisher">
+                                [source]="article.publisher"
+                                [comment]="article.comment">
           </scui-article-content>
           <footer class="scui-article-footer">
 <!--            <div class="pills-box">-->
@@ -59,7 +61,8 @@ import { ScUiArticle } from '../../interfaces';
                                 [url]="article.url"
                                 [mode]="article.mode"
                                 [headline]="article.title"
-                                [source]="article.publisher">
+                                [source]="article.publisher"
+                                [comment]="article.comment">
           </scui-article-content>
           <footer class="scui-article-footer">
             <span class="article-action" (click)="importArticle(article)">

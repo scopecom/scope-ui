@@ -9,6 +9,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'default',
     publisher: 'Source',
+    comment: 'Comment'
   },
   {
     title: 'Kress News',
@@ -18,6 +19,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'edit',
     publisher: 'Source',
+    comment: 'Comment',
     linked: true
   },
   {
@@ -28,6 +30,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'delete',
     publisher: 'Source',
+    comment: 'Comment'
   },
   {
     title: 'Kress News',
@@ -37,6 +40,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'imported',
     publisher: 'Source',
+    comment: 'Comment'
   },
   {
     title: 'Kress News',
@@ -47,6 +51,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: '',
     mode: 'default',
     publisher: 'Source',
+    comment: 'Comment',
   },
   {
     title: 'Kress News',
@@ -57,6 +62,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: '',
     mode: 'imported',
     publisher: 'Source',
+    comment: 'Comment',
   },
   {
     title: 'Kress News',
@@ -66,5 +72,6 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: '',
     mode: 'edit',
     publisher: 'Source',
+    comment: 'Comment',
   },
 ];

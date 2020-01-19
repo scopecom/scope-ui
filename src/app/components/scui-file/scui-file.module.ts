@@ -39,10 +39,16 @@ import { ScUiFile } from '../../interfaces';
                       <span class="icon icon-pen-2"></span>
                       <span class="output-action-label"> Edit</span>
                     </div>
-                    <div class="output-action" *ngIf="!file?.hasScheduledPublications" (click)="archiveFile()" mat-menu-item>
+                    <div class="output-action" *ngIf="file?.hasScheduledPublications; else scheduledPublication" (click)="archiveFile()" mat-menu-item>
                       <span class="icon icon-box"></span>
                       <span class="output-action-label"> {{ file?.status === 'ARCHIVED' ? 'Un-Archive' : 'Archive' }}</span>
                     </div>
+                    <ng-template #scheduledPublication>
+                      <div class="output-action disabled">
+                        <span class="icon icon-box"></span>
+                        <span class="output-action-label"> Archive</span>
+                      </div>
+                    </ng-template>
                     <!--                    <div class="output-action" mat-menu-item>-->
                     <!--                      <span class="icon icon-preview"></span>-->
                     <!--                      <span class="output-action-label"> View</span>-->

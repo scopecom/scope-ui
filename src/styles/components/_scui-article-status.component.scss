@@ -9,6 +9,8 @@
     padding-left: 12px;
 
     &.disabled {
+      line-height: 48px;
+
       .icon {
         color: $main_4;
       }

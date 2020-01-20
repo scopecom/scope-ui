@@ -36,10 +36,10 @@ import { ScUiFile } from '../../interfaces';
             <span [matMenuTriggerFor]="menu" class="icon icon-menu-ham-horz menu-trigger"></span>
                   <mat-menu class="output-actions" #menu="matMenu">
                     <div class="output-action" (click)="selectFile()" mat-menu-item>
-                      <span class="icon icon-pen-2"></span>
-                      <span class="output-action-label"> Edit</span>
+                      <span class="icon {{ file?.status === 'ARCHIVED' ? 'icon-preview' : 'icon-pen-2' }}"></span>
+                      <span class="output-action-label"> {{ file?.status === 'ARCHIVED' ? 'View' : 'Edit' }}</span>
                     </div>
-                    <div class="output-action" *ngIf="file?.hasScheduledPublications; else scheduledPublication" (click)="archiveFile()" mat-menu-item>
+                    <div class="output-action" *ngIf="!file?.hasScheduledPublications; else scheduledPublication" (click)="archiveFile()" mat-menu-item>
                       <span class="icon icon-box"></span>
                       <span class="output-action-label"> {{ file?.status === 'ARCHIVED' ? 'Un-Archive' : 'Archive' }}</span>
                     </div>

@@ -9,7 +9,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'default',
     publisher: 'Source',
-    comment: 'Zum Jahresabschluss veröffentlichte Netflix noch einmal einen Action-Kracher, dessen spektakuläre Szenen wohl alle Blockbuster 2019 toppen. Dieser Größenwahnsinn stammt von niemand anderem als Michael Bay und heißt 6 Underground. Zwar waren die Kritiker in ihrer Meinung gespalten, bei einem waren sich die meisten aber einig: Die Actionszenen in 6 Underground gehören zu den besten des Jahres. Ein Grund dafür: Der Charakter Four (Ben Hardy) ist Parkour-Meister und sorgt für einige atemberaubende Szenen - die fast alle komplett echt waren.',
+    comment: 'Comment',
   },
   {
     title: 'Kress News',
@@ -30,7 +30,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'delete',
     publisher: 'Source',
-    comment: 'Comment'
+    comment: 'Comment',
   },
   {
     title: 'Kress News',
@@ -40,7 +40,7 @@ export const ArticleListStub: ScUiArticle[] = [
     photoUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
     mode: 'imported',
     publisher: 'Source',
-    comment: 'Comment'
+    comment: 'Comment',
   },
   {
     title: 'Kress News',

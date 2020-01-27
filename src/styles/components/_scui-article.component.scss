@@ -74,12 +74,6 @@
             color: $main_7;
           }
         }
-        .scui-article-desc__comment {
-          color: $main_7;
-          margin-top: 8px;
-          font-size: 15px;
-          display: none;
-        }
       }
     }
 
@@ -114,12 +108,6 @@
           a {
             color: $main_7;
           }
-        }
-        .scui-article-desc__comment {
-          color: $main_7;
-          margin-top: 8px;
-          font-size: 15px;
-          display: none;
         }
       }
     }
@@ -188,12 +176,6 @@
             color: $main_7;
           }
         }
-        .scui-article-desc__comment {
-          color: $main_7;
-          margin-top: 8px;
-          font-size: 15px;
-          display: none;
-        }
       }
     }
 
@@ -224,6 +206,18 @@
       }
     }
 
+  }
+
+  .scui-article-footer__details {
+    color: $main_7;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .scui-article-desc__comment {
+    color: $main_7;
+    margin-top: 8px;
+    font-size: 14px;
   }
 
 }
@@ -266,12 +260,6 @@
           a {
             color: $main_7;
           }
-        }
-        .scui-article-desc__comment {
-          color: $main_7;
-          margin-top: 8px;
-          font-size: 15px;
-          display: none;
         }
       }
     }
@@ -319,12 +307,6 @@
           a {
             color: $main_7;
           }
-        }
-        .scui-article-desc__comment {
-          color: $main_7;
-          margin-top: 8px;
-          font-size: 15px;
-          display: none;
         }
       }
     }
@@ -397,12 +379,6 @@
           a {
             color: $main_7;
           }
-        }
-        .scui-article-desc__comment {
-          color: $main_7;
-          margin-top: 8px;
-          font-size: 15px;
-          display: none;
         }
       }
     }
@@ -542,7 +518,7 @@
     left: 0;
     right: 0;
     bottom: 1px;
-    padding: 10px 16px;
+    padding: 8px 16px;
 
     .pills-box {
       position: absolute;
@@ -649,11 +625,10 @@
         text-decoration: none;
       }
     }
-    .scui-article-desc__comment {
+    .scui-article-footer__details {
       color: $main_7;
       margin-top: 8px;
-      font-size: 15px;
-      display: none;
+      font-size: 14px;
     }
 
   }

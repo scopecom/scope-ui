@@ -1,8 +1,7 @@
 @import "../global/_variables";
 
 scui-editor-article {
-  width: 174px;
-  height: 174px;
+  width: 100%;
   position: relative;
   cursor: move;
   display: inline-flex;
@@ -10,15 +9,21 @@ scui-editor-article {
 }
 
 .scui-editor-article {
-  width: 174px;
-  height: 174px;
   position: relative;
   cursor: move;
+
+  .editor-article-image-wrap {
+    float: left;
+    width: 174px;
+    position: relative;
+    margin-right: 8px;
+  }
 
   .editor-article-overlay {
     position: absolute;
     visibility: hidden;
     height: 87px;
+    width: 174px;
     top: 0;
     left: 0;
     right: 0;
@@ -74,6 +79,18 @@ scui-editor-article {
       padding: 8px;
       font-size: 13px;
       font-weight: 300;
+      max-height: 87px;
+      overflow: hidden;
+    }
+
+    .editor-article-content-title {
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+
+    .editor-article-content-comment {
+      height: 60px;
+      overflow: hidden;
     }
   }
 

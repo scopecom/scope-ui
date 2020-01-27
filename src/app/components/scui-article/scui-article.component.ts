@@ -17,6 +17,11 @@ import { ScUiArticle } from '../../interfaces';
                                 [comment]="article.comment">
           </scui-article-content>
           <footer class="scui-article-footer">
+            <div class="scui-article-footer__details">
+              <time *ngIf="article.date && article.date !== ''">{{ article.date | date:'d.M.yyyy' }}</time>
+              <span *ngIf="article.date && article.date !== ''"> - </span>
+              <span>{{ article.publisher }}</span>
+            </div>
 <!--            <div class="pills-box">-->
 <!--              <span class="pill-info">-->
 <!--                <span class="value">2</span>-->
@@ -43,6 +48,11 @@ import { ScUiArticle } from '../../interfaces';
                                 [comment]="article.comment">
           </scui-article-content>
           <footer class="scui-article-footer">
+          <div class="scui-article-footer__details">
+            <time *ngIf="article.date && article.date !== ''">{{ article.date | date:'d.M.yyyy' }}</time>
+            <span *ngIf="article.date && article.date !== ''"> - </span>
+            <span>{{ article.publisher }}</span>
+          </div>
 <!--            <div class="pills-box">-->
 <!--              <span class="pill-info">-->
 <!--                <span class="value">2</span>-->
@@ -65,6 +75,11 @@ import { ScUiArticle } from '../../interfaces';
                                 [comment]="article.comment">
           </scui-article-content>
           <footer class="scui-article-footer">
+          <div class="scui-article-footer__details">
+            <time *ngIf="article.date && article.date !== ''">{{ article.date | date:'d.M.yyyy' }}</time>
+            <span *ngIf="article.date && article.date !== ''"> - </span>
+            <span>{{ article.publisher }}</span>
+          </div>
             <span class="article-action" (click)="importArticle(article)">
               <span class="icon icon-e-add"></span>
             </span>

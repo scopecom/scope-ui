@@ -141,9 +141,9 @@ storiesOf('Inputs and Controls', module)
   .add('Scope Textarea', () => ({
     template: `<div style="padding:20px; width:400px;background: white;" class="scui-form-field">
                  <form [formGroup]="myForm">
-                   <scui-textarea 
-                   formControlName="name" 
-                   [maxLength]="maxLength" 
+                   <scui-textarea
+                   formControlName="name"
+                   [maxLength]="maxLength"
                    [label]="label">This is the error message</scui-textarea>
                  </form>
                </div>
@@ -157,10 +157,10 @@ storiesOf('Inputs and Controls', module)
   .add('Scope Textarea disabled', () => ({
     template: `<div style="padding:20px; width:400px;background: white;" class="scui-form-field">
                  <form [formGroup]="myForm">
-                   <scui-textarea 
-                   formControlName="name" 
-                   [disabled]="disabled" 
-                   [maxLength]="maxLength" 
+                   <scui-textarea
+                   formControlName="name"
+                   [disabled]="disabled"
+                   [maxLength]="maxLength"
                    [label]="label">This is the error message</scui-textarea>
                  </form>
                </div>
@@ -294,7 +294,7 @@ storiesOf('Inputs and Controls', module)
   }))
   .add('Standard select', () => ({
     template: `<div style="padding:40px; background:white; ">
-                  <scui-dropdown [selectedOption]="selectedOption" [options]="options"></scui-dropdown>
+                  <scui-dropdown [disclaimerText]="disclaimerText" [selectedOption]="selectedOption" [options]="options"></scui-dropdown>
                </div>`,
     props: {
       options: [{
@@ -310,7 +310,8 @@ storiesOf('Inputs and Controls', module)
       selectedOption: {
         label: 'Select Project',
         id: 0
-      }
+      },
+      disclaimerText: `<p>This is disclaimer text that can be used for promoting multiple workspaces. For more information contact us at <a href="mailto:mail@thescope.com ">mail@thescope.com </a></p>`
     }
   }))
   .add('Project selector', () => ({

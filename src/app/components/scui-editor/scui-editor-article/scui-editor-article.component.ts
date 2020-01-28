@@ -18,7 +18,8 @@ import { ScUiArticle } from '../../../interfaces';
       <div class="editor-article-content-wrap">
         <div class="editor-article-content">
           <div class="editor-article-content-title">{{ article.title }}</div>
-          <div class="editor-article-content-comment">{{ article.comment }}</div>
+          <div class="editor-article-content-comment" *ngIf="article.comment; else noComment">{{ article.comment }}</div>
+          <ng-template #noComment>(no comment)</ng-template>
         </div>
       </div>
     </div>

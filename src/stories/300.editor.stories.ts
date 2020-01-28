@@ -24,7 +24,7 @@ storiesOf('Editor', module)
   }))
   .add('Content element on drag', () => ({
     template: `
-      <div style="background: #fff; padding: 20px;" class="gu-mirror">
+      <div style="background: #fff; padding: 20px; width: 100%;" class="gu-mirror">
         <scui-editor-element [elementMeta]="elementMeta"></scui-editor-element>
       </div>
     `,
@@ -37,7 +37,7 @@ storiesOf('Editor', module)
   }))
   .add('Editor Article default + hover', () => ({
     template: `
-    <div style="background: white;padding:20px;">
+    <div style="background: white;padding:20px; width: 100%;">
        <scui-editor-article [article]="articleList[0]"></scui-editor-article>
     </div>
     `,
@@ -47,7 +47,7 @@ storiesOf('Editor', module)
   }))
   .add('Editor Article default on drag', () => ({
     template: `
-    <div style="background: white;padding:20px;" class="gu-mirror">
+    <div style="background: white;padding:20px; width: 100%;" class="gu-mirror">
        <scui-editor-article [article]="articleList[0]"></scui-editor-article>
     </div>
     `,
@@ -57,7 +57,7 @@ storiesOf('Editor', module)
   }))
   .add('Editor Article linked + hover', () => ({
     template: `
-    <div style="background: white;padding:20px;">
+    <div style="background: white;padding:20px; width: 100%;">
        <scui-editor-article [article]="articleList[1]"></scui-editor-article>
     </div>
     `,
@@ -67,7 +67,7 @@ storiesOf('Editor', module)
   }))
   .add('Editor Article linked on drag', () => ({
     template: `
-    <div style="background: white;padding:20px;" class="gu-mirror">
+    <div style="background: white;padding:20px; width: 100%;" class="gu-mirror">
        <scui-editor-article [article]="articleList[1]"></scui-editor-article>
     </div>
     `,
@@ -77,7 +77,7 @@ storiesOf('Editor', module)
   }))
   .add('Editor Article In Article List', () => ({
     template: `
-    <div style="background: white;padding:20px;" >
+    <div style="background: white;padding:20px; width: 100%;" >
        <scui-editor-article-box [article]="articleItem"></scui-editor-article-box>
     </div>
     `,

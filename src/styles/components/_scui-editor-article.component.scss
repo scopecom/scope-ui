@@ -77,11 +77,13 @@ scui-editor-article {
     background: $main_2;
 
     .editor-article-content {
-      padding: 8px;
+      padding-top: 8px;
       font-size: 13px;
       font-weight: 300;
       max-height: 87px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .editor-article-content-title {
@@ -92,6 +94,7 @@ scui-editor-article {
     .editor-article-content-comment {
       max-height: 60px;
       overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 

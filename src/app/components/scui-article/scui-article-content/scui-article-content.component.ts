@@ -10,7 +10,7 @@ import {
     <div class="scui-article-content {{ mode }}">
       <div class="scui-article-desc">
         <h3><a [href]="url" target="_blank">{{headline}}</a></h3>
-        <p class="scui-article-desc__comment">{{ commentFinal }}</p>
+        <p class="scui-article-desc__comment">{{ commentOutput }}</p>
       </div>
     </div>
   `,
@@ -23,18 +23,22 @@ export class ScuiArticleContentComponent implements OnInit {
   @Input() headline = 'Headline';
   @Input() comment = 'Comment';
 
-  commentFinal: string;
+  commentOutput: string;
 
   constructor() {
   }
 
   ngOnInit() {
-    if(this.comment.length == 0) {
-      this.commentFinal = '(no comment)'
-    } else if (this.comment.length >= 250) {
-      this.commentFinal = this.comment.slice(0, 250) + '...';
+    if(typeof this.comment === 'string') {
+      if (this.comment.length >= 250) {
+        this.commentOutput = this.comment.slice(0, 250) + '...';
+      } else if (this.comment.length === 0) {
+        this.commentOutput = '(no comment)';
+      } else {
+        this.commentOutput = this.comment;
+      }
     } else {
-      this.commentFinal = this.comment;
+      this.commentOutput = '(no comment)'
     }
   }
 

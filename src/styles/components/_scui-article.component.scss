@@ -214,10 +214,21 @@
     font-weight: 300;
   }
 
+  .scui-article-desc__commentWrap {
+    margin-top: 8px;
+  }
+
   .scui-article-desc__comment {
     color: $main_7;
-    margin-top: 8px;
     font-size: 14px;
+    font-style: italic;
+  }
+
+  .scui-article-desc__commentLabel {
+    font-size: 13px;
+    font-weight: 400;
+    color: #8E939C;
+    text-transform: uppercase;
   }
 
 }

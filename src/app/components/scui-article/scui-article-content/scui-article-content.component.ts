@@ -10,7 +10,10 @@ import {
     <div class="scui-article-content {{ mode }}">
       <div class="scui-article-desc">
         <h3><a [href]="url" target="_blank">{{headline}}</a></h3>
-        <p class="scui-article-desc__comment">{{ commentOutput }}</p>
+        <div class="scui-article-desc__commentWrap" *ngIf="mode === 'edit'">
+          <span class="scui-article-desc__commentLabel">COMMENT:</span>
+          <p class="scui-article-desc__comment">{{ commentOutput }}</p>
+        </div>
       </div>
     </div>
   `,

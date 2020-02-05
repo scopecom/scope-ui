@@ -232,6 +232,7 @@ scui-editor-article-box {
     .scui-editor-article-box-content {
       width: calc(100% - 80px);
       display: inline-block;
+      cursor: auto;
     }
   }
 }

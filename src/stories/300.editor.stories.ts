@@ -89,4 +89,19 @@ storiesOf('Editor', module)
         articleComment: '123123'
       },
     }
+  }))
+  .add('Editor Article In Article List Editable', () => ({
+    template: `
+    <div style="background: white;padding:20px; width: 100%;" >
+       <scui-editor-article-box [article]="articleItem"></scui-editor-article-box>
+    </div>
+    `,
+    props: {
+      articleItem: {
+        articleImageUrl: 'https://storage.googleapis.com/static-imgs/scope-ui/scope-image-dummy.png',
+        articleSource: '12313',
+        articleTitle: '123123',
+        articleComment: '123123'
+      },
+    }
   }));

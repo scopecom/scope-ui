@@ -96,6 +96,16 @@
       }
 
       .scui-article-desc {
+        display: flex;
+        flex-direction: column;
+        height: 133px;
+        overflow: hidden;
+
+        h3 {
+          max-height: 40px;
+          flex: 1 0 auto;
+          overflow: hidden;
+        }
         &:hover {
           h3 {
             a {

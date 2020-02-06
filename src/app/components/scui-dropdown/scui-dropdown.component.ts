@@ -31,7 +31,6 @@ export class ScUiDropdownComponent implements OnInit {
 
   ngOnInit() {
     this.selectedOption = this.selectedOption || this.options[0];
-    console.log(this.disclaimerText);
   }
 
   toggle() {

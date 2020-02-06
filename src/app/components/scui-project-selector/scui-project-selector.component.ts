@@ -8,7 +8,7 @@ import { ScUiOption } from '../../interfaces';
       <div class="scui-project-selector-label" *ngIf="label">
         {{label}}
       </div>
-      <div [ngClass]="{'dropdown-expanded': isOpen}" class="scui-dropdown">
+      <div [ngClass]="{'dropdown-expanded': isOpen}" class="scui-dropdown" (blur)="onBlurMethod()" tabindex="0">
         <div (click)="toggle()" class="main">{{ placeholder }}
           <span *ngIf="!isOpen" class="icon icon-small-down"></span>
           <span *ngIf="isOpen" class="icon icon-small-up"></span>
@@ -52,6 +52,10 @@ export class ScUiProjectSelectorComponent implements OnChanges {
 
   toggle() {
     this.isOpen = !this.isOpen;
+  }
+
+  onBlurMethod() {
+    this.isOpen = false;
   }
 
   removeProject(option: ScUiOption) {

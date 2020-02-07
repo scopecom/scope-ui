@@ -9,7 +9,7 @@ import {
   template: `
     <div class="scui-article-content {{ mode }}">
       <div class="scui-article-desc">
-        <h3><a [href]="url" target="_blank">{{headline}}</a></h3>
+        <h3><a [href]="url" target="_blank">{{headlineOutput}}</a></h3>
         <div class="scui-article-desc__commentWrap" *ngIf="mode === 'edit'">
           <span class="scui-article-desc__commentLabel">COMMENT:</span>
           <p class="scui-article-desc__comment">{{ commentOutput }}</p>
@@ -27,14 +27,25 @@ export class ScuiArticleContentComponent implements OnInit {
   @Input() comment = 'Comment';
 
   commentOutput: string;
+  headlineOutput: string;
 
   constructor() {
   }
 
   ngOnInit() {
+    const helineLimit = 95;
+    const commentLimit = 210;
+    if(this.headline.length >= helineLimit) {
+      this.headlineOutput = this.headline.substring(0, helineLimit);
+      this.headlineOutput = this.headlineOutput.substr(0, Math.min(this.headlineOutput.length, this.headlineOutput.lastIndexOf(" "))) + '...';
+    } else {
+      this.headlineOutput = this.headline;
+    }
+
     if(typeof this.comment === 'string') {
-      if (this.comment.length >= 250) {
-        this.commentOutput = this.comment.slice(0, 250) + '...';
+      if (this.comment.length >= 210) {
+        this.commentOutput = this.comment.substring(0, 210);
+        this.commentOutput = this.commentOutput.substr(0, Math.min(this.commentOutput.length, this.commentOutput.lastIndexOf(" "))) + '...';
       } else if (this.comment.length === 0) {
         this.commentOutput = '(no comment)';
       } else {

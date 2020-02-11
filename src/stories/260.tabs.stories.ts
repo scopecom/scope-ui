@@ -32,4 +32,16 @@ storiesOf('Tabs', module)
       cssClass: 'tabs-drawer',
       tabEvt: action('Tab Select')
     }
+  }))
+  .add('Tabs Programatically change', () => ({
+    template: `<div style="background: white; margin:20px;">
+                    <scui-tabs [tabs]="tabs" [activeTabIndex]="activeTabIndex" (tabSelect)="tabEvt($event)"></scui-tabs>
+                    <button (click)="activeTabIndex = 1">1</button>
+                    <button (click)="activeTabIndex = 2">2</button>
+                </div>`,
+    props: {
+      tabs: Tabs,
+      activeTabIndex: 0,
+      tabEvt: action('Tab Select')
+    }
   }));

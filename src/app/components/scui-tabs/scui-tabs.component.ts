@@ -2,9 +2,9 @@ import {
   AfterViewInit,
   Component, ElementRef,
   EventEmitter,
-  Input,
+  Input, OnChanges,
   Output,
-  QueryList,
+  QueryList, SimpleChanges,
   ViewChild,
   ViewChildren,
   ViewEncapsulation
@@ -32,7 +32,7 @@ import { ScUiTabs } from '../../interfaces';
   `,
   encapsulation: ViewEncapsulation.None
 })
-export class ScUiTabsComponent implements AfterViewInit {
+export class ScUiTabsComponent implements AfterViewInit, OnChanges {
   offsetLeft = 0;
   offsetWidth = 0;
 
@@ -44,7 +44,10 @@ export class ScUiTabsComponent implements AfterViewInit {
 
   @Output() tabSelect = new EventEmitter<{index: number, tab: ScUiTabs}>();
 
-  constructor() {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes && changes.activeTabIndex.currentValue && !changes.activeTabIndex.firstChange) {
+      this.setActiveTab(changes.activeTabIndex.currentValue, this.tabItems.toArray()[changes.activeTabIndex.currentValue].nativeElement, this.tabContainer.nativeElement);
+    }
   }
 
   ngAfterViewInit() {

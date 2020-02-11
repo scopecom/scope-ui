@@ -40,11 +40,6 @@ export class StartComponent implements OnInit {
       name: ['', [Validators.required, Validators.maxLength(15), Validators.email]],
       lastName: ['', [Validators.maxLength(2)]]
     });
-
-    this.demoForm.valueChanges.subscribe((val) => {
-      console.log(val);
-      console.log(this.demoForm.valid);
-    });
   }
 
 }

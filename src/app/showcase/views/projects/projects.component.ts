@@ -14,7 +14,6 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
   }
 
-  reorder(event) {
-    console.log(event);
+  reorder() {
   }
 }

@@ -45,7 +45,7 @@ export class ScUiTabsComponent implements AfterViewInit, OnChanges {
   @Output() tabSelect = new EventEmitter<{index: number, tab: ScUiTabs}>();
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes && changes.activeTabIndex.currentValue && !changes.activeTabIndex.firstChange) {
+    if (changes && changes.activeTabIndex && !changes.activeTabIndex.firstChange) {
       this.setActiveTab(changes.activeTabIndex.currentValue, this.tabItems.toArray()[changes.activeTabIndex.currentValue].nativeElement, this.tabContainer.nativeElement);
     }
   }

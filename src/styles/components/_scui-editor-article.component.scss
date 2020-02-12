@@ -103,21 +103,6 @@ scui-editor-article {
   }
 
   &:hover {
-    .editor-article-move {
-      position: absolute;
-      left: 0;
-      height: 100%;
-      border-left: 8px solid #8E939C;
-      z-index: 9;
-
-      .hover-icon {
-        display: inline-block;
-        position: relative;
-        left: -28px;
-        top: 5px;
-      }
-    }
-
     .editor-article-overlay {
       visibility: visible;
     }
@@ -152,13 +137,12 @@ scui-editor-article {
   margin-bottom: 8px;
 }
 
-.gu-mirror .scui-editor-article, .gu-mirror .scui-editor-article-box {
-
+.gu-mirror .scui-editor-article-box {
   .editor-article-move {
     position: absolute;
     left: 0;
     height: 100%;
-    border-left: 8px solid #8E939C;
+    border-left: 8px solid $main_5;
     z-index: 9;
 
     .hover-icon {
@@ -168,6 +152,8 @@ scui-editor-article {
       display: inline-block;
     }
   }
+}
+.gu-mirror .scui-editor-article, .gu-mirror .scui-editor-article-box {
 
   .editor-article-overlay {
     visibility: visible !important;
@@ -241,13 +227,18 @@ scui-editor-article-box {
     cursor: move;
     position: relative;
 
+    .editor-article-move {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      border-left: 8px solid $main_4;
+      z-index: 9;
+      pointer-events: none;
+    }
+
     &:hover {
       .editor-article-move {
-        position: absolute;
-        left: 0;
-        height: 100%;
-        border-left: 8px solid #8E939C;
-        z-index: 9;
+        border-left: 8px solid $main_5;
 
         .hover-icon {
           position: relative;
@@ -261,7 +252,7 @@ scui-editor-article-box {
 
   .scui-editor-article-box-meta {
     flex: 1;
-    padding: 8px 30px 8px 16px;
+    padding: 8px 40px 8px 16px;
     font-size: 13px;
 
     .box-info {
@@ -283,15 +274,15 @@ scui-editor-article-box {
       width: calc(100% - 80px);
       display: inline-block;
       cursor: auto;
-      border: 1px solid #F2F2F2;
+      border: 1px solid $main_1;
       padding: 2px;
 
       &:hover {
-        background: #fff;
+        background: $blank_2;
       }
       &:focus {
-        border: 1px solid #06f;
-        background: #F2F5FF;
+        border: 1px solid $prim_5;
+        background: $prim_1;
         outline: none;
       }
     }

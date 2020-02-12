@@ -8,6 +8,10 @@ scui-editor-article {
   margin: 10px;
 }
 
+.hover-icon {
+  display: none;
+}
+
 .scui-editor-article {
   position: relative;
   cursor: move;
@@ -99,7 +103,20 @@ scui-editor-article {
   }
 
   &:hover {
-    outline: 8px solid $main_3;
+    .editor-article-move {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      border-left: 8px solid #8E939C;
+      z-index: 9;
+
+      .hover-icon {
+        display: inline-block;
+        position: relative;
+        left: -28px;
+        top: 5px;
+      }
+    }
 
     .editor-article-overlay {
       visibility: visible;
@@ -136,7 +153,22 @@ scui-editor-article {
 }
 
 .gu-mirror .scui-editor-article, .gu-mirror .scui-editor-article-box {
-  outline: 8px solid $prim_5 !important;
+
+  .editor-article-move {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-left: 8px solid #8E939C;
+    z-index: 9;
+
+    .hover-icon {
+      position: relative;
+      left: -28px;
+      top: 5px;
+      display: inline-block;
+    }
+  }
+
   .editor-article-overlay {
     visibility: visible !important;
   }
@@ -167,13 +199,12 @@ scui-editor-article.gu-transit {
 .gu-transit .scui-editor-article {
   display: block !important;
   width: 100% !important;
-  outline: none !important;
+  // outline: none !important;
 }
 
 scui-editor-article-box {
   width: 100%;
   position: relative;
-  cursor: move;
   display: inline-flex;
   margin: 0 0 16px 0;
 }
@@ -207,15 +238,34 @@ scui-editor-article-box {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    cursor: move;
+    position: relative;
+
+    &:hover {
+      .editor-article-move {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        border-left: 8px solid #8E939C;
+        z-index: 9;
+
+        .hover-icon {
+          position: relative;
+          left: -28px;
+          top: 5px;
+          display: inline-block;
+        }
+      }
+    }
   }
 
   .scui-editor-article-box-meta {
     flex: 1;
-    padding: 8px 8px 8px 16px;
+    padding: 8px 30px 8px 16px;
     font-size: 13px;
 
     .box-info {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
 
       &:last-child {
         margin-bottom: 0;
@@ -233,6 +283,17 @@ scui-editor-article-box {
       width: calc(100% - 80px);
       display: inline-block;
       cursor: auto;
+      border: 1px solid #F2F2F2;
+      padding: 2px;
+
+      &:hover {
+        background: #fff;
+      }
+      &:focus {
+        border: 1px solid #06f;
+        background: #F2F5FF;
+        outline: none;
+      }
     }
   }
 }

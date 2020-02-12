@@ -6,9 +6,10 @@ import { ScUiArticle } from '../../../interfaces';
   template: `
     <div class="scui-editor-article" [ngClass]="{'linked': article.linked}">
       <div class="editor-article-image-wrap">
+        <div class="editor-article-move">
+          <span class="hover-icon icon-zoom-99"></span></div>
         <div class="editor-article-overlay"></div>
-        <div scuiImageCropper="bgImage" [photoUrl]="article.photoUrl"
-            class="editor-article-img">
+        <div scuiImageCropper="bgImage" [photoUrl]="article.photoUrl" class="editor-article-img">
         </div>
         <span class="icon icon-cloud-forecast-2" *ngIf="!article.linked;"></span>
         <span class="icon icon-scope-square-neg" *ngIf="article.linked;"></span>
@@ -43,8 +44,9 @@ export class ScUiEditorArticleComponent implements OnInit {
       <div class="remove-article" (click)="removeArticle.emit()">
         <span class="icon icon-i-remove"></span>
       </div>
-      <div scuiImageCropper="bgImage" [photoUrl]="article.articleImageUrl"
-           class="editor-article-img">
+      <div scuiImageCropper="bgImage" [photoUrl]="article.articleImageUrl" class="editor-article-img">
+        <div class="editor-article-move">
+          <span class="hover-icon icon-zoom-99"></span></div>
       </div>
       <div class="scui-editor-article-box-meta">
       <div class="box-info">

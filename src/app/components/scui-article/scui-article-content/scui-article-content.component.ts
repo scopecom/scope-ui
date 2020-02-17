@@ -33,7 +33,7 @@ export class ScuiArticleContentComponent implements OnInit {
   }
 
   ngOnInit() {
-    const helineLimit = 95;
+    const helineLimit = 93;
     const commentLimit = 210;
     if(this.headline.length >= helineLimit) {
       this.headlineOutput = this.headline.substring(0, helineLimit);

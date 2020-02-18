@@ -146,5 +146,16 @@
       line-height: 32px;
     }
   }
+}
 
+.scui-autocomplete-box {
+  border: 1px solid $main_2;
+
+  .submenu-nav {
+    padding-bottom: 0;
+  }
+
+  .submenu-nav-item {
+    padding: 8px 12px;
+  }
 }

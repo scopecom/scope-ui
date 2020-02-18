@@ -62,25 +62,6 @@ storiesOf('Inputs and Controls', module)
       ScuiDropdownModule
     ]
   }))
-  .add('Autocomplete', () => ({
-    template: `<div style="margin: 20px;" class="scui-autocomplete">
-                  <form class="example-form">
-                    <mat-form-field class="example-full-width">
-                      <input type="text" placeholder="Pick one"
-                       aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-                      <mat-autocomplete #auto="matAutocomplete">
-                        <mat-option *ngFor="let option of options" [value]="option">
-                          {{option}}
-                        </mat-option>
-                      </mat-autocomplete>
-                    </mat-form-field>
-                  </form>
-               </div>`,
-    props: {
-      options: ['One', 'Two', 'Three'],
-      myControl: ctrl
-    }
-  }))
   .add('Checkbox', () => ({
     template: `<div style="padding: 20px 0 60px 20px;background: white;">
                    <scui-checkbox [groupLabel]="groupLabel" [label]="label" ></scui-checkbox>
@@ -109,6 +90,33 @@ storiesOf('Inputs and Controls', module)
                       <mat-datepicker #picker></mat-datepicker>
                    </mat-form-field>
                </div>`
+  }))
+  .add('Scope Autocomplete field', () => ({
+    template: `<div style="background: white;padding: 20px; width:400px">
+                 <form [formGroup]="myForm">
+                 <div class="scui-form-field">
+                  <scui-autocomplete formControlName="name" [placeholder]="'Test'" [autocompleteList]="list" [label]="label"></scui-autocomplete>
+                 </div>
+               </form>
+               </div>`,
+    props: {
+      label: 'FORM FIELD*',
+      myForm: fromGroup,
+      list: [
+        {
+          value: 'mail@mail.com',
+          label: 'One'
+        },
+        {
+          value: '2',
+          label: 'Two'
+        },
+        {
+          value: '3',
+          label: 'Three'
+        }
+      ]
+    }
   }))
   .add('Scope Form field', () => ({
     template: `<div style="background: white;padding: 20px; width:400px">

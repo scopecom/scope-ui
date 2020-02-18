@@ -19,7 +19,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
                class="scui-input-field">
         <div class="scui-autocomplete-box scui-submenu" *ngIf="showAutocomplete">
           <ul class="submenu-nav">
-            <li class="submenu-nav-item " *ngFor="let option of autocompleteList" (click)="setInputValue(option.value)">
+            <li class="submenu-nav-item " *ngFor="let option of autocompletInput" (click)="setInputValue(option.value)">
               <a class="list-item" (keydown.enter)="setInputValue(option.value)" tabindex="0">{{option.label}}</a>
             </li>
           </ul>
@@ -91,7 +91,7 @@ export class ScUiAutocomleteComponent implements ControlValueAccessor, OnInit {
   save(event: any) {
     this.value = event.target.value;
     this.propagateChange(this.value);
-    this.autocompleteList = this.autocompletInput.filter(item => {
+    this.autocompletInput = this.autocompleteList.filter(item => {
       return item.value.toLowerCase().indexOf(this.value.toLowerCase()) > -1
     })
   }

@@ -103,10 +103,10 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+
+    this.numberOfProjects = this.subMenuItems.length;
     this.subMenuItems.map( item => {
-      item.id === -1 ?
-      this.numberOfProjects = this.subMenuItems.length - 1
-      : this.numberOfProjects = this.subMenuItems.length;
+      if (item.id === -1) {this.numberOfProjects = this.subMenuItems.length - 1}
     })
 
     if (this.sortable) {

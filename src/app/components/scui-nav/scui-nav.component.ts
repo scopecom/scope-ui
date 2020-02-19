@@ -26,6 +26,12 @@ import { ScUiMenuItem } from '../../interfaces';
       <footer class="nav-footer" *ngIf="footer">
         <a class="nav-item"
            scuiBgHover="#004FE5"
+           href="https://thescope.atlassian.net/wiki/spaces/scopepublic/overview"
+           target="_blank">
+          <span class="icon icon-help-circle"></span>
+        </a>
+        <a class="nav-item"
+           scuiBgHover="#004FE5"
            *ngFor="let menuItem of footer"
            [routerLink]="[menuItem.route]"
            [routerLinkActive]="activeClass">

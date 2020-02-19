@@ -4,7 +4,7 @@ export const AppMenu: ScUiMenuItem[] = [
   {
     name: 'Projects',
     route: '/test',
-    iconClass: 'icon-magnifier'
+    iconClass: 'icon-magnifier-2'
   },
   {
     name: 'Start',

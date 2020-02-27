@@ -18,6 +18,21 @@ scui-editor-element {
   justify-content: center;
   position: relative;
 
+  .insert-el {
+    position: absolute;
+    z-index: 10;
+    top: 32px;
+    left: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+
+    &.i-bot {
+      top: auto;
+      bottom: 32px;
+    }
+  }
+
   .handle {
     position: absolute;
     width: 100%;
@@ -29,7 +44,10 @@ scui-editor-element {
   }
 
   &:hover {
-    outline:8px solid $main_3;
+    outline: 8px solid $main_3;
+    .insert-el {
+      display: block;
+    }
   }
 
   .scui-editor-element-label {

@@ -6,10 +6,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     <div class="scui-editor-element">
       <div class="handle"></div>
       <div class="insert-el i-top" (click)="$event.preventDefault(); insertEvt.emit('top')" role="button">
-        <span class="icon-frame-s-caret-up"></span>
+        <span class="icon-list-first"></span>
       </div>
       <div class="insert-el i-bot" (click)="$event.preventDefault(); insertEvt.emit('bottom')" role="button">
-        <span class="icon-frame-s-caret-down"></span>
+        <span class="icon-list-last"></span>
       </div>
       <div class="scui-editor-element-icon">
         <span class="icon" [ngClass]="elementMeta?.iconClass"></span>

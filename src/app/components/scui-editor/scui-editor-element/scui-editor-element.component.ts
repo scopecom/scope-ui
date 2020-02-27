@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
       <div class="insert-el i-top" (click)="$event.preventDefault(); insertEvt.emit('top')" role="button">
         <span class="icon-frame-s-caret-up"></span>
       </div>
-      <div class="insert-el i-bot" (click)="$event.preventDefault(); insertEvt.emit('bottom')" role="button">
+      <div class="insert-el i-bot" (click)="$event.preventDefault(); insertEvt.emit('top')" role="button">
         <span class="icon-frame-s-caret-down"></span>
       </div>
       <div class="scui-editor-element-icon">

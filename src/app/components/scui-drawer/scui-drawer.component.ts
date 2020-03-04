@@ -24,6 +24,10 @@ import { Subscription } from 'rxjs';
       <div class="drawer-collapse" *ngIf="collapse" (click)="toggleDrawer()"></div>
     </aside>
   `,
+    styles: [`
+      width: 420px;
+      display: block;
+    `],
   encapsulation: ViewEncapsulation.None
 })
 export class ScUiDrawerComponent implements OnChanges {

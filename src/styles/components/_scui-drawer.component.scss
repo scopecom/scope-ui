@@ -6,6 +6,7 @@
   overflow: auto;
   display: flex;
   flex-direction: row;
+  position: fixed;
 
   .drawer-inner {
     background-color: $blank_2;

@@ -51,16 +51,16 @@ export class ScUiEditorArticleComponent implements OnInit {
       <div class="scui-editor-article-box-meta">
       <div class="box-info">
           <strong class="scui-editor-article-box-title">Title</strong>
-          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerHTML, 'articleTitle')" contenteditable="true">{{article.articleTitle}}</span>
+          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerText, 'articleTitle')" contenteditable="true">{{article.articleTitle}}</span>
         </div>
         <div class="box-info">
           <strong class="scui-editor-article-box-title">Publisher</strong>
-          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerHTML, 'articleSource')" contenteditable="true">{{article.articleSource}}</span>
+          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerText, 'articleSource')" contenteditable="true">{{article.articleSource}}</span>
         </div>
         <div class="box-info">
           <strong class="scui-editor-article-box-title">Comment</strong>
-          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerHTML, 'articleComment')" contenteditable="true" *ngIf="article.articleComment; else noComment">{{article.articleComment}}</span>
-          <ng-template #noComment><span (blur)="articleUpdate($event.target?.innerHTML, 'articleComment')" contenteditable="true">(no comment)</span></ng-template>
+          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerText, 'articleComment')" contenteditable="true" *ngIf="article.articleComment; else noComment">{{article.articleComment}}</span>
+          <ng-template #noComment><span (blur)="articleUpdate($event.target?.innerText, 'articleComment')" contenteditable="true">(no comment)</span></ng-template>
         </div>
       </div>
     </div>

@@ -276,6 +276,7 @@ scui-editor-article-box {
       cursor: auto;
       border: 1px solid $main_1;
       padding: 2px;
+      white-space: pre-wrap;
 
       &:hover {
         background: $blank_2;

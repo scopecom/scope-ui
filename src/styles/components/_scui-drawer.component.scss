@@ -6,7 +6,7 @@
   overflow: auto;
   display: flex;
   flex-direction: row;
-  position: fixed;
+  width: 420px;
 
   .drawer-inner {
     background-color: $blank_2;
@@ -19,6 +19,7 @@
 
   &.collapsed {
     z-index: -1;
+    width: auto;
     background: $main_1;
     .drawer-collapse {
       background-color: $main_4 !important;

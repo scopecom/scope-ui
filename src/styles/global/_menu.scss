@@ -4,7 +4,9 @@
   padding: 0;
   min-width: 280px;
   position: fixed;
-  width: 418px;
+  width: 412px;
+  overflow: auto;
+  height: 100%;
 
   .submenu-nav {
     padding: 0 0 16px 0;

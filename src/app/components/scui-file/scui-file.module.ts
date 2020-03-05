@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { MatMenuModule } from '@angular/material';
+import { MatMenuModule, MatTooltipModule } from '@angular/material';
+
 
 import {
   Component,
@@ -16,10 +17,13 @@ import { ScUiFile } from '../../interfaces';
       <div class="icons-wrap">
         <span class="item" *ngFor="let itm of outputChannels">
           <span class="icon-wrap {{ itm.type }}"
+                matTooltip="
+                  {{channelsConfig[itm.type].name}}
+                  {{(itm.status === statusPublished && ' has been published') || (itm.status === statusScheduled && ' is scheduled.') || (itm.status === '' && ' has not been used yet')}}"
                 [ngClass]="{scheduled:itm.status === statusScheduled, published:itm.status === statusPublished,
-                 defaultState: itm.status !== statusPublished && itm.status !== statusScheduled}">
+                defaultState: itm.status !== statusPublished && itm.status !== statusScheduled}">
             <span class="icon {{ channelsConfig[itm.type].icon }}"></span>
-                      <span *ngIf="itm.status === statusPublished || itm.status === statusScheduled" class="dot"></span>
+            <span *ngIf="itm.status === statusPublished || itm.status === statusScheduled" class="dot"></span>
           </span>
         </span>
       </div>
@@ -109,36 +113,47 @@ export class ScUiFileComponent implements OnInit {
 
   channelsConfig = {
     TWITTER: {
+      name: 'Twitter',
       icon: 'icon-twitter'
     },
     WORDPRESS: {
+      name: 'Wordpress',
       icon: 'icon-wordpress'
     },
     MAILCHIMP: {
+      name: 'Mailchimp',
       icon: 'icon-mc-freddie-dark'
     },
     FACEBOOK_PAGE: {
+      name: 'Facebook (Page)',
       icon: 'icon-facebook-f'
     },
     LINKEDIN_PAGE: {
+      name: 'LinkedIn (Page)',
       icon: 'icon-linkedin-in'
     },
     LINKEDIN_PROFILE: {
+      name: 'LinkedIn (Profile)',
       icon: 'icon-linkedin-in'
     },
     GOOGLE_DOC: {
+      name: 'Google Docs',
       icon: 'icon-google-drive'
     },
     SALES_FORCE: {
+      name: 'Salesforce',
       icon: 'icon-salesforce-icon'
     },
     PARDOT: {
+      name: 'Salesforce Pardot',
       icon: 'icon-salesforce-icon'
     },
     SCOPE_TO_EMAIL: {
+      name: 'Scope To Email',
       icon: 'icon-mail-block'
     },
     HUBSPOT: {
+      name: 'Hubspot',
       icon: 'icon-HubSpot'
     },
   };
@@ -176,7 +191,8 @@ export class ScUiFileComponent implements OnInit {
   declarations: [ScUiFileComponent],
   imports: [
     CommonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTooltipModule
   ],
   exports: [ScUiFileComponent]
 })

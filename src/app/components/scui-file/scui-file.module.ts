@@ -141,7 +141,7 @@ export class ScUiFileComponent implements OnInit {
       icon: 'icon-google-drive'
     },
     SALES_FORCE: {
-      name: 'Sales Force',
+      name: 'Salesforce',
       icon: 'icon-salesforce-icon'
     },
     PARDOT: {
@@ -162,7 +162,6 @@ export class ScUiFileComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.outputChannels, 'outputChannels');
     if (this.outputChannels) {
       const activeChannels = this.outputChannels.filter(val => val.status === this.statusPublished || val.status === this.statusScheduled);
       if (activeChannels && activeChannels.length) {

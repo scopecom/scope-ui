@@ -18,8 +18,8 @@ import { ScUiArticle } from '../../interfaces';
           </scui-article-content>
           <footer class="scui-article-footer">
             <div class="scui-article-footer__details">
-              <time *ngIf="article.date && article.date !== ''">{{ article.date | date:'d.M.yyyy' }}</time>
-              <span *ngIf="article.date && article.date !== ''"> - </span>
+              <time *ngIf="article.date && article.date !== null">{{ article.date | date:'d.M.yyyy' }}</time>
+              <span *ngIf="article.date && article.date !== null"> - </span>
               <span>{{ article.publisher }}</span>
             </div>
 <!--            <div class="pills-box">-->
@@ -49,8 +49,8 @@ import { ScUiArticle } from '../../interfaces';
           </scui-article-content>
           <footer class="scui-article-footer">
           <div class="scui-article-footer__details">
-            <time *ngIf="article.date && article.date !== ''">{{ article.date | date:'d.M.yyyy' }}</time>
-            <span *ngIf="article.date && article.date !== ''"> - </span>
+            <time *ngIf="article.date && article.date !== null">{{ article.date | date:'d.M.yyyy' }}</time>
+            <span *ngIf="article.date && article.date !== null"> - </span>
             <span>{{ article.publisher }}</span>
           </div>
 <!--            <div class="pills-box">-->
@@ -76,8 +76,8 @@ import { ScUiArticle } from '../../interfaces';
           </scui-article-content>
           <footer class="scui-article-footer">
           <div class="scui-article-footer__details">
-            <time *ngIf="article.date && article.date !== ''">{{ article.date | date:'d.M.yyyy' }}</time>
-            <span *ngIf="article.date && article.date !== ''"> - </span>
+            <time *ngIf="article.date && article.date !== null">{{ article.date | date:'d.M.yyyy' }}</time>
+            <span *ngIf="article.date && article.date !== null"> - </span>
             <span>{{ article.publisher }}</span>
           </div>
             <span class="article-action" (click)="importArticle(article)">

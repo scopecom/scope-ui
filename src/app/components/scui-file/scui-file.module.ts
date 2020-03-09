@@ -19,7 +19,7 @@ import { ScUiFile } from '../../interfaces';
           <span class="icon-wrap {{ itm.type }}"
                 matTooltip="
                   {{channelsConfig[itm.type].name}}
-                  {{(itm.status === statusPublished && ' has been published') || (itm.status === statusScheduled && ' is scheduled.') || (itm.status === '' && ' has not been used yet')}}"
+                  {{(itm.status === statusPublished && ' has been published') || (itm.status === statusScheduled && ' is scheduled.') || (itm.status === statusUnused && ' has not been used yet')}}"
                 [ngClass]="{scheduled:itm.status === statusScheduled, published:itm.status === statusPublished,
                 defaultState: itm.status !== statusPublished && itm.status !== statusScheduled}">
             <span class="icon {{ channelsConfig[itm.type].icon }}"></span>
@@ -110,6 +110,7 @@ export class ScUiFileComponent implements OnInit {
   overlayActive: boolean;
   readonly statusPublished = 'PUBLISHED';
   readonly statusScheduled = 'SCHEDULED';
+  readonly statusUnused = 'UNUSED';
 
   channelsConfig = {
     TWITTER: {

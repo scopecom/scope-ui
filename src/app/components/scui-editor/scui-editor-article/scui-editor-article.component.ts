@@ -40,7 +40,7 @@ export class ScUiEditorArticleComponent implements OnInit {
 @Component({
   selector: 'scui-editor-article-box',
   template: `
-    <div class="scui-editor-article-box">
+    <div class="scui-editor-article-box" (mousedown)="handleMousedown()">
       <div class="remove-article" (click)="removeArticle.emit()">
         <span class="icon icon-i-remove"></span>
       </div>
@@ -51,16 +51,16 @@ export class ScUiEditorArticleComponent implements OnInit {
       <div class="scui-editor-article-box-meta">
       <div class="box-info">
           <strong class="scui-editor-article-box-title">Title</strong>
-          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerText, 'articleTitle')" contenteditable="true">{{article.articleTitle}}</span>
+          <span class="scui-editor-article-box-content" #title scuiClipboard (keydown)="setActiveElement(title)" (blur)="articleUpdate($event.target?.innerText, 'articleTitle')" contenteditable="true">{{article.articleTitle}}</span>
         </div>
         <div class="box-info">
           <strong class="scui-editor-article-box-title">Publisher</strong>
-          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerText, 'articleSource')" contenteditable="true">{{article.articleSource}}</span>
+          <span class="scui-editor-article-box-content" #source scuiClipboard (keydown)="setActiveElement(source)" (blur)="articleUpdate($event.target?.innerText, 'articleSource')" contenteditable="true">{{article.articleSource}}</span>
         </div>
         <div class="box-info">
           <strong class="scui-editor-article-box-title">Comment</strong>
-          <span class="scui-editor-article-box-content" scuiClipboard (blur)="articleUpdate($event.target?.innerText, 'articleComment')" contenteditable="true" *ngIf="article.articleComment; else noComment">{{article.articleComment}}</span>
-          <ng-template #noComment><span (blur)="articleUpdate($event.target?.innerText, 'articleComment')" contenteditable="true">(no comment)</span></ng-template>
+          <span class="scui-editor-article-box-content" #comment scuiClipboard (keydown)="setActiveElement(comment)" (blur)="articleUpdate($event.target?.innerText, 'articleComment')" contenteditable="true" *ngIf="article.articleComment; else noComment">{{article.articleComment}}</span>
+          <ng-template #noComment><span class="scui-editor-article-box-content" #comment2 (keydown)="setActiveElement(comment2)" (blur)="articleUpdate($event.target?.innerText, 'articleComment')" contenteditable="true">(no comment)</span></ng-template>
         </div>
       </div>
     </div>
@@ -77,6 +77,8 @@ export class ScUiEditorArticleBoxComponent {
   @Output() removeArticle = new EventEmitter();
   @Output() updateArticle = new EventEmitter();
 
+  private activeContenteditable: any;
+
   articleUpdate(event, articleProp) {
     this.article = {
       ...this.article,
@@ -84,6 +86,19 @@ export class ScUiEditorArticleBoxComponent {
     };
 
     this.updateArticle.emit(this.article);
+
   }
 
+  setActiveElement(element) {
+    this.activeContenteditable = element;
+  }
+
+  handleMousedown() {
+    try {
+      this.activeContenteditable.blur();
+      console.log(this.activeContenteditable.nativeElement)
+    } catch (e) {
+      console.log('could not blur')
+    }
+  }
 }

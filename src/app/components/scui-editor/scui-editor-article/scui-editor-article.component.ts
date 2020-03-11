@@ -96,9 +96,6 @@ export class ScUiEditorArticleBoxComponent {
   handleMousedown() {
     try {
       this.activeContenteditable.blur();
-      console.log(this.activeContenteditable.nativeElement)
-    } catch (e) {
-      console.log('could not blur')
-    }
+    } catch (e) {}
   }
 }

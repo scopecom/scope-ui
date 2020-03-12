@@ -26,7 +26,7 @@ import { ScUiMenuItem } from '../../interfaces';
       <footer class="nav-footer" *ngIf="footer">
         <a class="nav-item"
            scuiBgHover="#004FE5"
-           href="https://thescope.atlassian.net/wiki/spaces/scopepublic/overview"
+           href="https://www.thescope.com/support"
            target="_blank">
           <span class="icon icon-help-circle"></span>
         </a>

@@ -59,7 +59,9 @@ export class ScUiDrawerComponent implements OnChanges {
   selector: 'scui-drawer-nav',
   template: `
     <nav class="submenu-nav">
-      <h2 class="submenu-nav-title">{{ title }} ({{ numberOfProjects }})
+      <h2 class="submenu-nav-title">{{ title }}
+        <span *ngIf="title === 'Projects' else projectCount">{{subMenuItems.length - 1}}</span>
+        <ng-template #projectCount>{{subMenuItems.length}}</ng-template>
         <a *ngIf="link" routerLink="{{link}}" class="icon icon-e-add"></a>
       </h2>
       <ul class="submenu-nav-items">
@@ -107,11 +109,6 @@ export class ScUiDrawerNavComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-
-    this.numberOfProjects = this.subMenuItems.length;
-    this.subMenuItems.map( item => {
-      if (item.id === -1) {this.numberOfProjects = this.subMenuItems.length - 1}
-    })
 
     if (this.sortable) {
       this.subs = new Subscription();

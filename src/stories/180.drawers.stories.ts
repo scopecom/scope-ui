@@ -21,7 +21,7 @@ storiesOf('Drawers', module)
             <h1 class="submenu-title">Projects</h1>
           </header>
           <div class="submenu-divider"></div>
-          <scui-drawer-nav [subMenuItems]="submenu" title="MY PROJECTS"></scui-drawer-nav>
+          <scui-drawer-nav [subMenuItems]="submenu" title="Projects"></scui-drawer-nav>
           <div class="submenu-divider"></div>
           <scui-drawer-nav [subMenuItems]="submenu2" title="COMPANY PROJECTS"></scui-drawer-nav>
           <div class="submenu-divider"></div>
